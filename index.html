@@ -40,39 +40,7 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
-
-    <div class="site-navbar-wrap js-site-navbar bg-white">
-
-      <div class="container">
-        <div class="site-navbar bg-light">
-          <div class="py-1">
-            <div class="row align-items-center">
-              <div class="col-2">
-                <h2 class="mb-0 site-logo"><a href="index.html">TC ARG</a></h2>
-              </div>
-              <div class="col-10">
-                <nav class="site-navigation text-right" role="navigation">
-                  <div class="container">
-                    <!-- d-lg-none -->
-                    <div class="d-inline-block  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
-                     <!-- d-lg-block -->
-                    <ul class="site-menu js-clone-nav d-none">
-                      <li class="active">
-                        <a href="index.html">Home</a>
-                      </li>
-                      <li><a href="sobre.html">Sobre TC/ARG</a></li>
-                      <li><a href="sponsors.html">Sponsors</a></li>
-                      <li><a href="faq.html">FAQ</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="divNavbar"></div>
 
     <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -233,5 +201,6 @@
             });
     </script>
     <script>$('#divFooter').load('templates/footer.inc.html')</script>
+    <script>$('#divNavbar').load('templates/navbar.inc.html')</script>
   </body>
 </html>
