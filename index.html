@@ -15,17 +15,10 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/animate.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-
-
-
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/style.css">
-
   </head>
   <body>
 
@@ -40,24 +33,48 @@
       <div class="site-mobile-menu-body"></div>
     </div> <!-- .site-mobile-menu -->
 
-    <div id="divNavbar"></div>
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+  <div class="container">
+    <div class="site-navbar bg-light">
+      <div class="py-1">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <h2 class="mb-0 site-logo"><a href="index.html">TC ARG</a></h2>
+          </div>
+          <div class="col-10">
+            <nav class="site-navigation text-right" role="navigation">
+              <div class="container">
+                <!-- d-lg-none -->
+                <div class="d-inline-block  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                 <!-- d-lg-block -->
+                <ul class="site-menu js-clone-nav d-none">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="sobre.html">Sobre TC/ARG</a></li>
+                  <li><a href="sponsors.html">Sponsors</a></li>
+                  <li><a href="faq.html">FAQ</a></li>
+                  <li><a href="contact.html">Contacto</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
     <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-10 text-center" data-aos="fade">
-            <h1 class="mb-4">Training Camp Argentina</h1>
-            <h3 class="mb-5" style="color:white">8-19 Julio, 2019 &bullet; Universidad Nacional de Córdoba</h3>
-            <p class="regular-font-size">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfVzY2oAQusLUQDed53nQvWaHsM67zuXyaWUorCLdWsbmu8-g/viewform" class="btn btn-primary px-4 py-3 text-uppercase">Registrarse</a>
-            </p>
+            <h1 class="mb-4">Preguntas Frequentes</h1>
           </div>
         </div>
       </div>
     </div>
 
-
-
+    
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -130,7 +147,6 @@
       <div class="image bg-image" style="background-image: url('images/img_4.jpg');">
       </div>
     </div>
-
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -154,9 +170,38 @@
       </div>
     </div>
 
+
     <footer class="site-footer" style="background-image: url('images/hero_1.jpg');">
       <div class="container">
-        <div id="divFooter"></div>
+        <div class="row">
+  <!--<div class="col-md-4">
+    <h3 class="footer-heading mb-4 text-white">About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quos rem ullam, placeat amet.</p>
+    <p><a href="#" class="btn btn-primary pill text-white px-4">Read More</a></p>
+  </div>-->
+  <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="footer-heading mb-4 text-white">Mapa de Sitio</h3>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre.html">Sobre TC ARG</a></li>
+            <li><a href="#">Sponsors</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+      </div>
+      <div class="col-md-6">
+        <h3 class="footer-heading mb-4 text-white">&nbsp;</h3>
+          <ul class="list-unstyled">
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="#">Infomación Local</a></li>
+            <li><a href="#">Ser un Sponsor</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
@@ -186,6 +231,7 @@
   <script>
       document.addEventListener('DOMContentLoaded', function() {
                 var mediaElements = document.querySelectorAll('video, audio'), total = mediaElements.length;
+
                 for (var i = 0; i < total; i++) {
                     new MediaElementPlayer(mediaElements[i], {
                         pluginPath: 'https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/',
@@ -200,7 +246,5 @@
                 }
             });
     </script>
-    <script>$('#divFooter').load('templates/footer.inc.html')</script>
-    <script>$('#divNavbar').load('templates/navbar.inc.html')</script>
   </body>
 </html>
