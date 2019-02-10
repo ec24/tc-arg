@@ -104,6 +104,7 @@ a {
     box-shadow: none !important; }
 
 .site-section {
+  text-align:justify;
   padding: 3em 0; }
   @media (min-width: 768px) {
     .site-section {
