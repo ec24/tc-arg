@@ -1,0 +1,90 @@
+{% extends 'layout.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2016</h1>
+    <h3 class="mb-5" style="color:white">Universidad Nacional del Comahue</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2016/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2016/sponsors/medallia.png" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2016/sponsors/neuquen.png" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Clases Teóricas</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="pdfs/2016/00-Entrada-salida.pdf">Entrada-Salida</a></li>
+              <li><a href="pdfs/2016/01-Grafos.pdf">Grafos parte I</a></li>
+              <li><a href="pdfs/2016/02-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="pdfs/2016/03-Estructuras.pdf">Estructuras de Datos</a></li>
+              <li><a href="pdfs/2016/04-DFS.pdf">Grafos parte II</a></li>
+              <li><a href="pdfs/2016/05-Greedy.pdf">Algoritmos Golosos</a></li>
+              <li><a href="pdfs/2016/06-BS.pdf">Búsqueda Binaria</a></li>
+              <li><a href="pdfs/2016/07-Geometria.pdf">Geometría</a></li>
+              <li><a href="pdfs/2016/08-Flujo.pdf">Flujo</a></li>
+              <li><a href="pdfs/2016/09-Strings.pdf">Strings</a></li>
+              <li><a href="pdfs/2016/10-Primalidad.pdf">Aritmética y Primalidad</a></li>
+              <li><a href="pdfs/2016/11-Juegos.pdf">Teoría de Juegos</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Oradores</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Agustín Santiago Gutiérrez', 'Licenciado en Ciencias de la Computación de la
+        Universidad de Buenos Aires. Finalista y campeón latinoamericano en dos ocasiones como
+        competidor (2009 y 2011) y finalista en seis ocasiones como entrenador (2010, 2013, 2014,
+        2015, 2016 y 2017) siendo campeón latinoamericano en 2015. Agustín se desempeña como
+        Ayudante de Primera en la carrera de Ciencias de la Computación de la Universidad de
+        Buenos Aires - FCEN. Participó en dos ocasiones de la International Olympiad in Informatics
+        (IOI) obteniendo una Medalla de Plata en 2007. Jurado y entrenador de la Olimpíada Informática
+        Argentina (OIA).') }}
+        {{ speaker('Leopoldo Taravilse', 'Licenciado en Ciencias de la Computación de la Universidad
+        de Buenos Aires. Finalista en dos ocasiones como competidor (2010 y 2012) y en una ocasión
+        como entrenador (2016) siendo campeón latinoamericano. Leopoldo se desempeña como Jefe de
+        Trabajos Prácticos en la carrera de Ciencias de la Computación de la Universidad de Buenos
+        Aires y fue pasante de Google (USA), Facebook (USA) y Medallia (Argentina).') }}
+        {{ speaker('Quimey Vivas', 'Doctor en Matemáticas de Facultad de Ciencias Exactas y Naturales,
+        Universidad de Buenos Aires. Finalista de la ACM-ICPC Finalista como participante (2010) y
+        como coach (2012). Ex Ingeniero de Facebook en Menlo Park, California (USA).
+        Trabaja en Avature.') }}
+      </div>
+    </div>
+{% endblock %}
