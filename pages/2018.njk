@@ -1,0 +1,252 @@
+{% extends 'layout.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2018</h1>
+    <h3 class="mb-5" style="color:white">30 Julio-10 Agosto, 2018 &bullet; Universidad de Buenos Aires</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row d-block">
+        <h5 class="font-weight-bold text-uppercase display-5">Platinum</h5>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2018/sponsors/google.png" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2018/sponsors/medallia.png" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2018/sponsors/avature.png" alt="Image" class="img-fluid">
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="font-weight-bold text-uppercase display-5">Silver</h5>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2018/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-left section-heading">
+            <h2 class="mb-5 text-uppercase">Clases Teóricas</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <a href="clases/intro.pdf">Charla de introducción al training camp</a>.
+            <div>
+              <h3>Clases iniciales:</h3>
+              <ul>
+                  <li><a href="clases/ipc.pdf">E/S + Introdución</a>, a cargo de <em>Agustín Santiago Gutiérrez</em></li>
+                  <li><a href="clases/binary_search.pdf">Búsqueda binaria y ordenamiento</a>, a cargo de <em>Quimey Vivas</em></li>
+                  <li><a href="clases/dp-mariano.pdf">Programación dinámica </a>, a cargo de <em>Mariano Crosetti</em>.
+                  Mariano dictará un subconjunto de los siguientes temas, a definir y acorde al tiempo disponible:
+                  ¿Qué es la DP? Top Down y Bottom Up. Reconstruyendo la solución. K - ésima reconstrucción.
+                  Reducir una dimensión de memoria. Agregando una flag. Recuperando un parámetro. Dinámica en rangos.
+                  Dinámica en de máscara de bits. Dinámica en prefijos de números. Dinámica en frentes.
+                  </li>
+                  <li> <a href="clases/Matematica.pdf">Matemática</a>, a cargo de <em>Ariel Zylber</em></li>
+                  <li> <a href="clases/Grafos.pdf">Grafos</a>, a cargo de <em>Matías Hunicken</em>. Representación
+                  de grafos, árboles, DFS/BFS, distancias mínimas (algoritmos de Dijkstra y Floyd), union-find,
+                  algoritmo de Kruskal.
+                  </li>
+                  <li> <a href="clases/estructuras.pdf">Estructuras de datos para programación competitiva</a>,
+                  a cargo de <em>Quimey Vivas</em></li>
+                  <li> <a href="clases/Clase 2_ Greedy.pdf">Algoritmos golosos</a>, a cargo de <em>Pablo Zimmermann</em>.
+                  Introducción a los algoritmos golosos/voraces. Cómo pensarlos. Estrategia para usarlos en competencias.
+                  Teorema de la fruta golosa y del ordenamiento de a 2 (Taravilse, Álvarez). Falsos positivos: Los Greedy
+                  que no son Greedy. Ejemplos y anécdotas personales.
+                  </li>
+                  <li><a href="clases/strings.pdf">Strings</a>, a cargo de <em>Agustín Santiago Gutiérrez</em>
+                  Arreglo Z (ejemplo, buscar un string en otro). Bordes de una cadena (calculados a partir del arreglo
+                  Z, por ejemplo para encontrar sufijos o prefijos palindrómicos eficientemente). Hashing de Rabin-Karp
+                  y trucos asociados (o &quot;cómo usar hashing para computar casi cualquier cosa de strings&quot;,
+                  como por ejemplo todos los anteriores + el resultado del algoritmo de Manacher + el suffix array de un
+                  string). Tries.
+                  </li>
+              </ul>
+            </div>
+            <div>
+            <h3>Clases avanzadas:</h3>
+                  <ul>
+                      <li> <a href="clases/geomel.pdf">Geometría computacional</a>, a cargo de <em>Melanie Sclar</em>.
+                      Elementos básicos: puntos, vectores y rectas. Operaciones importantes y  representación.
+                      Técnicas de barrido (&quot;sweep line&quot;): Par de puntos más cercano, Intersección de segmentos,
+                      Cápsula convexa (Convex Hull). Área de polígono y teorema de Pick.
+                      </li>
+
+                      <li> <a href="clases/chulltrick.pdf">Dualidad punto línea y &quot;convex hull trick&quot;</a>,
+                      a cargo de <em>Agustín Santiago Gutiérrez</em> &quot;Convex hull trick&quot; es una técnica conocida
+                      para calcular eficientemente &quot;El máximo de varias funciones lineales&quot;, sobre un cierto
+                      valor de x. La dualidad punto línea es una forma de transformar problemas con rectas en problemas
+                      con puntos, y viceversa. Además de aprender ambas, usaremos esta última técnica para entender de
+                      dónde viene el nombre medio misterioso de &quot;convex hull trick&quot;.
+                      </li>
+
+                      <li> <a href="clases/max-flow.pdf">Flujo máximo </a>, a cargo de <em>Ariel Zylber</em>.
+                      En la charla se tratarán algunos de los siguientes temas: Algoritmo para flujo máximo / corte mínimo,
+                      con énfasis en cómo utilizarlo para modelar y resolver problemas de competencias. Matching máximo
+                      bipartito. Teoremas de Konig y Hall. Mínima partición/cubrimiento por caminos. Teorema de Dilworth.
+                      Flujo de costo mínimo.
+                      </li>
+
+                      <li><a href="clases/Combinatoria.pdf">Matemática: Combinatoria y probabilidad</a>, a cargo de
+                      <em>Pablo Zimmermann</em>. Introducción a la combinatoria. Formas de calcular números combinatorios.
+                      Principio de inclusión - exclusión. Nociones básicas de probabilidad en competencias. Introducción a
+                      Teoría de Juegos. Posiciones perdedoras. Nim y Misere Nim. Teorema de Sprague-Grundy.
+                      </li>
+
+                      <li> <a href="clases/arboles.pdf">Estructuras de datos sobre árboles</a>, a cargo de <em>Matías Hunicken</em>.
+                      Heavy light decomposition, dsu on tree, centroid decomposition, link-cut tree.
+                      </li>
+
+                      <li> Suffix Automaton, a cargo de <em>Nicolás Álvarez</em>. Suffix automaton: si bien ambas cosas
+                      son importantes, la charla se enfoca más en &quot;cómo utilizar la estructura para resolver los
+                      problemas&quot;, y no tanto en &quot;por qué se construye así el autómata&quot;. El suffix automaton
+                      es una estructura más avanzada y complicada, continuación natural de las estructuras básicas
+                      explicadas en la charla básica de strings.
+                      </li>
+                  </ul>
+            </div>
+          </div>
+          <div class="col-lg-1"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Oradores</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <h3>Nicolás Álvarez</h3>
+          <p>Licenciado en Ciencias de la Computación de la Universidad Nacional del Sur. Estudiante del Doctorado en
+          Ciencias de la Computación de la Universidad Nacional del Sur. Finalista como participante (2009) y como
+          coach (2010, 2013, 2015) de la ACM ICPC. Jefe de Trabajos Prácticos en la Universidad Nacional del Sur.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Mariano Crosetti</h3>
+          <p>Estudiante de licenciatura en ciencias de la computación en la UNR. Finalista ICPC con su equipo
+          Caloventor en Dos en 2015 (Marruecos) y 2016 (Tailandia). Pasante en Google Codejam (miembro del
+          staff de la final Dublín 2017) y Google Chromecast (2018).
+          </p>
+        </div>
+        <div class="row">
+          <h3>Agustín Santiago Gutiérrez</h3>
+          <p>Licenciado en Ciencias de la Computación de la Universidad de Buenos Aires. Finalista y campeón
+          latinoamericano en dos ocasiones como competidor (2009 y 2011) y finalista en seis ocasiones como
+          entrenador (2010, 2013, 2014, 2015, 2016 y 2017) siendo campeón latinoamericano en 2015. Agustín
+          se desempeña como Ayudante de Primera en la carrera de Ciencias de la Computación de la Universidad
+          de Buenos Aires - FCEN. Participó en dos ocasiones de la International Olympiad in Informatics (IOI)
+          obteniendo una Medalla de Plata en 2007. Jurado y entrenador de la Olimpíada Informática Argentina (OIA).
+          </p>
+        </div>
+        <div class="row">
+          <h3>Matias Hunicken</h3>
+          <p> Estudiante de Licenciatura en Ciencias de la Computación en la Universidad Nacional de Córdoba.
+          Finalista de ICPC en dos ocasiones (2017 y 2018).
+          </p>
+        </div>
+        <div class="row">
+          <h3>Melanie Sclar</h3>
+          <p>Licenciada en Ciencias de la Computación de la Facultad de Ciencias Exactas y Naturales,
+          Universidad de Buenos Aires. Entre otros premios, podemos destacar la Medalla de Plata en la 21°
+          Olimpíada Matemática del Cono Sur (Brasil, 2010); Medalla de Bronce en la 26° Olimpíada
+          Iberoamericana de Matemática (Costa Rica, 2011); Campeona Nacional en la 27° Olimpíada Matemática
+          Argentina (2011). Finalista en dos ocasiones (2014 y 2015) de la ACM ICPC y Campeona Latinoamericana
+          en 2015. Melanie fue pasante de Facebook (USA) en dos oportunidades.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Quimey Vivas</h3>
+          <p>Doctor en Matemáticas de Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires.
+          Finalista de la ACM-ICPC Finalista como participante (2010) y como coach (2012). Ex Ingeniero de
+          Facebook en Menlo Park, California (USA). Trabaja en Avature.
+          </p>
+        </div>
+        <div class="row">
+          <h3>Pablo Zimmermann</h3>
+          <p>Estudiante de Licenciatura en Ciencias de la Computación de la Facultad de Ciencias Exactas
+          y Ingeniería y Agrimensura, Universidad Nacional de Rosario. Entre otros premios, podemos
+          destacar la Medalla de Oro en la 8° Olimpíada Iberoamericana de Mayo, Medalla de Bronce y
+          Mención de Honor respectivamente en la 47° y 48° Olimpíada Internacional de Matemática
+          (Eslovenia, 2006 y Vietnam, 2007), Medalla de Oro en la 15° Olimpíada Matemática Rioplatense
+          (Escobar, Argentina). Finalista en dos ocasiones (Marruecos, 2015 y Tailandia, 2016) de la ACM ICPC
+          y Campeón Latinoamericano en 2016. Coach Finalista en el 2017 (EEUU). Pablo fue pasante de Google (USA).
+          </p>
+        </div>
+        <div class="row">
+          <h3>Ariel Zylber</h3>
+          <p> Estudiante de la Licenciatura en Ciencias Matemáticas y Licenciado en Ciencias de la Computación
+          de la Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires. Entre los numerosísimos
+          premios que obtuvo, podemos nombrar la Medalla de Oro en la 52° Olimpíada Internacional de Matemática
+          (Amsterdam 2011), dos veces medalla de Oro en la Olimpíada Iberoamericana de Matemática (2011 y 2012),
+          Medalla de Oro en la Olimpíada Matemática del Cono Sur (2010), medalla de Bronce en la 22° Olimpíada
+          Internacional de Informática (Waterloo 2010); entre muchos otros. Finalista en dos ocasiones (2014 y 2015)
+          de la ACM ICPC y Campeón Latinoamericano en 2015. Ariel fue pasante de Facebook (USA).
+          </p>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Contests</h2>
+        </div>
+        <div class="text-center" style="font-size:1.8rem">
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226449">Contest 0</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226449/standings/groupmates/true">Standing</a>
+          </p>
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226479">Contest 1</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226479/standings/groupmates/true">Standing</a>
+          </p>
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226572">Contest 2</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226572/standings/groupmates/true">Standing</a>
+          </p>
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226591">Contest 3</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226591/standings/groupmates/true">Standing</a>
+          </p>
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226696">Contest 4</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226696/standings/groupmates/true">Standing</a>
+          </p>
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226759">Contest 5</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226759/standings/groupmates/true">Standing</a>
+          </p>
+          <p>
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226821">Contest 6</a> -
+          <a href="https://codeforces.com/group/HKdByrdQUN/contest/226821/standings/groupmates/true">Standing</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
