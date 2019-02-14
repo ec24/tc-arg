@@ -1,0 +1,85 @@
+{% extends 'layout.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2012</h1>
+    <h3 class="mb-5" style="color:white">Universidad Nacional de Córdoba</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="images/2012/sponsors/google.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Clases Teóricas</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="pdfs/2012/01-Grafos.pdf">Grafos</a></li>
+              <li><a href="pdfs/2012/02-BS.pdf">Búsqueda Binaria</a></li>
+              <li><a href="pdfs/2012/03-Greedy.pdf">Algoritmos Golosos</a></li>
+              <li><a href="pdfs/2012/04-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="pdfs/2012/05-Aritmetica.pdf">Aritmética</a></li>
+              <li><a href="pdfs/2012/06-Estructuras.pdf">Estructuras de Datos</a></li>
+              <li><a href="pdfs/2012/07-Geometria.pdf">Geometría</a></li>
+              <li><a href="pdfs/2012/08-Strings.pdf">Strings</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Oradores</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Eric Destéfanis', 'Licenciado en Ciencias de la Computación
+        de la Facultad de Matemática, Astronomía, Física y Computación,
+        Universidad Nacional de Córdoba. Finalista en 2010 y 2011 de la ACM ICPC.
+        Actualmente trabaja en Google (USA).') }}
+        {{ speaker('Gastón Ingaramo', 'Licenciado en Ciencias de la Computación
+        de la Facultad de Matemática, Astronomía, Física y Computación,
+        Universidad Nacional de Córdoba. Finalista en 2011 y 2012 de la ACM ICPC.
+        Actualmente trabaja en Google (USA).') }}
+        {{ speaker('Ramiro Lafuente', 'Doctor en Matemática de la Facultad de
+        Matemática, Astronomía, Física y Computación, Universidad Nacional de
+        Córdoba. Finalista en dos oportunidades (2009 y 2010) de la competencia
+        ACM ICPC.') }}
+        {{ speaker('Leopoldo Taravilse', 'Licenciado en Ciencias de la Computación
+        de la Universidad de Buenos Aires. Finalista en dos ocasiones como competidor
+        (2010 y 2012) y en una ocasión como entrenador (2016) siendo campeón
+        latinoamericano. Leopoldo se desempeña como Jefe de Trabajos Prácticos en
+        la carrera de Ciencias de la Computación de la Universidad de Buenos Aires
+        y fue pasante de Google (USA), Facebook (USA) y Medallia (Argentina).')}}
+        {{ speaker('Matías Tealdi', 'Licenciado en Ciencias de la Computación de
+        la Facultad de Matemática, Astronomía, Física y Computación, Universidad
+        Nacional de Córdoba. Finalista en 2011 y 2012 de la ACM ICPC. Actualmente
+        trabaja en Amazon (Canadá).')}}
+      </div>
+    </div>
+{% endblock %}
