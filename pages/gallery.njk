@@ -2,7 +2,7 @@
 
 {% block head %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
-<link rel="stylesheet" href="css/compact-gallery.css">
+<link rel="stylesheet" href="css/grid-gallery.css">
 {% endblock %}
 
 {% block main_header %}
@@ -12,18 +12,18 @@
 {% endblock %}
 
 {% block content %}
-<section class="site-section gallery-block compact-gallery">
+<section class="site-section gallery-block grid-gallery">
     <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto text-center mb-8 section-heading">
             <h2 class="mb-8 text-uppercase">Edición 2018</h2>
           </div>
         </div>
-        <div class="row no-gutters">
+        <div class="row">
             {% for i in range(0,59)%}
-              <div class="col-md-6 col-lg-4 item zoom-on-hover">
+              <div class="col-md-6 col-lg-4 item">
                   <a class="lightbox" href="images/gallery/2018/img_{{i}}.jpg">
-                      <img class="img-fluid image" src="images/gallery/2018/img_{{i}}.jpg">
+                      <img class="img-fluid image scale-on-hover" src="images/gallery/2018/img_{{i}}.jpg">
                   </a>
               </div>
             {% endfor %}
@@ -32,7 +32,7 @@
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 <script>
-    baguetteBox.run('.compact-gallery', { animation: 'slideIn'});
+    baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
 </script>
 
 {% endblock %}
