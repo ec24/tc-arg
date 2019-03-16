@@ -1,0 +1,38 @@
+{% extends 'layout_en.njk' %}
+
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+<link rel="stylesheet" href="../css/grid-gallery.css">
+{% endblock %}
+
+{% block main_header %}
+<div class="col-md-10 text-center" data-aos="fade">
+  <h1 class="mb-4">Gallery</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="site-section gallery-block grid-gallery">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto text-center mb-8 section-heading">
+            <h2 class="mb-8 text-uppercase">2018 Edition</h2>
+          </div>
+        </div>
+        <div class="row">
+            {% for i in range(0,79)%}
+              <div class="col-md-6 col-lg-4 item">
+                  <a class="lightbox" href="../images/gallery/2018/img_{{i}}.jpg">
+                      <img class="img-fluid image scale-on-hover" src="../images/gallery/2018/img_{{i}}.jpg">
+                  </a>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
+</script>
+
+{% endblock %}
