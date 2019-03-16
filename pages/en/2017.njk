@@ -1,0 +1,102 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2017</h1>
+    <h3 class="mb-5" style="color:white">July 17-28, 2017 &bullet; Universidad Nacional de San Martín</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2017/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2017/sponsors/medallia.png" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2017/01-intro.pdf">Introducción al TC</a></li>
+              <li><a href="../pdfs/2017/01-fast-io.pdf">E/S rápida</a></li>
+              <li><a href="../pdfs/2017/01-BS.pdf">Búsqueda binaria</a></li>
+              <li><a href="../pdfs/2017/01-Greedy.pdf">Algoritmos golosos</a></li>
+              <li><a href="../pdfs/2017/02-dp-principiante.pdf">DP Principiante</a></li>
+              <li><a href="../pdfs/2017/02-dp-avanzado.pdf">DP Avanzado</a></li>
+              <li><a href="../pdfs/2017/03-grafos1.pdf">Grafos I</a></li>
+              <li><a href="../pdfs/2017/03-dfs-avanzado.pdf">DFS Avanzado</a></li>
+              <li><a href="../pdfs/2017/04-grafos2.pdf">Grafos II</a></li>
+              <li><a href="../pdfs/2017/05-estructuras.pdf">Estructuras para operadores asociativos</a></li>
+              <li><a href="../pdfs/2017/06-geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2017/06-geometria-avanzado.pdf">Técnicas avanzadas de geometría</a></li>
+              <li><a href="../pdfs/2017/07-strings.pdf">Strings</a></li>
+              <li><a href="../pdfs/2017/08-primalidad.pdf">Primalidad</a></li>
+            </ul>
+            <div class="col-md-7 mx-auto text-center section-heading">
+              <h3 class="mb-5 text-uppercase">Videos</h3>
+            </div>
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=jHRVSIX_pi4">Árboles I</a></li>
+              <li><a href="https://www.youtube.com/watch?v=XRx2nd1XFx8">Árboles II</a></li>
+              <li><a href="https://www.youtube.com/watch?v=4Ugp0MdLPkU">Árboles III</a></li>
+              <li><a href="https://www.youtube.com/watch?v=QCBujq2FNNQ">Estructuras de Datos</a></li>
+              <li><a href="https://www.youtube.com/watch?v=0UDQtcoQgS8">Strings I</a></li>
+              <li><a href="https://www.youtube.com/watch?v=TL6ohqxMiEg">Strings II</a></li>
+              <li><a href="https://www.youtube.com/watch?v=utQP6NKqKDE">Strings III</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Agustín Santiago Gutiérrez', 'M.S. in Computer Science from Universidad de Buenos Aires.
+        Finalist and Latin American Champion twice as contestant (2009 and 2011) and finalist six times as
+        coach (2010, 2013, 2014, 2015, 2016 and 2017), being Latin American Champion in 2015. Agustín is a
+        First class Teaching Assistant at the Computer Science Department of Universidad de Buenos Aires -
+        FCEN. He participated twice of the International Olympiad in Informatics (IOI) obtaining a Silver
+        Medal in 2007. He is a jury and coach of the Argentine National Olympiad in Informatics (OIA).') }}
+        {{ speaker('Leopoldo Taravilse', 'Master\'s in Computer Sciences from Universidad de Buenos Aires.
+        Finalist twice as contestant (2010 and 2012) and once finalist and Latin American Champion (2016).
+        Leopoldo is Head of Teaching Assistants at the Computer Science degree at Universidad de Buenos Aires.
+        He was intern at Google (USA), Facebook (USA) and Medallia (Argentina).')}}
+        {{ speaker('Pablo Blanc','M.S. in Pure Mathematics from Universidad de Buenos Aires. World Finalist
+        of the ACM-ICPC in 2013. Pablo is a PhD student at Universidad de Buenos Aires. He participated of
+        the International Mathematical Olympiad in 2007. He participated twice of the Olimpíada
+        Iberoamericana de Matemática, obtaining a Gold Medal in 2007.') }}
+        {{ speaker('Juan Cruz Piñero','Computer Analyst from Universidad Nacional del Comahue. Host organizer
+        in previous editions of the Argentine Programming Contest, and main organizer of Training Camp
+        Argentina 2016. Juan Cruz is a First class Teaching Assistant at the Informatics Faculty of
+        Universidad Nacional del Comahue.') }}
+      </div>
+    </div>
+{% endblock %}
