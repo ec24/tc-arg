@@ -1,0 +1,62 @@
+{% extends 'layout.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2010</h1>
+    <h3 class="mb-5" style="color:white">Universidad de Buenos Aires</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Clases Teóricas</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="/pdfs/2010/04-Geometria.pdf">Geometría</a></li>
+              <li><a href="/pdfs/2010/05-Flujo.pdf">Flujo</a></li>
+              <li><a href="/pdfs/2010/06-Aritmetica.pdf">Aritmética</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Oradores</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Nicolás Álvarez','Licenciado en Ciencias de la Computación de la Universidad Nacional del
+        Sur. Estudiante del Doctorado en Ciencias de la Computación de la Universidad Nacional del Sur. Finalista
+        como participante (2009) y como coach (2010, 2013, 2015) de la ACM ICPC. Jefe de Trabajos Prácticos en
+        la Universidad Nacional del Sur.')}}
+        {{ speaker('Alejandro Deymonnaz','Licenciado en Ciencias de la Computación de la Facultad de Ciencias
+        Exactas y Naturales, Universidad de Buenos Aires. Finalista y Campeón Latinoamericano en dos
+        oportunidades (2007 y 2009) de la competencia ACM ICPC. Actualmente trabaja en Google (USA).')}}
+        {{ speaker('Pablo Heiber','Doctor en Ciencias de la Computación de la Facultad de Ciencias Exactas
+        y Naturales, Universidad de Buenos Aires. Finalista en dos oportunidades (2005 y 2007) y Campeón
+        Latinoamericano en 2007 de la competencia ACM ICPC. Actualmente trabaja en Google (USA).') }}
+        {{ speaker('Francisco Roslán', 'Estudiante de la Licenciatura en Ciencias de la Computación
+        de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires. Actualmente
+        trabaja en BrightSector.') }}
+        {{ speaker('Martín Safe', 'Doctor en Ciencias de la Computación de la Facultad de Ciencias
+        Exactas y Naturales, Universidad de Buenos Aires. Finalista como coach en 2009 de la competencia
+        ACM ICPC. Actualmente es profesor en la Universidad Nacional del Sur.') }}
+        {{ speaker('Fidel Schaposnik', 'Doctor en Física de la Facultad de Ciencias Exactas,
+        Universidad Nacional de La Plata. Finalista en dos oportunidades (2009 y 2010) de la
+        competencia ACM ICPC.')}}
+      </div>
+    </div>
+{% endblock %}
