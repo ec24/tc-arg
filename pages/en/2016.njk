@@ -1,0 +1,86 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2016</h1>
+    <h3 class="mb-5" style="color:white">Universidad Nacional del Comahue</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2016/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2016/sponsors/medallia.png" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2016/sponsors/neuquen.png" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2016/00-Entrada-salida.pdf">Entrada-Salida</a></li>
+              <li><a href="../pdfs/2016/01-Grafos.pdf">Grafos parte I</a></li>
+              <li><a href="../pdfs/2016/02-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="../pdfs/2016/03-Estructuras.pdf">Estructuras de Datos</a></li>
+              <li><a href="../pdfs/2016/04-DFS.pdf">Grafos parte II</a></li>
+              <li><a href="../pdfs/2016/05-Greedy.pdf">Algoritmos Golosos</a></li>
+              <li><a href="../pdfs/2016/06-BS.pdf">Búsqueda Binaria</a></li>
+              <li><a href="../pdfs/2016/07-Geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2016/08-Flujo.pdf">Flujo</a></li>
+              <li><a href="../pdfs/2016/09-Strings.pdf">Strings</a></li>
+              <li><a href="../pdfs/2016/10-Primalidad.pdf">Aritmética y Primalidad</a></li>
+              <li><a href="../pdfs/2016/11-Juegos.pdf">Teoría de Juegos</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Agustín Santiago Gutiérrez', 'M.S. in Computer Science from Universidad de Buenos Aires.
+        Finalist and Latin American Champion twice as contestant (2009 and 2011) and finalist six times as
+        coach (2010, 2013, 2014, 2015, 2016 and 2017), being Latin American Champion in 2015. Agustín is a
+        First class Teaching Assistant at the Computer Science Department of Universidad de Buenos Aires -
+        FCEN. He participated twice of the International Olympiad in Informatics (IOI) obtaining a Silver
+        Medal in 2007. He is a jury and coach of the Argentine National Olympiad in Informatics (OIA).') }}
+        {{ speaker('Leopoldo Taravilse', 'Master\'s in Computer Sciences from Universidad de Buenos Aires.
+        Finalist twice as contestant (2010 and 2012) and once finalist and Latin American Champion (2016).
+        Leopoldo is Head of Teaching Assistants at the Computer Science degree at Universidad de Buenos Aires.
+        He was intern at Google (USA), Facebook (USA) and Medallia (Argentina).')}}
+        {{ speaker('Quimey Vivas', 'PhD in Mathematics from Facultad de Ciencias Exactas y Naturales,
+        Universidad de Buenos Aires. ACM-ICPC World finalist: both as a contestant (2010) and as a
+        coach (2012). Former Software Engineer at Facebook, Menlo Park, California (USA).') }}
+      </div>
+    </div>
+{% endblock %}
