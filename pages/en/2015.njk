@@ -1,0 +1,92 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2015</h1>
+    <h3 class="mb-5" style="color:white">Universidad Nacional del Sur</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2015/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2015/sponsors/medallia.png" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2015/sponsors/google.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2015/sponsors/facebook.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2015/01-Grafos.pdf">Grafos parte I</a></li>
+              <li><a href="../pdfs/2015/02-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="../pdfs/2015/03-Aritmetica.pdf">Aritmética</a></li>
+              <li><a href="../pdfs/2015/04-Grafos2.pdf">Grafos parte II</a></li>
+              <li><a href="../pdfs/2015/05-Estructuras.pdf">Estructuras de Datos</a></li>
+              <li><a href="../pdfs/2015/06-Arboles.pdf">Árboles</a></li>
+              <li><a href="../pdfs/2015/07-Greedy.pdf">Algoritmos Golosos</a></li>
+              <li><a href="../pdfs/2015/08-Strings.pdf">Strings</a></li>
+              <li><a href="../pdfs/2015/09-Geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2015/10-Juegos.pdf">Teoría de Juegos</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Nicolás Álvarez','M.S. in Computer Science from Universidad Nacional del Sur. Currently
+        pursuing a PhD in Computer Science at Universidad Nacional del Sur. World finalist of the ACM ICPC
+        both as a contestant (2009) and as a coach (2010, 2013, 2015). Head of Teaching Assistants at
+        Universidad Nacional del Sur.')}}
+        {{ speaker('Nicolás Fochesatto', 'Industrial Engineer from Universidad Nacional del Sur. Currently
+        pursuing a PhD in Engineering at Universidad Nacional del Sur. ACM ICPC world finalist in 2013.') }}
+        {{ speaker('Fidel Schaposnik', 'PhD in Physics from Facultad de Ciencias Exactas, Universidad
+        Nacional de La Plata. Two times ACM ICPC world finalist (2009,2010).')}}
+        {{ speaker('Melanie Sclar', 'Currently pursuing both a M.S. in Computer Science and a M.S. in
+        Mathematics at Facultad de Ciencias Exactas y Naturales, Universidad de Buenos Aires. Silver
+        Medal at the 21° Mathematical Olympiad of the Southern Cone (Brasil, 2010); Bronze Medal at
+        the 26° Iberoamerican Mathematical Olympiad (Costa Rica, 2011); National Champion of the 27°
+        Argentine Mathematical Olympiad (2011). Two times world finalist of the ACM ICPC (2014 y 2015),
+        and Latin American Champion in 2015. Two times intern at Facebook (USA).') }}
+        {{ speaker('Leopoldo Taravilse', 'Master\'s in Computer Sciences from Universidad de Buenos Aires.
+        Finalist twice as contestant (2010 and 2012) and once finalist and Latin American Champion (2016).
+        Leopoldo is Head of Teaching Assistants at the Computer Science degree at Universidad de Buenos Aires.
+        He was intern at Google (USA), Facebook (USA) and Medallia (Argentina).')}}
+      </div>
+    </div>
+{% endblock %}
