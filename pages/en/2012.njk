@@ -1,0 +1,79 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2012</h1>
+    <h3 class="mb-5" style="color:white">Universidad Nacional de Córdoba</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2012/sponsors/google.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2012/01-Grafos.pdf">Grafos</a></li>
+              <li><a href="../pdfs/2012/02-BS.pdf">Búsqueda Binaria</a></li>
+              <li><a href="../pdfs/2012/03-Greedy.pdf">Algoritmos Golosos</a></li>
+              <li><a href="../pdfs/2012/04-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="../pdfs/2012/05-Aritmetica.pdf">Aritmética</a></li>
+              <li><a href="../pdfs/2012/06-Estructuras.pdf">Estructuras de Datos</a></li>
+              <li><a href="../pdfs/2012/07-Geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2012/08-Strings.pdf">Strings</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Eric Destéfanis', 'M.S. in Computer Science from Facultad de Matemática,
+        Astronomía, Física y Computación, Universidad Nacional de Córdoba. ACM ICPC world
+        finalist in 2010 y 2011. Currently working at Google (USA).') }}
+        {{ speaker('Gastón Ingaramo', 'M.S. in Computer Science from Facultad de Matemática,
+        Astronomía, Física y Computación, Universidad Nacional de Córdoba. ACM ICPC world
+        finalist in 2011 y 2012. Currently working at Google (USA).') }}
+        {{ speaker('Ramiro Lafuente', 'PhD in Mathematics from Facultad de Matemática, Astronomía,
+        Física y Computación, Universidad Nacional de Córdoba. Two times world finalist at the ACM
+        ICPC (2009 y 2010).') }}
+        {{ speaker('Leopoldo Taravilse', 'Master\'s in Computer Sciences from Universidad de Buenos Aires.
+        Finalist twice as contestant (2010 and 2012) and once finalist and Latin American Champion (2016).
+        Leopoldo is Head of Teaching Assistants at the Computer Science degree at Universidad de Buenos Aires.
+        He was intern at Google (USA), Facebook (USA) and Medallia (Argentina).')}}
+        {{ speaker('Matías Tealdi', 'M.S. in Computer Science from Facultad de Matemática, Astronomía,
+        Física y Computación, Universidad Nacional de Córdoba. Two times world finalist of the ACM ICPC
+        (2011, 2012). Currently working at Amazon (Canada).')}}
+      </div>
+    </div>
+{% endblock %}

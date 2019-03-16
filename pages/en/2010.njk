@@ -1,0 +1,60 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2010</h1>
+    <h3 class="mb-5" style="color:white">Universidad de Buenos Aires</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2010/04-Geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2010/05-Flujo.pdf">Flujo</a></li>
+              <li><a href="../pdfs/2010/06-Aritmetica.pdf">Aritmética</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Nicolás Álvarez','M.S. in Computer Science from Universidad Nacional del Sur. Currently
+        pursuing a PhD in Computer Science at Universidad Nacional del Sur. World finalist of the ACM ICPC
+        both as a contestant (2009) and as a coach (2010, 2013, 2015). Head of Teaching Assistants at
+        Universidad Nacional del Sur.')}}
+        {{ speaker('Alejandro Deymonnaz', 'M.S. in Computer Science from Facultad de Ciencias Exactas y Naturales,
+        Universidad de Buenos Aires. Two times ACM ICPC world finalist (2007 y 2009) and Latin American Champion
+        both times. Currently working at Google (USA).')}}
+        {{ speaker('Pablo Heiber','PhD in Computer Science from Facultad de Ciencias Exactas y Naturales,
+        Universidad de Buenos Aires. Two time world finalist at ACM ICPC (2005, 2007) and Latin American Champion
+        in 2007. Currently working at Google (USA).')}}
+        {{ speaker('Francisco Roslán', 'Currently pursuing a M.S. in Computer Science at Facultad de Ciencias
+        Exactas y Naturales de la Universidad de Buenos Aires. Working at BrightSector Algorithms.') }}
+        {{ speaker('Martín Safe', 'PhD in Computer Science from Facultad de Ciencias Exactas y Naturales,
+        Universidad de Buenos Aires. World finalist of the ACM ICPC 2009 as a coach. He is a professor at
+        Universidad Nacional del Sur.') }}
+        {{ speaker('Fidel Schaposnik', 'PhD in Physics from Facultad de Ciencias Exactas, Universidad
+        Nacional de La Plata. Two times ACM ICPC world finalist (2009,2010).')}}
+      </div>
+    </div>
+{% endblock %}

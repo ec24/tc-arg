@@ -1,0 +1,76 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2011</h1>
+    <h3 class="mb-5" style="color:white">Universidad de Buenos Aires</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2011/sponsors/google.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2011/01-Grafos.pdf">Grafos</a></li>
+              <li><a href="../pdfs/2011/02-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="../pdfs/2011/03-Aritmetica.pdf">Aritmética</a></li>
+              <li><a href="../pdfs/2011/04-Geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2011/05-Estructuras.pdf">Estructuras de Datos</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Agustín Santiago Gutiérrez', 'M.S. in Computer Science from Universidad de Buenos Aires.
+        Finalist and Latin American Champion twice as contestant (2009 and 2011) and finalist six times as
+        coach (2010, 2013, 2014, 2015, 2016 and 2017), being Latin American Champion in 2015. Agustín is a
+        First class Teaching Assistant at the Computer Science Department of Universidad de Buenos Aires -
+        FCEN. He participated twice of the International Olympiad in Informatics (IOI) obtaining a Silver
+        Medal in 2007. He is a jury and coach of the Argentine National Olympiad in Informatics (OIA).') }}
+        {{ speaker('Joaquín Rodrigues', 'PhD in Mathematics from the University of Paris VI. Two times ACM
+        International Collegiate Programming Contest (ICPC) world finalist (2009, 2010).') }}
+        {{ speaker('Francisco Roslán', 'Currently pursuing a M.S. in Computer Science at Facultad de Ciencias
+        Exactas y Naturales de la Universidad de Buenos Aires. Working at BrightSector Algorithms.') }}
+        {{ speaker('Fidel Schaposnik', 'PhD in Physics from Facultad de Ciencias Exactas, Universidad
+        Nacional de La Plata. Two times ACM ICPC world finalist (2009,2010).')}}
+        {{ speaker('Leopoldo Taravilse', 'Master\'s in Computer Sciences from Universidad de Buenos Aires.
+        Finalist twice as contestant (2010 and 2012) and once finalist and Latin American Champion (2016).
+        Leopoldo is Head of Teaching Assistants at the Computer Science degree at Universidad de Buenos Aires.
+        He was intern at Google (USA), Facebook (USA) and Medallia (Argentina).')}}
+      </div>
+    </div>
+{% endblock %}
