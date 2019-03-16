@@ -1,0 +1,83 @@
+{% extends 'layout_en.njk' %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2013</h1>
+    <h3 class="mb-5" style="color:white">Universidad Nacional de La Plata</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-5 section-heading">
+          <h2 class="mb-5 text-uppercase">Sponsors</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2013/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-6 col-md-6 col-lg-4">
+          <img src="../images/2013/sponsors/google.jpg" alt="Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Lectures</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <ul>
+              <li><a href="../pdfs/2013/01-Aritmetica.pdf">Aritmética</a></li>
+              <li><a href="../pdfs/2013/02-Grafos.pdf">Grafos</a></li>
+              <li><a href="../pdfs/2013/03-Estructuras.pdf">Estructuras</a></li>
+              <li><a href="../pdfs/2013/04-Geometria.pdf">Geometría</a></li>
+              <li><a href="../pdfs/2013/05-DP.pdf">Programación Dinámica</a></li>
+              <li><a href="../pdfs/2013/06-Greedy+BS.pdf">Algoritmos golosos y búsqueda binaria</a></li>
+              <li><a href="../pdfs/2013/07-Strings.pdf">Strings</a></li>
+              <li><a href="../pdfs/2013/08-Juegos.pdf">Teoría de Juegos</a></li>
+              <li><a href="../pdfs/2013/09-Flujo.pdf">Flujo</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mx-auto text-center section-heading">
+            <h2 class="mb-5 text-uppercase">Speakers</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        {% from 'edition_macros.njk' import 'speaker' %}
+        {{ speaker('Nicolás Álvarez','M.S. in Computer Science from Universidad Nacional del Sur. Currently
+        pursuing a PhD in Computer Science at Universidad Nacional del Sur. World finalist of the ACM ICPC
+        both as a contestant (2009) and as a coach (2010, 2013, 2015). Head of Teaching Assistants at
+        Universidad Nacional del Sur.')}}
+        {{ speaker('Agustín Santiago Gutiérrez', 'M.S. in Computer Science from Universidad de Buenos Aires.
+        Finalist and Latin American Champion twice as contestant (2009 and 2011) and finalist six times as
+        coach (2010, 2013, 2014, 2015, 2016 and 2017), being Latin American Champion in 2015. Agustín is a
+        First class Teaching Assistant at the Computer Science Department of Universidad de Buenos Aires -
+        FCEN. He participated twice of the International Olympiad in Informatics (IOI) obtaining a Silver
+        Medal in 2007. He is a jury and coach of the Argentine National Olympiad in Informatics (OIA).') }}
+        {{ speaker('Fidel Schaposnik', 'PhD in Physics from Facultad de Ciencias Exactas, Universidad
+        Nacional de La Plata. Two times ACM ICPC world finalist (2009,2010).')}}
+        {{ speaker('Leopoldo Taravilse', 'Master\'s in Computer Sciences from Universidad de Buenos Aires.
+        Finalist twice as contestant (2010 and 2012) and once finalist and Latin American Champion (2016).
+        Leopoldo is Head of Teaching Assistants at the Computer Science degree at Universidad de Buenos Aires.
+        He was intern at Google (USA), Facebook (USA) and Medallia (Argentina).')}}
+      </div>
+    </div>
+{% endblock %}
