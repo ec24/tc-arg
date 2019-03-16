@@ -8,5 +8,5 @@ gulp.task('nunjucks', function() {
       path: ['templates']
     }))
   // output files in app folder
-  .pipe(gulp.dest('.'))
+  .pipe(gulp.dest('docs/'))
 });
