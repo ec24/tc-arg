@@ -1,0 +1,150 @@
+{% extends 'layout_en.njk' %}
+
+{% block head %}<link rel="stylesheet" href="../css/2019.css">{% endblock %}
+
+{% block current_url %}2019.html{% endblock %}
+
+{% block main_header %}
+  <div class="col-md-10 text-center" data-aos="fade">
+    <h1 class="mb-4">Training Camp Argentina 2019</h1>
+    <h3 class="mb-5" style="color:white">8-19 Julio, 2019 &bullet; Universidad Nacional de Córdoba</h3>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="site-section" id="cronograma">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center mb-4 section-heading">
+          <h2 class="text-uppercase">Schedule</h2>
+          <h3>(tentative)</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="table-responsive text-nowrap">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th class="col-sm-1"></th>
+                <th>Día 1 (Monday 8)</th>
+                <th>Día 2 (Tuesday 9)</th>
+                <th>Día 3 (Wednesday 10)</th>
+                <th>Día 4 (Thursday 11)</th>
+                <th>Día 5 (Friday 12)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00 - 11:00</td>
+                <td class="table-registracion">Registration</td>
+                <td rowspan="2" class="table-charla">Sponsors talk + resolution</td>
+                <td rowspan="2" class="table-contest" colspan="3">Contest</td>
+              </tr>
+              <tr>
+                <td>11:00 - 13:00</td>
+                <td class="table-contest">Short contest</td>
+              </tr>
+              <tr>
+                <td>13:00 - 14:30</td>
+                <td class="table-comida" colspan="5">Lunch</td>
+              </tr>
+              <tr>
+                <td>14:30 - 16:30</td>
+                <td class="table-charla" colspan="5">Class</td>
+              </tr>
+              <tr>
+                <td>16:30 - 16:45</td>
+                <td class="table-comida" colspan="5">Coffee break</td>
+              </tr>
+              <tr>
+                <td>16:45 - 18:00</td>
+                <td class="table-charla">Talk about strategy</td>
+                <td class="table-upsolving" colspan="4">Upsolving</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="table-responsive text-nowrap">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th class="col-sm-1"></th>
+                <th>Día 6 (Monday 8)</th>
+                <th>Día 7 (Tuesday 9)</th>
+                <th>Día 8 (Wednesday 10)</th>
+                <th>Día 9 (Thursday 11)</th>
+                <th>Día 10 (Friday 12)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00 - 11:00</td>
+                <td rowspan="2" class="table-contest" colspan="2">Contest</td>
+                <td class="table-charla" rowspan="2">Resolution</td>
+                <td rowspan="2" class="table-contest" colspan="2">Contest</td>
+              </tr>
+              <tr>
+                <td>11:00 - 13:00</td>
+              </tr>
+              <tr>
+                <td>13:00 - 14:30</td>
+                <td class="table-comida" colspan="5">Lunch</td>
+              </tr>
+              <tr>
+                <td>14:30 - 16:30</td>
+                <td class="table-charla" colspan="4">Class</td>
+                <td class="table-charla" colspan="4">Feedback + Closing Ceremony</td>
+              </tr>
+              <tr>
+                <td>16:30 - 16:45</td>
+                <td class="table-comida" colspan="5">Coffee break</td>
+              </tr>
+              <tr>
+                <td>16:45 - 18:00</td>
+                <td class="table-upsolving" colspan="4">Upsolving</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+          <h2 class="mb-3 text-uppercase">Classes</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-md-6 mb-3">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-info">Inicial</li>
+            <li class="list-group-item">Lunes 8: E/S + Intro (Agus)</li>
+            <li class="list-group-item">Martes 9: Matemática (Luis)</li>
+            <li class="list-group-item">Miércoles 10: Greedy (Ema)</li>
+            <li class="list-group-item">Jueves 11: Grafos Avanzado (Eric)</li>
+            <li class="list-group-item">Viernes 12: Grafos (Hector)</li>
+            <li class="list-group-item">Lunes 15: Strings (Juan Cruz) </li>
+            <li class="list-group-item">Martes 16: Estructuras (Seba)</li>
+            <li class="list-group-item">Miércoles 17: Upsolving</li>
+            <li class="list-group-item">Jueves 18: DP (Eric)</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-info">Avanzado</li>
+            <li class="list-group-item">Lunes 8: Matemática++ (Luis)</li>
+            <li class="list-group-item">Martes 9: Teoría de Números (Brian)</li>
+            <li class="list-group-item">Miércoles 10: Geometría (Brian)</li>
+            <li class="list-group-item">Jueves 11: Grafos Avanzado (Eric)</li>
+            <li class="list-group-item">Viernes 12: Teoría de Juegos (Agus)</li>
+            <li class="list-group-item">Lunes 15: Upsolving </li>
+            <li class="list-group-item">Martes 16: Suffix autómata (Marcos)</li>
+            <li class="list-group-item">Miércoles 17: Upsolving</li>
+            <li class="list-group-item">Jueves 18: DP Avanzada (Agus)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
