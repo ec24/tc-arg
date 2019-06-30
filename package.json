@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ec24/tmp#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "lodash": "^4.17.11"
   },
