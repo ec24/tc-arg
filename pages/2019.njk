@@ -12,175 +12,221 @@
 {% endblock %}
 
 {% block content %}
-  <div class="site-section">
-    <div class="container" id="cronograma" style="padding:4.5em 0 0 0">
-      <div class="row">
-        <div class="col-md-6 mx-auto text-center mb-4 section-heading">
-          <h2 class="text-uppercase">Cronograma</h2>
-          <h3>(tentativo)</h3>
-        </div>
-      </div>
-
-      <div class="row">
-        <p><i>ACLARACIÓN</i>: <b>Aulas</b> comprenden a las aulas 13 y 17. <b>Labs</b> comprenden a los laboratorios IPT, 28 y 30. Todos estos lugares se encuentran dentro de la <a href="#ubicacion">Facultad de Matemática, Astronomía, Física y Computación</a> de la UNC.</p>
-        <div class="table-responsive text-nowrap">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th class="col-sm-1"></th>
-                <th>Día 1 (Lunes 8)</th>
-                <th>Día 2 (Martes 9)</th>
-                <th>Día 3 (Miércoles 10)</th>
-                <th>Día 4 (Jueves 11)</th>
-                <th>Día 5 (Viernes 12)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>09:00 - 11:00</td>
-                <td class="table-registracion">Registración: Aulas</td>
-                <td rowspan="2" class="table-charla">Charla sponsors + resolución: Aulas</td>
-                <td rowspan="2" class="table-contest" colspan="3">Contest: Labs</td>
-              </tr>
-              <tr>
-                <td>11:00 - 13:00</td>
-                <td class="table-contest">Contest corto: Labs</td>
-              </tr>
-              <tr>
-                <td>13:00 - 14:30</td>
-                <td class="table-comida" colspan="5">Almuerzo</td>
-              </tr>
-              <tr>
-                <td>14:30 - 16:30</td>
-                <td class="table-charla" colspan="5">Clase Teórica: Aulas</td>
-              </tr>
-              <tr>
-                <td>16:30 - 16:45</td>
-                <td class="table-comida" colspan="5">Coffee break</td>
-              </tr>
-              <tr>
-                <td>16:45 - 18:00</td>
-                <td class="table-charla">Charla sobre estrategias: Aulas</td>
-                <td class="table-upsolving" colspan="4">Upsolving: Aulas</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="row">
-        <div class="table-responsive text-nowrap">
-          <table class="table table-sm">
-            <thead>
-              <tr>
-                <th class="col-sm-1"></th>
-                <th>Día 6 (Lunes 15)</th>
-                <th>Día 7 (Martes 16)</th>
-                <th>Día 8 (Miércoles 17)</th>
-                <th>Día 9 (Jueves 18)</th>
-                <th>Día 10 (Viernes 19)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>09:00 - 11:00</td>
-                <td rowspan="2" class="table-contest" colspan="2">Contest: Labs</td>
-                <td class="table-charla" rowspan="2">Resolución: Aulas</td>
-                <td class="table-contest" rowspan="2">Topcoder Contest: Competencia, Premios y Análisis de los problemas</td>
-                <td rowspan="2" class="table-contest" colspan="1">Contest: Labs</td>
-              </tr>
-              <tr>
-                <td>11:00 - 13:00</td>
-              </tr>
-              <tr>
-                <td>13:00 - 14:30</td>
-                <td class="table-comida" colspan="5">Almuerzo</td>
-              </tr>
-              <tr>
-                <td>14:30 - 16:30</td>
-                <td class="table-charla" colspan="2">Clase Teórica: Aulas</td>
-                <td class="table-charla" colspan="1">Charla Avature (<a href="#charla-avature">más info</a>)</td>
-                <td class="table-charla" colspan="1">Clase Teórica: Aulas</td>
-                <td class="table-cierre" colspan="1">Feedback + Cierre: Aulas</td>
-              </tr>
-              <tr>
-                <td>16:30 - 16:45</td>
-                <td class="table-comida" colspan="5">Coffee break</td>
-              </tr>
-              <tr>
-                <td>16:45 - 18:00</td>
-                <td class="table-upsolving" colspan="4">Upsolving: Aulas</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mx-auto text-center">
-          <h2 class="mb-3 text-uppercase">Clases teóricas</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-6 mb-3">
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-info">Inicial</li>
-            <li class="list-group-item">Lunes 8: E/S + Intro (Agustín Gutiérrez)</li>
-            <li class="list-group-item">Martes 9: Matemática (Luis Ferroni)</li>
-            <li class="list-group-item">Miércoles 10: Greedy (Emanuel Lupi)</li>
-            <li class="list-group-item">Jueves 11: Grafos (Hector Peña Pollastri)</li>
-            <li class="list-group-item">Viernes 12: BS + Sorting (Juan Cruz Piñero)</li>
-            <li class="list-group-item">Lunes 15: Strings (Juan Cruz Piñero) </li>
-            <li class="list-group-item">Martes 16: Estructuras (Sebastian Marin)</li>
-            <li class="list-group-item">Jueves 18: DP (Eric Destefanis)</li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <ul class="list-group">
-            <li class="list-group-item list-group-item-info">Avanzado</li>
-            <li class="list-group-item">Lunes 8: Matemática++ (Luis Ferroni)</li>
-            <li class="list-group-item">Martes 9: Teoría de Números (Brian Morris)</li>
-            <li class="list-group-item">Miércoles 10: Geometría (Brian Morris)</li>
-            <li class="list-group-item">Jueves 11: Grafos Avanzado (Eric Destefanis)</li>
-            <li class="list-group-item">Viernes 12: Teoría de Juegos (Agustín Gutiérrez)</li>
-            <li class="list-group-item">Lunes 15: Upsolving </li>
-            <li class="list-group-item">Martes 16: Suffix autómata (Marcos Kolodny)</li>
-            <li class="list-group-item">Jueves 18: DP Avanzada (Agustín Gutiérrez)</li>
-          </ul>
-        </div>
+<div class="site-section">
+  <div class="container" id="cronograma" style="padding:4.5em 0 0 0">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center mb-4 section-heading">
+        <h2 class="text-uppercase">Cronograma</h2>
+        <h3>(tentativo)</h3>
       </div>
     </div>
-    <div class="container" id="ubicacion" style="padding:4.5em 0 0 0">
-      <div class="row">
-        <div class="col-md-6 mx-auto text-center mb-4 section-heading">
-          <h2 class="text-uppercase">Ubicación</h2>
-        </div>
+
+    <div class="row">
+      <p><i>ACLARACIÓN</i>: <b>Aulas</b> comprenden a las aulas 13 y 17. <b>Labs</b> comprenden a los laboratorios IPT, 28 y 30. Todos estos lugares se encuentran dentro de la <a href="#ubicacion">Facultad de Matemática, Astronomía, Física y Computación</a> de la UNC.</p>
+      <div class="table-responsive text-nowrap">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th class="col-1"></th>
+              <th>Día 1 (Lunes 8)</th>
+              <th>Día 2 (Martes 9)</th>
+              <th>Día 3 (Miércoles 10)</th>
+              <th>Día 4 (Jueves 11)</th>
+              <th>Día 5 (Viernes 12)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 - 11:00</td>
+              <td class="table-registracion">Registración: Aulas</td>
+              <td rowspan="2" class="table-charla">A definir</td>
+              <td rowspan="2" class="table-contest" colspan="3">Contest: Labs</td>
+            </tr>
+            <tr>
+              <td>11:00 - 13:00</td>
+              <td class="table-contest">Contest corto: Labs</td>
+            </tr>
+            <tr>
+              <td>13:00 - 14:30</td>
+              <td class="table-comida" colspan="5">Almuerzo</td>
+            </tr>
+            <tr>
+              <td>14:30 - 16:30</td>
+              <td class="table-charla" colspan="5">Clase Teórica: Aulas</td>
+            </tr>
+            <tr>
+              <td>16:30 - 16:45</td>
+              <td class="table-comida" colspan="5">Coffee break</td>
+            </tr>
+            <tr>
+              <td>16:45 - 18:00</td>
+              <td class="table-charla">Charla sobre estrategias: Aulas</td>
+              <td class="table-upsolving" colspan="4">Resolución: Aulas</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div class="row">
-        <div class="embed-responsive embed-responsive-16by9 col-xs-12 text-center">
-          <iframe class="embed-responsive-item" width="600" height="450" frameborder="0" style="border:0"
+    </div>
+    <div class="row">
+      <div class="table-responsive text-nowrap">
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th class="col-1 col-sm-1"></th>
+              <th class="col">Día 6 (Lunes 15)</th>
+              <th class="col">Día 7 (Martes 16)</th>
+              <th class="col">Día 8 (Miércoles 17)</th>
+              <th class="col">Día 9 (Jueves 18)</th>
+              <th class="col">Día 10 (Viernes 19)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>09:00 - 11:00</td>
+              <td rowspan="2" class="table-contest" colspan="2">Contest: Labs</td>
+              <td class="table-charla" rowspan="2">Resolución: Aulas</td>
+              <td class="table-contest" rowspan="2">Topcoder Contest: Labs <br>(<a href="#topcoder-contest">más info</a>)</td>
+              <td rowspan="2" class="table-contest" colspan="1">Contest: Labs</td>
+            </tr>
+            <tr>
+              <td>11:00 - 13:00</td>
+            </tr>
+            <tr>
+              <td>13:00 - 14:30</td>
+              <td class="table-comida" colspan="5">Almuerzo</td>
+            </tr>
+            <tr>
+              <td>14:30 - 16:30</td>
+              <td class="table-charla" colspan="2">Clase Teórica: Aulas</td>
+              <td class="table-charla" colspan="1">Charla Avature (<a href="#charla-avature">más info</a>)</td>
+              <td class="table-charla" colspan="1">Clase Teórica: Aulas</td>
+              <td class="table-cierre" colspan="1">Feedback + Cierre: Aulas</td>
+            </tr>
+            <tr>
+              <td>16:30 - 16:45</td>
+              <td class="table-comida" colspan="5">Coffee break</td>
+            </tr>
+            <tr>
+              <td>16:45 - 18:00</td>
+              <td class="table-upsolving" colspan="4">Resolución: Aulas</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center">
+        <h2 class="mb-3 text-uppercase">Clases teóricas</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 mb-3">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-info">Inicial</li>
+          <li class="list-group-item">Lunes 8: E/S + Intro (Agustín Gutiérrez)</li>
+          <li class="list-group-item">Martes 9: Matemática (Luis Ferroni)</li>
+          <li class="list-group-item">Miércoles 10: Greedy (Emanuel Lupi)</li>
+          <li class="list-group-item">Jueves 11: Grafos (Hector Peña Pollastri)</li>
+          <li class="list-group-item">Viernes 12: BS + Sorting (Juan Cruz Piñero)</li>
+          <li class="list-group-item">Lunes 15: Strings (Juan Cruz Piñero) </li>
+          <li class="list-group-item">Martes 16: Estructuras (Sebastian Marin)</li>
+          <li class="list-group-item">Jueves 18: DP (Eric Destefanis)</li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-info">Avanzado</li>
+          <li class="list-group-item">Lunes 8: Matemática++ (Luis Ferroni)</li>
+          <li class="list-group-item">Martes 9: Teoría de Números (Brian Morris)</li>
+          <li class="list-group-item">Miércoles 10: Geometría (Brian Morris)</li>
+          <li class="list-group-item">Jueves 11: Grafos Avanzado (Eric Destefanis)</li>
+          <li class="list-group-item">Viernes 12: Teoría de Juegos (Agustín Gutiérrez)</li>
+          <li class="list-group-item">Lunes 15: Upsolving </li>
+          <li class="list-group-item">Martes 16: Suffix autómata (Marcos Kolodny)</li>
+          <li class="list-group-item">Jueves 18: DP Avanzada (Agustín Gutiérrez)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="ubicacion" style="padding:4.5em 0 0 0">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center mb-4 section-heading">
+        <h2 class="text-uppercase">Ubicación</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="embed-responsive embed-responsive-16by9 col-xs-12 text-center">
+        <iframe class="embed-responsive-item" width="600" height="450" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJhQkIDPWiMpQRJugJ_mZMHuw&key=AIzaSyAIU1meHjm1ZzEi2M4ZXz14WBmSeUha2EY" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding:4.5em 0 0 0">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center mb-4 section-heading">
+        <h2 class="text-uppercase">Sponsors</h2>
+      </div>
+    </div>
+    <div class="row d-block">
+      <h5 class="font-weight-bold text-uppercase display-5">Platinum</h5>
+    </div>
+    <div class="row" style="height:5px"></div>
+    <div class="row">
+      <div class="col-6 col-md-6 col-lg-4">
+        <img src="images/2015/sponsors/facebook.jpg" alt="Image" class="img-fluid">
+      </div>
+    </div>
+    <div class="row d-block">
+      <h5 class="font-weight-bold text-uppercase display-5">Gold</h5>
+    </div>
+     <div class="row" style="height:5px"></div>
+    <div class="row">
+      <div class="col-6 col-md-6 col-lg-4">
+        <img src="images/2019/sponsors/avature.png" alt="Image" class="img-fluid">
+      </div>
+      <div class="col-6 col-md-6 col-lg-4">
+        <img src="images/2019/sponsors/TopcoderLogo_Primary_FullColor.png" alt="Image" class="img-fluid">
+      </div>
+    </div>
+    <div class="row">
+      <h5 class="font-weight-bold text-uppercase display-5">Silver</h5>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-6 col-lg-4">
+        <img src="images/2019/sponsors/sadosky.jpg" alt="Image" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="container" id="charla-sponsors" style="padding:4.5em 0 0 0">
+    <div class="row">
+      <div class="col-md-6 mx-auto text-center mb-4 section-heading">
+        <h2 class="text-uppercase">Actividades de sponsors</h2>
+      </div>
+    </div>
+    <div class="row" id="charla-avature">
+      <div class="card bg-light mb-3">
+        <div class="card-header">
+          Avature: Charla
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Más allá del orden complejidad. Identificando problemas de rendimiento en tiempo real</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Pablo Factorovich, ex profesor de UBA-FCEN, ex consultor de Fundación Sadosky</h6>
+          <p class="card-text">La teoría desarrollada por Knuth y otros indica que debemos focalizarnos en encontrar algoritmos con el mejor orden de complejidad posible para nuestros problemas. Eso está muy bien pero muchas veces no alcanza. Resolver una tarea en medio segundo no es lo mismo que hacerlo en 3 para la usabilidad de un sistema online, así que el tamaño de las constantes importa. Por otra parte, qué pasa si se introducen bugs de rendimiento (no funcionales) que se producen al desarrollar de un sistema en el que trabajan cientos de personas produciendo versiones nuevas todas las semanas? Y qué rol juega a la infraestructura, cuando hay decenas de servidores productivos?
+
+          En esta charla discutiremos cómo podemos identificar problemas de rendimiento en tiempo real para los millones de llamadas por día que realizan miles de usuarios trabajando para cientos de clientes de un producto SaaS. Y, más importante, sus causas.</p>
         </div>
       </div>
     </div>
-    <div class="container" id="charla-sponsors" style="padding:4.5em 0 0 0">
-      <div class="row">
-        <div class="col-md-6 mx-auto text-center mb-4 section-heading">
-          <h2 class="text-uppercase">Charla sponsors</h2>
+    <div class="row" id="topcoder-contest">
+      <div class="col-12 card bg-light mb-3">
+        <div class="card-header">
+          Topcoder: Contest
         </div>
-      </div>
-      <div class="row" id="charla-avature">
-        <div class="card bg-light mb-3">
-          <div class="card-header">
-            Avature
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Más allá del orden complejidad. Identificando problemas de rendimiento en tiempo real</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Pablo Factorovich, ex profesor de UBA-FCEN, ex consultor de Fundación Sadosky</h6>
-            <p class="card-text">La teoría desarrollada por Knuth y otros indica que debemos focalizarnos en encontrar algoritmos con el mejor orden de complejidad posible para nuestros problemas. Eso está muy bien pero muchas veces no alcanza. Resolver una tarea en medio segundo no es lo mismo que hacerlo en 3 para la usabilidad de un sistema online, así que el tamaño de las constantes importa. Por otra parte, qué pasa si se introducen bugs de rendimiento (no funcionales) que se producen al desarrollar de un sistema en el que trabajan cientos de personas produciendo versiones nuevas todas las semanas? Y qué rol juega a la infraestructura, cuando hay decenas de servidores productivos?
-
-            En esta charla discutiremos cómo podemos identificar problemas de rendimiento en tiempo real para los millones de llamadas por día que realizan miles de usuarios trabajando para cientos de clientes de un producto SaaS. Y, más importante, sus causas.</p>
-          </div>
+        <div class="card-body">
+          <p class="card-text">Competencia, Premios y Análisis de los problemas</p>
         </div>
       </div>
     </div>
   </div>
+</div>
 {% endblock %}
