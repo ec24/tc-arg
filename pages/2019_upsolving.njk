@@ -74,7 +74,7 @@ var update_with_contest_data = (validated, idx) => function( data ) {
       valid_accounts.add(id);
     }
     if(!(id in teams) && validated){
-      teams[id] = {'name': name[0], 'contests': new Array(contests_id.length).fill(0).map((a,b) => new Set())};
+      teams[id] = {'username': name[0], 'name': name[1], 'contests': new Array(contests_id.length).fill(0).map((a,b) => new Set())};
     }
   });
   $.each( data['submissions'], function(key, val){
@@ -133,12 +133,12 @@ var show_upsolving_scoreboard = function(){
       position = key + 1;
     }
     content += '<tr><td>' + position + '</td><td>' + val['name'] + '<br>';
-    if(val['name'] in medals){
+    if(val['username'] in medals){
       for(var i=0; i<3; i++){
-        if(medals[val['name']][i] > 0){
+        if(medals[val['username']][i] > 0){
           content += '<div class="medal-holder">';
           content += '<i class="fas fa-medal ' + medals_str[i] + '-medal"></i>';
-          content += '<span class="badge count">'+ medals[val['name']][i] +'</span>';
+          content += '<span class="badge count">'+ medals[val['username']][i] +'</span>';
           content += '</div> ';
         }
       }
@@ -165,3 +165,4 @@ show_upsolving_scoreboard();
 
 </script>
 {% endblock %}
+
