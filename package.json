@@ -19,7 +19,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.14"
   },
   "dependencies": {
     "npx": "^10.2.0"
