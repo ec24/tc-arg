@@ -95,12 +95,14 @@ var show_upsolving_scoreboard = function(){
     for(var idx=0; idx<contests_id.length; idx++){
       content += '<td>';
       for(var i=0; i<contests_lengths[idx]; i++){
+        if(i == 8)content += '<br>';
         content += '<span style="color:';
         if(val['contests'][idx].has(i)){content+='#33CC66';}
         else{content += '#D3D3D3';}
         content += '">' + alpha[i] + '</span>';
       }
-      content += ' | ' + solved_per_contests[idx] + '</td>';
+
+      content += ' ('+solved_per_contests[idx] + ')</td>';
     }
     content += '<td>'+ problems_solved +'</td></tr>';
   });
