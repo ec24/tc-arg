@@ -76,7 +76,6 @@ var show_upsolving_scoreboard = function(){
   $.each(teams_arr, function(key, val){
     var solved_per_contests = map_size(val['contests']);
     var problems_solved = array_Sum(solved_per_contests);
-    console.log(problems_solved + ' ' + last_problem_solved);
     if(last_problem_solved > problems_solved){
       last_problem_solved = problems_solved;
       position = key + 1;
