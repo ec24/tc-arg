@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+
   </head>
   <body>
 
@@ -90,6 +92,32 @@
     </div>
   </div>
 </div>
+
+<style>
+.medal-holder{
+  position:relative;
+  display:inline;
+}
+.count{
+  z-index: 1;
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+}
+.gold-medal{
+  font-size:24px;
+  color:gold;
+}
+.silver-medal{
+  font-size:24px;
+  color:silver;
+}
+.bronze-medal{
+  font-size:24px;
+  color:#cd7f32;
+}
+</style>
+
 <script>
 var teams = {};
 var get_team_id = id => {
@@ -111,7 +139,7 @@ var update_with_contest_data = (validated, idx) => function( data ) {
       valid_accounts.add(id);
     }
     if(!(id in teams) && validated){
-      teams[id] = {'name': name[1], 'contests': new Array(contests_id.length).fill(0).map((a,b) => new Set())};
+      teams[id] = {'name': name[0], 'contests': new Array(contests_id.length).fill(0).map((a,b) => new Set())};
     }
   });
   $.each( data['submissions'], function(key, val){
@@ -144,9 +172,20 @@ teams_arr.sort( function(a, b){
   return cnt_b - cnt_a;
 });
 
+var medals = {
+  'InChaVoLa': [3, 1, 0],
+  'ggdem': [0, 2, 1],
+  'NoFuePenalCsm': [0, 0, 1],
+  'QuePerdio': [0, 1, 0],
+  'argipop': [1, 0, 1],
+  'ThreePointers': [0, 0, 1],
+};
+
+var medals_str = ['gold', 'silver', 'bronze'];
+
 var show_upsolving_scoreboard = function(){
   var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var content = '<div class="table-responsive text-nowrap"><table class="table table-sm"><thead><th>Posición</th><th>Equipo</th><th>Contest#1</th><th>Contest#2</th><th>Contest#3</th><th>Contest#4</th><th>Total</th></thead><tbody>';
+  var content = '<div class="table-responsive text-nowrap"><table class="table table-sm"><thead><th>Pos</th><th>Equipo</th><th>Contest#1</th><th>Contest#2</th><th>Contest#3</th><th>Contest#4</th><th>Total</th></thead><tbody>';
   var last_problem_solved = 0, position = 0;
   if(teams_arr.length > 0){
     last_problem_solved = 1 + array_Sum(map_size(teams_arr[0]['contests']));
@@ -158,7 +197,18 @@ var show_upsolving_scoreboard = function(){
       last_problem_solved = problems_solved;
       position = key + 1;
     }
-    content += '<tr><td>' + position + '</td><td>' + val['name'] + '</td>';
+    content += '<tr><td>' + position + '</td><td>' + val['name'] + '<br>';
+    if(val['name'] in medals){
+      for(var i=0; i<3; i++){
+        if(medals[val['name']][i] > 0){
+          content += '<div class="medal-holder">';
+          content += '<i class="fas fa-medal ' + medals_str[i] + '-medal"></i>';
+          content += '<span class="badge count">'+ medals[val['name']][i] +'</span>';
+          content += '</div> ';
+        }
+      }
+    }
+    content += '</td>';
     for(var idx=0; idx<contests_id.length; idx++){
       content += '<td>';
       for(var i=0; i<contests_lengths[idx]; i++){
