@@ -133,17 +133,33 @@ teams_arr.sort( function(a, b){
   var cnt_b = array_Sum(map_size(b['contests']));
   return cnt_b - cnt_a;
 });
-var content = '<div class="table-responsive text-nowrap"><table class="table table-sm"><thead><th>Equipo</th><th>Contest#1</th><th>Contest#2</th><th>Contest#3</th><th>Contest#4</th><th>Total</th></thead><tbody>';
-$.each(teams_arr, function(key, val){
-  content += '<tr><td>' + val['name'] + '</td>';
-  var solved_per_contests = map_size(val['contests']);
-  for(var idx=0; idx<contests_id.length; idx++){
-    content += '<td>' + solved_per_contests[idx] + '</td>'
+
+var show_upsolving_scoreboard = function(){
+  var content = '<div class="table-responsive text-nowrap"><table class="table table-sm"><thead><th>Posición</th><th>Equipo</th><th>Contest#1</th><th>Contest#2</th><th>Contest#3</th><th>Contest#4</th><th>Total</th></thead><tbody>';
+  var last_problem_solved = 0, position = 0;
+  if(teams_arr.length > 0){
+    last_problem_solved = 1 + array_Sum(map_size(teams_arr[0]['contests']));
   }
-  content += '<td>'+array_Sum(solved_per_contests)+'</td></tr>';
-});
-content +='</tbody></table></div>';
-$('#scoreboard-data').html(content);
+
+  $.each(teams_arr, function(key, val){
+    var solved_per_contests = map_size(val['contests']);
+    var problems_solved = array_Sum(solved_per_contests);
+    console.log(problems_solved + ' ' + last_problem_solved);
+    if(last_problem_solved > problems_solved){
+      last_problem_solved = problems_solved;
+      position = key + 1;
+    }
+    content += '<tr><td>' + position + '</td><td>' + val['name'] + '</td>';
+    for(var idx=0; idx<contests_id.length; idx++){
+      content += '<td>' + solved_per_contests[idx] + '</td>'
+    }
+    content += '<td>'+ problems_solved +'</td></tr>';
+  });
+  content +='</tbody></table></div>';
+  $('#scoreboard-data').html(content);
+};
+show_upsolving_scoreboard();
+
 </script>
 
 
