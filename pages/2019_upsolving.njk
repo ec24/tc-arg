@@ -25,12 +25,19 @@
 </div>
 <script>
 var teams = {};
+var get_team_id = id => {
+  id = id.toString();
+  if(id == "300966"){id="304811";}
+  if(id == "304846"){id="304788";}
+  return id;
+};
 var url_base = "https://vjudge.net/contest/rank/single/";
 var contests_id = ["309884", "310047", "310373", "310467"];
 var contests_official_id = ["309646", "309921", "310196", "310454"];
 var valid_accounts = new Set();
 var update_with_contest_data = (validated, idx) => function( data ) {
   $.each( data['participants'], function(id, name) {
+    id = get_team_id(id);
     if(validated){
       valid_accounts.add(id);
     }
@@ -39,8 +46,9 @@ var update_with_contest_data = (validated, idx) => function( data ) {
     }
   });
   $.each( data['submissions'], function(key, val){
-    if(val[2] == 1 && valid_accounts.has(val[0].toString())){
-      teams[val[0]]['contests'][idx].add(val[1]);
+    id = get_team_id(val[0]);
+    if(val[2] == 1 && valid_accounts.has(id)){
+      teams[id]['contests'][idx].add(val[1]);
     }
   });
 };
