@@ -127,9 +127,9 @@ var get_team_id = id => {
   return id;
 };
 var url_base = "https://vjudge.net/contest/rank/single/";
-var contests_id = ["309884", "310047", "310373", "310467", "311476"];
-var contests_official_id = ["309646", "309921", "310196", "310454", "311265"];
-var contests_lengths = [12, 12, 13, 15, 13];
+var contests_id = ["309884", "310047", "310373", "310467", "311476", "311693"];
+var contests_official_id = ["309646", "309921", "310196", "310454", "311265", "311584"];
+var contests_lengths = [12, 12, 13, 15, 13, 13];
 
 var valid_accounts = new Set();
 var update_with_contest_data = (validated, idx) => function( data ) {
@@ -173,9 +173,9 @@ teams_arr.sort( function(a, b){
 });
 
 var medals = {
-  'InChaVoLa': [4, 1, 0],
-  'ggdem': [0, 2, 2],
-  'NoFuePenalCsm': [0, 0, 1],
+  'InChaVoLa': [4, 1, 1],
+  'ggdem': [0, 3, 2],
+  'NoFuePenalCsm': [1, 0, 1],
   'QuePerdio': [0, 2, 0],
   'argipop': [1, 0, 1],
   'ThreePointers': [0, 0, 1],
@@ -185,7 +185,7 @@ var medals_str = ['gold', 'silver', 'bronze'];
 
 var show_upsolving_scoreboard = function(){
   var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var content = '<div class="table-responsive text-nowrap"><table class="table table-sm"><thead><th>Pos</th><th>Equipo</th><th>Contest#1</th><th>Contest#2</th><th>Contest#3</th><th>Contest#4</th><th>Contest#5</th><th>Total</th></thead><tbody>';
+  var content = '<div class="table-responsive text-nowrap"><table class="table table-sm"><thead><th>Pos</th><th>Equipo</th><th>Contest#1</th><th>Contest#2</th><th>Contest#3</th><th>Contest#4</th><th>Contest#5</th><th>Contest#6</th><th>Total</th></thead><tbody>';
   var last_problem_solved = 0, position = 0;
   if(teams_arr.length > 0){
     last_problem_solved = 1 + array_Sum(map_size(teams_arr[0]['contests']));
