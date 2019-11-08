@@ -1,0 +1,3985 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=5673&non=true&My=true';
+		else
+			window.location = 'submissions?ID=5673&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=5673&My=true';
+		else
+			window.location = 'submissions?ID=5673';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D5673" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=5673">5673 - Training Camp Argentina 2013 - Lunes 22
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=5673">Standings</a> - <a href="https://a2oj.com/submissions?ID=5673">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=5673">Problems</a> - <a href="https://a2oj.com/registrants?ID=5673">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="acc">
+<td>1</td>
+<td>241132</td>
+<td>9700223</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:46:39</td>
+</tr><tr class="acc">
+<td>2</td>
+<td>241131</td>
+<td>5077343</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:46:24</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>241128</td>
+<td>1264797</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:45:06</td>
+</tr><tr class="acc">
+<td>4</td>
+<td>241129</td>
+<td>1264796</td>
+<td><a href="https://a2oj.com/profile?Username=JmJ">JmJ</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:45:06</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>241130</td>
+<td>9700217</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:44:41</td>
+</tr><tr>
+<td>6</td>
+<td>241127</td>
+<td>9700211</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:43:45</td>
+</tr><tr class="acc">
+<td>7</td>
+<td>241120</td>
+<td>5077340</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:43:32</td>
+</tr><tr class="acc">
+<td>8</td>
+<td>241124</td>
+<td>9700205</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:42:48</td>
+</tr><tr class="acc">
+<td>9</td>
+<td>241121</td>
+<td>5077336</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1752" target="_blank">P6 - Tree 2</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:42:17</td>
+</tr><tr>
+<td>10</td>
+<td>241116</td>
+<td>1264791</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:41:37</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>241117</td>
+<td>9700199</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:41:30</td>
+</tr><tr>
+<td>12</td>
+<td>241118</td>
+<td>9700197</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:41:18</td>
+</tr><tr class="acc">
+<td>13</td>
+<td>241113</td>
+<td>9700195</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:41:04</td>
+</tr><tr>
+<td>14</td>
+<td>241114</td>
+<td>9700194</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:41:01</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>241108</td>
+<td>9700190</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:39:35</td>
+</tr><tr>
+<td>16</td>
+<td>241109</td>
+<td>9700189</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:39:28</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>241102</td>
+<td>9700180</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:38:05</td>
+</tr><tr>
+<td>18</td>
+<td>241103</td>
+<td>9700179</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=bsoj">bsoj</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:37:58</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>241101</td>
+<td>1264788</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:37:33</td>
+</tr><tr>
+<td>20</td>
+<td>241099</td>
+<td>5077330</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:37:20</td>
+</tr><tr class="acc">
+<td>21</td>
+<td>241100</td>
+<td>5077329</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:37:03</td>
+</tr><tr>
+<td>22</td>
+<td>241094</td>
+<td>9700157</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=bsoj">bsoj</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:35:17</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>241095</td>
+<td>9700155</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 19:35:05</td>
+</tr><tr class="acc">
+<td>24</td>
+<td>241091</td>
+<td>5077326</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:34:29</td>
+</tr><tr class="odd">
+<td>25</td>
+<td>241093</td>
+<td>9700145</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:33:48</td>
+</tr><tr>
+<td>26</td>
+<td>241086</td>
+<td>5077325</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:33:25</td>
+</tr><tr class="odd">
+<td>27</td>
+<td>241087</td>
+<td>5077322</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:32:47</td>
+</tr><tr>
+<td>28</td>
+<td>241089</td>
+<td>9700135</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:32:38</td>
+</tr><tr class="acc">
+<td>29</td>
+<td>241084</td>
+<td>5077319</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:31:01</td>
+</tr><tr>
+<td>30</td>
+<td>241122</td>
+<td>5077315</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1752" target="_blank">P6 - Tree 2</a></td>
+<td>Timus</td>
+<td>Runtime error (access violation)</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:28:14</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>241081</td>
+<td>5077314</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 19:28:02</td>
+</tr><tr class="acc">
+<td>32</td>
+<td>241080</td>
+<td>9700103</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:26:08</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>241076</td>
+<td>9700090</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2013-07-22 19:24:50</td>
+</tr><tr class="acc">
+<td>34</td>
+<td>241070</td>
+<td>9700076</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:22:02</td>
+</tr><tr class="odd">
+<td>35</td>
+<td>241071</td>
+<td>9700074</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2013-07-22 19:21:48</td>
+</tr><tr class="acc">
+<td>36</td>
+<td>241072</td>
+<td>9700069</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:20:54</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>241065</td>
+<td>9700063</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:20:11</td>
+</tr><tr>
+<td>38</td>
+<td>241053</td>
+<td>1264777</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:19:45</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>241058</td>
+<td>9700058</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:19:36</td>
+</tr><tr class="acc">
+<td>40</td>
+<td>241052</td>
+<td>5077307</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:19:23</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>241059</td>
+<td>9700056</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 19:19:09</td>
+</tr><tr class="acc">
+<td>42</td>
+<td>241048</td>
+<td>5077305</td>
+<td><a href="https://a2oj.com/profile?Username=JmJ">JmJ</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:18:53</td>
+</tr><tr class="acc">
+<td>43</td>
+<td>241049</td>
+<td>5077304</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:18:48</td>
+</tr><tr>
+<td>44</td>
+<td>241050</td>
+<td>5077303</td>
+<td><a href="https://a2oj.com/profile?Username=JmJ">JmJ</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:18:24</td>
+</tr><tr class="odd">
+<td>45</td>
+<td>241046</td>
+<td>5077302</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:16:51</td>
+</tr><tr>
+<td>46</td>
+<td>241047</td>
+<td>9700041</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:16:17</td>
+</tr><tr class="odd">
+<td>47</td>
+<td>241045</td>
+<td>9700037</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2013-07-22 19:15:18</td>
+</tr><tr class="acc">
+<td>48</td>
+<td>241043</td>
+<td>5077299</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1752" target="_blank">P6 - Tree 2</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:15:13</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>241042</td>
+<td>9700031</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:14:01</td>
+</tr><tr>
+<td>50</td>
+<td>241033</td>
+<td>1264773</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 19:13:33</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>241041</td>
+<td>9700029</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2013-07-22 19:13:27</td>
+</tr><tr>
+<td>52</td>
+<td>241025</td>
+<td>9700011</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 19:10:07</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>241026</td>
+<td>9700009</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:10:03</td>
+</tr><tr class="acc">
+<td>54</td>
+<td>241020</td>
+<td>9700003</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:09:38</td>
+</tr><tr class="odd">
+<td>55</td>
+<td>241019</td>
+<td>5077291</td>
+<td><a href="https://a2oj.com/profile?Username=JmJ">JmJ</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:09:28</td>
+</tr><tr>
+<td>56</td>
+<td>241021</td>
+<td>9700001</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:09:18</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>241018</td>
+<td>1264767</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:08:18</td>
+</tr><tr class="acc">
+<td>58</td>
+<td>241014</td>
+<td>5077289</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:08:01</td>
+</tr><tr class="acc">
+<td>59</td>
+<td>241017</td>
+<td>9699991</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:07:43</td>
+</tr><tr>
+<td>60</td>
+<td>241015</td>
+<td>5077288</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:07:35</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>241013</td>
+<td>9699982</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:06:08</td>
+</tr><tr>
+<td>62</td>
+<td>241011</td>
+<td>5077284</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:05:43</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>241009</td>
+<td>9699975</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:04:40</td>
+</tr><tr class="acc">
+<td>64</td>
+<td>241010</td>
+<td>9699973</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 19:04:27</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>241007</td>
+<td>9699969</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 19:03:34</td>
+</tr><tr>
+<td>66</td>
+<td>241005</td>
+<td>5077281</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1752" target="_blank">P6 - Tree 2</a></td>
+<td>Timus</td>
+<td>Runtime error (access violation)</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 19:02:38</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>241003</td>
+<td>9699960</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 19:00:12</td>
+</tr><tr>
+<td>68</td>
+<td>241004</td>
+<td>9699958</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:59:49</td>
+</tr><tr class="acc">
+<td>69</td>
+<td>241001</td>
+<td>9699952</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:58:40</td>
+</tr><tr class="acc">
+<td>70</td>
+<td>240996</td>
+<td>4137164</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4137164" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:58:30</td>
+</tr><tr class="odd">
+<td>71</td>
+<td>240998</td>
+<td>9699950</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:57:58</td>
+</tr><tr>
+<td>72</td>
+<td>240992</td>
+<td>9699949</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:57:02</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>240993</td>
+<td>9699945</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:56:36</td>
+</tr><tr>
+<td>74</td>
+<td>240985</td>
+<td>5077268</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1752" target="_blank">P6 - Tree 2</a></td>
+<td>Timus</td>
+<td>Runtime error (access violation)</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:55:25</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>240986</td>
+<td>5077267</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:55:09</td>
+</tr><tr>
+<td>76</td>
+<td>240987</td>
+<td>9699937</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:55:01</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>240977</td>
+<td>5077258</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:52:09</td>
+</tr><tr>
+<td>78</td>
+<td>240979</td>
+<td>9699930</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:51:53</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>240973</td>
+<td>5077257</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:51:30</td>
+</tr><tr>
+<td>80</td>
+<td>240974</td>
+<td>9699928</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:50:22</td>
+</tr><tr class="acc">
+<td>81</td>
+<td>240968</td>
+<td>5077256</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:49:21</td>
+</tr><tr>
+<td>82</td>
+<td>240970</td>
+<td>9699925</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:49:11</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>240969</td>
+<td>1264759</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:49:04</td>
+</tr><tr>
+<td>84</td>
+<td>240971</td>
+<td>9699924</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 18:48:49</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>240957</td>
+<td>5077250</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1752" target="_blank">P6 - Tree 2</a></td>
+<td>Timus</td>
+<td>Runtime error (access violation)</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:47:25</td>
+</tr><tr class="acc">
+<td>86</td>
+<td>240966</td>
+<td>9699915</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:47:16</td>
+</tr><tr class="odd">
+<td>87</td>
+<td>240962</td>
+<td>9699913</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 18:46:31</td>
+</tr><tr class="acc">
+<td>88</td>
+<td>240959</td>
+<td>4137126</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4137126" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:46:10</td>
+</tr><tr class="acc">
+<td>89</td>
+<td>240955</td>
+<td>9699909</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:45:49</td>
+</tr><tr>
+<td>90</td>
+<td>240956</td>
+<td>9699908</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:45:45</td>
+</tr><tr class="odd">
+<td>91</td>
+<td>240948</td>
+<td>9699905</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:45:17</td>
+</tr><tr class="acc">
+<td>92</td>
+<td>240942</td>
+<td>5077242</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:43:06</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>240943</td>
+<td>9699892</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:42:06</td>
+</tr><tr>
+<td>94</td>
+<td>240936</td>
+<td>5077240</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:41:45</td>
+</tr><tr class="acc">
+<td>95</td>
+<td>240949</td>
+<td>9699889</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:41:23</td>
+</tr><tr>
+<td>96</td>
+<td>240930</td>
+<td>9699878</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:39:39</td>
+</tr><tr class="odd">
+<td>97</td>
+<td>240928</td>
+<td>9699874</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:38:50</td>
+</tr><tr>
+<td>98</td>
+<td>240950</td>
+<td>9699871</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:38:09</td>
+</tr><tr class="acc">
+<td>99</td>
+<td>240921</td>
+<td>4137091</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4137091" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:37:07</td>
+</tr><tr class="acc">
+<td>100</td>
+<td>240923</td>
+<td>9699866</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:37:00</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>240920</td>
+<td>5077230</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:35:23</td>
+</tr><tr>
+<td>102</td>
+<td>240917</td>
+<td>9699852</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:34:42</td>
+</tr><tr class="odd">
+<td>103</td>
+<td>240918</td>
+<td>9699851</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:34:20</td>
+</tr><tr class="acc">
+<td>104</td>
+<td>240914</td>
+<td>5077229</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:34:00</td>
+</tr><tr class="acc">
+<td>105</td>
+<td>240911</td>
+<td>4137076</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4137076" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:32:31</td>
+</tr><tr class="acc">
+<td>106</td>
+<td>240907</td>
+<td>5077227</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 18:32:14</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>240913</td>
+<td>9699843</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:32:03</td>
+</tr><tr class="acc">
+<td>108</td>
+<td>240905</td>
+<td>1264756</td>
+<td><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:30:36</td>
+</tr><tr class="acc">
+<td>109</td>
+<td>240906</td>
+<td>9699837</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:30:09</td>
+</tr><tr>
+<td>110</td>
+<td>240898</td>
+<td>9699825</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:27:47</td>
+</tr><tr class="odd">
+<td>111</td>
+<td>240899</td>
+<td>9699823</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:27:22</td>
+</tr><tr>
+<td>112</td>
+<td>240900</td>
+<td>9699822</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:27:10</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>240895</td>
+<td>9699815</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:25:58</td>
+</tr><tr>
+<td>114</td>
+<td>240885</td>
+<td>5077220</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:25:47</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>240889</td>
+<td>9699811</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:25:17</td>
+</tr><tr class="acc">
+<td>116</td>
+<td>240886</td>
+<td>5077218</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 18:25:05</td>
+</tr><tr class="acc">
+<td>117</td>
+<td>240881</td>
+<td>5077217</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Java 1.7</td>
+<td>2013-07-22 18:24:52</td>
+</tr><tr>
+<td>118</td>
+<td>240882</td>
+<td>9699806</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:24:49</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>240874</td>
+<td>9699781</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:22:10</td>
+</tr><tr>
+<td>120</td>
+<td>240875</td>
+<td>9699779</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:22:05</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>240876</td>
+<td>9699778</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:22:03</td>
+</tr><tr class="acc">
+<td>122</td>
+<td>240870</td>
+<td>5077207</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:21:32</td>
+</tr><tr class="acc">
+<td>123</td>
+<td>240872</td>
+<td>9699772</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2013-07-22 18:21:15</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>240868</td>
+<td>9699769</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:20:28</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>240869</td>
+<td>9699767</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:20:16</td>
+</tr><tr class="acc">
+<td>126</td>
+<td>240867</td>
+<td>5077204</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:19:58</td>
+</tr><tr class="acc">
+<td>127</td>
+<td>240860</td>
+<td>5077203</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 18:18:48</td>
+</tr><tr>
+<td>128</td>
+<td>240863</td>
+<td>9699755</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:18:00</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>240858</td>
+<td>9699751</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 18:17:08</td>
+</tr><tr>
+<td>130</td>
+<td>240857</td>
+<td>5077200</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:16:54</td>
+</tr><tr class="acc">
+<td>131</td>
+<td>240855</td>
+<td>4137003</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4137003" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:15:48</td>
+</tr><tr>
+<td>132</td>
+<td>240856</td>
+<td>9699743</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:15:37</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>240850</td>
+<td>5077198</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>Java 1.7</td>
+<td>2013-07-22 18:15:32</td>
+</tr><tr class="acc">
+<td>134</td>
+<td>240853</td>
+<td>9699741</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:15:09</td>
+</tr><tr class="acc">
+<td>135</td>
+<td>240851</td>
+<td>4137001</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4137001" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:15:00</td>
+</tr><tr>
+<td>136</td>
+<td>240854</td>
+<td>9699740</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:14:58</td>
+</tr><tr class="acc">
+<td>137</td>
+<td>240871</td>
+<td>4136999</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4136999" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:14:24</td>
+</tr><tr class="acc">
+<td>138</td>
+<td>240841</td>
+<td>5077193</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:13:46</td>
+</tr><tr class="acc">
+<td>139</td>
+<td>240842</td>
+<td>5077192</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:13:29</td>
+</tr><tr>
+<td>140</td>
+<td>240845</td>
+<td>9699730</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:13:13</td>
+</tr><tr class="acc">
+<td>141</td>
+<td>240846</td>
+<td>9699726</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:13:05</td>
+</tr><tr>
+<td>142</td>
+<td>240836</td>
+<td>5077190</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:12:47</td>
+</tr><tr class="acc">
+<td>143</td>
+<td>240839</td>
+<td>9699723</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:12:28</td>
+</tr><tr class="acc">
+<td>144</td>
+<td>240840</td>
+<td>9699722</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:12:27</td>
+</tr><tr class="acc">
+<td>145</td>
+<td>240843</td>
+<td>5077186</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=bsoj">bsoj</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:11:30</td>
+</tr><tr>
+<td>146</td>
+<td>240834</td>
+<td>9699715</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:10:52</td>
+</tr><tr class="acc">
+<td>147</td>
+<td>240835</td>
+<td>9699714</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:10:49</td>
+</tr><tr>
+<td>148</td>
+<td>240825</td>
+<td>5077184</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>Java 1.7</td>
+<td>2013-07-22 18:10:44</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>240826</td>
+<td>5077183</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Time limit exceeded</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:10:01</td>
+</tr><tr>
+<td>150</td>
+<td>240823</td>
+<td>9699706</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:09:07</td>
+</tr><tr class="odd">
+<td>151</td>
+<td>240808</td>
+<td>5077177</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:07:39</td>
+</tr><tr class="acc">
+<td>152</td>
+<td>240813</td>
+<td>9699697</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:07:15</td>
+</tr><tr class="acc">
+<td>153</td>
+<td>240812</td>
+<td>4136979</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4136979" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 18:07:12</td>
+</tr><tr>
+<td>154</td>
+<td>240816</td>
+<td>9699692</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:07:04</td>
+</tr><tr class="acc">
+<td>155</td>
+<td>240814</td>
+<td>9699694</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:07:04</td>
+</tr><tr>
+<td>156</td>
+<td>240811</td>
+<td>5077175</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:06:59</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>240805</td>
+<td>5077173</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:05:49</td>
+</tr><tr class="acc">
+<td>158</td>
+<td>240837</td>
+<td>5077171</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:05:18</td>
+</tr><tr class="odd">
+<td>159</td>
+<td>240804</td>
+<td>9699681</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:04:46</td>
+</tr><tr>
+<td>160</td>
+<td>240802</td>
+<td>5077170</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>Java 1.7</td>
+<td>2013-07-22 18:03:48</td>
+</tr><tr class="acc">
+<td>161</td>
+<td>240800</td>
+<td>9699662</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 18:01:41</td>
+</tr><tr>
+<td>162</td>
+<td>240801</td>
+<td>9699661</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:01:30</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>240797</td>
+<td>9699659</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 18:01:11</td>
+</tr><tr class="acc">
+<td>164</td>
+<td>240793</td>
+<td>5077168</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 18:01:08</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>240794</td>
+<td>5077166</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 18:00:51</td>
+</tr><tr>
+<td>166</td>
+<td>240798</td>
+<td>9699651</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 18:00:21</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>240786</td>
+<td>5077164</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:59:54</td>
+</tr><tr>
+<td>168</td>
+<td>240838</td>
+<td>5077163</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:59:44</td>
+</tr><tr class="acc">
+<td>169</td>
+<td>240788</td>
+<td>9699642</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://www.spoj.com/problems/FBRIDGES/" target="_blank">P3 - Factory of Bridges</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:59:29</td>
+</tr><tr class="acc">
+<td>170</td>
+<td>240789</td>
+<td>9699641</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:59:28</td>
+</tr><tr class="odd">
+<td>171</td>
+<td>240784</td>
+<td>9699633</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:58:34</td>
+</tr><tr>
+<td>172</td>
+<td>240785</td>
+<td>9699628</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 17:58:05</td>
+</tr><tr class="acc">
+<td>173</td>
+<td>240780</td>
+<td>9699618</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=adolfo">adolfo</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:57:21</td>
+</tr><tr>
+<td>174</td>
+<td>240774</td>
+<td>9699614</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:56:57</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>240771</td>
+<td>9699602</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:55:17</td>
+</tr><tr>
+<td>176</td>
+<td>240772</td>
+<td>9699601</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 17:55:17</td>
+</tr><tr class="odd">
+<td>177</td>
+<td>240768</td>
+<td>9699598</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:55:06</td>
+</tr><tr class="acc">
+<td>178</td>
+<td>240765</td>
+<td>5077154</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 17:54:34</td>
+</tr><tr class="acc">
+<td>179</td>
+<td>240769</td>
+<td>9699592</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:54:17</td>
+</tr><tr class="acc">
+<td>180</td>
+<td>240775</td>
+<td>9699591</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=adolfo">adolfo</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:54:13</td>
+</tr><tr class="acc">
+<td>181</td>
+<td>240759</td>
+<td>5077152</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:54:04</td>
+</tr><tr>
+<td>182</td>
+<td>240763</td>
+<td>9699589</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:53:55</td>
+</tr><tr class="acc">
+<td>183</td>
+<td>240756</td>
+<td>5077151</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:53:14</td>
+</tr><tr>
+<td>184</td>
+<td>240764</td>
+<td>9699586</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:53:11</td>
+</tr><tr class="odd">
+<td>185</td>
+<td>240751</td>
+<td>5077147</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:51:48</td>
+</tr><tr>
+<td>186</td>
+<td>240754</td>
+<td>9699581</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:51:39</td>
+</tr><tr class="odd">
+<td>187</td>
+<td>240755</td>
+<td>9699580</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:51:38</td>
+</tr><tr>
+<td>188</td>
+<td>240750</td>
+<td>9699574</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 17:50:34</td>
+</tr><tr class="odd">
+<td>189</td>
+<td>240746</td>
+<td>9699568</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:49:38</td>
+</tr><tr>
+<td>190</td>
+<td>240745</td>
+<td>5077140</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:49:29</td>
+</tr><tr class="acc">
+<td>191</td>
+<td>240743</td>
+<td>5077137</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:49:00</td>
+</tr><tr>
+<td>192</td>
+<td>240744</td>
+<td>9699566</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:48:41</td>
+</tr><tr class="odd">
+<td>193</td>
+<td>240739</td>
+<td>9699564</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:47:51</td>
+</tr><tr>
+<td>194</td>
+<td>240736</td>
+<td>9699556</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:46:09</td>
+</tr><tr class="odd">
+<td>195</td>
+<td>240728</td>
+<td>5077132</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Runtime error (integer division by zero)</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:46:07</td>
+</tr><tr>
+<td>196</td>
+<td>240732</td>
+<td>9699554</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:45:48</td>
+</tr><tr class="acc">
+<td>197</td>
+<td>240729</td>
+<td>5077131</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Java 1.7</td>
+<td>2013-07-22 17:45:26</td>
+</tr><tr class="acc">
+<td>198</td>
+<td>240733</td>
+<td>9699550</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:45:06</td>
+</tr><tr class="acc">
+<td>199</td>
+<td>240726</td>
+<td>5077127</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Java 1.7</td>
+<td>2013-07-22 17:44:08</td>
+</tr><tr>
+<td>200</td>
+<td>240722</td>
+<td>9699541</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:43:35</td>
+</tr><tr class="odd">
+<td>201</td>
+<td>240723</td>
+<td>9699537</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:43:18</td>
+</tr><tr class="acc">
+<td>202</td>
+<td>240730</td>
+<td>5077124</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Java 1.7</td>
+<td>2013-07-22 17:42:48</td>
+</tr><tr class="acc">
+<td>203</td>
+<td>240717</td>
+<td>9699531</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:42:21</td>
+</tr><tr>
+<td>204</td>
+<td>240714</td>
+<td>5077121</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Time limit exceeded</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 17:41:16</td>
+</tr><tr class="odd">
+<td>205</td>
+<td>240709</td>
+<td>5077120</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Time limit exceeded</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 17:41:01</td>
+</tr><tr>
+<td>206</td>
+<td>240710</td>
+<td>9699521</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:40:53</td>
+</tr><tr class="acc">
+<td>207</td>
+<td>240703</td>
+<td>5077119</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:40:01</td>
+</tr><tr>
+<td>208</td>
+<td>240704</td>
+<td>9699511</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:39:58</td>
+</tr><tr class="acc">
+<td>209</td>
+<td>240699</td>
+<td>5077115</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:38:58</td>
+</tr><tr>
+<td>210</td>
+<td>240695</td>
+<td>5077113</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 17:37:22</td>
+</tr><tr class="odd">
+<td>211</td>
+<td>240696</td>
+<td>5077112</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:37:09</td>
+</tr><tr>
+<td>212</td>
+<td>240687</td>
+<td>5077107</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 17:35:48</td>
+</tr><tr class="odd">
+<td>213</td>
+<td>240688</td>
+<td>5077105</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 17:35:06</td>
+</tr><tr>
+<td>214</td>
+<td>240686</td>
+<td>5077104</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:34:49</td>
+</tr><tr class="odd">
+<td>215</td>
+<td>240683</td>
+<td>9699467</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:33:21</td>
+</tr><tr class="acc">
+<td>216</td>
+<td>240684</td>
+<td>9699466</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:33:11</td>
+</tr><tr class="odd">
+<td>217</td>
+<td>240680</td>
+<td>5077098</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:32:45</td>
+</tr><tr>
+<td>218</td>
+<td>240678</td>
+<td>5077096</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Time limit exceeded</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 17:32:24</td>
+</tr><tr class="odd">
+<td>219</td>
+<td>240679</td>
+<td>5077095</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:32:16</td>
+</tr><tr class="acc">
+<td>220</td>
+<td>240677</td>
+<td>9699455</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:31:43</td>
+</tr><tr class="odd">
+<td>221</td>
+<td>240675</td>
+<td>5077092</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Time limit exceeded</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 17:31:33</td>
+</tr><tr>
+<td>222</td>
+<td>240673</td>
+<td>5077088</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 17:30:27</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>240674</td>
+<td>9699448</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:29:52</td>
+</tr><tr class="acc">
+<td>224</td>
+<td>240670</td>
+<td>9699446</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:29:23</td>
+</tr><tr class="acc">
+<td>225</td>
+<td>240664</td>
+<td>5077083</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:28:44</td>
+</tr><tr>
+<td>226</td>
+<td>240665</td>
+<td>5077082</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:28:21</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>240667</td>
+<td>9699440</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:28:11</td>
+</tr><tr>
+<td>228</td>
+<td>240666</td>
+<td>5077081</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:28:10</td>
+</tr><tr class="odd">
+<td>229</td>
+<td>240663</td>
+<td>5077079</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 17:27:15</td>
+</tr><tr class="acc">
+<td>230</td>
+<td>240661</td>
+<td>5077074</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 17:26:14</td>
+</tr><tr class="odd">
+<td>231</td>
+<td>240660</td>
+<td>5077072</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:25:08</td>
+</tr><tr class="acc">
+<td>232</td>
+<td>240668</td>
+<td>4136866</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://codeforces.com/problemset/problem/16/E" target="_blank">P2 - Fish</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/16/submission/4136866" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-22 17:24:03</td>
+</tr><tr class="odd">
+<td>233</td>
+<td>240654</td>
+<td>5077067</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:23:11</td>
+</tr><tr>
+<td>234</td>
+<td>240655</td>
+<td>9699418</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:22:47</td>
+</tr><tr class="odd">
+<td>235</td>
+<td>240656</td>
+<td>9699417</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:22:43</td>
+</tr><tr class="acc">
+<td>236</td>
+<td>240647</td>
+<td>5077065</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:22:31</td>
+</tr><tr class="odd">
+<td>237</td>
+<td>240652</td>
+<td>9699412</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:21:58</td>
+</tr><tr class="acc">
+<td>238</td>
+<td>240644</td>
+<td>5077063</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:21:37</td>
+</tr><tr class="odd">
+<td>239</td>
+<td>240643</td>
+<td>1264719</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2475" target="_blank">P10 - Code Lock</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:21:28</td>
+</tr><tr>
+<td>240</td>
+<td>240638</td>
+<td>5077058</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=florens">florens</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:20:12</td>
+</tr><tr class="odd">
+<td>241</td>
+<td>240639</td>
+<td>5077057</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:20:06</td>
+</tr><tr class="acc">
+<td>242</td>
+<td>240640</td>
+<td>5077054</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:20:00</td>
+</tr><tr class="acc">
+<td>243</td>
+<td>240642</td>
+<td>9699398</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:19:22</td>
+</tr><tr>
+<td>244</td>
+<td>240631</td>
+<td>5077049</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:18:06</td>
+</tr><tr class="odd">
+<td>245</td>
+<td>240632</td>
+<td>5077047</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:17:55</td>
+</tr><tr class="acc">
+<td>246</td>
+<td>240633</td>
+<td>9699384</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:17:38</td>
+</tr><tr class="acc">
+<td>247</td>
+<td>240629</td>
+<td>9699383</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2013-07-22 17:17:30</td>
+</tr><tr>
+<td>248</td>
+<td>240630</td>
+<td>9699377</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:16:52</td>
+</tr><tr class="acc">
+<td>249</td>
+<td>240649</td>
+<td>5077043</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:16:32</td>
+</tr><tr>
+<td>250</td>
+<td>240627</td>
+<td>5077042</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:15:56</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>240623</td>
+<td>5077039</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:15:33</td>
+</tr><tr>
+<td>252</td>
+<td>240624</td>
+<td>5077038</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:15:04</td>
+</tr><tr class="odd">
+<td>253</td>
+<td>240625</td>
+<td>5077034</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:14:57</td>
+</tr><tr>
+<td>254</td>
+<td>240626</td>
+<td>9699357</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:14:25</td>
+</tr><tr class="odd">
+<td>255</td>
+<td>240619</td>
+<td>5077033</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:14:24</td>
+</tr><tr>
+<td>256</td>
+<td>240616</td>
+<td>5077028</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:12:23</td>
+</tr><tr class="odd">
+<td>257</td>
+<td>240645</td>
+<td>3363682</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P8 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-22 17:12:04</td>
+</tr><tr>
+<td>258</td>
+<td>240617</td>
+<td>5077026</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:11:43</td>
+</tr><tr class="odd">
+<td>259</td>
+<td>240641</td>
+<td>3363681</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P8 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-22 17:11:31</td>
+</tr><tr>
+<td>260</td>
+<td>240612</td>
+<td>9699338</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:10:59</td>
+</tr><tr class="odd">
+<td>261</td>
+<td>240613</td>
+<td>9699337</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:10:58</td>
+</tr><tr>
+<td>262</td>
+<td>240609</td>
+<td>5077022</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:09:59</td>
+</tr><tr class="odd">
+<td>263</td>
+<td>240635</td>
+<td>3363679</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P8 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-22 17:09:55</td>
+</tr><tr>
+<td>264</td>
+<td>240607</td>
+<td>5077021</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:08:26</td>
+</tr><tr class="odd">
+<td>265</td>
+<td>240608</td>
+<td>9699325</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 17:07:26</td>
+</tr><tr class="acc">
+<td>266</td>
+<td>240603</td>
+<td>5077020</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:07:11</td>
+</tr><tr class="acc">
+<td>267</td>
+<td>240606</td>
+<td>9699324</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:07:11</td>
+</tr><tr>
+<td>268</td>
+<td>240604</td>
+<td>5077019</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:06:48</td>
+</tr><tr class="odd">
+<td>269</td>
+<td>240600</td>
+<td>9699314</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 17:05:58</td>
+</tr><tr>
+<td>270</td>
+<td>240601</td>
+<td>9699312</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:05:54</td>
+</tr><tr class="acc">
+<td>271</td>
+<td>240602</td>
+<td>9699311</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:05:45</td>
+</tr><tr>
+<td>272</td>
+<td>240620</td>
+<td>3363677</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P8 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-22 17:05:06</td>
+</tr><tr class="odd">
+<td>273</td>
+<td>240621</td>
+<td>3363676</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P8 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-22 17:04:52</td>
+</tr><tr>
+<td>274</td>
+<td>240595</td>
+<td>9699303</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 17:04:37</td>
+</tr><tr class="acc">
+<td>275</td>
+<td>240596</td>
+<td>9699300</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:04:09</td>
+</tr><tr class="acc">
+<td>276</td>
+<td>240593</td>
+<td>5077014</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 17:02:44</td>
+</tr><tr class="acc">
+<td>277</td>
+<td>240590</td>
+<td>9699286</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:02:13</td>
+</tr><tr class="acc">
+<td>278</td>
+<td>240591</td>
+<td>9699278</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 17:01:12</td>
+</tr><tr class="odd">
+<td>279</td>
+<td>240589</td>
+<td>9699276</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-22 17:00:45</td>
+</tr><tr>
+<td>280</td>
+<td>240587</td>
+<td>5077006</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 17:00:19</td>
+</tr><tr class="odd">
+<td>281</td>
+<td>240585</td>
+<td>9699267</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 16:58:36</td>
+</tr><tr class="acc">
+<td>282</td>
+<td>240586</td>
+<td>9699263</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 16:58:02</td>
+</tr><tr class="odd">
+<td>283</td>
+<td>240579</td>
+<td>5077001</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 16:56:28</td>
+</tr><tr>
+<td>284</td>
+<td>240580</td>
+<td>9699257</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-22 16:56:27</td>
+</tr><tr class="acc">
+<td>285</td>
+<td>240581</td>
+<td>9699256</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 16:56:22</td>
+</tr><tr class="acc">
+<td>286</td>
+<td>240582</td>
+<td>9699254</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 16:56:08</td>
+</tr><tr class="odd">
+<td>287</td>
+<td>240618</td>
+<td>5076998</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Time limit exceeded</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:55:56</td>
+</tr><tr class="acc">
+<td>288</td>
+<td>240574</td>
+<td>5076995</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:54:36</td>
+</tr><tr class="acc">
+<td>289</td>
+<td>240575</td>
+<td>5076994</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:54:33</td>
+</tr><tr>
+<td>290</td>
+<td>240572</td>
+<td>5076993</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 16:53:35</td>
+</tr><tr class="acc">
+<td>291</td>
+<td>240573</td>
+<td>5076992</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:53:34</td>
+</tr><tr>
+<td>292</td>
+<td>240570</td>
+<td>9699242</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 16:52:28</td>
+</tr><tr class="odd">
+<td>293</td>
+<td>240567</td>
+<td>5076990</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:51:56</td>
+</tr><tr>
+<td>294</td>
+<td>240571</td>
+<td>9699238</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-22 16:51:44</td>
+</tr><tr class="odd">
+<td>295</td>
+<td>240565</td>
+<td>9699231</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/ASSIGN/" target="_blank">P9 - Assignments</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGKILL">SIGKILL</a>)</td>
+<td>C++</td>
+<td>2013-07-22 16:50:35</td>
+</tr><tr class="acc">
+<td>296</td>
+<td>240561</td>
+<td>9699213</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 16:46:49</td>
+</tr><tr class="acc">
+<td>297</td>
+<td>240560</td>
+<td>5076976</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:45:30</td>
+</tr><tr>
+<td>298</td>
+<td>240576</td>
+<td>5076975</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:44:44</td>
+</tr><tr class="odd">
+<td>299</td>
+<td>240577</td>
+<td>5076974</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>FreePascal 2.0.4</td>
+<td>2013-07-22 16:44:31</td>
+</tr><tr class="acc">
+<td>300</td>
+<td>240555</td>
+<td>5076968</td>
+<td><a href="https://a2oj.com/profile?Username=Anunnaki">Anunnaki</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:41:37</td>
+</tr><tr class="acc">
+<td>301</td>
+<td>240554</td>
+<td>5076963</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:40:03</td>
+</tr><tr>
+<td>302</td>
+<td>240553</td>
+<td>5076962</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:39:50</td>
+</tr><tr class="acc">
+<td>303</td>
+<td>240550</td>
+<td>5076959</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2</td>
+<td>2013-07-22 16:38:47</td>
+</tr><tr class="acc">
+<td>304</td>
+<td>240551</td>
+<td>5076958</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 16:38:12</td>
+</tr><tr class="acc">
+<td>305</td>
+<td>240546</td>
+<td>5076957</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1120" target="_blank">P7 - Sum of Sequential Numbers</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>Visual C++ 2010</td>
+<td>2013-07-22 16:37:51</td>
+</tr><tr class="acc">
+<td>306</td>
+<td>240548</td>
+<td>9699165</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 16:37:41</td>
+</tr><tr class="odd">
+<td>307</td>
+<td>240549</td>
+<td>9699139</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://www.spoj.com/problems/INDIPROG/" target="_blank">P4 - Indicator of progression</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2013-07-22 16:33:45</td>
+</tr><tr class="acc">
+<td>308</td>
+<td>240544</td>
+<td>9699129</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/PT07X/" target="_blank">P5 - Vertex Cover</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-22 16:32:32</td>
+</tr><tr class="acc">
+<td>309</td>
+<td>240541</td>
+<td>5076935</td>
+<td><a href="https://a2oj.com/profile?Username=SebP">SebP</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P1 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.7.2 C++11</td>
+<td>2013-07-22 16:24:37</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

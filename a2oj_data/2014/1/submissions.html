@@ -1,0 +1,2797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=11560&non=true&My=true';
+		else
+			window.location = 'submissions?ID=11560&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=11560&My=true';
+		else
+			window.location = 'submissions?ID=11560';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D11560" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=11560">11560 - Training Camp Argentina 2014 #1
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=11560">Standings</a> - <a href="https://a2oj.com/submissions?ID=11560">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=11560">Problems</a> - <a href="https://a2oj.com/registrants?ID=11560">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>525613</td>
+<td>7280857</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280857" target="_blank">MEMORY_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:59:25</td>
+</tr><tr class="acc">
+<td>2</td>
+<td>525614</td>
+<td>7280856</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280856" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:59:16</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>525610</td>
+<td>7280849</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280849" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:58:32</td>
+</tr><tr>
+<td>4</td>
+<td>525606</td>
+<td>7280845</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280845" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:57:46</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>525600</td>
+<td>7280841</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280841" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 20:55:36</td>
+</tr><tr>
+<td>6</td>
+<td>525611</td>
+<td>3715473</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3656" target="_blank">P7 - Bit Magic</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:55:36</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>525601</td>
+<td>7280838</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280838" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:55:00</td>
+</tr><tr class="acc">
+<td>8</td>
+<td>525594</td>
+<td>7280835</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280835" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:54:17</td>
+</tr><tr class="acc">
+<td>9</td>
+<td>525590</td>
+<td>7280829</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280829" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:53:05</td>
+</tr><tr>
+<td>10</td>
+<td>525585</td>
+<td>7280825</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280825" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:52:35</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>525599</td>
+<td>3715472</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3656" target="_blank">P7 - Bit Magic</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:51:45</td>
+</tr><tr>
+<td>12</td>
+<td>525584</td>
+<td>7280822</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280822" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:51:26</td>
+</tr><tr class="acc">
+<td>13</td>
+<td>525588</td>
+<td>3715471</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:50:01</td>
+</tr><tr>
+<td>14</td>
+<td>525589</td>
+<td>3715470</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3656" target="_blank">P7 - Bit Magic</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:49:48</td>
+</tr><tr class="acc">
+<td>15</td>
+<td>525583</td>
+<td>7280808</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280808" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:48:48</td>
+</tr><tr>
+<td>16</td>
+<td>525574</td>
+<td>7280806</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280806" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:48:09</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>525575</td>
+<td>7280805</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280805" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 20:47:56</td>
+</tr><tr class="acc">
+<td>18</td>
+<td>525571</td>
+<td>7280801</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280801" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:47:35</td>
+</tr><tr class="acc">
+<td>19</td>
+<td>525582</td>
+<td>3715469</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:46:49</td>
+</tr><tr>
+<td>20</td>
+<td>525568</td>
+<td>7280793</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280793" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:46:30</td>
+</tr><tr class="acc">
+<td>21</td>
+<td>525569</td>
+<td>7280792</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280792" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:46:23</td>
+</tr><tr class="acc">
+<td>22</td>
+<td>525579</td>
+<td>3715468</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:46:04</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>525566</td>
+<td>7280786</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280786" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 20:44:37</td>
+</tr><tr>
+<td>24</td>
+<td>525567</td>
+<td>7280784</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280784" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:44:31</td>
+</tr><tr class="acc">
+<td>25</td>
+<td>525560</td>
+<td>3715467</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:41:55</td>
+</tr><tr>
+<td>26</td>
+<td>525562</td>
+<td>3715466</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 20:41:41</td>
+</tr><tr class="acc">
+<td>27</td>
+<td>525557</td>
+<td>7280765</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280765" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 20:40:52</td>
+</tr><tr>
+<td>28</td>
+<td>525555</td>
+<td>3715464</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Memory Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 20:40:18</td>
+</tr><tr class="odd">
+<td>29</td>
+<td>525544</td>
+<td>7280759</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280759" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:39:56</td>
+</tr><tr>
+<td>30</td>
+<td>525551</td>
+<td>3715463</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:39:04</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>525545</td>
+<td>7280755</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280755" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:38:49</td>
+</tr><tr>
+<td>32</td>
+<td>525552</td>
+<td>3715462</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:38:49</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>525547</td>
+<td>7280752</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280752" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:38:36</td>
+</tr><tr>
+<td>34</td>
+<td>525542</td>
+<td>3715461</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:35:01</td>
+</tr><tr class="odd">
+<td>35</td>
+<td>525534</td>
+<td>7280737</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280737" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:34:17</td>
+</tr><tr>
+<td>36</td>
+<td>525533</td>
+<td>7280735</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280735" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:33:12</td>
+</tr><tr class="acc">
+<td>37</td>
+<td>525530</td>
+<td>7280727</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280727" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:30:55</td>
+</tr><tr>
+<td>38</td>
+<td>525531</td>
+<td>7280726</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280726" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 6</td>
+<td>2014-07-28 20:30:55</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>525525</td>
+<td>7280723</td>
+<td><a href="https://a2oj.com/profile?Username=chrisnachjuli">chrisnachjuli</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280723" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2014-07-28 20:30:10</td>
+</tr><tr>
+<td>40</td>
+<td>525526</td>
+<td>7280722</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280722" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:30:03</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>525528</td>
+<td>3715460</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:28:01</td>
+</tr><tr>
+<td>42</td>
+<td>525517</td>
+<td>3715459</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Floating Point Error</td>
+<td>C++</td>
+<td>2014-07-28 20:24:33</td>
+</tr><tr class="odd">
+<td>43</td>
+<td>525509</td>
+<td>7280701</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280701" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:24:24</td>
+</tr><tr class="acc">
+<td>44</td>
+<td>525513</td>
+<td>3715458</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:24:17</td>
+</tr><tr class="odd">
+<td>45</td>
+<td>525510</td>
+<td>7280698</td>
+<td><a href="https://a2oj.com/profile?Username=chrisnachjuli">chrisnachjuli</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280698" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2014-07-28 20:23:36</td>
+</tr><tr>
+<td>46</td>
+<td>525507</td>
+<td>3715457</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Floating Point Error</td>
+<td>C++</td>
+<td>2014-07-28 20:22:16</td>
+</tr><tr class="acc">
+<td>47</td>
+<td>525496</td>
+<td>7280688</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280688" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:21:01</td>
+</tr><tr class="acc">
+<td>48</td>
+<td>525504</td>
+<td>3715456</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:20:29</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>525501</td>
+<td>3715455</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Floating Point Error</td>
+<td>C++</td>
+<td>2014-07-28 20:19:17</td>
+</tr><tr>
+<td>50</td>
+<td>525486</td>
+<td>7280676</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280676" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>MS C++</td>
+<td>2014-07-28 20:18:25</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>525487</td>
+<td>7280669</td>
+<td><a href="https://a2oj.com/profile?Username=chrisnachjuli">chrisnachjuli</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280669" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2014-07-28 20:17:29</td>
+</tr><tr>
+<td>52</td>
+<td>525466</td>
+<td>7280642</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280642" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>MS C++</td>
+<td>2014-07-28 20:10:28</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>525462</td>
+<td>7280638</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280638" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:09:53</td>
+</tr><tr>
+<td>54</td>
+<td>525460</td>
+<td>7280632</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280632" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 20:08:29</td>
+</tr><tr class="acc">
+<td>55</td>
+<td>525461</td>
+<td>7280630</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280630" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:08:02</td>
+</tr><tr>
+<td>56</td>
+<td>525464</td>
+<td>3715454</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:07:07</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>525456</td>
+<td>7280626</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280626" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:07:06</td>
+</tr><tr class="acc">
+<td>58</td>
+<td>525465</td>
+<td>3715453</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 20:07:04</td>
+</tr><tr class="odd">
+<td>59</td>
+<td>525453</td>
+<td>3715452</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 20:02:53</td>
+</tr><tr class="acc">
+<td>60</td>
+<td>525446</td>
+<td>7280602</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280602" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 20:01:30</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>525444</td>
+<td>7280596</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280596" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:59:42</td>
+</tr><tr>
+<td>62</td>
+<td>525445</td>
+<td>7280594</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280594" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:59:02</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>525432</td>
+<td>7280577</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280577" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:55:28</td>
+</tr><tr>
+<td>64</td>
+<td>525433</td>
+<td>7280576</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280576" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:55:11</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>525434</td>
+<td>7280571</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280571" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:54:20</td>
+</tr><tr>
+<td>66</td>
+<td>525440</td>
+<td>3715450</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 19:53:31</td>
+</tr><tr class="acc">
+<td>67</td>
+<td>525424</td>
+<td>7280568</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280568" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:53:23</td>
+</tr><tr>
+<td>68</td>
+<td>525421</td>
+<td>7280563</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280563" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:52:28</td>
+</tr><tr class="acc">
+<td>69</td>
+<td>525428</td>
+<td>3715449</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 19:51:28</td>
+</tr><tr>
+<td>70</td>
+<td>525419</td>
+<td>7280555</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280555" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:50:51</td>
+</tr><tr class="odd">
+<td>71</td>
+<td>525415</td>
+<td>7280548</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280548" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:49:34</td>
+</tr><tr>
+<td>72</td>
+<td>525416</td>
+<td>7280540</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280540" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:47:24</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>525407</td>
+<td>7280532</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280532" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:46:12</td>
+</tr><tr class="acc">
+<td>74</td>
+<td>525402</td>
+<td>7280528</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280528" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:44:51</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>525409</td>
+<td>3715448</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 19:44:09</td>
+</tr><tr>
+<td>76</td>
+<td>525405</td>
+<td>3715446</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 19:42:42</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>525398</td>
+<td>7280515</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280515" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:42:08</td>
+</tr><tr>
+<td>78</td>
+<td>525395</td>
+<td>7280503</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280503" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 6</td>
+<td>2014-07-28 19:40:48</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>525388</td>
+<td>7280491</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280491" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:37:09</td>
+</tr><tr class="acc">
+<td>80</td>
+<td>525385</td>
+<td>7280487</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280487" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:36:21</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>525389</td>
+<td>3715442</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 19:34:39</td>
+</tr><tr class="acc">
+<td>82</td>
+<td>525425</td>
+<td>3715441</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 19:34:22</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>525382</td>
+<td>7280476</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280476" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:34:06</td>
+</tr><tr class="acc">
+<td>84</td>
+<td>525381</td>
+<td>7280473</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280473" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:33:42</td>
+</tr><tr class="acc">
+<td>85</td>
+<td>525379</td>
+<td>7280470</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280470" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:32:21</td>
+</tr><tr>
+<td>86</td>
+<td>525374</td>
+<td>7280458</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280458" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:29:43</td>
+</tr><tr class="acc">
+<td>87</td>
+<td>525368</td>
+<td>7280453</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280453" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:28:11</td>
+</tr><tr class="acc">
+<td>88</td>
+<td>525363</td>
+<td>7280442</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280442" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:26:01</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>525426</td>
+<td>3715440</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 19:23:03</td>
+</tr><tr class="acc">
+<td>90</td>
+<td>525355</td>
+<td>7280427</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/C" target="_blank">P1 - Dungeons and Candies</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280427" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:22:04</td>
+</tr><tr class="odd">
+<td>91</td>
+<td>525357</td>
+<td>7280423</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280423" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 6</td>
+<td>2014-07-28 19:21:30</td>
+</tr><tr class="acc">
+<td>92</td>
+<td>525348</td>
+<td>7280418</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280418" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:20:41</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>525349</td>
+<td>7280417</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280417" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:20:31</td>
+</tr><tr>
+<td>94</td>
+<td>525350</td>
+<td>7280416</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280416" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:20:28</td>
+</tr><tr class="acc">
+<td>95</td>
+<td>525351</td>
+<td>7280414</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280414" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:19:31</td>
+</tr><tr class="acc">
+<td>96</td>
+<td>525352</td>
+<td>7280410</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280410" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:18:47</td>
+</tr><tr class="acc">
+<td>97</td>
+<td>525353</td>
+<td>7280408</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280408" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:18:30</td>
+</tr><tr>
+<td>98</td>
+<td>525339</td>
+<td>7280391</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280391" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2014-07-28 19:16:02</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>525340</td>
+<td>7280390</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280390" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:15:55</td>
+</tr><tr>
+<td>100</td>
+<td>525338</td>
+<td>7280386</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280386" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:15:41</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>525335</td>
+<td>7280376</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280376" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:13:38</td>
+</tr><tr>
+<td>102</td>
+<td>525336</td>
+<td>7280373</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280373" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:13:00</td>
+</tr><tr class="acc">
+<td>103</td>
+<td>525329</td>
+<td>7280362</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280362" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:10:16</td>
+</tr><tr>
+<td>104</td>
+<td>525325</td>
+<td>7280351</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280351" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:08:14</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>525326</td>
+<td>7280340</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280340" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:06:22</td>
+</tr><tr>
+<td>106</td>
+<td>525314</td>
+<td>7280338</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280338" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:04:40</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>525315</td>
+<td>7280336</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280336" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:04:19</td>
+</tr><tr>
+<td>108</td>
+<td>525316</td>
+<td>7280335</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280335" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:04:18</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>525309</td>
+<td>7280325</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280325" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:01:25</td>
+</tr><tr>
+<td>110</td>
+<td>525307</td>
+<td>7280320</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280320" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 19:00:37</td>
+</tr><tr class="acc">
+<td>111</td>
+<td>525303</td>
+<td>7280313</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280313" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:59:11</td>
+</tr><tr>
+<td>112</td>
+<td>525297</td>
+<td>7280311</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280311" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:58:57</td>
+</tr><tr class="acc">
+<td>113</td>
+<td>525295</td>
+<td>7280305</td>
+<td><a href="https://a2oj.com/profile?Username=KingAguila">KingAguila</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280305" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:57:37</td>
+</tr><tr class="acc">
+<td>114</td>
+<td>525294</td>
+<td>7280299</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280299" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:56:34</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>525300</td>
+<td>3715431</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>Java</td>
+<td>2014-07-28 18:56:14</td>
+</tr><tr>
+<td>116</td>
+<td>525288</td>
+<td>7280290</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280290" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:54:54</td>
+</tr><tr class="acc">
+<td>117</td>
+<td>525290</td>
+<td>7280284</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280284" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:53:52</td>
+</tr><tr>
+<td>118</td>
+<td>525293</td>
+<td>3715430</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 18:53:15</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>525274</td>
+<td>7280273</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280273" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:51:54</td>
+</tr><tr class="acc">
+<td>120</td>
+<td>525276</td>
+<td>7280270</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1365">Winzip Winzip araña</a> (<a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Miguel">Miguel</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280270" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 18:51:31</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>525277</td>
+<td>7280268</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280268" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:51:23</td>
+</tr><tr>
+<td>122</td>
+<td>525263</td>
+<td>7280264</td>
+<td><a href="https://a2oj.com/profile?Username=KingAguila">KingAguila</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280264" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:50:24</td>
+</tr><tr class="acc">
+<td>123</td>
+<td>525265</td>
+<td>7280261</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280261" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:50:03</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>525260</td>
+<td>7280257</td>
+<td><a href="https://a2oj.com/profile?Username=acm18_cl">acm18_cl</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280257" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:49:35</td>
+</tr><tr class="acc">
+<td>125</td>
+<td>525272</td>
+<td>3715429</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 18:49:04</td>
+</tr><tr>
+<td>126</td>
+<td>525261</td>
+<td>7280253</td>
+<td><a href="https://a2oj.com/profile?Username=KingAguila">KingAguila</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280253" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:49:01</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>525262</td>
+<td>3715426</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>Java</td>
+<td>2014-07-28 18:46:20</td>
+</tr><tr>
+<td>128</td>
+<td>525257</td>
+<td>7280235</td>
+<td><a href="https://a2oj.com/profile?Username=KingAguila">KingAguila</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280235" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:46:02</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>525252</td>
+<td>7280232</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280232" target="_blank">MEMORY_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:44:49</td>
+</tr><tr>
+<td>130</td>
+<td>525253</td>
+<td>7280231</td>
+<td><a href="https://a2oj.com/profile?Username=acm18_cl">acm18_cl</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280231" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:44:46</td>
+</tr><tr class="odd">
+<td>131</td>
+<td>525255</td>
+<td>3715424</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 18:43:15</td>
+</tr><tr class="acc">
+<td>132</td>
+<td>525256</td>
+<td>3715423</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3780" target="_blank">P2 - Paint the Grid Again</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 18:42:48</td>
+</tr><tr class="acc">
+<td>133</td>
+<td>525266</td>
+<td>7280213</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1365">Winzip Winzip araña</a> (<a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Miguel">Miguel</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280213" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 18:41:32</td>
+</tr><tr>
+<td>134</td>
+<td>525249</td>
+<td>7280211</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280211" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:41:11</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>525267</td>
+<td>7280199</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1365">Winzip Winzip araña</a> (<a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Miguel">Miguel</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280199" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 18:40:01</td>
+</tr><tr>
+<td>136</td>
+<td>525246</td>
+<td>7280195</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280195" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:38:58</td>
+</tr><tr class="acc">
+<td>137</td>
+<td>525245</td>
+<td>7280193</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/412/D" target="_blank">P5 - Giving Awards</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/412/submission/7280193" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:38:29</td>
+</tr><tr>
+<td>138</td>
+<td>525244</td>
+<td>7280187</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280187" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:37:31</td>
+</tr><tr class="acc">
+<td>139</td>
+<td>525241</td>
+<td>7280178</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280178" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:35:40</td>
+</tr><tr>
+<td>140</td>
+<td>525237</td>
+<td>7280170</td>
+<td><a href="https://a2oj.com/profile?Username=acm18_cl">acm18_cl</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280170" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:33:32</td>
+</tr><tr class="acc">
+<td>141</td>
+<td>525236</td>
+<td>7280163</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280163" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:32:38</td>
+</tr><tr>
+<td>142</td>
+<td>525233</td>
+<td>7280159</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280159" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 18:31:18</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>525234</td>
+<td>7280156</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280156" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:31:02</td>
+</tr><tr>
+<td>144</td>
+<td>525229</td>
+<td>7280152</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280152" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:30:36</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>525230</td>
+<td>7280148</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280148" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:30:18</td>
+</tr><tr class="acc">
+<td>146</td>
+<td>525223</td>
+<td>7280141</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280141" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:28:49</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>525224</td>
+<td>7280134</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280134" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 18:27:34</td>
+</tr><tr>
+<td>148</td>
+<td>525232</td>
+<td>3715419</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2014-07-28 18:27:33</td>
+</tr><tr class="acc">
+<td>149</td>
+<td>525217</td>
+<td>7280121</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280121" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:26:20</td>
+</tr><tr>
+<td>150</td>
+<td>525218</td>
+<td>7280117</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280117" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 18:26:09</td>
+</tr><tr class="acc">
+<td>151</td>
+<td>525219</td>
+<td>7280116</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280116" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:25:48</td>
+</tr><tr>
+<td>152</td>
+<td>525220</td>
+<td>7280113</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280113" target="_blank">COMPILATION_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-07-28 18:25:30</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>525221</td>
+<td>7280108</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280108" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:25:21</td>
+</tr><tr class="acc">
+<td>154</td>
+<td>525222</td>
+<td>7280107</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280107" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:24:55</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>525212</td>
+<td>7280103</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280103" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:24:16</td>
+</tr><tr>
+<td>156</td>
+<td>525213</td>
+<td>7280102</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7280102" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:24:10</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>525214</td>
+<td>7280100</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280100" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2014-07-28 18:23:56</td>
+</tr><tr class="acc">
+<td>158</td>
+<td>525209</td>
+<td>7280085</td>
+<td><a href="https://a2oj.com/profile?Username=sonG">sonG</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280085" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:21:14</td>
+</tr><tr class="odd">
+<td>159</td>
+<td>525205</td>
+<td>7280084</td>
+<td><a href="https://a2oj.com/profile?Username=KingAguila">KingAguila</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280084" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:20:47</td>
+</tr><tr>
+<td>160</td>
+<td>525206</td>
+<td>7280083</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280083" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:20:38</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>525202</td>
+<td>7280074</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280074" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:19:16</td>
+</tr><tr>
+<td>162</td>
+<td>525200</td>
+<td>7280070</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280070" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:18:42</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>525207</td>
+<td>3715417</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 18:18:14</td>
+</tr><tr>
+<td>164</td>
+<td>525208</td>
+<td>3715416</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-07-28 18:18:01</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>525204</td>
+<td>3715414</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 18:16:19</td>
+</tr><tr>
+<td>166</td>
+<td>525193</td>
+<td>7280047</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280047" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:14:25</td>
+</tr><tr class="acc">
+<td>167</td>
+<td>525194</td>
+<td>7280045</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280045" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:14:18</td>
+</tr><tr class="acc">
+<td>168</td>
+<td>525187</td>
+<td>7280041</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7280041" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:12:54</td>
+</tr><tr class="odd">
+<td>169</td>
+<td>525188</td>
+<td>7280039</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7280039" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:12:19</td>
+</tr><tr>
+<td>170</td>
+<td>525191</td>
+<td>3715411</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2014-07-28 18:10:59</td>
+</tr><tr class="acc">
+<td>171</td>
+<td>525182</td>
+<td>7280012</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280012" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:06:19</td>
+</tr><tr class="acc">
+<td>172</td>
+<td>525180</td>
+<td>7280008</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1097">Luzos</a> (<a class="normal" href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a>, <a class="normal" href="https://a2oj.com/profile?Username=carloscas01">carloscas01</a>, <a class="normal" href="https://a2oj.com/profile?Username=Scypha">Scypha</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280008" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:05:24</td>
+</tr><tr class="odd">
+<td>173</td>
+<td>525181</td>
+<td>7280005</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7280005" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:05:21</td>
+</tr><tr class="acc">
+<td>174</td>
+<td>525177</td>
+<td>7279996</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279996" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:04:07</td>
+</tr><tr class="acc">
+<td>175</td>
+<td>525172</td>
+<td>7279984</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7279984" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:01:10</td>
+</tr><tr>
+<td>176</td>
+<td>525173</td>
+<td>7279983</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1097">Luzos</a> (<a class="normal" href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a>, <a class="normal" href="https://a2oj.com/profile?Username=carloscas01">carloscas01</a>, <a class="normal" href="https://a2oj.com/profile?Username=Scypha">Scypha</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279983" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 18:00:40</td>
+</tr><tr class="acc">
+<td>177</td>
+<td>525174</td>
+<td>7279977</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279977" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:59:54</td>
+</tr><tr class="acc">
+<td>178</td>
+<td>525169</td>
+<td>7279959</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279959" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 17:56:42</td>
+</tr><tr class="acc">
+<td>179</td>
+<td>525171</td>
+<td>7279955</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279955" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:56:17</td>
+</tr><tr class="acc">
+<td>180</td>
+<td>525170</td>
+<td>7279956</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/225/C" target="_blank">P9 - Barcode</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/225/submission/7279956" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:56:17</td>
+</tr><tr class="odd">
+<td>181</td>
+<td>525165</td>
+<td>7279952</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7279952" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-07-28 17:55:47</td>
+</tr><tr class="acc">
+<td>182</td>
+<td>525166</td>
+<td>7279938</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279938" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:54:02</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>525167</td>
+<td>7279935</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279935" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:53:38</td>
+</tr><tr class="acc">
+<td>184</td>
+<td>525164</td>
+<td>3715403</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P4 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-07-28 17:50:48</td>
+</tr><tr class="acc">
+<td>185</td>
+<td>525160</td>
+<td>7279916</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279916" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:50:32</td>
+</tr><tr class="acc">
+<td>186</td>
+<td>525161</td>
+<td>7279907</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279907" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:49:15</td>
+</tr><tr class="acc">
+<td>187</td>
+<td>525162</td>
+<td>7279904</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279904" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:48:54</td>
+</tr><tr class="acc">
+<td>188</td>
+<td>525163</td>
+<td>7279894</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279894" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:46:54</td>
+</tr><tr class="acc">
+<td>189</td>
+<td>525155</td>
+<td>7279889</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279889" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:45:55</td>
+</tr><tr>
+<td>190</td>
+<td>525150</td>
+<td>7279887</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279887" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:45:47</td>
+</tr><tr class="acc">
+<td>191</td>
+<td>525149</td>
+<td>7279888</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279888" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:45:47</td>
+</tr><tr class="acc">
+<td>192</td>
+<td>525151</td>
+<td>7279884</td>
+<td><a href="https://a2oj.com/profile?Username=sonG">sonG</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279884" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:45:23</td>
+</tr><tr class="acc">
+<td>193</td>
+<td>525152</td>
+<td>7279882</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279882" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:45:03</td>
+</tr><tr class="acc">
+<td>194</td>
+<td>525139</td>
+<td>7279875</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279875" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:43:46</td>
+</tr><tr class="odd">
+<td>195</td>
+<td>525140</td>
+<td>7279873</td>
+<td><a href="https://a2oj.com/profile?Username=mariano22">mariano22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279873" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:43:37</td>
+</tr><tr class="acc">
+<td>196</td>
+<td>525141</td>
+<td>7279869</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279869" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:43:18</td>
+</tr><tr class="acc">
+<td>197</td>
+<td>525143</td>
+<td>7279866</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279866" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:42:41</td>
+</tr><tr class="acc">
+<td>198</td>
+<td>525144</td>
+<td>7279860</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279860" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:42:04</td>
+</tr><tr class="acc">
+<td>199</td>
+<td>525145</td>
+<td>7279859</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279859" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:41:58</td>
+</tr><tr>
+<td>200</td>
+<td>525135</td>
+<td>7279854</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279854" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:40:25</td>
+</tr><tr class="acc">
+<td>201</td>
+<td>525136</td>
+<td>7279853</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279853" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:40:05</td>
+</tr><tr>
+<td>202</td>
+<td>525124</td>
+<td>7279852</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279852" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:39:52</td>
+</tr><tr class="acc">
+<td>203</td>
+<td>525125</td>
+<td>7279849</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279849" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:39:41</td>
+</tr><tr class="acc">
+<td>204</td>
+<td>525126</td>
+<td>7279839</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/417/D" target="_blank">P3 - Cunning Gena</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/417/submission/7279839" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:38:18</td>
+</tr><tr class="odd">
+<td>205</td>
+<td>525128</td>
+<td>7279830</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279830" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:37:13</td>
+</tr><tr class="acc">
+<td>206</td>
+<td>525129</td>
+<td>7279829</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279829" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:36:41</td>
+</tr><tr class="odd">
+<td>207</td>
+<td>525130</td>
+<td>7279827</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279827" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:36:29</td>
+</tr><tr>
+<td>208</td>
+<td>525131</td>
+<td>7279826</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279826" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:36:29</td>
+</tr><tr class="acc">
+<td>209</td>
+<td>525133</td>
+<td>7279825</td>
+<td><a href="https://a2oj.com/profile?Username=KingAguila">KingAguila</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/384/A" target="_blank">P8 - Coder</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/384/submission/7279825" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:36:22</td>
+</tr><tr>
+<td>210</td>
+<td>525134</td>
+<td>7279822</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/436/E" target="_blank">P6 - Cardboard Box</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/436/submission/7279822" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-07-28 17:35:37</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

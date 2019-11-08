@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache gr__a2oj_com fontface"><head>
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="Melarita_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="Melarita_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript" async="" src="Melarita_files/ga.js"></script><script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="Melarita_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" src="Melarita_files/jquery-latest.js"></script>
+<script type="text/javascript" src="Melarita_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<!-- START AUTO COMPLETE CODE -->
+<link rel="stylesheet" href="Melarita_files/jquery.css" type="text/css">
+<script type="text/javascript" src="Melarita_files/jquery_003.js"></script>
+<script type="text/javascript" src="Melarita_files/jquery_002.js"></script>
+<script type="text/javascript" src="Melarita_files/jquery_004.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("#Username").autocomplete("usernames",{
+    	delay: 200,
+		scrollHeight: 220,
+    	selectFirst: false
+	});
+});
+</script>
+<!-- END AUTO COMPLETE CODE -->
+
+
+
+
+
+
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="Melarita_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="Melarita_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2F%3FUsername%3DMelarita" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        <script src="Melarita_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+	
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+
+
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+
+<!-- <center><a href="https://goo.gl/hhK6L3" target="_blank"><img src="banner.jpg"></img></a><br/><br/></center> -->
+
+<div id="page"> 
+
+<center>
+
+
+
+<table cellpadding="5" border="1">
+<tbody><tr><td><b><center><font size="3" color="black"></font><font size="3" color="red">I'm sadly announcing that a2oj.com (A2 Online Judge) will be retiring by end of 2019, please read more details <a href="https://a2oj.com/bye">here</a>.</font></center></b></td></tr>
+</tbody></table>
+<br>
+
+<iframe src="Melarita_files/tb1.html" width="227" height="20" frameborder="0"></iframe>
+<br><br>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+<form method="get" action="">
+<table>
+<tbody><tr>
+<td><font size="3">Show contests only for this username (as owner and/or registrant):</font></td>
+<td><input type="text" id="Username" name="Username" style="Width:150px" value="Melarita" autocomplete="off" class="ac_input"></td>
+<td><input type="submit" value="Show"></td>
+</tr>
+</tbody></table>
+</form>
+<br>
+
+
+
+<b style="font: 22px arial, sans-serif;
+  color: #5C5C5C;">Running Contests</b>
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+There are no running contests<br><br>
+
+
+<br><br>
+
+<b style="font: 22px arial, sans-serif;
+  color: #5C5C5C;">Coming Contests</b>
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+There are no coming contests<br><br>
+
+
+<br><br>
+
+<b style="font: 22px arial, sans-serif;
+  color: #5C5C5C;">Past 20 Contests</b>
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+<table class="tablesorter" style="text-align: center;vertical-align:middle;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">Contest Name</th>
+<th class="header">Owner</th>
+<th class="header">Start Time</th>
+<th class="header">Duration</th>
+<th class="header">Registrants</th>
+<th class="header">Type</th>
+<th class="header"></th>
+<th class="header"></th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td style="vertical-align:middle">1</td>
+<td style="vertical-align:middle">5557 - Training Camp Argentina 2013 - Lunes 15
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=fidels">fidels</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=15&amp;month=7&amp;year=2013&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2013-07-15 17:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5557">37</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5557">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5557">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">2</td>
+<td style="vertical-align:middle">5575 - Training Camp Argentina 2013 - Martes 16
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=16&amp;month=7&amp;year=2013&amp;hour=16&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2013-07-16 16:15:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5575">35</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5575">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5575">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">3</td>
+<td style="vertical-align:middle">5591 - Training Camp Argentina 2013 - Miercoles 17
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=fidels">fidels</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=17&amp;month=7&amp;year=2013&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2013-07-17 16:30:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5591">38</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5591">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5591">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">4</td>
+<td style="vertical-align:middle">5582 - Training Camp Argentina 2013 - Martes 16 (Parte 2)
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=16&amp;month=7&amp;year=2013&amp;hour=23&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2013-07-16 23:00:00</a></td>
+<td style="vertical-align:middle">21 hrs and 45 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5582">13</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5582">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5582">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">5</td>
+<td style="vertical-align:middle">5608 - Training Camp Argentina 2013 - Jueves 18
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=fidels">fidels</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=18&amp;month=7&amp;year=2013&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2013-07-18 16:30:00</a></td>
+<td style="vertical-align:middle">4 hrs and 15 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5608">38</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5608">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5608">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">6</td>
+<td style="vertical-align:middle">5673 - Training Camp Argentina 2013 - Lunes 22
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=22&amp;month=7&amp;year=2013&amp;hour=16&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2013-07-22 16:15:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5673">37</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5673">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5673">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">7</td>
+<td style="vertical-align:middle">5690 - Training Camp Argentina 2013 - Martes 23
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=23&amp;month=7&amp;year=2013&amp;hour=16&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2013-07-23 16:15:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5690">32</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5690">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5690">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">8</td>
+<td style="vertical-align:middle">5709 - Training Camp Argentina - Miercoles 24
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=24&amp;month=7&amp;year=2013&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2013-07-24 16:30:00</a></td>
+<td style="vertical-align:middle">4 hrs and 15 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5709">35</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5709">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5709">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">9</td>
+<td style="vertical-align:middle">5727 - Training Camp Argentina 2013 - Jueves 25
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=25&amp;month=7&amp;year=2013&amp;hour=16&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2013-07-25 16:15:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5727">36</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5727">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5727">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">10</td>
+<td style="vertical-align:middle">5623 - Training Camp Argentina 2013 - 1ra semana
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=fidels">fidels</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=19&amp;month=7&amp;year=2013&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2013-07-19 16:30:00</a></td>
+<td style="vertical-align:middle">9 days, 7 hrs and 29 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5623">41</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5623">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5623">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">11</td>
+<td style="vertical-align:middle">8692 - Copa Desafío
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=elsantodel90">elsantodel90</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=22&amp;month=12&amp;year=2013&amp;hour=20&amp;min=10&amp;sec=0&amp;p1=1440" target="_blank">2013-12-22 20:10:00</a></td>
+<td style="vertical-align:middle">4 hrs and 50 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=8692">4</a></td>
+<td style="vertical-align:middle">Private</td>
+<td style="vertical-align:middle">By invitation only</td>
+<td></td>
+</tr><tr>
+<td style="vertical-align:middle">12</td>
+<td style="vertical-align:middle">9819 - Training Camp Lima - Jueves 20
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=20&amp;month=3&amp;year=2014&amp;hour=14&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2014-03-20 14:30:00</a></td>
+<td style="vertical-align:middle">3 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9819">19</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9819">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9819">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">13</td>
+<td style="vertical-align:middle">9836 - Training Camp Lima - Viernes 21
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=21&amp;month=3&amp;year=2014&amp;hour=14&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2014-03-21 14:30:00</a></td>
+<td style="vertical-align:middle">3 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9836">14</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9836">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9836">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">14</td>
+<td style="vertical-align:middle">9856 - Training Camp Lima - Lunes 24
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=24&amp;month=3&amp;year=2014&amp;hour=14&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-03-24 14:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9856">17</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9856">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9856">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">15</td>
+<td style="vertical-align:middle">9867 - Training Camp Lima - Martes 25
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=25&amp;month=3&amp;year=2014&amp;hour=14&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-03-25 14:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9867">16</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9867">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9867">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">16</td>
+<td style="vertical-align:middle">9890 - Training Camp Lima - Miercoles 26
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=26&amp;month=3&amp;year=2014&amp;hour=14&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-03-26 14:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9890">14</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9890">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9890">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">17</td>
+<td style="vertical-align:middle">9906 - Training Camp Lima - Jueves 27
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=27&amp;month=3&amp;year=2014&amp;hour=14&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-03-27 14:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9906">15</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9906">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9906">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">18</td>
+<td style="vertical-align:middle">9924 - Training Camp Lima - Viernes 28
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=28&amp;month=3&amp;year=2014&amp;hour=14&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-03-28 14:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=9924">16</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=9924">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=9924">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">19</td>
+<td style="vertical-align:middle">11560 - Training Camp Argentina 2014 #1
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=28&amp;month=7&amp;year=2014&amp;hour=17&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2014-07-28 17:30:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11560">40</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11560">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11560">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">20</td>
+<td style="vertical-align:middle">11565 - Training Camp Argentina 2014 #2
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=29&amp;month=7&amp;year=2014&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-07-29 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11565">41</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11565">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11565">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">21</td>
+<td style="vertical-align:middle">11571 - Training Camp Argentina 2014 #3
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=31&amp;month=7&amp;year=2014&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-07-31 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11571">39</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11571">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11571">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">22</td>
+<td style="vertical-align:middle">11574 - Training Camp Argentina 2014 #4
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=1&amp;month=8&amp;year=2014&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-08-01 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11574">39</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11574">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11574">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">23</td>
+<td style="vertical-align:middle">11674 - Training Camp Argentina 2014 #6
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=5&amp;month=8&amp;year=2014&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-08-05 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11674">38</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11674">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11674">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">24</td>
+<td style="vertical-align:middle">11712 - Training Camp Argentina 2014 #7
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=6&amp;month=8&amp;year=2014&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-08-06 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11712">37</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11712">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11712">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">25</td>
+<td style="vertical-align:middle">11713 - Training Camp Argentina 2014 #8
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=7&amp;month=8&amp;year=2014&amp;hour=17&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2014-08-07 17:15:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11713">35</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11713">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11713">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">26</td>
+<td style="vertical-align:middle">19253 - Test
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=20&amp;month=7&amp;year=2015&amp;hour=22&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-07-20 22:00:00</a></td>
+<td style="vertical-align:middle">30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19253">0</a></td>
+<td style="vertical-align:middle">Private</td>
+<td style="vertical-align:middle">By invitation only</td>
+<td></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">27</td>
+<td style="vertical-align:middle">19407 - Training Camp NEA 2015 - Prueba #6
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=pablobce">pablobce</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=27&amp;month=7&amp;year=2015&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-07-27 17:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 40 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19407">13</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19407">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19407">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">28</td>
+<td style="vertical-align:middle">28665 - Test
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=29&amp;month=10&amp;year=2016&amp;hour=21&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2016-10-29 21:00:00</a></td>
+<td style="vertical-align:middle">1 hr</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=28665">0</a></td>
+<td style="vertical-align:middle">Private</td>
+<td style="vertical-align:middle">By invitation only</td>
+<td></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">29</td>
+<td style="vertical-align:middle">28698 - Training Camp Campina Grande - Day 1
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=31&amp;month=10&amp;year=2016&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2016-10-31 17:00:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=28698">5</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=28698">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=28698">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">30</td>
+<td style="vertical-align:middle">28708 - Training Camp Campina Grande Day 2
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=1&amp;month=11&amp;year=2016&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2016-11-01 17:00:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=28708">9</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=28708">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=28708">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">31</td>
+<td style="vertical-align:middle">28725 - Training Camp Campina Grande Day 3
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=2&amp;month=11&amp;year=2016&amp;hour=17&amp;min=20&amp;sec=0&amp;p1=1440" target="_blank">2016-11-02 17:20:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=28725">7</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=28725">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=28725">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">32</td>
+<td style="vertical-align:middle">28744 - Training Camp Campina Grande Day 4
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=3&amp;month=11&amp;year=2016&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2016-11-03 17:00:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=28744">4</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=28744">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=28744">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">33</td>
+<td style="vertical-align:middle">28766 - Training Camp Campina Grande Day 5
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=4&amp;month=11&amp;year=2016&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2016-11-04 17:00:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=28766">3</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=28766">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=28766">Standings</a></td>
+</tr></tbody>
+</table>
+
+
+
+
+
+</center>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

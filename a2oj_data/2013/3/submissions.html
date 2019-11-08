@@ -1,0 +1,3853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=5591&non=true&My=true';
+		else
+			window.location = 'submissions?ID=5591&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=5591&My=true';
+		else
+			window.location = 'submissions?ID=5591';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D5591" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=5591">5591 - Training Camp Argentina 2013 - Miercoles 17
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=5591">Standings</a> - <a href="https://a2oj.com/submissions?ID=5591">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=5591">Problems</a> - <a href="https://a2oj.com/registrants?ID=5591">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>236506</td>
+<td>9672812</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 20:29:51</td>
+</tr><tr>
+<td>2</td>
+<td>236507</td>
+<td>9672808</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:29:37</td>
+</tr><tr class="acc">
+<td>3</td>
+<td>236501</td>
+<td>9672807</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:29:29</td>
+</tr><tr>
+<td>4</td>
+<td>236498</td>
+<td>1315813</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:29:26</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>236499</td>
+<td>1315811</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:29:09</td>
+</tr><tr>
+<td>6</td>
+<td>236502</td>
+<td>9672804</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:28:57</td>
+</tr><tr class="acc">
+<td>7</td>
+<td>236490</td>
+<td>9672799</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:27:24</td>
+</tr><tr>
+<td>8</td>
+<td>236486</td>
+<td>1315807</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:26:19</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>236485</td>
+<td>9672793</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2013-07-17 20:26:02</td>
+</tr><tr>
+<td>10</td>
+<td>236479</td>
+<td>9672791</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2013-07-17 20:25:36</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>236481</td>
+<td>9672788</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:24:54</td>
+</tr><tr>
+<td>12</td>
+<td>236482</td>
+<td>9672787</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2013-07-17 20:24:39</td>
+</tr><tr class="odd">
+<td>13</td>
+<td>236472</td>
+<td>9672778</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:23:18</td>
+</tr><tr class="acc">
+<td>14</td>
+<td>236473</td>
+<td>1315805</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:23:06</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>236474</td>
+<td>1315804</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:23:04</td>
+</tr><tr>
+<td>16</td>
+<td>236471</td>
+<td>4094672</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094672" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:22:40</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>236466</td>
+<td>1315802</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>C++</td>
+<td>2013-07-17 20:22:30</td>
+</tr><tr>
+<td>18</td>
+<td>236467</td>
+<td>1315801</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:21:58</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>236463</td>
+<td>1315800</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:21:16</td>
+</tr><tr>
+<td>20</td>
+<td>236453</td>
+<td>1315798</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:19:03</td>
+</tr><tr class="acc">
+<td>21</td>
+<td>236451</td>
+<td>4094659</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094659" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:19:03</td>
+</tr><tr class="acc">
+<td>22</td>
+<td>236445</td>
+<td>1315796</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jainor">jainor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:18:13</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>236446</td>
+<td>1315795</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Presentation Error</td>
+<td>C++</td>
+<td>2013-07-17 20:18:12</td>
+</tr><tr>
+<td>24</td>
+<td>236444</td>
+<td>9672759</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 20:17:29</td>
+</tr><tr class="acc">
+<td>25</td>
+<td>236441</td>
+<td>1315793</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:16:57</td>
+</tr><tr>
+<td>26</td>
+<td>236440</td>
+<td>9672755</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:16:53</td>
+</tr><tr class="odd">
+<td>27</td>
+<td>236435</td>
+<td>1315792</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:16:03</td>
+</tr><tr>
+<td>28</td>
+<td>236430</td>
+<td>9672746</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:14:12</td>
+</tr><tr class="odd">
+<td>29</td>
+<td>236432</td>
+<td>1315790</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:13:50</td>
+</tr><tr>
+<td>30</td>
+<td>236431</td>
+<td>9672743</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:13:23</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>236425</td>
+<td>9672739</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 20:12:45</td>
+</tr><tr>
+<td>32</td>
+<td>236421</td>
+<td>9672727</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:11:24</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>236418</td>
+<td>9672723</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2013-07-17 20:10:41</td>
+</tr><tr>
+<td>34</td>
+<td>236414</td>
+<td>1315787</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:10:18</td>
+</tr><tr class="odd">
+<td>35</td>
+<td>236416</td>
+<td>4094630</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094630" target="_blank">Runtime error on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:10:04</td>
+</tr><tr>
+<td>36</td>
+<td>236412</td>
+<td>9672718</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 20:09:54</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>236415</td>
+<td>1315786</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:09:44</td>
+</tr><tr class="acc">
+<td>38</td>
+<td>236413</td>
+<td>9672716</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:09:32</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>236410</td>
+<td>1315785</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:09:23</td>
+</tr><tr class="acc">
+<td>40</td>
+<td>236411</td>
+<td>1315784</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:09:13</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>236409</td>
+<td>9672714</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 20:09:10</td>
+</tr><tr>
+<td>42</td>
+<td>236406</td>
+<td>1315783</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:08:20</td>
+</tr><tr class="odd">
+<td>43</td>
+<td>236399</td>
+<td>1315780</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 20:05:48</td>
+</tr><tr>
+<td>44</td>
+<td>236395</td>
+<td>9672698</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:04:59</td>
+</tr><tr class="acc">
+<td>45</td>
+<td>236394</td>
+<td>4094609</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094609" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:04:44</td>
+</tr><tr>
+<td>46</td>
+<td>236386</td>
+<td>9672692</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:03:45</td>
+</tr><tr class="odd">
+<td>47</td>
+<td>236379</td>
+<td>1315778</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:02:46</td>
+</tr><tr>
+<td>48</td>
+<td>236380</td>
+<td>1315776</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jainor">jainor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:02:22</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>236381</td>
+<td>1315775</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 20:02:16</td>
+</tr><tr class="acc">
+<td>50</td>
+<td>236387</td>
+<td>4094601</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094601" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:02:00</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>236373</td>
+<td>9672685</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:01:59</td>
+</tr><tr class="acc">
+<td>52</td>
+<td>236382</td>
+<td>1315774</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:01:59</td>
+</tr><tr class="acc">
+<td>53</td>
+<td>236375</td>
+<td>1315774</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 20:01:59</td>
+</tr><tr class="acc">
+<td>54</td>
+<td>236388</td>
+<td>4094599</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094599" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:01:55</td>
+</tr><tr class="odd">
+<td>55</td>
+<td>236374</td>
+<td>9672681</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 20:01:11</td>
+</tr><tr>
+<td>56</td>
+<td>236370</td>
+<td>4094596</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094596" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 20:00:59</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>236359</td>
+<td>1315772</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:59:54</td>
+</tr><tr>
+<td>58</td>
+<td>236360</td>
+<td>1315771</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:59:17</td>
+</tr><tr class="odd">
+<td>59</td>
+<td>236350</td>
+<td>9672669</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 19:57:43</td>
+</tr><tr>
+<td>60</td>
+<td>236371</td>
+<td>4094590</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094590" target="_blank">Runtime error on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:57:28</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>236365</td>
+<td>4094589</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094589" target="_blank">Compilation error</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:57:03</td>
+</tr><tr>
+<td>62</td>
+<td>236347</td>
+<td>9672665</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 19:56:30</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>236346</td>
+<td>1315769</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=adolfo">adolfo</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:56:04</td>
+</tr><tr class="acc">
+<td>64</td>
+<td>236389</td>
+<td>4094582</td>
+<td><a href="https://a2oj.com/profile?Username=Shinta">Shinta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094582" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:55:59</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>236343</td>
+<td>1315767</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:55:07</td>
+</tr><tr class="acc">
+<td>66</td>
+<td>236339</td>
+<td>9672655</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 19:54:10</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>236341</td>
+<td>4094573</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094573" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:53:33</td>
+</tr><tr>
+<td>68</td>
+<td>236334</td>
+<td>1315766</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:53:33</td>
+</tr><tr class="odd">
+<td>69</td>
+<td>236335</td>
+<td>1315765</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Presentation Error</td>
+<td>C++</td>
+<td>2013-07-17 19:52:55</td>
+</tr><tr>
+<td>70</td>
+<td>236328</td>
+<td>4094563</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094563" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:51:16</td>
+</tr><tr class="odd">
+<td>71</td>
+<td>236336</td>
+<td>1315764</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:50:47</td>
+</tr><tr>
+<td>72</td>
+<td>236337</td>
+<td>1315763</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=adolfo">adolfo</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:50:45</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>236324</td>
+<td>1315762</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:49:53</td>
+</tr><tr>
+<td>74</td>
+<td>236329</td>
+<td>4094555</td>
+<td><a href="https://a2oj.com/profile?Username=Shinta">Shinta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094555" target="_blank">Denial of judgement</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:49:36</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>236330</td>
+<td>4094553</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094553" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:49:11</td>
+</tr><tr>
+<td>76</td>
+<td>236320</td>
+<td>1315761</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=adolfo">adolfo</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:47:28</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>236321</td>
+<td>4094548</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094548" target="_blank">Compilation error</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:47:26</td>
+</tr><tr class="acc">
+<td>78</td>
+<td>236319</td>
+<td>9672630</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 19:46:55</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>236317</td>
+<td>1315759</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:46:27</td>
+</tr><tr>
+<td>80</td>
+<td>236309</td>
+<td>1315758</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:45:40</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>236311</td>
+<td>1315756</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Output Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:45:03</td>
+</tr><tr>
+<td>82</td>
+<td>236310</td>
+<td>1315757</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=adolfo">adolfo</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:45:03</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>236297</td>
+<td>9672609</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-17 19:41:40</td>
+</tr><tr class="acc">
+<td>84</td>
+<td>236306</td>
+<td>4094526</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094526" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:41:28</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>236307</td>
+<td>4094514</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094514" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:39:41</td>
+</tr><tr class="acc">
+<td>86</td>
+<td>236308</td>
+<td>4094512</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094512" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:39:33</td>
+</tr><tr class="acc">
+<td>87</td>
+<td>236316</td>
+<td>9672598</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=grayfox">grayfox</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 19:38:32</td>
+</tr><tr>
+<td>88</td>
+<td>236289</td>
+<td>9672594</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 19:38:01</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>236287</td>
+<td>9672588</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 19:37:01</td>
+</tr><tr>
+<td>90</td>
+<td>236283</td>
+<td>1315755</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:36:14</td>
+</tr><tr class="acc">
+<td>91</td>
+<td>236304</td>
+<td>4094498</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094498" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:36:08</td>
+</tr><tr class="acc">
+<td>92</td>
+<td>236278</td>
+<td>4094495</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094495" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:35:36</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>236280</td>
+<td>9672572</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 19:34:31</td>
+</tr><tr>
+<td>94</td>
+<td>236272</td>
+<td>1315754</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>Java</td>
+<td>2013-07-17 19:33:30</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>236271</td>
+<td>9672562</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-17 19:32:25</td>
+</tr><tr class="acc">
+<td>96</td>
+<td>236282</td>
+<td>4094471</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094471" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:31:53</td>
+</tr><tr class="odd">
+<td>97</td>
+<td>236265</td>
+<td>1315753</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-17 19:28:37</td>
+</tr><tr>
+<td>98</td>
+<td>236264</td>
+<td>9672542</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 19:28:29</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>236267</td>
+<td>4094434</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094434" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:27:41</td>
+</tr><tr class="acc">
+<td>100</td>
+<td>236270</td>
+<td>4094432</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094432" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:27:26</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>236258</td>
+<td>4094428</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094428" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:27:03</td>
+</tr><tr>
+<td>102</td>
+<td>236268</td>
+<td>4094422</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094422" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:26:11</td>
+</tr><tr class="odd">
+<td>103</td>
+<td>236259</td>
+<td>4094418</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094418" target="_blank">Denial of judgement</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:25:29</td>
+</tr><tr>
+<td>104</td>
+<td>236253</td>
+<td>9672526</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2013-07-17 19:24:45</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>236254</td>
+<td>1315752</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:24:32</td>
+</tr><tr>
+<td>106</td>
+<td>236250</td>
+<td>1315751</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:24:03</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>236248</td>
+<td>4094403</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094403" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:23:59</td>
+</tr><tr>
+<td>108</td>
+<td>236247</td>
+<td>1315750</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:23:05</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>236245</td>
+<td>1315749</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:21:32</td>
+</tr><tr>
+<td>110</td>
+<td>236241</td>
+<td>1315748</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 19:21:27</td>
+</tr><tr class="odd">
+<td>111</td>
+<td>236244</td>
+<td>4094378</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094378" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:20:54</td>
+</tr><tr>
+<td>112</td>
+<td>236249</td>
+<td>4094372</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094372" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:20:06</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>236240</td>
+<td>1315747</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:19:53</td>
+</tr><tr>
+<td>114</td>
+<td>236233</td>
+<td>1315746</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:17:51</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>236235</td>
+<td>4094357</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094357" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:17:09</td>
+</tr><tr>
+<td>116</td>
+<td>236232</td>
+<td>4094354</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094354" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:16:52</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>236226</td>
+<td>4094349</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094349" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:15:44</td>
+</tr><tr>
+<td>118</td>
+<td>236228</td>
+<td>1315745</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:15:27</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>236236</td>
+<td>4094342</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094342" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:14:36</td>
+</tr><tr>
+<td>120</td>
+<td>236227</td>
+<td>4094339</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094339" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:14:08</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>236224</td>
+<td>4094336</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094336" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:12:53</td>
+</tr><tr>
+<td>122</td>
+<td>236220</td>
+<td>9672472</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 19:12:27</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>236215</td>
+<td>4094328</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094328" target="_blank">Running on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:12:02</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>236217</td>
+<td>1315742</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 19:11:29</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>236219</td>
+<td>4094322</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094322" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:11:19</td>
+</tr><tr>
+<td>126</td>
+<td>236214</td>
+<td>9672466</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2013-07-17 19:10:26</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>236212</td>
+<td>4094321</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094321" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:08:48</td>
+</tr><tr>
+<td>128</td>
+<td>236213</td>
+<td>4094320</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094320" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:08:26</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>236210</td>
+<td>9672459</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 19:08:25</td>
+</tr><tr>
+<td>130</td>
+<td>236209</td>
+<td>1315738</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:07:58</td>
+</tr><tr class="odd">
+<td>131</td>
+<td>236207</td>
+<td>9672454</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 19:06:33</td>
+</tr><tr>
+<td>132</td>
+<td>236206</td>
+<td>4094314</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094314" target="_blank">Wrong answer on test </a></td>
+<td>MS C++</td>
+<td>2013-07-17 19:06:22</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>236208</td>
+<td>4094311</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094311" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:05:41</td>
+</tr><tr>
+<td>134</td>
+<td>236202</td>
+<td>4094302</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094302" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:04:54</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>236203</td>
+<td>4094299</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094299" target="_blank">Runtime error on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:04:28</td>
+</tr><tr>
+<td>136</td>
+<td>236197</td>
+<td>9672434</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 19:03:39</td>
+</tr><tr class="odd">
+<td>137</td>
+<td>236196</td>
+<td>1315737</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:03:00</td>
+</tr><tr>
+<td>138</td>
+<td>236195</td>
+<td>4094292</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094292" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:02:42</td>
+</tr><tr class="odd">
+<td>139</td>
+<td>236193</td>
+<td>1315736</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 19:01:26</td>
+</tr><tr>
+<td>140</td>
+<td>236190</td>
+<td>4094280</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094280" target="_blank">Compilation error</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:01:02</td>
+</tr><tr class="acc">
+<td>141</td>
+<td>236192</td>
+<td>9672419</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 19:00:58</td>
+</tr><tr>
+<td>142</td>
+<td>236191</td>
+<td>4094275</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094275" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 19:00:48</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>236188</td>
+<td>9672407</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 18:58:11</td>
+</tr><tr>
+<td>144</td>
+<td>236189</td>
+<td>9672406</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 18:58:06</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>236186</td>
+<td>9672405</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>ADA</td>
+<td>2013-07-17 18:57:48</td>
+</tr><tr>
+<td>146</td>
+<td>236187</td>
+<td>4094249</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094249" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:57:00</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>236179</td>
+<td>9672398</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 18:56:42</td>
+</tr><tr class="acc">
+<td>148</td>
+<td>236182</td>
+<td>1315733</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:56:33</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>236183</td>
+<td>1315732</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:56:12</td>
+</tr><tr class="acc">
+<td>150</td>
+<td>236184</td>
+<td>1315731</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:56:10</td>
+</tr><tr class="acc">
+<td>151</td>
+<td>236180</td>
+<td>9672393</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C</td>
+<td>2013-07-17 18:55:38</td>
+</tr><tr>
+<td>152</td>
+<td>236178</td>
+<td>1315729</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 18:55:14</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>236181</td>
+<td>9672392</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>ADA</td>
+<td>2013-07-17 18:55:08</td>
+</tr><tr>
+<td>154</td>
+<td>236177</td>
+<td>4094236</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094236" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:54:56</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>236176</td>
+<td>1315728</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:54:29</td>
+</tr><tr class="acc">
+<td>156</td>
+<td>236174</td>
+<td>1315726</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:53:38</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>236173</td>
+<td>1315725</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:51:52</td>
+</tr><tr>
+<td>158</td>
+<td>236170</td>
+<td>1315724</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 18:50:47</td>
+</tr><tr class="acc">
+<td>159</td>
+<td>236171</td>
+<td>1315723</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:50:13</td>
+</tr><tr class="acc">
+<td>160</td>
+<td>236172</td>
+<td>4094201</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094201" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:48:30</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>236165</td>
+<td>9672348</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 18:45:18</td>
+</tr><tr>
+<td>162</td>
+<td>236162</td>
+<td>1315720</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-17 18:42:37</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>236164</td>
+<td>4094166</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094166" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:42:26</td>
+</tr><tr>
+<td>164</td>
+<td>236163</td>
+<td>1315719</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:42:26</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>236157</td>
+<td>9672308</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 18:39:15</td>
+</tr><tr class="acc">
+<td>166</td>
+<td>236158</td>
+<td>1315716</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:39:09</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>236160</td>
+<td>4094143</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094143" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:38:29</td>
+</tr><tr>
+<td>168</td>
+<td>236154</td>
+<td>4094136</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4094136" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:36:31</td>
+</tr><tr class="odd">
+<td>169</td>
+<td>236152</td>
+<td>1315713</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:34:04</td>
+</tr><tr class="acc">
+<td>170</td>
+<td>236150</td>
+<td>1315712</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:31:17</td>
+</tr><tr class="odd">
+<td>171</td>
+<td>236151</td>
+<td>4094110</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094110" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:31:13</td>
+</tr><tr>
+<td>172</td>
+<td>236147</td>
+<td>1315711</td>
+<td><a href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:30:15</td>
+</tr><tr class="acc">
+<td>173</td>
+<td>236149</td>
+<td>4094098</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094098" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:29:48</td>
+</tr><tr>
+<td>174</td>
+<td>236145</td>
+<td>4094088</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094088" target="_blank">Judgement failed</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:28:38</td>
+</tr><tr class="acc">
+<td>175</td>
+<td>236144</td>
+<td>1315709</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:28:12</td>
+</tr><tr class="acc">
+<td>176</td>
+<td>236139</td>
+<td>9672225</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:22:33</td>
+</tr><tr class="odd">
+<td>177</td>
+<td>236136</td>
+<td>9672223</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2013-07-17 18:22:02</td>
+</tr><tr class="acc">
+<td>178</td>
+<td>236137</td>
+<td>9672221</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:21:57</td>
+</tr><tr class="odd">
+<td>179</td>
+<td>236135</td>
+<td>4094039</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094039" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:21:51</td>
+</tr><tr class="acc">
+<td>180</td>
+<td>236138</td>
+<td>9672220</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:21:49</td>
+</tr><tr class="odd">
+<td>181</td>
+<td>236132</td>
+<td>9672217</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 18:20:00</td>
+</tr><tr class="acc">
+<td>182</td>
+<td>236131</td>
+<td>4094023</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4094023" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:19:32</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>236128</td>
+<td>9672212</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 18:18:42</td>
+</tr><tr class="acc">
+<td>184</td>
+<td>236129</td>
+<td>9672207</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:18:25</td>
+</tr><tr class="odd">
+<td>185</td>
+<td>236133</td>
+<td>1315704</td>
+<td><a href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 18:17:58</td>
+</tr><tr>
+<td>186</td>
+<td>236126</td>
+<td>4094007</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4094007" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:17:41</td>
+</tr><tr class="odd">
+<td>187</td>
+<td>236127</td>
+<td>4093997</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4093997" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:17:08</td>
+</tr><tr>
+<td>188</td>
+<td>236123</td>
+<td>1315701</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-17 18:15:10</td>
+</tr><tr class="odd">
+<td>189</td>
+<td>236120</td>
+<td>1315698</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 18:12:29</td>
+</tr><tr>
+<td>190</td>
+<td>236121</td>
+<td>9672183</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 18:12:28</td>
+</tr><tr class="odd">
+<td>191</td>
+<td>236118</td>
+<td>4093955</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4093955" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:12:18</td>
+</tr><tr class="acc">
+<td>192</td>
+<td>236122</td>
+<td>9672182</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:12:16</td>
+</tr><tr class="acc">
+<td>193</td>
+<td>236115</td>
+<td>9672180</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:12:07</td>
+</tr><tr>
+<td>194</td>
+<td>236117</td>
+<td>1315695</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 18:11:11</td>
+</tr><tr class="acc">
+<td>195</td>
+<td>236114</td>
+<td>4093947</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4093947" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:11:07</td>
+</tr><tr class="acc">
+<td>196</td>
+<td>236109</td>
+<td>9672174</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:10:54</td>
+</tr><tr class="odd">
+<td>197</td>
+<td>236107</td>
+<td>4093933</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4093933" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:09:19</td>
+</tr><tr>
+<td>198</td>
+<td>236104</td>
+<td>1315690</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 18:07:05</td>
+</tr><tr class="acc">
+<td>199</td>
+<td>236101</td>
+<td>4093904</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4093904" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:06:26</td>
+</tr><tr>
+<td>200</td>
+<td>236134</td>
+<td>1315688</td>
+<td><a href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 18:06:01</td>
+</tr><tr class="acc">
+<td>201</td>
+<td>236100</td>
+<td>9672154</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:05:59</td>
+</tr><tr>
+<td>202</td>
+<td>236103</td>
+<td>4093890</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4093890" target="_blank">Runtime error on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:05:21</td>
+</tr><tr class="odd">
+<td>203</td>
+<td>236094</td>
+<td>9672143</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 18:03:37</td>
+</tr><tr>
+<td>204</td>
+<td>236090</td>
+<td>9672132</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>JAVA</td>
+<td>2013-07-17 18:02:48</td>
+</tr><tr class="acc">
+<td>205</td>
+<td>236091</td>
+<td>9672131</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:02:34</td>
+</tr><tr class="acc">
+<td>206</td>
+<td>236089</td>
+<td>1315687</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:02:20</td>
+</tr><tr class="acc">
+<td>207</td>
+<td>236088</td>
+<td>1315686</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:01:47</td>
+</tr><tr>
+<td>208</td>
+<td>236087</td>
+<td>4093843</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4093843" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 18:01:10</td>
+</tr><tr class="odd">
+<td>209</td>
+<td>236085</td>
+<td>1315683</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-17 18:00:49</td>
+</tr><tr class="acc">
+<td>210</td>
+<td>236083</td>
+<td>9672118</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 18:00:46</td>
+</tr><tr class="odd">
+<td>211</td>
+<td>236079</td>
+<td>4093822</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4093822" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:59:57</td>
+</tr><tr class="acc">
+<td>212</td>
+<td>236080</td>
+<td>9672111</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:59:44</td>
+</tr><tr class="odd">
+<td>213</td>
+<td>236078</td>
+<td>1315679</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:58:41</td>
+</tr><tr class="acc">
+<td>214</td>
+<td>236073</td>
+<td>1315677</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:57:24</td>
+</tr><tr class="odd">
+<td>215</td>
+<td>236070</td>
+<td>9672096</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 17:56:39</td>
+</tr><tr>
+<td>216</td>
+<td>236071</td>
+<td>1315676</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>C++</td>
+<td>2013-07-17 17:56:29</td>
+</tr><tr class="acc">
+<td>217</td>
+<td>236068</td>
+<td>9672088</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Joshi">Joshi</a></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:55:04</td>
+</tr><tr>
+<td>218</td>
+<td>236066</td>
+<td>1315674</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:54:36</td>
+</tr><tr class="odd">
+<td>219</td>
+<td>236064</td>
+<td>9672080</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 17:53:05</td>
+</tr><tr class="acc">
+<td>220</td>
+<td>236062</td>
+<td>1315673</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:50:17</td>
+</tr><tr class="acc">
+<td>221</td>
+<td>236061</td>
+<td>9672060</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:49:08</td>
+</tr><tr>
+<td>222</td>
+<td>236059</td>
+<td>4093654</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4093654" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:49:08</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>236060</td>
+<td>4093639</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4093639" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:48:46</td>
+</tr><tr class="acc">
+<td>224</td>
+<td>236058</td>
+<td>1315672</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:48:08</td>
+</tr><tr class="acc">
+<td>225</td>
+<td>236056</td>
+<td>9672052</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:47:37</td>
+</tr><tr>
+<td>226</td>
+<td>236055</td>
+<td>1315670</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:46:25</td>
+</tr><tr class="acc">
+<td>227</td>
+<td>236054</td>
+<td>4093616</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4093616" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:46:04</td>
+</tr><tr>
+<td>228</td>
+<td>236051</td>
+<td>4093466</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4093466" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:43:22</td>
+</tr><tr class="odd">
+<td>229</td>
+<td>236050</td>
+<td>1315669</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:41:46</td>
+</tr><tr>
+<td>230</td>
+<td>236047</td>
+<td>9672009</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 17:41:00</td>
+</tr><tr class="acc">
+<td>231</td>
+<td>236045</td>
+<td>1315666</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:37:40</td>
+</tr><tr class="acc">
+<td>232</td>
+<td>236044</td>
+<td>9671988</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:36:44</td>
+</tr><tr class="odd">
+<td>233</td>
+<td>236043</td>
+<td>4093142</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="http://codeforces.com/problemset/problem/19/D" target="_blank">P9 - Points</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/19/submission/4093142" target="_blank">Time limit exceeded on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:36:35</td>
+</tr><tr class="acc">
+<td>234</td>
+<td>236042</td>
+<td>1315664</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:35:43</td>
+</tr><tr class="acc">
+<td>235</td>
+<td>236036</td>
+<td>1315663</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:34:11</td>
+</tr><tr class="acc">
+<td>236</td>
+<td>236034</td>
+<td>1315662</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:32:55</td>
+</tr><tr class="acc">
+<td>237</td>
+<td>236033</td>
+<td>9671961</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:32:33</td>
+</tr><tr>
+<td>238</td>
+<td>236031</td>
+<td>1315661</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 17:32:16</td>
+</tr><tr class="acc">
+<td>239</td>
+<td>236030</td>
+<td>9671954</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:31:20</td>
+</tr><tr>
+<td>240</td>
+<td>236027</td>
+<td>1315660</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2013-07-17 17:30:18</td>
+</tr><tr class="odd">
+<td>241</td>
+<td>236029</td>
+<td>1315659</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:30:03</td>
+</tr><tr>
+<td>242</td>
+<td>236024</td>
+<td>1315657</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jdl">jdl</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:28:51</td>
+</tr><tr class="acc">
+<td>243</td>
+<td>236025</td>
+<td>9671938</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:28:24</td>
+</tr><tr class="acc">
+<td>244</td>
+<td>236022</td>
+<td>1315656</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:27:44</td>
+</tr><tr class="odd">
+<td>245</td>
+<td>236020</td>
+<td>9671905</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2013-07-17 17:23:32</td>
+</tr><tr>
+<td>246</td>
+<td>236017</td>
+<td>1315655</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jdl">jdl</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:22:51</td>
+</tr><tr class="odd">
+<td>247</td>
+<td>236018</td>
+<td>1315654</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:22:26</td>
+</tr><tr>
+<td>248</td>
+<td>236015</td>
+<td>9671894</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 17:21:37</td>
+</tr><tr class="odd">
+<td>249</td>
+<td>236014</td>
+<td>1315653</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:21:17</td>
+</tr><tr class="acc">
+<td>250</td>
+<td>236013</td>
+<td>4092584</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/272/C" target="_blank">P7 - Dima and Staircase</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/272/submission/4092584" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:20:13</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>236012</td>
+<td>9671883</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:19:24</td>
+</tr><tr class="acc">
+<td>252</td>
+<td>236008</td>
+<td>1315651</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:17:57</td>
+</tr><tr class="acc">
+<td>253</td>
+<td>236006</td>
+<td>9671858</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:16:23</td>
+</tr><tr class="acc">
+<td>254</td>
+<td>236005</td>
+<td>1315648</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:14:38</td>
+</tr><tr class="odd">
+<td>255</td>
+<td>236001</td>
+<td>9671838</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2013-07-17 17:13:41</td>
+</tr><tr class="acc">
+<td>256</td>
+<td>236003</td>
+<td>9671833</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:13:25</td>
+</tr><tr class="acc">
+<td>257</td>
+<td>235998</td>
+<td>4092286</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4092286" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:12:26</td>
+</tr><tr class="acc">
+<td>258</td>
+<td>235999</td>
+<td>1315646</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:12:12</td>
+</tr><tr class="odd">
+<td>259</td>
+<td>235997</td>
+<td>9671821</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2013-07-17 17:12:06</td>
+</tr><tr class="acc">
+<td>260</td>
+<td>235995</td>
+<td>9671810</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:10:42</td>
+</tr><tr class="acc">
+<td>261</td>
+<td>235992</td>
+<td>1315645</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:09:54</td>
+</tr><tr class="acc">
+<td>262</td>
+<td>235993</td>
+<td>1315644</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:09:48</td>
+</tr><tr class="acc">
+<td>263</td>
+<td>235994</td>
+<td>1315643</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:09:11</td>
+</tr><tr>
+<td>264</td>
+<td>235991</td>
+<td>1315642</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 17:08:07</td>
+</tr><tr class="odd">
+<td>265</td>
+<td>235988</td>
+<td>9671784</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2013-07-17 17:06:28</td>
+</tr><tr>
+<td>266</td>
+<td>235985</td>
+<td>4092035</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4092035" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:05:58</td>
+</tr><tr class="acc">
+<td>267</td>
+<td>235986</td>
+<td>9671780</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:05:56</td>
+</tr><tr>
+<td>268</td>
+<td>235983</td>
+<td>9671773</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/QTREE2/" target="_blank">P5 - Query on a tree II</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGKILL">SIGKILL</a>)</td>
+<td>C++</td>
+<td>2013-07-17 17:04:30</td>
+</tr><tr class="odd">
+<td>269</td>
+<td>235984</td>
+<td>9671772</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2013-07-17 17:04:12</td>
+</tr><tr class="acc">
+<td>270</td>
+<td>235979</td>
+<td>9671770</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:03:44</td>
+</tr><tr class="acc">
+<td>271</td>
+<td>235978</td>
+<td>4091944</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4091944" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:03:20</td>
+</tr><tr>
+<td>272</td>
+<td>235980</td>
+<td>9671763</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 17:03:04</td>
+</tr><tr class="odd">
+<td>273</td>
+<td>235977</td>
+<td>4091893</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4091893" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 17:01:57</td>
+</tr><tr class="acc">
+<td>274</td>
+<td>235975</td>
+<td>1315639</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 17:00:25</td>
+</tr><tr class="odd">
+<td>275</td>
+<td>235973</td>
+<td>1315637</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 16:59:47</td>
+</tr><tr>
+<td>276</td>
+<td>235974</td>
+<td>1315635</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 16:59:03</td>
+</tr><tr class="odd">
+<td>277</td>
+<td>235972</td>
+<td>4091767</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/21/C" target="_blank">P3 - Stripe 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/21/submission/4091767" target="_blank">Wrong answer on test </a></td>
+<td>GNU C++</td>
+<td>2013-07-17 16:58:57</td>
+</tr><tr>
+<td>278</td>
+<td>235970</td>
+<td>9671738</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2013-07-17 16:57:47</td>
+</tr><tr class="odd">
+<td>279</td>
+<td>235965</td>
+<td>1315633</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 16:55:40</td>
+</tr><tr>
+<td>280</td>
+<td>235961</td>
+<td>9671728</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 16:55:32</td>
+</tr><tr class="odd">
+<td>281</td>
+<td>235962</td>
+<td>9671727</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 16:55:17</td>
+</tr><tr class="acc">
+<td>282</td>
+<td>235957</td>
+<td>1315632</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=eddycael">eddycael</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1910.html" target="_blank">P8 - The Triangle Game</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:54:47</td>
+</tr><tr class="odd">
+<td>283</td>
+<td>235963</td>
+<td>9671722</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2013-07-17 16:54:28</td>
+</tr><tr class="acc">
+<td>284</td>
+<td>235955</td>
+<td>9671719</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Joshi">Joshi</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:54:11</td>
+</tr><tr class="acc">
+<td>285</td>
+<td>235959</td>
+<td>1315629</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:53:54</td>
+</tr><tr>
+<td>286</td>
+<td>235956</td>
+<td>9671715</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Joshi">Joshi</a></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>ADA</td>
+<td>2013-07-17 16:53:51</td>
+</tr><tr class="odd">
+<td>287</td>
+<td>235949</td>
+<td>1315627</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-17 16:53:22</td>
+</tr><tr>
+<td>288</td>
+<td>235953</td>
+<td>9671710</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 16:53:15</td>
+</tr><tr class="acc">
+<td>289</td>
+<td>235950</td>
+<td>1315626</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=429">iifiis</a> (<a class="normal" href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=hamlet_fiis">hamlet_fiis</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:52:58</td>
+</tr><tr>
+<td>290</td>
+<td>235947</td>
+<td>1315624</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Time Limit Exceed</td>
+<td>C++</td>
+<td>2013-07-17 16:52:25</td>
+</tr><tr class="odd">
+<td>291</td>
+<td>235944</td>
+<td>9671700</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/BYTESM2/" target="_blank">P6 - Philosophers Stone</a></td>
+<td>SPOJ</td>
+<td>runtime error    (NZEC)</td>
+<td>JAVA</td>
+<td>2013-07-17 16:51:28</td>
+</tr><tr class="acc">
+<td>292</td>
+<td>235942</td>
+<td>1315622</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:50:43</td>
+</tr><tr class="acc">
+<td>293</td>
+<td>235943</td>
+<td>1315620</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:47:47</td>
+</tr><tr>
+<td>294</td>
+<td>235930</td>
+<td>9671672</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/DQUERY/" target="_blank">P1 - D-query</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2013-07-17 16:46:29</td>
+</tr><tr class="acc">
+<td>295</td>
+<td>235927</td>
+<td>1315618</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1961.html" target="_blank">P10 - Sum It Up</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:43:51</td>
+</tr><tr>
+<td>296</td>
+<td>235929</td>
+<td>1315617</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-17 16:43:43</td>
+</tr><tr class="acc">
+<td>297</td>
+<td>235924</td>
+<td>1315615</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:39:36</td>
+</tr><tr class="acc">
+<td>298</td>
+<td>235922</td>
+<td>1315613</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.tju.edu.cn/toj/showp1398.html" target="_blank">P4 - Square</a></td>
+<td>TJU</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-17 16:38:00</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

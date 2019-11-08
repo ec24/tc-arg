@@ -1,0 +1,4201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19397&non=true&My=true';
+		else
+			window.location = 'submissions?ID=19397&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19397&My=true';
+		else
+			window.location = 'submissions?ID=19397';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D19397" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=19397">19397 - TC Argentina 2015 - Dia 6
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=19397">Standings</a> - <a href="https://a2oj.com/submissions?ID=19397">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=19397">Problems</a> - <a href="https://a2oj.com/registrants?ID=19397">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>891791</td>
+<td>12256964</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256964" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 21:29:45</td>
+</tr><tr>
+<td>2</td>
+<td>891788</td>
+<td>12256951</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256951" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 21:27:32</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>891786</td>
+<td>14770887</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++14</td>
+<td>2015-07-28 21:27:25</td>
+</tr><tr>
+<td>4</td>
+<td>891783</td>
+<td>1732197</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-28 21:26:33</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>891772</td>
+<td>1732196</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-28 21:26:19</td>
+</tr><tr class="acc">
+<td>6</td>
+<td>891779</td>
+<td>14770882</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 21:26:15</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>891774</td>
+<td>1732194</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 21:25:02</td>
+</tr><tr>
+<td>8</td>
+<td>891769</td>
+<td>1732193</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 21:23:54</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>891770</td>
+<td>1732192</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-28 21:22:57</td>
+</tr><tr class="acc">
+<td>10</td>
+<td>891758</td>
+<td>12256926</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256926" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 21:22:42</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>891761</td>
+<td>1732191</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++</td>
+<td>2015-07-28 21:22:15</td>
+</tr><tr class="acc">
+<td>12</td>
+<td>891762</td>
+<td>1732190</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 21:22:12</td>
+</tr><tr class="odd">
+<td>13</td>
+<td>891763</td>
+<td>1732189</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 21:22:08</td>
+</tr><tr>
+<td>14</td>
+<td>891765</td>
+<td>1732187</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-28 21:20:50</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>891755</td>
+<td>1732185</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 21:19:54</td>
+</tr><tr>
+<td>16</td>
+<td>891748</td>
+<td>1732184</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-28 21:15:34</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>891747</td>
+<td>14770861</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++14</td>
+<td>2015-07-28 21:15:23</td>
+</tr><tr class="acc">
+<td>18</td>
+<td>891743</td>
+<td>14770858</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 21:14:07</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>891744</td>
+<td>14770857</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 21:13:17</td>
+</tr><tr>
+<td>20</td>
+<td>891740</td>
+<td>1732183</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 21:12:01</td>
+</tr><tr class="odd">
+<td>21</td>
+<td>891739</td>
+<td>14770833</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++14</td>
+<td>2015-07-28 21:09:33</td>
+</tr><tr>
+<td>22</td>
+<td>891738</td>
+<td>1732181</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 21:08:48</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>891732</td>
+<td>14770826</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++14</td>
+<td>2015-07-28 21:07:11</td>
+</tr><tr>
+<td>24</td>
+<td>891725</td>
+<td>6332496</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 21:05:44</td>
+</tr><tr class="odd">
+<td>25</td>
+<td>891727</td>
+<td>6332495</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 21:05:39</td>
+</tr><tr>
+<td>26</td>
+<td>891716</td>
+<td>12256811</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256811" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 21:04:15</td>
+</tr><tr class="odd">
+<td>27</td>
+<td>891721</td>
+<td>6332491</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 21:04:12</td>
+</tr><tr>
+<td>28</td>
+<td>891712</td>
+<td>1732178</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-28 21:02:06</td>
+</tr><tr class="acc">
+<td>29</td>
+<td>891713</td>
+<td>1732177</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 21:01:41</td>
+</tr><tr>
+<td>30</td>
+<td>891711</td>
+<td>14770805</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++14</td>
+<td>2015-07-28 21:01:37</td>
+</tr><tr class="acc">
+<td>31</td>
+<td>891703</td>
+<td>6332482</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 20:57:20</td>
+</tr><tr>
+<td>32</td>
+<td>891700</td>
+<td>1732175</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 20:57:12</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>891697</td>
+<td>1732174</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 20:55:52</td>
+</tr><tr class="acc">
+<td>34</td>
+<td>891694</td>
+<td>14770778</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 20:54:43</td>
+</tr><tr class="odd">
+<td>35</td>
+<td>891695</td>
+<td>12256739</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256739" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 20:54:34</td>
+</tr><tr>
+<td>36</td>
+<td>891692</td>
+<td>1732173</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 20:53:30</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>891693</td>
+<td>1732171</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 20:53:05</td>
+</tr><tr>
+<td>38</td>
+<td>891689</td>
+<td>1732170</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 20:52:29</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>891686</td>
+<td>14770770</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 20:52:18</td>
+</tr><tr>
+<td>40</td>
+<td>891687</td>
+<td>14770767</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 20:51:53</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>891681</td>
+<td>12256720</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256720" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 20:50:42</td>
+</tr><tr class="acc">
+<td>42</td>
+<td>891684</td>
+<td>12256711</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256711" target="_blank">Accepted</a></td>
+<td>Java 7</td>
+<td>2015-07-28 20:49:32</td>
+</tr><tr class="odd">
+<td>43</td>
+<td>891680</td>
+<td>1732167</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 20:48:51</td>
+</tr><tr>
+<td>44</td>
+<td>891675</td>
+<td>14770749</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++14</td>
+<td>2015-07-28 20:47:10</td>
+</tr><tr class="acc">
+<td>45</td>
+<td>891676</td>
+<td>14770748</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 20:46:37</td>
+</tr><tr>
+<td>46</td>
+<td>891673</td>
+<td>1732166</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 20:46:17</td>
+</tr><tr class="odd">
+<td>47</td>
+<td>891672</td>
+<td>12256694</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256694" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 20:46:11</td>
+</tr><tr>
+<td>48</td>
+<td>891664</td>
+<td>6332470</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 20:44:56</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>891667</td>
+<td>12256685</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256685" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 20:43:42</td>
+</tr><tr>
+<td>50</td>
+<td>891666</td>
+<td>1732164</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-28 20:42:31</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>891653</td>
+<td>12256654</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256654" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 20:39:45</td>
+</tr><tr>
+<td>52</td>
+<td>891652</td>
+<td>12256650</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256650" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 20:39:01</td>
+</tr><tr class="acc">
+<td>53</td>
+<td>891645</td>
+<td>6332462</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 20:33:12</td>
+</tr><tr class="acc">
+<td>54</td>
+<td>891632</td>
+<td>6332458</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 20:26:26</td>
+</tr><tr class="acc">
+<td>55</td>
+<td>891614</td>
+<td>1732152</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 20:21:43</td>
+</tr><tr>
+<td>56</td>
+<td>891608</td>
+<td>6332456</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 20:20:31</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>891609</td>
+<td>6332455</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>FreePascal 2.6</td>
+<td>2015-07-28 20:20:09</td>
+</tr><tr>
+<td>58</td>
+<td>891602</td>
+<td>1732151</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Presentation error</td>
+<td>C++</td>
+<td>2015-07-28 20:17:19</td>
+</tr><tr class="odd">
+<td>59</td>
+<td>891592</td>
+<td>6332454</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 20:17:06</td>
+</tr><tr>
+<td>60</td>
+<td>891593</td>
+<td>6332453</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 20:16:26</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>891596</td>
+<td>1732150</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 20:16:06</td>
+</tr><tr class="acc">
+<td>62</td>
+<td>891595</td>
+<td>12256501</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256501" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 20:15:56</td>
+</tr><tr class="acc">
+<td>63</td>
+<td>891588</td>
+<td>14770555</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 20:11:33</td>
+</tr><tr>
+<td>64</td>
+<td>891586</td>
+<td>6332450</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 20:11:11</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>891580</td>
+<td>6332449</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 20:10:33</td>
+</tr><tr class="acc">
+<td>66</td>
+<td>891581</td>
+<td>6332447</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 20:09:25</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>891571</td>
+<td>14770530</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2015-07-28 20:08:31</td>
+</tr><tr class="acc">
+<td>68</td>
+<td>891573</td>
+<td>14770524</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 20:07:49</td>
+</tr><tr class="odd">
+<td>69</td>
+<td>891565</td>
+<td>6332440</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 20:04:43</td>
+</tr><tr class="acc">
+<td>70</td>
+<td>891564</td>
+<td>1732147</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 20:02:58</td>
+</tr><tr class="acc">
+<td>71</td>
+<td>891556</td>
+<td>14770457</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-28 19:59:24</td>
+</tr><tr class="acc">
+<td>72</td>
+<td>891545</td>
+<td>12256371</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256371" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 19:59:07</td>
+</tr><tr class="acc">
+<td>73</td>
+<td>891550</td>
+<td>6332437</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 19:58:05</td>
+</tr><tr class="acc">
+<td>74</td>
+<td>891544</td>
+<td>1732143</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:57:15</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>891536</td>
+<td>1732142</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 19:55:33</td>
+</tr><tr class="acc">
+<td>76</td>
+<td>891530</td>
+<td>14770427</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:54:58</td>
+</tr><tr class="acc">
+<td>77</td>
+<td>891531</td>
+<td>14770420</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-28 19:54:24</td>
+</tr><tr class="acc">
+<td>78</td>
+<td>891529</td>
+<td>1732141</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3917" target="_blank">P6 - Smoking gun</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:54:07</td>
+</tr><tr class="acc">
+<td>79</td>
+<td>891528</td>
+<td>6332435</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:53:29</td>
+</tr><tr class="acc">
+<td>80</td>
+<td>891525</td>
+<td>6332431</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>GCC 4.9</td>
+<td>2015-07-28 19:52:29</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>891533</td>
+<td>14770399</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 19:52:26</td>
+</tr><tr class="acc">
+<td>82</td>
+<td>891526</td>
+<td>6332430</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:52:23</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>891523</td>
+<td>14770395</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:52:12</td>
+</tr><tr>
+<td>84</td>
+<td>891527</td>
+<td>6332429</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 19:51:16</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>891524</td>
+<td>1732140</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 19:51:12</td>
+</tr><tr>
+<td>86</td>
+<td>891513</td>
+<td>6332427</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:50:49</td>
+</tr><tr class="acc">
+<td>87</td>
+<td>891515</td>
+<td>14770374</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:50:02</td>
+</tr><tr>
+<td>88</td>
+<td>891517</td>
+<td>14770368</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 19:49:28</td>
+</tr><tr class="acc">
+<td>89</td>
+<td>891516</td>
+<td>1732139</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:49:10</td>
+</tr><tr class="acc">
+<td>90</td>
+<td>891510</td>
+<td>14770362</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 19:48:35</td>
+</tr><tr class="odd">
+<td>91</td>
+<td>891512</td>
+<td>6332425</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:47:11</td>
+</tr><tr>
+<td>92</td>
+<td>891506</td>
+<td>14770344</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:46:14</td>
+</tr><tr class="acc">
+<td>93</td>
+<td>891499</td>
+<td>14770332</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:45:04</td>
+</tr><tr>
+<td>94</td>
+<td>891502</td>
+<td>6332424</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:44:24</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>891500</td>
+<td>14770320</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:44:07</td>
+</tr><tr>
+<td>96</td>
+<td>891501</td>
+<td>14770308</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 19:43:16</td>
+</tr><tr class="acc">
+<td>97</td>
+<td>891488</td>
+<td>12256261</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256261" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:42:45</td>
+</tr><tr>
+<td>98</td>
+<td>891493</td>
+<td>1732135</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 19:41:31</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>891494</td>
+<td>1732134</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3917" target="_blank">P6 - Smoking gun</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:41:26</td>
+</tr><tr class="acc">
+<td>100</td>
+<td>891484</td>
+<td>14770291</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:40:40</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>891487</td>
+<td>12256241</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256241" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:40:35</td>
+</tr><tr class="acc">
+<td>102</td>
+<td>891486</td>
+<td>1732132</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:39:11</td>
+</tr><tr class="acc">
+<td>103</td>
+<td>891478</td>
+<td>1732131</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:37:46</td>
+</tr><tr>
+<td>104</td>
+<td>891483</td>
+<td>14770263</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:37:25</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>891475</td>
+<td>1732130</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:36:14</td>
+</tr><tr>
+<td>106</td>
+<td>891468</td>
+<td>6332420</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:34:50</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>891466</td>
+<td>14770224</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 19:32:44</td>
+</tr><tr class="acc">
+<td>108</td>
+<td>891460</td>
+<td>1732128</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:31:19</td>
+</tr><tr class="acc">
+<td>109</td>
+<td>891459</td>
+<td>14770213</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 19:30:49</td>
+</tr><tr class="acc">
+<td>110</td>
+<td>891454</td>
+<td>12256155</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256155" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:29:45</td>
+</tr><tr class="acc">
+<td>111</td>
+<td>891458</td>
+<td>1732126</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 19:29:39</td>
+</tr><tr class="acc">
+<td>112</td>
+<td>891457</td>
+<td>1732127</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:29:39</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>891443</td>
+<td>1732125</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-28 19:28:20</td>
+</tr><tr class="acc">
+<td>114</td>
+<td>891439</td>
+<td>1732121</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 19:26:27</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>891441</td>
+<td>1732119</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-28 19:25:04</td>
+</tr><tr>
+<td>116</td>
+<td>891433</td>
+<td>6332410</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 19:25:01</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>891435</td>
+<td>12256106</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256106" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:24:11</td>
+</tr><tr>
+<td>118</td>
+<td>891437</td>
+<td>12256102</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256102" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:23:59</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>891428</td>
+<td>12256091</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256091" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:22:14</td>
+</tr><tr>
+<td>120</td>
+<td>891419</td>
+<td>12256076</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12256076" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 19:20:39</td>
+</tr><tr class="acc">
+<td>121</td>
+<td>891424</td>
+<td>14770111</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:20:30</td>
+</tr><tr>
+<td>122</td>
+<td>891425</td>
+<td>14770110</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 19:20:24</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>891422</td>
+<td>12256063</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256063" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:19:08</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>891411</td>
+<td>1732115</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 19:18:12</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>891415</td>
+<td>6332406</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 19:18:05</td>
+</tr><tr class="acc">
+<td>126</td>
+<td>891409</td>
+<td>1732112</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 19:15:09</td>
+</tr><tr class="acc">
+<td>127</td>
+<td>891403</td>
+<td>12256034</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12256034" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 19:14:33</td>
+</tr><tr class="acc">
+<td>128</td>
+<td>891408</td>
+<td>6332401</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:14:14</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>891406</td>
+<td>1732109</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1076">FORC++</a> (<a class="normal" href="https://a2oj.com/profile?Username=Victoralin10">Victoralin10</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jairls18">Jairls18</a>, <a class="normal" href="https://a2oj.com/profile?Username=josue">josue</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=josue">josue</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3917" target="_blank">P6 - Smoking gun</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:14:06</td>
+</tr><tr class="acc">
+<td>130</td>
+<td>891407</td>
+<td>1732108</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 19:13:52</td>
+</tr><tr class="odd">
+<td>131</td>
+<td>891402</td>
+<td>14770068</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:13:48</td>
+</tr><tr>
+<td>132</td>
+<td>891395</td>
+<td>14770060</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 19:12:17</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>891394</td>
+<td>1732104</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 19:09:30</td>
+</tr><tr class="acc">
+<td>134</td>
+<td>891389</td>
+<td>6332393</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:08:52</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>891386</td>
+<td>12255964</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255964" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:06:24</td>
+</tr><tr>
+<td>136</td>
+<td>891382</td>
+<td>6332390</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:05:19</td>
+</tr><tr class="odd">
+<td>137</td>
+<td>891379</td>
+<td>12255945</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255945" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:03:56</td>
+</tr><tr class="acc">
+<td>138</td>
+<td>891380</td>
+<td>12255943</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255943" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:03:37</td>
+</tr><tr class="odd">
+<td>139</td>
+<td>891360</td>
+<td>12255911</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255911" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 19:01:05</td>
+</tr><tr>
+<td>140</td>
+<td>891358</td>
+<td>6332385</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 19:00:55</td>
+</tr><tr class="acc">
+<td>141</td>
+<td>891363</td>
+<td>12255905</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255905" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:00:45</td>
+</tr><tr class="acc">
+<td>142</td>
+<td>891364</td>
+<td>12255904</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255904" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 19:00:37</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>891365</td>
+<td>12255901</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255901" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 19:00:24</td>
+</tr><tr class="acc">
+<td>144</td>
+<td>891351</td>
+<td>12255884</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255884" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:58:56</td>
+</tr><tr class="acc">
+<td>145</td>
+<td>891353</td>
+<td>12255880</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255880" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:58:33</td>
+</tr><tr class="acc">
+<td>146</td>
+<td>891357</td>
+<td>6332380</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:57:23</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>891349</td>
+<td>14769967</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 18:57:17</td>
+</tr><tr class="acc">
+<td>148</td>
+<td>891340</td>
+<td>6332378</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:56:49</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>891345</td>
+<td>12255847</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255847" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:55:32</td>
+</tr><tr class="acc">
+<td>150</td>
+<td>891341</td>
+<td>6332377</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 18:55:23</td>
+</tr><tr class="odd">
+<td>151</td>
+<td>891347</td>
+<td>12255845</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255845" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:55:16</td>
+</tr><tr>
+<td>152</td>
+<td>891339</td>
+<td>14769942</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:54:28</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>891333</td>
+<td>12255816</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255816" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:52:29</td>
+</tr><tr class="acc">
+<td>154</td>
+<td>891334</td>
+<td>12255815</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255815" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:52:24</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>891332</td>
+<td>14769917</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 18:52:00</td>
+</tr><tr>
+<td>156</td>
+<td>891335</td>
+<td>12255812</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255812" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:51:53</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>891330</td>
+<td>14769907</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 18:50:35</td>
+</tr><tr>
+<td>158</td>
+<td>891327</td>
+<td>12255795</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255795" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:50:06</td>
+</tr><tr class="odd">
+<td>159</td>
+<td>891329</td>
+<td>6332368</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 18:49:25</td>
+</tr><tr class="acc">
+<td>160</td>
+<td>891323</td>
+<td>1732084</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-28 18:48:15</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>891322</td>
+<td>12255778</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255778" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:48:09</td>
+</tr><tr>
+<td>162</td>
+<td>891319</td>
+<td>1732082</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2450" target="_blank">P3 - Fare and Balanced</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 18:45:14</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>891318</td>
+<td>14769863</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 18:45:12</td>
+</tr><tr>
+<td>164</td>
+<td>891309</td>
+<td>6332364</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 18:44:02</td>
+</tr><tr class="acc">
+<td>165</td>
+<td>891312</td>
+<td>1732078</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:43:18</td>
+</tr><tr class="acc">
+<td>166</td>
+<td>891306</td>
+<td>6332362</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:42:13</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>891301</td>
+<td>14769831</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 18:40:21</td>
+</tr><tr class="acc">
+<td>168</td>
+<td>891302</td>
+<td>14769830</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:40:15</td>
+</tr><tr class="odd">
+<td>169</td>
+<td>891303</td>
+<td>14769819</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 18:39:11</td>
+</tr><tr class="acc">
+<td>170</td>
+<td>891296</td>
+<td>14769817</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:38:57</td>
+</tr><tr class="odd">
+<td>171</td>
+<td>891293</td>
+<td>6332359</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:38:23</td>
+</tr><tr>
+<td>172</td>
+<td>891294</td>
+<td>6332358</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:37:40</td>
+</tr><tr class="acc">
+<td>173</td>
+<td>891291</td>
+<td>1732074</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:37:11</td>
+</tr><tr>
+<td>174</td>
+<td>891287</td>
+<td>14769798</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:36:19</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>891288</td>
+<td>14769791</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:35:22</td>
+</tr><tr class="acc">
+<td>176</td>
+<td>891282</td>
+<td>1732071</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:35:08</td>
+</tr><tr class="odd">
+<td>177</td>
+<td>891268</td>
+<td>6332352</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 18:34:32</td>
+</tr><tr>
+<td>178</td>
+<td>891269</td>
+<td>6332351</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>FreePascal 2.6</td>
+<td>2015-07-28 18:34:06</td>
+</tr><tr class="acc">
+<td>179</td>
+<td>891276</td>
+<td>1732069</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 18:33:52</td>
+</tr><tr>
+<td>180</td>
+<td>891277</td>
+<td>1732068</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 18:33:38</td>
+</tr><tr class="acc">
+<td>181</td>
+<td>891278</td>
+<td>1732066</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:32:59</td>
+</tr><tr>
+<td>182</td>
+<td>891262</td>
+<td>1732063</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Presentation error</td>
+<td>C++</td>
+<td>2015-07-28 18:31:59</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>891265</td>
+<td>14769761</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:31:23</td>
+</tr><tr>
+<td>184</td>
+<td>891250</td>
+<td>6332344</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 18:30:51</td>
+</tr><tr class="acc">
+<td>185</td>
+<td>891256</td>
+<td>12255618</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255618" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:28:48</td>
+</tr><tr class="acc">
+<td>186</td>
+<td>891236</td>
+<td>1732056</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:26:37</td>
+</tr><tr class="acc">
+<td>187</td>
+<td>891238</td>
+<td>1732054</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 18:25:56</td>
+</tr><tr class="acc">
+<td>188</td>
+<td>891239</td>
+<td>1732053</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:24:50</td>
+</tr><tr class="odd">
+<td>189</td>
+<td>891226</td>
+<td>12255580</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255580" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:24:06</td>
+</tr><tr class="acc">
+<td>190</td>
+<td>891229</td>
+<td>14769668</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:23:43</td>
+</tr><tr class="acc">
+<td>191</td>
+<td>891217</td>
+<td>1732051</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:22:13</td>
+</tr><tr>
+<td>192</td>
+<td>891218</td>
+<td>1732050</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:21:11</td>
+</tr><tr class="acc">
+<td>193</td>
+<td>891215</td>
+<td>14769646</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:20:49</td>
+</tr><tr class="acc">
+<td>194</td>
+<td>891208</td>
+<td>1732049</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-28 18:19:58</td>
+</tr><tr class="acc">
+<td>195</td>
+<td>891212</td>
+<td>12255541</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255541" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:19:44</td>
+</tr><tr class="acc">
+<td>196</td>
+<td>891203</td>
+<td>14769624</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:18:29</td>
+</tr><tr class="odd">
+<td>197</td>
+<td>891202</td>
+<td>6332334</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:18:06</td>
+</tr><tr>
+<td>198</td>
+<td>891205</td>
+<td>14769616</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:17:11</td>
+</tr><tr class="acc">
+<td>199</td>
+<td>891197</td>
+<td>6332332</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:14:39</td>
+</tr><tr>
+<td>200</td>
+<td>891195</td>
+<td>12255511</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255511" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:14:38</td>
+</tr><tr class="odd">
+<td>201</td>
+<td>891196</td>
+<td>12255505</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255505" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:14:00</td>
+</tr><tr>
+<td>202</td>
+<td>891186</td>
+<td>12255490</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255490" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:12:12</td>
+</tr><tr class="acc">
+<td>203</td>
+<td>891191</td>
+<td>14769589</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:12:07</td>
+</tr><tr class="acc">
+<td>204</td>
+<td>891190</td>
+<td>6332327</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:11:49</td>
+</tr><tr class="acc">
+<td>205</td>
+<td>891187</td>
+<td>12255486</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255486" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:11:44</td>
+</tr><tr>
+<td>206</td>
+<td>891189</td>
+<td>12255479</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255479" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:11:10</td>
+</tr><tr class="odd">
+<td>207</td>
+<td>891182</td>
+<td>14769563</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 18:09:44</td>
+</tr><tr>
+<td>208</td>
+<td>891179</td>
+<td>12255459</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255459" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:09:36</td>
+</tr><tr class="acc">
+<td>209</td>
+<td>891185</td>
+<td>14769557</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:09:18</td>
+</tr><tr>
+<td>210</td>
+<td>891180</td>
+<td>1732046</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-28 18:08:51</td>
+</tr><tr class="acc">
+<td>211</td>
+<td>891174</td>
+<td>12255453</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255453" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:08:02</td>
+</tr><tr>
+<td>212</td>
+<td>891175</td>
+<td>12255449</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255449" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:07:49</td>
+</tr><tr class="acc">
+<td>213</td>
+<td>891176</td>
+<td>12255448</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255448" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:07:44</td>
+</tr><tr class="acc">
+<td>214</td>
+<td>891177</td>
+<td>12255446</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255446" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:07:40</td>
+</tr><tr class="acc">
+<td>215</td>
+<td>891173</td>
+<td>14769546</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:07:27</td>
+</tr><tr class="acc">
+<td>216</td>
+<td>891171</td>
+<td>14769534</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 18:05:46</td>
+</tr><tr class="acc">
+<td>217</td>
+<td>891172</td>
+<td>6332319</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 18:05:37</td>
+</tr><tr>
+<td>218</td>
+<td>891166</td>
+<td>12255415</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255415" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:04:34</td>
+</tr><tr class="odd">
+<td>219</td>
+<td>891168</td>
+<td>12255400</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255400" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:03:21</td>
+</tr><tr>
+<td>220</td>
+<td>891162</td>
+<td>14769506</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 18:03:00</td>
+</tr><tr class="odd">
+<td>221</td>
+<td>891164</td>
+<td>12255385</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255385" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 18:01:33</td>
+</tr><tr class="acc">
+<td>222</td>
+<td>891163</td>
+<td>14769489</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 18:01:15</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>891155</td>
+<td>6332311</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 18:00:46</td>
+</tr><tr class="acc">
+<td>224</td>
+<td>891153</td>
+<td>1732038</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 18:00:27</td>
+</tr><tr class="acc">
+<td>225</td>
+<td>891157</td>
+<td>12255371</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255371" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 18:00:24</td>
+</tr><tr>
+<td>226</td>
+<td>891158</td>
+<td>12255365</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255365" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:59:44</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>891159</td>
+<td>12255358</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255358" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:59:17</td>
+</tr><tr>
+<td>228</td>
+<td>891142</td>
+<td>12255355</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255355" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:58:52</td>
+</tr><tr class="odd">
+<td>229</td>
+<td>891143</td>
+<td>12255351</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255351" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:58:34</td>
+</tr><tr>
+<td>230</td>
+<td>891150</td>
+<td>6332309</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 17:58:21</td>
+</tr><tr class="odd">
+<td>231</td>
+<td>891145</td>
+<td>12255346</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255346" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:57:40</td>
+</tr><tr class="acc">
+<td>232</td>
+<td>891151</td>
+<td>1732034</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 17:57:25</td>
+</tr><tr class="odd">
+<td>233</td>
+<td>891135</td>
+<td>12255341</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255341" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:57:04</td>
+</tr><tr class="acc">
+<td>234</td>
+<td>891134</td>
+<td>14769434</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:56:19</td>
+</tr><tr class="acc">
+<td>235</td>
+<td>891140</td>
+<td>1732028</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:56:17</td>
+</tr><tr class="acc">
+<td>236</td>
+<td>891141</td>
+<td>1732027</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:56:07</td>
+</tr><tr class="odd">
+<td>237</td>
+<td>891138</td>
+<td>12255326</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255326" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:55:38</td>
+</tr><tr>
+<td>238</td>
+<td>891127</td>
+<td>14769419</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 17:54:35</td>
+</tr><tr class="odd">
+<td>239</td>
+<td>891130</td>
+<td>12255307</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255307" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:54:06</td>
+</tr><tr>
+<td>240</td>
+<td>891131</td>
+<td>12255301</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255301" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:53:37</td>
+</tr><tr class="acc">
+<td>241</td>
+<td>891133</td>
+<td>6332306</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:53:33</td>
+</tr><tr class="acc">
+<td>242</td>
+<td>891132</td>
+<td>12255298</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255298" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:53:24</td>
+</tr><tr class="acc">
+<td>243</td>
+<td>891115</td>
+<td>1732023</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:52:06</td>
+</tr><tr>
+<td>244</td>
+<td>891122</td>
+<td>12255283</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255283" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:51:46</td>
+</tr><tr class="acc">
+<td>245</td>
+<td>891116</td>
+<td>1732022</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:51:11</td>
+</tr><tr class="acc">
+<td>246</td>
+<td>891118</td>
+<td>6332305</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:51:01</td>
+</tr><tr class="odd">
+<td>247</td>
+<td>891113</td>
+<td>12255269</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255269" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:50:32</td>
+</tr><tr class="acc">
+<td>248</td>
+<td>891108</td>
+<td>14769360</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:48:54</td>
+</tr><tr class="odd">
+<td>249</td>
+<td>891109</td>
+<td>14769351</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 17:48:19</td>
+</tr><tr class="acc">
+<td>250</td>
+<td>891107</td>
+<td>6332303</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:48:00</td>
+</tr><tr class="odd">
+<td>251</td>
+<td>891105</td>
+<td>12255239</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/321/C" target="_blank">P9 - Ciel the Commander</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/321/submission/12255239" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:47:42</td>
+</tr><tr>
+<td>252</td>
+<td>891096</td>
+<td>14769333</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/CANDN/" target="_blank">P2 - Charly And Nito</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++</td>
+<td>2015-07-28 17:46:59</td>
+</tr><tr class="acc">
+<td>253</td>
+<td>891099</td>
+<td>14769310</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:45:37</td>
+</tr><tr class="acc">
+<td>254</td>
+<td>891100</td>
+<td>14769309</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:45:35</td>
+</tr><tr class="acc">
+<td>255</td>
+<td>891124</td>
+<td>12255214</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255214" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:44:52</td>
+</tr><tr class="acc">
+<td>256</td>
+<td>891095</td>
+<td>1732018</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:44:42</td>
+</tr><tr class="acc">
+<td>257</td>
+<td>891080</td>
+<td>1732017</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:44:27</td>
+</tr><tr>
+<td>258</td>
+<td>891081</td>
+<td>1732016</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3914" target="_blank">P5 - Piece it together</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-28 17:44:24</td>
+</tr><tr class="acc">
+<td>259</td>
+<td>891086</td>
+<td>14769291</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 17:43:45</td>
+</tr><tr class="acc">
+<td>260</td>
+<td>891087</td>
+<td>14769290</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:43:45</td>
+</tr><tr class="acc">
+<td>261</td>
+<td>891078</td>
+<td>12255202</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255202" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:43:32</td>
+</tr><tr class="acc">
+<td>262</td>
+<td>891088</td>
+<td>14769284</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:43:19</td>
+</tr><tr class="acc">
+<td>263</td>
+<td>891117</td>
+<td>1732013</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:42:50</td>
+</tr><tr class="acc">
+<td>264</td>
+<td>891073</td>
+<td>12255191</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255191" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:42:17</td>
+</tr><tr class="acc">
+<td>265</td>
+<td>891075</td>
+<td>1732012</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 17:42:06</td>
+</tr><tr>
+<td>266</td>
+<td>891070</td>
+<td>6332301</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 17:40:44</td>
+</tr><tr class="odd">
+<td>267</td>
+<td>891065</td>
+<td>12255172</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255172" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:40:33</td>
+</tr><tr>
+<td>268</td>
+<td>891071</td>
+<td>6332300</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>FreePascal 2.6</td>
+<td>2015-07-28 17:40:29</td>
+</tr><tr class="acc">
+<td>269</td>
+<td>891064</td>
+<td>1732009</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:40:24</td>
+</tr><tr>
+<td>270</td>
+<td>891067</td>
+<td>12255165</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255165" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:39:54</td>
+</tr><tr class="odd">
+<td>271</td>
+<td>891069</td>
+<td>12255161</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255161" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:39:47</td>
+</tr><tr class="acc">
+<td>272</td>
+<td>891061</td>
+<td>14769244</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 17:39:01</td>
+</tr><tr class="odd">
+<td>273</td>
+<td>891057</td>
+<td>12255138</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255138" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:37:46</td>
+</tr><tr class="acc">
+<td>274</td>
+<td>891049</td>
+<td>6332298</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:37:35</td>
+</tr><tr class="acc">
+<td>275</td>
+<td>891050</td>
+<td>6332296</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:37:26</td>
+</tr><tr class="acc">
+<td>276</td>
+<td>891059</td>
+<td>12255131</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255131" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:37:18</td>
+</tr><tr class="acc">
+<td>277</td>
+<td>891045</td>
+<td>14769221</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:35:52</td>
+</tr><tr>
+<td>278</td>
+<td>891043</td>
+<td>12255112</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255112" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:35:49</td>
+</tr><tr class="acc">
+<td>279</td>
+<td>891039</td>
+<td>12255102</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255102" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:34:37</td>
+</tr><tr class="acc">
+<td>280</td>
+<td>891041</td>
+<td>12255101</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255101" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:34:36</td>
+</tr><tr class="acc">
+<td>281</td>
+<td>891036</td>
+<td>14769206</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:34:10</td>
+</tr><tr class="acc">
+<td>282</td>
+<td>891034</td>
+<td>1732001</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:33:57</td>
+</tr><tr class="acc">
+<td>283</td>
+<td>891037</td>
+<td>14769200</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:33:46</td>
+</tr><tr>
+<td>284</td>
+<td>891035</td>
+<td>1732000</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-28 17:33:46</td>
+</tr><tr class="acc">
+<td>285</td>
+<td>891038</td>
+<td>14769198</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:33:43</td>
+</tr><tr>
+<td>286</td>
+<td>891024</td>
+<td>12255077</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255077" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:32:38</td>
+</tr><tr class="odd">
+<td>287</td>
+<td>891026</td>
+<td>1731998</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-28 17:32:27</td>
+</tr><tr class="acc">
+<td>288</td>
+<td>891027</td>
+<td>1731997</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 17:32:26</td>
+</tr><tr class="acc">
+<td>289</td>
+<td>891028</td>
+<td>1731996</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:32:17</td>
+</tr><tr>
+<td>290</td>
+<td>891031</td>
+<td>14769187</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 17:31:53</td>
+</tr><tr class="acc">
+<td>291</td>
+<td>891032</td>
+<td>14769185</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:31:40</td>
+</tr><tr class="acc">
+<td>292</td>
+<td>891029</td>
+<td>1731995</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:31:37</td>
+</tr><tr class="acc">
+<td>293</td>
+<td>891017</td>
+<td>6332292</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=previus">previus</a></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:29:49</td>
+</tr><tr class="acc">
+<td>294</td>
+<td>891019</td>
+<td>1731992</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3061" target="_blank">P10 - Arm Wrestling Tournament</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:29:43</td>
+</tr><tr class="acc">
+<td>295</td>
+<td>891014</td>
+<td>12255032</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255032" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:28:44</td>
+</tr><tr class="acc">
+<td>296</td>
+<td>891015</td>
+<td>12255030</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255030" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:28:29</td>
+</tr><tr class="acc">
+<td>297</td>
+<td>891013</td>
+<td>14769152</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:28:28</td>
+</tr><tr class="acc">
+<td>298</td>
+<td>891010</td>
+<td>1731991</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:27:30</td>
+</tr><tr class="acc">
+<td>299</td>
+<td>891005</td>
+<td>14769134</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:26:46</td>
+</tr><tr class="acc">
+<td>300</td>
+<td>891008</td>
+<td>12255010</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12255010" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-28 17:26:22</td>
+</tr><tr class="odd">
+<td>301</td>
+<td>891006</td>
+<td>14769127</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-28 17:26:02</td>
+</tr><tr class="acc">
+<td>302</td>
+<td>891003</td>
+<td>14769121</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C</td>
+<td>2015-07-28 17:24:57</td>
+</tr><tr class="acc">
+<td>303</td>
+<td>891000</td>
+<td>14769100</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 17:22:17</td>
+</tr><tr class="acc">
+<td>304</td>
+<td>891001</td>
+<td>1731990</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:21:45</td>
+</tr><tr class="odd">
+<td>305</td>
+<td>890988</td>
+<td>14769091</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 17:20:57</td>
+</tr><tr class="acc">
+<td>306</td>
+<td>890989</td>
+<td>14769090</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:20:52</td>
+</tr><tr class="acc">
+<td>307</td>
+<td>890993</td>
+<td>6332276</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Accepted</td>
+<td>G++ 4.9 C++11</td>
+<td>2015-07-28 17:20:44</td>
+</tr><tr class="acc">
+<td>308</td>
+<td>890996</td>
+<td>1731989</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 17:20:28</td>
+</tr><tr class="acc">
+<td>309</td>
+<td>890998</td>
+<td>1731988</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 17:20:20</td>
+</tr><tr>
+<td>310</td>
+<td>890991</td>
+<td>14769083</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 17:20:04</td>
+</tr><tr class="acc">
+<td>311</td>
+<td>890992</td>
+<td>14769077</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:19:45</td>
+</tr><tr class="acc">
+<td>312</td>
+<td>891004</td>
+<td>1731987</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-28 17:19:23</td>
+</tr><tr class="odd">
+<td>313</td>
+<td>890985</td>
+<td>6332275</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:19:13</td>
+</tr><tr>
+<td>314</td>
+<td>890986</td>
+<td>6332274</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Compilation error</td>
+<td>FreePascal 2.6</td>
+<td>2015-07-28 17:18:41</td>
+</tr><tr class="odd">
+<td>315</td>
+<td>890987</td>
+<td>6332270</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1139" target="_blank">P8 - City Blocks</a></td>
+<td>Timus</td>
+<td>Wrong answer</td>
+<td>G++ 4.9</td>
+<td>2015-07-28 17:17:14</td>
+</tr><tr class="acc">
+<td>316</td>
+<td>890984</td>
+<td>1731985</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:16:49</td>
+</tr><tr class="acc">
+<td>317</td>
+<td>890978</td>
+<td>1731984</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:16:09</td>
+</tr><tr class="acc">
+<td>318</td>
+<td>890973</td>
+<td>14769020</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:14:53</td>
+</tr><tr class="acc">
+<td>319</td>
+<td>890971</td>
+<td>1731982</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:14:20</td>
+</tr><tr class="acc">
+<td>320</td>
+<td>890972</td>
+<td>1731981</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:14:18</td>
+</tr><tr class="acc">
+<td>321</td>
+<td>890966</td>
+<td>1731980</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:10:55</td>
+</tr><tr>
+<td>322</td>
+<td>890962</td>
+<td>14768972</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-28 17:10:12</td>
+</tr><tr class="acc">
+<td>323</td>
+<td>890963</td>
+<td>14768970</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-28 17:10:04</td>
+</tr><tr class="acc">
+<td>324</td>
+<td>890956</td>
+<td>1731976</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:08:34</td>
+</tr><tr class="acc">
+<td>325</td>
+<td>890958</td>
+<td>1731975</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4511" target="_blank">P1 - Boxes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:08:27</td>
+</tr><tr class="acc">
+<td>326</td>
+<td>890954</td>
+<td>12254860</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/550/C" target="_blank">P7 - Divisibility by Eight</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/550/submission/12254860" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-28 17:07:49</td>
+</tr><tr class="acc">
+<td>327</td>
+<td>890951</td>
+<td>14768893</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/GIRLSNBS/" target="_blank">P4 - Girls and Boys</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-28 17:03:45</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

@@ -1,0 +1,3145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=11712&non=true&My=true';
+		else
+			window.location = 'submissions?ID=11712&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=11712&My=true';
+		else
+			window.location = 'submissions?ID=11712';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D11712" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=11712">11712 - Training Camp Argentina 2014 #7
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=11712">Standings</a> - <a href="https://a2oj.com/submissions?ID=11712">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=11712">Problems</a> - <a href="https://a2oj.com/registrants?ID=11712">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>536347</td>
+<td>1510677</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 20:59:23</td>
+</tr><tr>
+<td>2</td>
+<td>536344</td>
+<td>1510676</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 20:55:39</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>536340</td>
+<td>1510675</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:53:58</td>
+</tr><tr>
+<td>4</td>
+<td>536335</td>
+<td>1510673</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:52:51</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>536330</td>
+<td>1510672</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 20:52:18</td>
+</tr><tr>
+<td>6</td>
+<td>536327</td>
+<td>1510670</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:49:18</td>
+</tr><tr class="acc">
+<td>7</td>
+<td>536323</td>
+<td>1510669</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:47:44</td>
+</tr><tr>
+<td>8</td>
+<td>536321</td>
+<td>1510667</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:46:04</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>536318</td>
+<td>1510664</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:44:25</td>
+</tr><tr>
+<td>10</td>
+<td>536319</td>
+<td>1510663</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 20:43:58</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>536307</td>
+<td>1510661</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:41:28</td>
+</tr><tr>
+<td>12</td>
+<td>536308</td>
+<td>1510660</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:40:50</td>
+</tr><tr class="odd">
+<td>13</td>
+<td>536306</td>
+<td>1510658</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 20:40:07</td>
+</tr><tr>
+<td>14</td>
+<td>536295</td>
+<td>1510655</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:38:13</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>536296</td>
+<td>1510654</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2014-08-06 20:37:56</td>
+</tr><tr>
+<td>16</td>
+<td>536288</td>
+<td>1510652</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 20:36:35</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>536284</td>
+<td>1510649</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 20:34:32</td>
+</tr><tr>
+<td>18</td>
+<td>536281</td>
+<td>1510648</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 20:33:43</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>536282</td>
+<td>1510647</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:33:35</td>
+</tr><tr>
+<td>20</td>
+<td>536278</td>
+<td>1510645</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:32:09</td>
+</tr><tr class="odd">
+<td>21</td>
+<td>536274</td>
+<td>1510644</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:30:45</td>
+</tr><tr>
+<td>22</td>
+<td>536269</td>
+<td>1510641</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>JAVA</td>
+<td>2014-08-06 20:26:09</td>
+</tr><tr class="acc">
+<td>23</td>
+<td>536268</td>
+<td>1510639</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:25:12</td>
+</tr><tr class="acc">
+<td>24</td>
+<td>536298</td>
+<td>1510638</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:25:08</td>
+</tr><tr class="acc">
+<td>25</td>
+<td>536299</td>
+<td>1510637</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:24:55</td>
+</tr><tr>
+<td>26</td>
+<td>536264</td>
+<td>1510636</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 20:24:33</td>
+</tr><tr class="odd">
+<td>27</td>
+<td>536262</td>
+<td>1510632</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:22:28</td>
+</tr><tr>
+<td>28</td>
+<td>536259</td>
+<td>1510631</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jeslev">jeslev</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:21:43</td>
+</tr><tr class="odd">
+<td>29</td>
+<td>536254</td>
+<td>1510630</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:19:31</td>
+</tr><tr>
+<td>30</td>
+<td>536250</td>
+<td>1510629</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 20:18:35</td>
+</tr><tr class="acc">
+<td>31</td>
+<td>536300</td>
+<td>1510627</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:18:19</td>
+</tr><tr>
+<td>32</td>
+<td>536251</td>
+<td>1510626</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:17:55</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>536248</td>
+<td>1510625</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2014-08-06 20:17:41</td>
+</tr><tr class="acc">
+<td>34</td>
+<td>536244</td>
+<td>1510624</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:16:41</td>
+</tr><tr class="acc">
+<td>35</td>
+<td>536242</td>
+<td>1510623</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:14:17</td>
+</tr><tr>
+<td>36</td>
+<td>536237</td>
+<td>1510622</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:13:34</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>536238</td>
+<td>1510621</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2014-08-06 20:13:09</td>
+</tr><tr class="acc">
+<td>38</td>
+<td>536234</td>
+<td>1510618</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:11:59</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>536301</td>
+<td>1510617</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:10:54</td>
+</tr><tr>
+<td>40</td>
+<td>536230</td>
+<td>1510616</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:10:20</td>
+</tr><tr class="acc">
+<td>41</td>
+<td>536227</td>
+<td>1510615</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:09:24</td>
+</tr><tr class="acc">
+<td>42</td>
+<td>536224</td>
+<td>1510613</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:08:17</td>
+</tr><tr class="acc">
+<td>43</td>
+<td>536225</td>
+<td>1510612</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:07:58</td>
+</tr><tr>
+<td>44</td>
+<td>536223</td>
+<td>1510611</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:06:14</td>
+</tr><tr class="acc">
+<td>45</td>
+<td>536221</td>
+<td>1510610</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2191" target="_blank">P3 - GCD Determinant</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:05:15</td>
+</tr><tr class="acc">
+<td>46</td>
+<td>536219</td>
+<td>1510609</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:04:08</td>
+</tr><tr class="acc">
+<td>47</td>
+<td>536220</td>
+<td>1510608</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:04:07</td>
+</tr><tr>
+<td>48</td>
+<td>536218</td>
+<td>1510607</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 20:03:42</td>
+</tr><tr class="acc">
+<td>49</td>
+<td>536217</td>
+<td>1510606</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 20:02:40</td>
+</tr><tr>
+<td>50</td>
+<td>536192</td>
+<td>1510605</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:59:33</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>536189</td>
+<td>1510604</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:58:43</td>
+</tr><tr class="acc">
+<td>52</td>
+<td>536181</td>
+<td>1510602</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 19:55:44</td>
+</tr><tr class="acc">
+<td>53</td>
+<td>536178</td>
+<td>1510599</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 19:51:24</td>
+</tr><tr class="acc">
+<td>54</td>
+<td>536175</td>
+<td>1510597</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:49:19</td>
+</tr><tr class="acc">
+<td>55</td>
+<td>536172</td>
+<td>1510595</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:47:09</td>
+</tr><tr class="acc">
+<td>56</td>
+<td>536169</td>
+<td>1510594</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 19:46:43</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>536167</td>
+<td>1510592</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:44:20</td>
+</tr><tr>
+<td>58</td>
+<td>536162</td>
+<td>1510591</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:42:08</td>
+</tr><tr class="acc">
+<td>59</td>
+<td>536163</td>
+<td>1510590</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:41:55</td>
+</tr><tr>
+<td>60</td>
+<td>536151</td>
+<td>1510589</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:40:38</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>536152</td>
+<td>1510588</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:40:11</td>
+</tr><tr class="acc">
+<td>62</td>
+<td>536153</td>
+<td>1510587</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:40:03</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>536146</td>
+<td>1510585</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:38:33</td>
+</tr><tr>
+<td>64</td>
+<td>536147</td>
+<td>1510583</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 19:38:01</td>
+</tr><tr class="acc">
+<td>65</td>
+<td>536143</td>
+<td>1510582</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:37:31</td>
+</tr><tr>
+<td>66</td>
+<td>536144</td>
+<td>1510581</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>JAVA</td>
+<td>2014-08-06 19:37:16</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>536145</td>
+<td>1510580</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++</td>
+<td>2014-08-06 19:36:31</td>
+</tr><tr>
+<td>68</td>
+<td>536137</td>
+<td>1510579</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>JAVA</td>
+<td>2014-08-06 19:33:49</td>
+</tr><tr class="acc">
+<td>69</td>
+<td>536133</td>
+<td>1510578</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jeslev">jeslev</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:33:19</td>
+</tr><tr>
+<td>70</td>
+<td>536134</td>
+<td>1510577</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:33:11</td>
+</tr><tr class="acc">
+<td>71</td>
+<td>536119</td>
+<td>1510575</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:30:22</td>
+</tr><tr class="acc">
+<td>72</td>
+<td>536116</td>
+<td>1510574</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:29:24</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>536114</td>
+<td>1510572</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:27:53</td>
+</tr><tr class="acc">
+<td>74</td>
+<td>536115</td>
+<td>1510571</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:27:50</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>536109</td>
+<td>1510569</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:26:12</td>
+</tr><tr>
+<td>76</td>
+<td>536105</td>
+<td>1510568</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2014-08-06 19:25:39</td>
+</tr><tr class="acc">
+<td>77</td>
+<td>536106</td>
+<td>1510567</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:25:05</td>
+</tr><tr class="acc">
+<td>78</td>
+<td>536107</td>
+<td>1510566</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:24:58</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>536104</td>
+<td>1510565</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jeslev">jeslev</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 19:23:57</td>
+</tr><tr>
+<td>80</td>
+<td>536097</td>
+<td>1510563</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:22:31</td>
+</tr><tr class="acc">
+<td>81</td>
+<td>536091</td>
+<td>1510560</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 19:21:30</td>
+</tr><tr>
+<td>82</td>
+<td>536092</td>
+<td>1510559</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:21:29</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>536089</td>
+<td>1510558</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2014-08-06 19:20:17</td>
+</tr><tr>
+<td>84</td>
+<td>536087</td>
+<td>1510557</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:19:02</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>536081</td>
+<td>1510556</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++</td>
+<td>2014-08-06 19:17:38</td>
+</tr><tr>
+<td>86</td>
+<td>536086</td>
+<td>1510555</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 19:17:20</td>
+</tr><tr class="acc">
+<td>87</td>
+<td>536076</td>
+<td>1510553</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:15:26</td>
+</tr><tr>
+<td>88</td>
+<td>536077</td>
+<td>1510552</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:14:46</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>536073</td>
+<td>1510551</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:14:44</td>
+</tr><tr class="acc">
+<td>90</td>
+<td>536074</td>
+<td>1510550</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:13:55</td>
+</tr><tr class="acc">
+<td>91</td>
+<td>536068</td>
+<td>1510547</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2191" target="_blank">P3 - GCD Determinant</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:11:19</td>
+</tr><tr class="acc">
+<td>92</td>
+<td>536069</td>
+<td>1510546</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:11:08</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>536070</td>
+<td>1510545</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:10:55</td>
+</tr><tr class="acc">
+<td>94</td>
+<td>536066</td>
+<td>1510543</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:09:56</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>536062</td>
+<td>1510541</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:09:16</td>
+</tr><tr>
+<td>96</td>
+<td>536057</td>
+<td>1510538</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:07:20</td>
+</tr><tr class="acc">
+<td>97</td>
+<td>536058</td>
+<td>1510537</td>
+<td><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2191" target="_blank">P3 - GCD Determinant</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 19:06:53</td>
+</tr><tr class="acc">
+<td>98</td>
+<td>536056</td>
+<td>1510535</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:06:03</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>536052</td>
+<td>1510533</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:05:38</td>
+</tr><tr class="acc">
+<td>100</td>
+<td>536048</td>
+<td>1510530</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 19:04:00</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>536049</td>
+<td>1510529</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:03:58</td>
+</tr><tr>
+<td>102</td>
+<td>536041</td>
+<td>1510526</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:01:47</td>
+</tr><tr class="odd">
+<td>103</td>
+<td>536042</td>
+<td>1510523</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:01:00</td>
+</tr><tr>
+<td>104</td>
+<td>536038</td>
+<td>1510522</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 19:00:33</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>536031</td>
+<td>1510519</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:59:14</td>
+</tr><tr>
+<td>106</td>
+<td>536032</td>
+<td>1510518</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:58:57</td>
+</tr><tr class="acc">
+<td>107</td>
+<td>536030</td>
+<td>1510517</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:58:24</td>
+</tr><tr class="acc">
+<td>108</td>
+<td>536026</td>
+<td>1510516</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:56:31</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>536022</td>
+<td>1510514</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:53:35</td>
+</tr><tr>
+<td>110</td>
+<td>536023</td>
+<td>1510513</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:53:20</td>
+</tr><tr class="odd">
+<td>111</td>
+<td>536021</td>
+<td>1510512</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 18:52:42</td>
+</tr><tr>
+<td>112</td>
+<td>536020</td>
+<td>1510509</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 18:49:52</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>536018</td>
+<td>1510506</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:49:10</td>
+</tr><tr>
+<td>114</td>
+<td>536019</td>
+<td>1510505</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 18:48:59</td>
+</tr><tr class="acc">
+<td>115</td>
+<td>536014</td>
+<td>1510504</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:48:23</td>
+</tr><tr class="acc">
+<td>116</td>
+<td>536009</td>
+<td>1510502</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:46:31</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>536010</td>
+<td>1510501</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:46:04</td>
+</tr><tr class="acc">
+<td>118</td>
+<td>536011</td>
+<td>1510500</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:45:59</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>536007</td>
+<td>1510499</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:45:03</td>
+</tr><tr class="acc">
+<td>120</td>
+<td>536005</td>
+<td>1510497</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:43:00</td>
+</tr><tr class="acc">
+<td>121</td>
+<td>536004</td>
+<td>1510496</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:41:50</td>
+</tr><tr class="acc">
+<td>122</td>
+<td>535999</td>
+<td>1510492</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:40:18</td>
+</tr><tr class="acc">
+<td>123</td>
+<td>536000</td>
+<td>1510491</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:40:04</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>535994</td>
+<td>1510489</td>
+<td><a href="https://a2oj.com/profile?Username=eugenus">eugenus</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:39:42</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>535988</td>
+<td>1510488</td>
+<td><a href="https://a2oj.com/profile?Username=Juaanma">Juaanma</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:37:18</td>
+</tr><tr>
+<td>126</td>
+<td>535991</td>
+<td>1510486</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:37:07</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>535987</td>
+<td>1510480</td>
+<td><a href="https://a2oj.com/profile?Username=Juaanma">Juaanma</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:35:53</td>
+</tr><tr class="acc">
+<td>128</td>
+<td>535979</td>
+<td>1510478</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cephei">cephei</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:33:42</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>535978</td>
+<td>1510477</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 18:33:38</td>
+</tr><tr class="acc">
+<td>130</td>
+<td>535970</td>
+<td>1510475</td>
+<td><a href="https://a2oj.com/profile?Username=setiembre15">setiembre15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:32:14</td>
+</tr><tr class="odd">
+<td>131</td>
+<td>535971</td>
+<td>1510474</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:32:11</td>
+</tr><tr>
+<td>132</td>
+<td>535972</td>
+<td>1510473</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 18:31:57</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>535960</td>
+<td>1510471</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:30:37</td>
+</tr><tr>
+<td>134</td>
+<td>535961</td>
+<td>1510470</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 18:30:20</td>
+</tr><tr class="acc">
+<td>135</td>
+<td>535957</td>
+<td>1510468</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:29:14</td>
+</tr><tr>
+<td>136</td>
+<td>535949</td>
+<td>1510467</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:27:22</td>
+</tr><tr class="acc">
+<td>137</td>
+<td>535952</td>
+<td>1510465</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:27:01</td>
+</tr><tr>
+<td>138</td>
+<td>535953</td>
+<td>1510464</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:26:53</td>
+</tr><tr class="acc">
+<td>139</td>
+<td>535946</td>
+<td>1510462</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:26:38</td>
+</tr><tr class="acc">
+<td>140</td>
+<td>535947</td>
+<td>1510461</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:26:31</td>
+</tr><tr class="acc">
+<td>141</td>
+<td>535942</td>
+<td>1510460</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:25:25</td>
+</tr><tr class="acc">
+<td>142</td>
+<td>535940</td>
+<td>1510459</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 18:24:42</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>535941</td>
+<td>1510458</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 18:23:59</td>
+</tr><tr>
+<td>144</td>
+<td>535936</td>
+<td>1510456</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:22:30</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>535930</td>
+<td>1510454</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 18:21:39</td>
+</tr><tr class="acc">
+<td>146</td>
+<td>535931</td>
+<td>1510453</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:21:10</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>535926</td>
+<td>1510452</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:20:38</td>
+</tr><tr>
+<td>148</td>
+<td>535927</td>
+<td>1510451</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:20:18</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>535928</td>
+<td>1510450</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:20:08</td>
+</tr><tr>
+<td>150</td>
+<td>535923</td>
+<td>1510449</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:19:05</td>
+</tr><tr class="odd">
+<td>151</td>
+<td>535924</td>
+<td>1510448</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:18:45</td>
+</tr><tr>
+<td>152</td>
+<td>535920</td>
+<td>1510447</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:18:22</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>535921</td>
+<td>1510446</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:18:16</td>
+</tr><tr>
+<td>154</td>
+<td>535915</td>
+<td>1510443</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 18:17:35</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>535916</td>
+<td>1510442</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:17:34</td>
+</tr><tr class="acc">
+<td>156</td>
+<td>535917</td>
+<td>1510441</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:17:24</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>535910</td>
+<td>1510439</td>
+<td><a href="https://a2oj.com/profile?Username=agusbbca">agusbbca</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:15:25</td>
+</tr><tr>
+<td>158</td>
+<td>535911</td>
+<td>1510438</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:15:22</td>
+</tr><tr class="acc">
+<td>159</td>
+<td>535912</td>
+<td>1510437</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:15:20</td>
+</tr><tr class="acc">
+<td>160</td>
+<td>535913</td>
+<td>1510436</td>
+<td><a href="https://a2oj.com/profile?Username=eugenus">eugenus</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:15:20</td>
+</tr><tr class="acc">
+<td>161</td>
+<td>535908</td>
+<td>1510435</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:14:32</td>
+</tr><tr class="acc">
+<td>162</td>
+<td>535909</td>
+<td>1510434</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:14:11</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>535903</td>
+<td>1510432</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:11:53</td>
+</tr><tr>
+<td>164</td>
+<td>535897</td>
+<td>1510431</td>
+<td><a href="https://a2oj.com/profile?Username=agusbbca">agusbbca</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:11:47</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>535898</td>
+<td>1510430</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 18:11:31</td>
+</tr><tr>
+<td>166</td>
+<td>535900</td>
+<td>1510428</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:10:55</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>535894</td>
+<td>1510425</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P6 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:10:18</td>
+</tr><tr class="acc">
+<td>168</td>
+<td>535895</td>
+<td>1510424</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:09:54</td>
+</tr><tr class="acc">
+<td>169</td>
+<td>535904</td>
+<td>1510423</td>
+<td><a href="https://a2oj.com/profile?Username=Juaanma">Juaanma</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:09:51</td>
+</tr><tr>
+<td>170</td>
+<td>535890</td>
+<td>1510421</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 18:08:57</td>
+</tr><tr class="acc">
+<td>171</td>
+<td>535891</td>
+<td>1510420</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:08:53</td>
+</tr><tr>
+<td>172</td>
+<td>535883</td>
+<td>1510418</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 18:07:42</td>
+</tr><tr class="acc">
+<td>173</td>
+<td>535884</td>
+<td>1510417</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 18:07:39</td>
+</tr><tr class="acc">
+<td>174</td>
+<td>535885</td>
+<td>1510416</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:07:25</td>
+</tr><tr class="acc">
+<td>175</td>
+<td>535879</td>
+<td>1510414</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2190" target="_blank">P9 - Lucky numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:06:04</td>
+</tr><tr class="acc">
+<td>176</td>
+<td>535876</td>
+<td>1510411</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jeslev">jeslev</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:05:34</td>
+</tr><tr class="acc">
+<td>177</td>
+<td>535874</td>
+<td>1510409</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 18:03:34</td>
+</tr><tr class="acc">
+<td>178</td>
+<td>535868</td>
+<td>1510408</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 18:00:04</td>
+</tr><tr class="odd">
+<td>179</td>
+<td>535861</td>
+<td>1510407</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:59:10</td>
+</tr><tr>
+<td>180</td>
+<td>535857</td>
+<td>1510403</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:56:56</td>
+</tr><tr class="odd">
+<td>181</td>
+<td>535850</td>
+<td>1510402</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:56:33</td>
+</tr><tr class="acc">
+<td>182</td>
+<td>535851</td>
+<td>1510401</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:56:18</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>535852</td>
+<td>1510400</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:56:15</td>
+</tr><tr>
+<td>184</td>
+<td>535845</td>
+<td>1510397</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:54:08</td>
+</tr><tr class="acc">
+<td>185</td>
+<td>535843</td>
+<td>1510396</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2014-08-06 17:53:30</td>
+</tr><tr>
+<td>186</td>
+<td>535844</td>
+<td>1510395</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 17:53:22</td>
+</tr><tr class="acc">
+<td>187</td>
+<td>535839</td>
+<td>1510393</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:51:44</td>
+</tr><tr class="acc">
+<td>188</td>
+<td>535840</td>
+<td>1510392</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:50:58</td>
+</tr><tr class="acc">
+<td>189</td>
+<td>535835</td>
+<td>1510391</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:50:42</td>
+</tr><tr class="acc">
+<td>190</td>
+<td>535836</td>
+<td>1510390</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2191" target="_blank">P3 - GCD Determinant</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:50:20</td>
+</tr><tr class="acc">
+<td>191</td>
+<td>535830</td>
+<td>1510387</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2014-08-06 17:48:01</td>
+</tr><tr class="acc">
+<td>192</td>
+<td>535826</td>
+<td>1510386</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:46:46</td>
+</tr><tr class="acc">
+<td>193</td>
+<td>535827</td>
+<td>1510385</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:46:12</td>
+</tr><tr class="acc">
+<td>194</td>
+<td>535823</td>
+<td>1510384</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:45:32</td>
+</tr><tr class="acc">
+<td>195</td>
+<td>535820</td>
+<td>1510383</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:44:46</td>
+</tr><tr class="acc">
+<td>196</td>
+<td>535814</td>
+<td>1510381</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:43:28</td>
+</tr><tr class="acc">
+<td>197</td>
+<td>535815</td>
+<td>1510380</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:43:15</td>
+</tr><tr class="acc">
+<td>198</td>
+<td>535816</td>
+<td>1510379</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:43:14</td>
+</tr><tr class="odd">
+<td>199</td>
+<td>535810</td>
+<td>1510378</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2014-08-06 17:42:12</td>
+</tr><tr>
+<td>200</td>
+<td>535806</td>
+<td>1510376</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:40:38</td>
+</tr><tr class="odd">
+<td>201</td>
+<td>535807</td>
+<td>1510375</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 17:40:37</td>
+</tr><tr class="acc">
+<td>202</td>
+<td>535804</td>
+<td>1510372</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2014-08-06 17:38:52</td>
+</tr><tr class="odd">
+<td>203</td>
+<td>535800</td>
+<td>1510371</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 17:37:58</td>
+</tr><tr class="acc">
+<td>204</td>
+<td>535801</td>
+<td>1510370</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jeslev">jeslev</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:37:53</td>
+</tr><tr class="acc">
+<td>205</td>
+<td>535798</td>
+<td>1510368</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:37:18</td>
+</tr><tr>
+<td>206</td>
+<td>535791</td>
+<td>1510367</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2014-08-06 17:36:48</td>
+</tr><tr class="acc">
+<td>207</td>
+<td>535788</td>
+<td>1510366</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:35:27</td>
+</tr><tr class="acc">
+<td>208</td>
+<td>535789</td>
+<td>1510365</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:34:53</td>
+</tr><tr class="acc">
+<td>209</td>
+<td>535782</td>
+<td>1510362</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:32:38</td>
+</tr><tr class="acc">
+<td>210</td>
+<td>535783</td>
+<td>1510361</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:32:25</td>
+</tr><tr class="acc">
+<td>211</td>
+<td>535779</td>
+<td>1510360</td>
+<td><a href="https://a2oj.com/profile?Username=eugenus">eugenus</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:31:50</td>
+</tr><tr class="acc">
+<td>212</td>
+<td>535780</td>
+<td>1510359</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:31:35</td>
+</tr><tr class="acc">
+<td>213</td>
+<td>535781</td>
+<td>1510357</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:31:19</td>
+</tr><tr>
+<td>214</td>
+<td>535775</td>
+<td>1510356</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:28:22</td>
+</tr><tr class="acc">
+<td>215</td>
+<td>535772</td>
+<td>1510355</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:25:23</td>
+</tr><tr class="acc">
+<td>216</td>
+<td>535773</td>
+<td>1510354</td>
+<td><a href="https://a2oj.com/profile?Username=TVG">TVG</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2192" target="_blank">P2 - Internet Service Providers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:25:10</td>
+</tr><tr class="odd">
+<td>217</td>
+<td>535768</td>
+<td>1510353</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:24:35</td>
+</tr><tr>
+<td>218</td>
+<td>535769</td>
+<td>1510351</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-06 17:23:58</td>
+</tr><tr class="acc">
+<td>219</td>
+<td>535765</td>
+<td>1510350</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:23:25</td>
+</tr><tr class="acc">
+<td>220</td>
+<td>535766</td>
+<td>1510349</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:23:11</td>
+</tr><tr class="acc">
+<td>221</td>
+<td>535762</td>
+<td>1510348</td>
+<td><a href="https://a2oj.com/profile?Username=eugenus">eugenus</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:22:10</td>
+</tr><tr class="acc">
+<td>222</td>
+<td>535763</td>
+<td>1510347</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2014-08-06 17:22:02</td>
+</tr><tr class="acc">
+<td>223</td>
+<td>535761</td>
+<td>1510346</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:21:04</td>
+</tr><tr class="acc">
+<td>224</td>
+<td>535758</td>
+<td>1510345</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P5 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:20:29</td>
+</tr><tr class="acc">
+<td>225</td>
+<td>535759</td>
+<td>1510344</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:20:16</td>
+</tr><tr class="acc">
+<td>226</td>
+<td>535760</td>
+<td>1510343</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:20:11</td>
+</tr><tr class="acc">
+<td>227</td>
+<td>535767</td>
+<td>1510342</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:19:35</td>
+</tr><tr class="acc">
+<td>228</td>
+<td>535751</td>
+<td>1510341</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:17:25</td>
+</tr><tr class="acc">
+<td>229</td>
+<td>535752</td>
+<td>1510340</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2189" target="_blank">P7 - Quick answer</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:17:19</td>
+</tr><tr class="acc">
+<td>230</td>
+<td>535753</td>
+<td>1510339</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:17:02</td>
+</tr><tr class="odd">
+<td>231</td>
+<td>535757</td>
+<td>1510337</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2014-08-06 17:14:38</td>
+</tr><tr class="acc">
+<td>232</td>
+<td>535748</td>
+<td>1510336</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:14:38</td>
+</tr><tr class="acc">
+<td>233</td>
+<td>535749</td>
+<td>1510335</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2185" target="_blank">P1 - Sky Code</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:14:09</td>
+</tr><tr class="acc">
+<td>234</td>
+<td>535745</td>
+<td>1510334</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:13:22</td>
+</tr><tr class="acc">
+<td>235</td>
+<td>535744</td>
+<td>1510332</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:12:14</td>
+</tr><tr>
+<td>236</td>
+<td>535741</td>
+<td>1510331</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-06 17:11:37</td>
+</tr><tr class="odd">
+<td>237</td>
+<td>535740</td>
+<td>1510329</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2014-08-06 17:10:17</td>
+</tr><tr>
+<td>238</td>
+<td>535739</td>
+<td>1510328</td>
+<td><a href="https://a2oj.com/profile?Username=fragusbot">fragusbot</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2184" target="_blank">P4 - Stock Exchange</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2014-08-06 17:08:41</td>
+</tr><tr class="acc">
+<td>239</td>
+<td>535734</td>
+<td>1510326</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2188" target="_blank">P8 - Build Your Home</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-06 17:05:34</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

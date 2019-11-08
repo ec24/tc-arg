@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache gr__a2oj_com fontface"><head>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="standing_files/all_002.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="standing_files/all.js"></script><script type="text/javascript" async="" src="standing_files/ga.js"></script><script type="text/javascript">
+var ID = 19281;
+var My = 0;
+var non = 0;
+var running = 0;
+var cells = 0;
+</script>
+
+
+<!-- START TABLE SORTER CODE -->
+<script type="text/javascript" src="standing_files/jquery-1.js"></script>
+<script type="text/javascript" src="standing_files/animator.js"></script>
+<script type="text/javascript" src="standing_files/rankingTableUpdate.js"></script>
+<link rel="stylesheet" type="text/css" href="standing_files/scoreboard.css">
+<script src="standing_files/scoreboard.js" type="text/javascript"></script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="standing_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="standing_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+<script type="text/javascript">
+function toggle() {
+	var pars = "";
+	if(document.getElementById("selection") && document.getElementById("selection").checked)
+		pars += "&my";
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked)
+		pars += "&non";
+	window.location = 'standings?ID=19281' + pars;
+}
+</script>
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none;" src="standing_files/xd_arbiter.html" frameborder="0"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123446397673080";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="standing_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="standing_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fstandings%3FID%3D19281" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="standing_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+
+<!-- <center><a href="https://goo.gl/slk2H1" target="_blank"><img src="banner.jpg"></img></a><br/><br/></center> -->
+
+<div id="page">
+
+<font size="3">
+<center>
+
+
+<script type="text/javascript">
+var srt = 1;
+</script>
+
+
+<font size="4">
+<b>
+Standings for: <a href="https://a2oj.com/contest?ID=19281">19281 - TC Argentina 2015 - Dia 5
+</a>
+ (Contest is over)
+
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=19281">Standings</a> - <a href="https://a2oj.com/submissions?ID=19281">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=19281">Problems</a> - <a href="https://a2oj.com/registrants?ID=19281">Registrants</a>
+
+</b>
+</font>
+
+
+
+<div id="scoreboard">
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<br><br>
+
+
+<div class="scroll">
+<div class="tableHolder">
+<ib style="text-align: center;" class="blind"></ib>
+<table class="template" style="display:none;">
+<thead>
+<tr style="height: 25px;">
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Rank</a> </th>
+<th class="anim:id fe-sortable fe-string"><a href="javascript:void();">Contestant</a> </th>
+<th class="anim:constant fe-sortable fe-string"><a href="javascript:void();">Country</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Solved</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Penalty</a> </th>
+<th class="anim:constant" title="5834 - Genghis Khan the Conqueror (Live Archive - 2011 - Asia - Fuzhou)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3845" target="_blank">P1</a></th>
+<th class="anim:constant" title="5116 - Dividing Stones (Live Archive - 2010 - Asia - Amritapuri)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3117" target="_blank">P2</a></th>
+<th class="anim:constant" title="5127 - Save the Python Programmers! (Live Archive - 2010 - North America - Pacific Northwest)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3128" target="_blank">P3</a></th>
+<th class="anim:constant" title="4116 - GCD's magic (TJU)"><a class="normal" href="http://acm.tju.edu.cn/toj/showp4116.html" target="_blank">P4</a></th>
+<th class="anim:constant" title="510C - Fox And Names (Codeforces - Codeforces Round #290 (Div. 2) &amp; Codeforces Round #290 (Div. 1))"><a class="normal" href="http://codeforces.com/problemset/problem/510/C" target="_blank">P5</a></th>
+<th class="anim:constant" title="5983 - MAGRID (Live Archive - 2011 - Asia - Amritapuri)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3994" target="_blank">P6</a></th>
+<th class="anim:constant" title="1633 - Zipper (TJU)"><a class="normal" href="http://acm.tju.edu.cn/toj/showp1633.html" target="_blank">P7</a></th>
+<th class="anim:constant" title="1846 - GCD 2010 (Timus)"><a class="normal" href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1846" target="_blank">P8</a></th>
+<th class="anim:constant" title="4110 - A+B (TJU)"><a class="normal" href="http://acm.tju.edu.cn/toj/showp4110.html" target="_blank">P9</a></th>
+<th class="anim:constant" title="5991 - Generations (Live Archive - 2011 - Asia - Amritapuri)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4002" target="_blank">P10</a></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table class="actualTable" style="">
+<thead>
+<tr style="height: 25px;">
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Rank</a> &#8593;</th>
+<th class="anim:id fe-sortable fe-string"><a href="javascript:void();">Contestant</a> </th>
+<th class="anim:constant fe-sortable fe-string"><a href="javascript:void();">Country</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Solved</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Penalty</a> </th>
+<th class="anim:constant" title="5834 - Genghis Khan the Conqueror (Live Archive - 2011 - Asia - Fuzhou)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3845" target="_blank">P1</a></th>
+<th class="anim:constant" title="5116 - Dividing Stones (Live Archive - 2010 - Asia - Amritapuri)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3117" target="_blank">P2</a></th>
+<th class="anim:constant" title="5127 - Save the Python Programmers! (Live Archive - 2010 - North America - Pacific Northwest)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3128" target="_blank">P3</a></th>
+<th class="anim:constant" title="4116 - GCD's magic (TJU)"><a class="normal" href="http://acm.tju.edu.cn/toj/showp4116.html" target="_blank">P4</a></th>
+<th class="anim:constant" title="510C - Fox And Names (Codeforces - Codeforces Round #290 (Div. 2) &amp; Codeforces Round #290 (Div. 1))"><a class="normal" href="http://codeforces.com/problemset/problem/510/C" target="_blank">P5</a></th>
+<th class="anim:constant" title="5983 - MAGRID (Live Archive - 2011 - Asia - Amritapuri)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3994" target="_blank">P6</a></th>
+<th class="anim:constant" title="1633 - Zipper (TJU)"><a class="normal" href="http://acm.tju.edu.cn/toj/showp1633.html" target="_blank">P7</a></th>
+<th class="anim:constant" title="1846 - GCD 2010 (Timus)"><a class="normal" href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1846" target="_blank">P8</a></th>
+<th class="anim:constant" title="4110 - A+B (TJU)"><a class="normal" href="http://acm.tju.edu.cn/toj/showp4110.html" target="_blank">P9</a></th>
+<th class="anim:constant" title="5991 - Generations (Live Archive - 2011 - Asia - Amritapuri)"><a class="normal" href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4002" target="_blank">P10</a></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 25px;"><td style="text-align: center;">1</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">8</td><td style="text-align: center;">862</td><td style="text-align: center; background-color: rgb(240, 128, 128);">9/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/138</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/9</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12243941" target="_blank">2/100</a></i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/106</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/30</i></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><i>2/39</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/51</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/249</i></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">2</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">7</td><td style="text-align: center;">772</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/242</i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">5/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/70</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12243704" target="_blank">1/71</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/98</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/29</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/75</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/67</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">3/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">3</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=2455">peruvianmidggwp</a> (<a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">7</td><td style="text-align: center;">787</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(46, 254, 100);"><i>2/50</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/25</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12244424" target="_blank">2/160</a></i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/225</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/62</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/123</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/42</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">4</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=270">Team</a> (<a class="normal" href="https://a2oj.com/profile?Username=Roberto.HC">Roberto.HC</a>, <a class="normal" href="https://a2oj.com/profile?Username=G4c4r0">G4c4r0</a>, <a class="normal" href="https://a2oj.com/profile?Username=previus">previus</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">6</td><td style="text-align: center;">512</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">5/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/14</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12243864" target="_blank">1/89</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/156</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/46</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/113</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/34</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">5</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">6</td><td style="text-align: center;">590</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">2/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/42</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12243593" target="_blank">1/57</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/160</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/43</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/180</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/68</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">6</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">6</td><td style="text-align: center;">609</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/1</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12244225" target="_blank">2/136</a></i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">3/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/29</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/148</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/1</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/254</i></td></tr><tr style="height: 25px;"><td style="text-align: center;">7</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">6</td><td style="text-align: center;">1058</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/56</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12244979" target="_blank">1/231</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/198</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/237</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/114</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/102</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">8</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td><td style="text-align: center;">Venezuela</td><td style="text-align: center;">5</td><td style="text-align: center;">341</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/22</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12243380" target="_blank">1/30</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/146</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/44</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">20/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/99</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">9</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td><td style="text-align: center;">Bolivia</td><td style="text-align: center;">5</td><td style="text-align: center;">357</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/17</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12243436" target="_blank">1/37</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/148</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/34</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/81</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">10</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">5</td><td style="text-align: center;">435</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/32</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12244123" target="_blank">2/123</a></i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/177</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/9</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/54</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">11</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">5</td><td style="text-align: center;">829</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/167</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/131</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/166</i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">5/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/132</i></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/93</b></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">12</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td><td style="text-align: center;">Venezuela</td><td style="text-align: center;">5</td><td style="text-align: center;">919</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/41</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12245149" target="_blank">1/255</a></b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/171</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/210</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/162</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">13</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td><td style="text-align: center;">Venezuela</td><td style="text-align: center;">5</td><td style="text-align: center;">975</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">2/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/120</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12244328" target="_blank">4/149</a></i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/231</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/132</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">5/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/163</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">14</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td><td style="text-align: center;">Colombia</td><td style="text-align: center;">4</td><td style="text-align: center;">401</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/7</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12244290" target="_blank">4/145</a></i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/109</i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/40</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">15</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">4</td><td style="text-align: center;">485</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/13</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b><a class="normal" href="http://codeforces.com/contest/510/submission/12243739" target="_blank">1/75</a></b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/127</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/170</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">16</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">4</td><td style="text-align: center;">579</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/64</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);"><a class="normal" href="http://codeforces.com/contest/510/submission/12245237" target="_blank">1/--</a></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/86</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/184</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/205</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">17</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">4</td><td style="text-align: center;">617</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/11</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/162</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/164</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>6/100</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">18</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">4</td><td style="text-align: center;">781</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/102</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/222</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/247</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/90</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">19</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">4</td><td style="text-align: center;">870</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/228</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12244242" target="_blank">4/138</a></i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/152</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/192</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">20</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td><td style="text-align: center;">Germany</td><td style="text-align: center;">3</td><td style="text-align: center;">201</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/3</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i><a class="normal" href="http://codeforces.com/contest/510/submission/12243661" target="_blank">2/66</a></i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/92</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">14/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">21</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">3</td><td style="text-align: center;">380</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/76</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">4/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/125</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/99</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">22</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">2</td><td style="text-align: center;">286</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/108</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">3/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/138</i></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">23</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">2</td><td style="text-align: center;">341</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/65</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/176</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">3/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">24</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">1</td><td style="text-align: center;">0</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(4, 180, 49);"><b>1/0</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">9/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">25</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">1</td><td style="text-align: center;">44</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">2/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/44</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">26</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">1</td><td style="text-align: center;">57</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/57</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">3/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">5/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">27</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">1</td><td style="text-align: center;">119</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/99</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">3/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">28</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">1</td><td style="text-align: center;">350</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>9/190</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">4/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">29</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">0</td><td style="text-align: center;">0</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">12/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5" style="text-align: center;">Total Submitted</td><td style="text-align: center;">11</td><td style="text-align: center;">26</td><td style="text-align: center;">7</td><td style="text-align: center;">52</td><td style="text-align: center;">31</td><td style="text-align: center;">31</td><td style="text-align: center;">62</td><td style="text-align: center;">61</td><td style="text-align: center;">91</td><td style="text-align: center;">8</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5" style="text-align: center;">First Accepted</td><td style="text-align: center;">--</td><td style="text-align: center;">50</td><td style="text-align: center;">--</td><td style="text-align: center;">0</td><td style="text-align: center;">30</td><td style="text-align: center;">86</td><td style="text-align: center;">9</td><td style="text-align: center;">39</td><td style="text-align: center;">1</td><td style="text-align: center;">93</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5" style="text-align: center;">Total Accepted</td><td style="text-align: center;">0</td><td style="text-align: center;">3</td><td style="text-align: center;">0</td><td style="text-align: center;">28</td><td style="text-align: center;">16</td><td style="text-align: center;">15</td><td style="text-align: center;">20</td><td style="text-align: center;">9</td><td style="text-align: center;">21</td><td style="text-align: center;">3</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5"></td><td title="5834 - Genghis Khan the Conqueror (Live Archive - 2011 - Asia - Fuzhou)" style="text-align: center;"><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3845" class="normal" target="_blank">P1</a></td><td title="5116 - Dividing Stones (Live Archive - 2010 - Asia - Amritapuri)" style="text-align: center;"><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3117" class="normal" target="_blank">P2</a></td><td title="5127 - Save the Python Programmers! (Live Archive - 2010 - North America - Pacific Northwest)" style="text-align: center;"><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3128" class="normal" target="_blank">P3</a></td><td title="4116 - GCD's magic (TJU)" style="text-align: center;"><a href="http://acm.tju.edu.cn/toj/showp4116.html" class="normal" target="_blank">P4</a></td><td title="510C - Fox And Names (Codeforces - Codeforces Round #290 (Div. 2) &amp; Codeforces Round #290 (Div. 1))" style="text-align: center;"><a href="http://codeforces.com/problemset/problem/510/C" class="normal" target="_blank">P5</a></td><td title="5983 - MAGRID (Live Archive - 2011 - Asia - Amritapuri)" style="text-align: center;"><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3994" class="normal" target="_blank">P6</a></td><td title="1633 - Zipper (TJU)" style="text-align: center;"><a href="http://acm.tju.edu.cn/toj/showp1633.html" class="normal" target="_blank">P7</a></td><td title="1846 - GCD 2010 (Timus)" style="text-align: center;"><a href="http://acm.timus.ru/problem.aspx?space=1&amp;num=1846" class="normal" target="_blank">P8</a></td><td title="4110 - A+B (TJU)" style="text-align: center;"><a href="http://acm.tju.edu.cn/toj/showp4110.html" class="normal" target="_blank">P9</a></td><td title="5991 - Generations (Live Archive - 2011 - Asia - Amritapuri)" style="text-align: center;"><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4002" class="normal" target="_blank">P10</a></td></tr><tr style="height: 10px; background-color: rgb(255, 255, 255); border: 0px solid rgb(255, 255, 255);"><td colspan="15" style="border: 0px solid rgb(255, 255, 255);"></td></tr></tbody>
+</table></div>
+</div>
+
+<p style="text-align: center;" class="status">Updated at: 02:28:30 08/11/2019 UTC</p>
+</div>
+
+<div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://a2oj.com/contest?ID=19281" data-width="800" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=123446397673080&amp;container_width=1000&amp;height=100&amp;href=https%3A%2F%2Fa2oj.com%2Fcontest%3FID%3D19281&amp;locale=en_US&amp;sdk=joey&amp;width=800"><span style="vertical-align: bottom; width: 800px; height: 215px;"><iframe name="f2a4e1d561639" title="fb:comments Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none; visibility: visible; width: 800px; height: 215px;" src="https://www.facebook.com/plugins/comments.php?app_id=123446397673080&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df2bcab69f52712a%26domain%3Da2oj.com%26origin%3Dhttps%253A%252F%252Fa2oj.com%252Ff29caf82bc2f518%26relation%3Dparent.parent&amp;container_width=1000&amp;height=100&amp;href=https%3A%2F%2Fa2oj.com%2Fcontest%3FID%3D19281&amp;locale=en_US&amp;sdk=joey&amp;width=800" class="" width="800px" height="100px" frameborder="0"></iframe></span></div>
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

@@ -1,0 +1,3397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19409&non=true&My=true';
+		else
+			window.location = 'submissions?ID=19409&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19409&My=true';
+		else
+			window.location = 'submissions?ID=19409';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D19409" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=19409">19409 - TC Argentina 2015 - Dia 7
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=19409">Standings</a> - <a href="https://a2oj.com/submissions?ID=19409">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=19409">Problems</a> - <a href="https://a2oj.com/registrants?ID=19409">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="acc">
+<td>1</td>
+<td>893993</td>
+<td>1733005</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 21:27:22</td>
+</tr><tr>
+<td>2</td>
+<td>893954</td>
+<td>1733001</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 21:22:41</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>893955</td>
+<td>1733000</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 21:22:22</td>
+</tr><tr class="acc">
+<td>4</td>
+<td>893966</td>
+<td>14779083</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:22:18</td>
+</tr><tr class="acc">
+<td>5</td>
+<td>893967</td>
+<td>14779083</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:22:18</td>
+</tr><tr class="acc">
+<td>6</td>
+<td>893968</td>
+<td>14779080</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:22:05</td>
+</tr><tr class="acc">
+<td>7</td>
+<td>893969</td>
+<td>14779080</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:22:05</td>
+</tr><tr>
+<td>8</td>
+<td>893956</td>
+<td>1732998</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 21:21:42</td>
+</tr><tr class="acc">
+<td>9</td>
+<td>893958</td>
+<td>1732996</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:21:09</td>
+</tr><tr class="acc">
+<td>10</td>
+<td>893959</td>
+<td>1732996</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:21:09</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>893960</td>
+<td>1732995</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 21:20:57</td>
+</tr><tr class="acc">
+<td>12</td>
+<td>893961</td>
+<td>1732994</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:20:56</td>
+</tr><tr class="acc">
+<td>13</td>
+<td>893962</td>
+<td>1732994</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:20:56</td>
+</tr><tr>
+<td>14</td>
+<td>893941</td>
+<td>1732993</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 21:20:44</td>
+</tr><tr class="acc">
+<td>15</td>
+<td>893942</td>
+<td>1732992</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:20:19</td>
+</tr><tr class="acc">
+<td>16</td>
+<td>893943</td>
+<td>1732992</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:20:19</td>
+</tr><tr class="acc">
+<td>17</td>
+<td>893924</td>
+<td>1732989</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:17:11</td>
+</tr><tr class="acc">
+<td>18</td>
+<td>893925</td>
+<td>1732989</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:17:11</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>893937</td>
+<td>4023029</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 21:15:15</td>
+</tr><tr>
+<td>20</td>
+<td>893908</td>
+<td>1732988</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 21:14:40</td>
+</tr><tr class="acc">
+<td>21</td>
+<td>893909</td>
+<td>1732987</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:14:22</td>
+</tr><tr class="acc">
+<td>22</td>
+<td>893899</td>
+<td>1732987</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:14:22</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>893900</td>
+<td>1732986</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 21:14:08</td>
+</tr><tr>
+<td>24</td>
+<td>893889</td>
+<td>1732984</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 21:12:02</td>
+</tr><tr class="acc">
+<td>25</td>
+<td>893882</td>
+<td>1732983</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 21:10:28</td>
+</tr><tr class="acc">
+<td>26</td>
+<td>893910</td>
+<td>1732982</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:09:59</td>
+</tr><tr class="acc">
+<td>27</td>
+<td>893883</td>
+<td>1732982</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 21:09:59</td>
+</tr><tr class="acc">
+<td>28</td>
+<td>893884</td>
+<td>1732981</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 21:09:13</td>
+</tr><tr class="acc">
+<td>29</td>
+<td>893876</td>
+<td>14779025</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 21:08:26</td>
+</tr><tr>
+<td>30</td>
+<td>893879</td>
+<td>1732980</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 21:07:56</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>893911</td>
+<td>1732979</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 21:06:56</td>
+</tr><tr>
+<td>32</td>
+<td>893880</td>
+<td>1732979</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 21:06:56</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>893846</td>
+<td>1732976</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 21:01:57</td>
+</tr><tr>
+<td>34</td>
+<td>893847</td>
+<td>1732975</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 21:01:56</td>
+</tr><tr class="acc">
+<td>35</td>
+<td>893912</td>
+<td>1732973</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:57:00</td>
+</tr><tr class="acc">
+<td>36</td>
+<td>893835</td>
+<td>1732973</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:57:00</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>893822</td>
+<td>14778979</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 20:56:08</td>
+</tr><tr>
+<td>38</td>
+<td>893824</td>
+<td>1732972</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:55:49</td>
+</tr><tr class="acc">
+<td>39</td>
+<td>893815</td>
+<td>4023027</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:55:36</td>
+</tr><tr>
+<td>40</td>
+<td>893825</td>
+<td>1732970</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:55:21</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>893813</td>
+<td>14778973</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 20:55:16</td>
+</tr><tr>
+<td>42</td>
+<td>893913</td>
+<td>1732968</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:55:00</td>
+</tr><tr class="odd">
+<td>43</td>
+<td>893828</td>
+<td>1732968</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:55:00</td>
+</tr><tr>
+<td>44</td>
+<td>893816</td>
+<td>4023026</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 20:54:18</td>
+</tr><tr class="odd">
+<td>45</td>
+<td>893792</td>
+<td>1732967</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:52:55</td>
+</tr><tr>
+<td>46</td>
+<td>893795</td>
+<td>1732966</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:51:51</td>
+</tr><tr class="acc">
+<td>47</td>
+<td>893817</td>
+<td>4023025</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:50:13</td>
+</tr><tr>
+<td>48</td>
+<td>893788</td>
+<td>1732964</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:48:55</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>893761</td>
+<td>14778923</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 20:43:41</td>
+</tr><tr>
+<td>50</td>
+<td>893762</td>
+<td>1732961</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:43:38</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>893914</td>
+<td>1732960</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:42:34</td>
+</tr><tr>
+<td>52</td>
+<td>893751</td>
+<td>1732960</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:42:34</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>893760</td>
+<td>4023024</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++0x</td>
+<td>2015-07-29 20:42:11</td>
+</tr><tr>
+<td>54</td>
+<td>893739</td>
+<td>4023023</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:40:29</td>
+</tr><tr class="odd">
+<td>55</td>
+<td>893741</td>
+<td>1732959</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++11</td>
+<td>2015-07-29 20:40:28</td>
+</tr><tr>
+<td>56</td>
+<td>893742</td>
+<td>1732958</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:39:28</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>893730</td>
+<td>1732957</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:38:39</td>
+</tr><tr class="acc">
+<td>58</td>
+<td>893737</td>
+<td>14778893</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 20:38:08</td>
+</tr><tr class="odd">
+<td>59</td>
+<td>893714</td>
+<td>1732955</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:36:36</td>
+</tr><tr>
+<td>60</td>
+<td>893715</td>
+<td>1732954</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:35:36</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>893716</td>
+<td>1732953</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:35:29</td>
+</tr><tr>
+<td>62</td>
+<td>893698</td>
+<td>1732949</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:32:01</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>893699</td>
+<td>1732948</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:31:43</td>
+</tr><tr>
+<td>64</td>
+<td>893694</td>
+<td>1732946</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:29:58</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>893681</td>
+<td>1732944</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:27:51</td>
+</tr><tr>
+<td>66</td>
+<td>893915</td>
+<td>1732944</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:27:51</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>893682</td>
+<td>1732943</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:27:32</td>
+</tr><tr>
+<td>68</td>
+<td>893683</td>
+<td>1732942</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:27:12</td>
+</tr><tr class="odd">
+<td>69</td>
+<td>893916</td>
+<td>1732942</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:27:12</td>
+</tr><tr class="acc">
+<td>70</td>
+<td>893671</td>
+<td>14778847</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:25:37</td>
+</tr><tr class="odd">
+<td>71</td>
+<td>893731</td>
+<td>4023022</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Floating Point Error</td>
+<td>C++</td>
+<td>2015-07-29 20:24:20</td>
+</tr><tr>
+<td>72</td>
+<td>893661</td>
+<td>1732939</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:21:44</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>893662</td>
+<td>1732938</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:20:56</td>
+</tr><tr>
+<td>74</td>
+<td>893652</td>
+<td>1732937</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:20:02</td>
+</tr><tr class="acc">
+<td>75</td>
+<td>893653</td>
+<td>1732936</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:19:02</td>
+</tr><tr>
+<td>76</td>
+<td>893642</td>
+<td>1732935</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:18:19</td>
+</tr><tr class="acc">
+<td>77</td>
+<td>893637</td>
+<td>14778806</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:18:18</td>
+</tr><tr>
+<td>78</td>
+<td>893633</td>
+<td>1732934</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 20:15:12</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>893634</td>
+<td>1732933</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:14:56</td>
+</tr><tr>
+<td>80</td>
+<td>893614</td>
+<td>14778772</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 20:12:36</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>893618</td>
+<td>1732932</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:12:34</td>
+</tr><tr class="acc">
+<td>82</td>
+<td>893615</td>
+<td>14778768</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:12:29</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>893619</td>
+<td>1732931</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-29 20:11:25</td>
+</tr><tr class="acc">
+<td>84</td>
+<td>893595</td>
+<td>1732927</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 20:06:42</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>893597</td>
+<td>1732926</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2514" target="_blank">P4 - Stammering Aliens</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 20:06:37</td>
+</tr><tr>
+<td>86</td>
+<td>893603</td>
+<td>4023021</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Floating Point Error</td>
+<td>C++</td>
+<td>2015-07-29 20:04:42</td>
+</tr><tr class="odd">
+<td>87</td>
+<td>893580</td>
+<td>14778715</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 20:03:14</td>
+</tr><tr class="acc">
+<td>88</td>
+<td>893579</td>
+<td>4023020</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 20:01:40</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>893581</td>
+<td>14778705</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 20:01:38</td>
+</tr><tr>
+<td>90</td>
+<td>893571</td>
+<td>1732924</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-29 20:00:29</td>
+</tr><tr class="odd">
+<td>91</td>
+<td>893562</td>
+<td>1732919</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:58:34</td>
+</tr><tr class="acc">
+<td>92</td>
+<td>893552</td>
+<td>4023019</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:56:46</td>
+</tr><tr class="acc">
+<td>93</td>
+<td>893902</td>
+<td>4023019</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:56:46</td>
+</tr><tr>
+<td>94</td>
+<td>893550</td>
+<td>1732914</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-29 19:54:13</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>893542</td>
+<td>4023018</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2015-07-29 19:53:49</td>
+</tr><tr>
+<td>96</td>
+<td>893903</td>
+<td>4023017</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-29 19:52:50</td>
+</tr><tr class="odd">
+<td>97</td>
+<td>893543</td>
+<td>4023017</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-29 19:52:50</td>
+</tr><tr class="acc">
+<td>98</td>
+<td>893544</td>
+<td>4023016</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:52:19</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>893538</td>
+<td>1732913</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 19:51:49</td>
+</tr><tr class="acc">
+<td>100</td>
+<td>893537</td>
+<td>1732910</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 19:49:33</td>
+</tr><tr class="acc">
+<td>101</td>
+<td>893525</td>
+<td>14778621</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-29 19:49:06</td>
+</tr><tr>
+<td>102</td>
+<td>893523</td>
+<td>1732908</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 19:48:31</td>
+</tr><tr class="acc">
+<td>103</td>
+<td>893524</td>
+<td>1732907</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:47:50</td>
+</tr><tr>
+<td>104</td>
+<td>893545</td>
+<td>4023015</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2015-07-29 19:47:41</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>893526</td>
+<td>14778605</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:47:14</td>
+</tr><tr>
+<td>106</td>
+<td>893521</td>
+<td>1732906</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 19:46:25</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>893516</td>
+<td>14778598</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-29 19:46:24</td>
+</tr><tr>
+<td>108</td>
+<td>893546</td>
+<td>4023014</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 19:45:44</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>893502</td>
+<td>14778568</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 19:43:01</td>
+</tr><tr class="acc">
+<td>110</td>
+<td>893496</td>
+<td>14778553</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 19:41:09</td>
+</tr><tr class="acc">
+<td>111</td>
+<td>893497</td>
+<td>14778541</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 19:39:35</td>
+</tr><tr>
+<td>112</td>
+<td>893479</td>
+<td>1732904</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-29 19:35:23</td>
+</tr><tr class="acc">
+<td>113</td>
+<td>893476</td>
+<td>14778502</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:35:10</td>
+</tr><tr>
+<td>114</td>
+<td>893474</td>
+<td>1732902</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 19:34:19</td>
+</tr><tr class="acc">
+<td>115</td>
+<td>893465</td>
+<td>14778483</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:32:59</td>
+</tr><tr class="acc">
+<td>116</td>
+<td>893466</td>
+<td>14778478</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:32:25</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>893467</td>
+<td>14778472</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:31:29</td>
+</tr><tr>
+<td>118</td>
+<td>893468</td>
+<td>14778471</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGSEGV">SIGSEGV</a>)</td>
+<td>C++</td>
+<td>2015-07-29 19:31:27</td>
+</tr><tr class="acc">
+<td>119</td>
+<td>893444</td>
+<td>1732900</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:30:15</td>
+</tr><tr class="acc">
+<td>120</td>
+<td>893431</td>
+<td>14778456</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 19:28:57</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>893418</td>
+<td>14778442</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:26:59</td>
+</tr><tr>
+<td>122</td>
+<td>893441</td>
+<td>4023012</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 19:26:34</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>893421</td>
+<td>1732897</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 19:26:05</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>893422</td>
+<td>1732895</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 19:25:04</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>893404</td>
+<td>4023011</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 19:22:53</td>
+</tr><tr class="acc">
+<td>126</td>
+<td>893397</td>
+<td>1732893</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:22:37</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>893389</td>
+<td>4023010</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2015-07-29 19:17:14</td>
+</tr><tr>
+<td>128</td>
+<td>893390</td>
+<td>1732891</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:17:03</td>
+</tr><tr class="acc">
+<td>129</td>
+<td>893381</td>
+<td>1732890</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:16:28</td>
+</tr><tr>
+<td>130</td>
+<td>893377</td>
+<td>14778358</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:15:55</td>
+</tr><tr class="acc">
+<td>131</td>
+<td>893378</td>
+<td>14778353</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 19:15:20</td>
+</tr><tr>
+<td>132</td>
+<td>893382</td>
+<td>1732889</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-29 19:15:04</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>893366</td>
+<td>1732888</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:12:16</td>
+</tr><tr>
+<td>134</td>
+<td>893363</td>
+<td>14778337</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:12:09</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>893367</td>
+<td>1732887</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 19:11:50</td>
+</tr><tr>
+<td>136</td>
+<td>893368</td>
+<td>1732886</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>JAVA</td>
+<td>2015-07-29 19:11:43</td>
+</tr><tr class="odd">
+<td>137</td>
+<td>893364</td>
+<td>14778335</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:11:24</td>
+</tr><tr>
+<td>138</td>
+<td>893344</td>
+<td>1732884</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 19:10:22</td>
+</tr><tr class="odd">
+<td>139</td>
+<td>893345</td>
+<td>1732883</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:09:56</td>
+</tr><tr class="acc">
+<td>140</td>
+<td>893347</td>
+<td>14778328</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:09:47</td>
+</tr><tr class="odd">
+<td>141</td>
+<td>893351</td>
+<td>14778326</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:09:17</td>
+</tr><tr>
+<td>142</td>
+<td>893338</td>
+<td>1732882</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:08:17</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>893327</td>
+<td>14778312</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 19:06:30</td>
+</tr><tr class="acc">
+<td>144</td>
+<td>893328</td>
+<td>14778310</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:06:24</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>893329</td>
+<td>14778309</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:06:23</td>
+</tr><tr>
+<td>146</td>
+<td>893330</td>
+<td>14778307</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:05:46</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>893331</td>
+<td>14778304</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 19:05:21</td>
+</tr><tr>
+<td>148</td>
+<td>893307</td>
+<td>14778298</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 19:04:55</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>893313</td>
+<td>1732878</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 19:04:29</td>
+</tr><tr class="acc">
+<td>150</td>
+<td>893309</td>
+<td>14778294</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 19:04:29</td>
+</tr><tr class="odd">
+<td>151</td>
+<td>893310</td>
+<td>14778291</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 19:03:51</td>
+</tr><tr>
+<td>152</td>
+<td>893300</td>
+<td>1732877</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 19:02:36</td>
+</tr><tr class="acc">
+<td>153</td>
+<td>893301</td>
+<td>14778278</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2455">peruvianmidggwp</a> (<a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:01:57</td>
+</tr><tr>
+<td>154</td>
+<td>893302</td>
+<td>14778275</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 19:01:47</td>
+</tr><tr class="acc">
+<td>155</td>
+<td>893292</td>
+<td>14778268</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 19:00:51</td>
+</tr><tr>
+<td>156</td>
+<td>893293</td>
+<td>14778260</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:59:29</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>893279</td>
+<td>1732875</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:58:30</td>
+</tr><tr>
+<td>158</td>
+<td>893288</td>
+<td>14778252</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:58:14</td>
+</tr><tr class="acc">
+<td>159</td>
+<td>893289</td>
+<td>14778251</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2455">peruvianmidggwp</a> (<a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:58:07</td>
+</tr><tr>
+<td>160</td>
+<td>893290</td>
+<td>14778250</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:57:59</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>893281</td>
+<td>1732874</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:57:29</td>
+</tr><tr>
+<td>162</td>
+<td>893272</td>
+<td>14778241</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:56:10</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>893264</td>
+<td>14778234</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:54:57</td>
+</tr><tr>
+<td>164</td>
+<td>893266</td>
+<td>1732873</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:54:41</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>893251</td>
+<td>14778206</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:51:16</td>
+</tr><tr>
+<td>166</td>
+<td>893233</td>
+<td>1732870</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:48:25</td>
+</tr><tr class="acc">
+<td>167</td>
+<td>893225</td>
+<td>1732867</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:44:29</td>
+</tr><tr>
+<td>168</td>
+<td>893226</td>
+<td>14778162</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:44:02</td>
+</tr><tr class="odd">
+<td>169</td>
+<td>893214</td>
+<td>1732866</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:42:24</td>
+</tr><tr>
+<td>170</td>
+<td>893211</td>
+<td>1732863</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:40:01</td>
+</tr><tr class="odd">
+<td>171</td>
+<td>893199</td>
+<td>4023007</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-29 18:38:54</td>
+</tr><tr>
+<td>172</td>
+<td>893207</td>
+<td>1732860</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:37:31</td>
+</tr><tr class="odd">
+<td>173</td>
+<td>893198</td>
+<td>14778123</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:37:17</td>
+</tr><tr>
+<td>174</td>
+<td>893200</td>
+<td>4023005</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 18:36:58</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>893904</td>
+<td>4023005</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 18:36:58</td>
+</tr><tr class="acc">
+<td>176</td>
+<td>893188</td>
+<td>14778106</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:34:27</td>
+</tr><tr class="odd">
+<td>177</td>
+<td>893189</td>
+<td>1732853</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:34:01</td>
+</tr><tr class="acc">
+<td>178</td>
+<td>893179</td>
+<td>1732850</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:32:14</td>
+</tr><tr class="odd">
+<td>179</td>
+<td>893181</td>
+<td>1732848</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4041" target="_blank">P3 - Infiltration</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:29:46</td>
+</tr><tr class="acc">
+<td>180</td>
+<td>893176</td>
+<td>14778073</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 18:28:43</td>
+</tr><tr class="acc">
+<td>181</td>
+<td>893177</td>
+<td>14778067</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 18:28:15</td>
+</tr><tr class="acc">
+<td>182</td>
+<td>893166</td>
+<td>14778043</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 18:25:58</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>893201</td>
+<td>4023004</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-29 18:25:43</td>
+</tr><tr>
+<td>184</td>
+<td>893168</td>
+<td>14778041</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>runtime error    (<a href="http://en.wikipedia.org/wiki/SIGABRT">SIGABRT</a>)</td>
+<td>C++14</td>
+<td>2015-07-29 18:25:27</td>
+</tr><tr class="odd">
+<td>185</td>
+<td>893164</td>
+<td>1732845</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:24:54</td>
+</tr><tr>
+<td>186</td>
+<td>893202</td>
+<td>4023003</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-29 18:24:24</td>
+</tr><tr class="acc">
+<td>187</td>
+<td>893155</td>
+<td>14778028</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:23:35</td>
+</tr><tr class="acc">
+<td>188</td>
+<td>893149</td>
+<td>14778022</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:23:17</td>
+</tr><tr class="odd">
+<td>189</td>
+<td>893148</td>
+<td>1732841</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:21:01</td>
+</tr><tr class="acc">
+<td>190</td>
+<td>893141</td>
+<td>14778014</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-29 18:20:52</td>
+</tr><tr class="odd">
+<td>191</td>
+<td>893107</td>
+<td>14777961</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:13:55</td>
+</tr><tr class="acc">
+<td>192</td>
+<td>893112</td>
+<td>4023002</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:12:49</td>
+</tr><tr class="odd">
+<td>193</td>
+<td>893099</td>
+<td>1732835</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:12:43</td>
+</tr><tr class="acc">
+<td>194</td>
+<td>893113</td>
+<td>4023001</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-29 18:11:07</td>
+</tr><tr class="odd">
+<td>195</td>
+<td>893095</td>
+<td>1732833</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-29 18:10:22</td>
+</tr><tr>
+<td>196</td>
+<td>893096</td>
+<td>1732831</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2455">peruvianmidggwp</a> (<a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:10:04</td>
+</tr><tr class="odd">
+<td>197</td>
+<td>893088</td>
+<td>1732828</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 18:07:18</td>
+</tr><tr class="acc">
+<td>198</td>
+<td>893073</td>
+<td>14777900</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 18:07:04</td>
+</tr><tr class="odd">
+<td>199</td>
+<td>893081</td>
+<td>1732826</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 18:06:27</td>
+</tr><tr>
+<td>200</td>
+<td>893075</td>
+<td>14777891</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:05:50</td>
+</tr><tr class="odd">
+<td>201</td>
+<td>893069</td>
+<td>14777888</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 18:05:08</td>
+</tr><tr>
+<td>202</td>
+<td>893070</td>
+<td>14777882</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-29 18:04:44</td>
+</tr><tr class="odd">
+<td>203</td>
+<td>893905</td>
+<td>4023000</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 18:04:22</td>
+</tr><tr>
+<td>204</td>
+<td>893114</td>
+<td>4023000</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-29 18:04:22</td>
+</tr><tr class="odd">
+<td>205</td>
+<td>893035</td>
+<td>14777847</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-29 18:00:26</td>
+</tr><tr>
+<td>206</td>
+<td>893037</td>
+<td>1732822</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2683" target="_blank">P9 - XOR Sum</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-29 18:00:20</td>
+</tr><tr class="odd">
+<td>207</td>
+<td>893036</td>
+<td>14777836</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:59:29</td>
+</tr><tr class="acc">
+<td>208</td>
+<td>893031</td>
+<td>14777828</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-29 17:58:37</td>
+</tr><tr class="odd">
+<td>209</td>
+<td>893039</td>
+<td>4022999</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-29 17:56:35</td>
+</tr><tr>
+<td>210</td>
+<td>893906</td>
+<td>4022999</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-29 17:56:35</td>
+</tr><tr class="odd">
+<td>211</td>
+<td>893040</td>
+<td>4022998</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-29 17:56:27</td>
+</tr><tr class="acc">
+<td>212</td>
+<td>893000</td>
+<td>14777788</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:54:21</td>
+</tr><tr class="acc">
+<td>213</td>
+<td>893001</td>
+<td>14777782</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:53:32</td>
+</tr><tr class="acc">
+<td>214</td>
+<td>892988</td>
+<td>1732818</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:53:10</td>
+</tr><tr class="odd">
+<td>215</td>
+<td>892961</td>
+<td>14777775</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2015-07-29 17:53:01</td>
+</tr><tr>
+<td>216</td>
+<td>893907</td>
+<td>4022997</td>
+<td><a href="https://a2oj.com/profile?Username=SorryAbril">SorryAbril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2015-07-29 17:52:43</td>
+</tr><tr class="odd">
+<td>217</td>
+<td>893002</td>
+<td>4022997</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3405" target="_blank">P2 - Counting Factor Trees</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2015-07-29 17:52:43</td>
+</tr><tr>
+<td>218</td>
+<td>892963</td>
+<td>14777769</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++14</td>
+<td>2015-07-29 17:52:33</td>
+</tr><tr class="acc">
+<td>219</td>
+<td>892964</td>
+<td>1732817</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:51:25</td>
+</tr><tr class="acc">
+<td>220</td>
+<td>892965</td>
+<td>1732816</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-29 17:51:13</td>
+</tr><tr class="odd">
+<td>221</td>
+<td>892966</td>
+<td>1732814</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-29 17:50:45</td>
+</tr><tr class="acc">
+<td>222</td>
+<td>892945</td>
+<td>14777756</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:50:42</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>892937</td>
+<td>14777739</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FILRTEST/" target="_blank">P6 - File Recover Testing</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:48:35</td>
+</tr><tr>
+<td>224</td>
+<td>892938</td>
+<td>1732812</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 17:47:57</td>
+</tr><tr class="acc">
+<td>225</td>
+<td>892939</td>
+<td>1732810</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=5167" target="_blank">P10 - Keyboarding</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:47:11</td>
+</tr><tr class="acc">
+<td>226</td>
+<td>892923</td>
+<td>14777700</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:44:17</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>892922</td>
+<td>1732809</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4949" target="_blank">P5 - The Imp</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:43:53</td>
+</tr><tr class="acc">
+<td>228</td>
+<td>892920</td>
+<td>14777691</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:43:08</td>
+</tr><tr class="acc">
+<td>229</td>
+<td>892903</td>
+<td>14777674</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:40:52</td>
+</tr><tr>
+<td>230</td>
+<td>892904</td>
+<td>14777665</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 17:39:47</td>
+</tr><tr class="odd">
+<td>231</td>
+<td>892907</td>
+<td>1732806</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2978" target="_blank">P7 - Enter The Dragon</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-29 17:39:45</td>
+</tr><tr class="acc">
+<td>232</td>
+<td>892905</td>
+<td>14777658</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:39:09</td>
+</tr><tr class="acc">
+<td>233</td>
+<td>892892</td>
+<td>14777655</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:38:49</td>
+</tr><tr>
+<td>234</td>
+<td>892893</td>
+<td>14777649</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:38:31</td>
+</tr><tr class="acc">
+<td>235</td>
+<td>892894</td>
+<td>14777646</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:38:26</td>
+</tr><tr class="acc">
+<td>236</td>
+<td>892895</td>
+<td>14777644</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:38:23</td>
+</tr><tr class="odd">
+<td>237</td>
+<td>892896</td>
+<td>14777641</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 17:38:15</td>
+</tr><tr class="acc">
+<td>238</td>
+<td>892897</td>
+<td>14777636</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:37:42</td>
+</tr><tr class="odd">
+<td>239</td>
+<td>892898</td>
+<td>14777634</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 17:37:37</td>
+</tr><tr>
+<td>240</td>
+<td>892901</td>
+<td>1732804</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1524" target="_blank">P1 - Knights of the Round Table</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-29 17:37:13</td>
+</tr><tr class="odd">
+<td>241</td>
+<td>892889</td>
+<td>14777624</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 17:36:42</td>
+</tr><tr class="acc">
+<td>242</td>
+<td>892890</td>
+<td>14777622</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:36:36</td>
+</tr><tr class="acc">
+<td>243</td>
+<td>892880</td>
+<td>14777589</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:33:32</td>
+</tr><tr class="acc">
+<td>244</td>
+<td>892874</td>
+<td>14777584</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2455">peruvianmidggwp</a> (<a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:32:57</td>
+</tr><tr class="acc">
+<td>245</td>
+<td>892875</td>
+<td>14777582</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:32:38</td>
+</tr><tr class="acc">
+<td>246</td>
+<td>892876</td>
+<td>14777574</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:32:12</td>
+</tr><tr class="odd">
+<td>247</td>
+<td>892865</td>
+<td>14777568</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:31:13</td>
+</tr><tr class="acc">
+<td>248</td>
+<td>892877</td>
+<td>14777565</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:31:09</td>
+</tr><tr class="acc">
+<td>249</td>
+<td>892866</td>
+<td>14777560</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:30:41</td>
+</tr><tr class="acc">
+<td>250</td>
+<td>892867</td>
+<td>14777559</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:30:33</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>892868</td>
+<td>14777554</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:30:05</td>
+</tr><tr class="acc">
+<td>252</td>
+<td>892869</td>
+<td>14777551</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:29:46</td>
+</tr><tr class="odd">
+<td>253</td>
+<td>892870</td>
+<td>14777550</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>C++</td>
+<td>2015-07-29 17:29:40</td>
+</tr><tr>
+<td>254</td>
+<td>892856</td>
+<td>14777532</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++14</td>
+<td>2015-07-29 17:27:39</td>
+</tr><tr class="acc">
+<td>255</td>
+<td>892848</td>
+<td>14777525</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:27:05</td>
+</tr><tr>
+<td>256</td>
+<td>892849</td>
+<td>14777508</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:25:41</td>
+</tr><tr class="acc">
+<td>257</td>
+<td>892850</td>
+<td>14777504</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++14</td>
+<td>2015-07-29 17:25:26</td>
+</tr><tr class="acc">
+<td>258</td>
+<td>892846</td>
+<td>14777487</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:23:40</td>
+</tr><tr class="acc">
+<td>259</td>
+<td>892842</td>
+<td>14777466</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-29 17:21:39</td>
+</tr><tr>
+<td>260</td>
+<td>892836</td>
+<td>14777458</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/FASHION/" target="_blank">P8 - Fashion Shows</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2015-07-29 17:20:43</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

@@ -1,0 +1,3721 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19241&non=true&My=true';
+		else
+			window.location = 'submissions?ID=19241&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19241&My=true';
+		else
+			window.location = 'submissions?ID=19241';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D19241" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=19241">19241 - TC Argentina 2015 - Dia 2
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=19241">Standings</a> - <a href="https://a2oj.com/submissions?ID=19241">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=19241">Problems</a> - <a href="https://a2oj.com/registrants?ID=19241">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="acc">
+<td>1</td>
+<td>883765</td>
+<td>4011045</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:57:26</td>
+</tr><tr class="acc">
+<td>2</td>
+<td>883766</td>
+<td>4011044</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:56:26</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>883764</td>
+<td>1726961</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:53:53</td>
+</tr><tr>
+<td>4</td>
+<td>883753</td>
+<td>12154147</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12154147" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2015-07-21 20:53:46</td>
+</tr><tr class="acc">
+<td>5</td>
+<td>883748</td>
+<td>4011043</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 20:52:31</td>
+</tr><tr class="acc">
+<td>6</td>
+<td>883749</td>
+<td>4011042</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 20:51:13</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>883741</td>
+<td>1726960</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:50:41</td>
+</tr><tr class="acc">
+<td>8</td>
+<td>883732</td>
+<td>12154107</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12154107" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 20:49:04</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>883727</td>
+<td>4011041</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:48:38</td>
+</tr><tr>
+<td>10</td>
+<td>883716</td>
+<td>12154098</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12154098" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-21 20:47:56</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>883725</td>
+<td>1726956</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 20:47:42</td>
+</tr><tr>
+<td>12</td>
+<td>883726</td>
+<td>1726955</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:47:35</td>
+</tr><tr class="odd">
+<td>13</td>
+<td>883728</td>
+<td>4011040</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 20:46:20</td>
+</tr><tr>
+<td>14</td>
+<td>883708</td>
+<td>1726953</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:45:25</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>883692</td>
+<td>1726950</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 20:41:10</td>
+</tr><tr>
+<td>16</td>
+<td>883693</td>
+<td>4011039</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 20:38:29</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>883678</td>
+<td>1726947</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:36:50</td>
+</tr><tr class="acc">
+<td>18</td>
+<td>883674</td>
+<td>4011038</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 20:36:17</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>883669</td>
+<td>4011037</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:35:19</td>
+</tr><tr>
+<td>20</td>
+<td>883670</td>
+<td>4011036</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-21 20:35:13</td>
+</tr><tr class="odd">
+<td>21</td>
+<td>883672</td>
+<td>1726944</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 20:34:49</td>
+</tr><tr>
+<td>22</td>
+<td>883671</td>
+<td>4011035</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 20:34:49</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>883658</td>
+<td>1726941</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 20:33:11</td>
+</tr><tr>
+<td>24</td>
+<td>883655</td>
+<td>1726939</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:32:04</td>
+</tr><tr class="odd">
+<td>25</td>
+<td>883653</td>
+<td>1726937</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 20:31:12</td>
+</tr><tr class="acc">
+<td>26</td>
+<td>883614</td>
+<td>4011034</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:29:40</td>
+</tr><tr class="acc">
+<td>27</td>
+<td>883626</td>
+<td>12153966</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153966" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 20:29:14</td>
+</tr><tr>
+<td>28</td>
+<td>883627</td>
+<td>12153965</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153965" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 20:29:13</td>
+</tr><tr class="odd">
+<td>29</td>
+<td>883615</td>
+<td>4011033</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:29:06</td>
+</tr><tr class="acc">
+<td>30</td>
+<td>883616</td>
+<td>4011032</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 20:28:25</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>883630</td>
+<td>12153950</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153950" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-21 20:27:44</td>
+</tr><tr class="acc">
+<td>32</td>
+<td>883617</td>
+<td>4011031</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:27:42</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>883631</td>
+<td>12153949</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153949" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 20:27:41</td>
+</tr><tr>
+<td>34</td>
+<td>883618</td>
+<td>4011030</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:27:23</td>
+</tr><tr class="acc">
+<td>35</td>
+<td>883619</td>
+<td>4011029</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:27:20</td>
+</tr><tr>
+<td>36</td>
+<td>883620</td>
+<td>4011028</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:25:19</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>883639</td>
+<td>12153927</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153927" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-21 20:25:07</td>
+</tr><tr>
+<td>38</td>
+<td>883592</td>
+<td>1726935</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 20:22:47</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>883621</td>
+<td>4011027</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:21:18</td>
+</tr><tr class="acc">
+<td>40</td>
+<td>883593</td>
+<td>1726934</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:21:14</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>883648</td>
+<td>12153895</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153895" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-21 20:20:29</td>
+</tr><tr>
+<td>42</td>
+<td>883589</td>
+<td>4011026</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:19:03</td>
+</tr><tr class="acc">
+<td>43</td>
+<td>883591</td>
+<td>1726932</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:17:58</td>
+</tr><tr class="acc">
+<td>44</td>
+<td>883590</td>
+<td>4011025</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 20:17:55</td>
+</tr><tr class="acc">
+<td>45</td>
+<td>883582</td>
+<td>1726931</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 20:16:08</td>
+</tr><tr>
+<td>46</td>
+<td>883580</td>
+<td>4011024</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 20:15:45</td>
+</tr><tr class="odd">
+<td>47</td>
+<td>883565</td>
+<td>4011023</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 20:13:53</td>
+</tr><tr class="acc">
+<td>48</td>
+<td>883566</td>
+<td>4011022</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:13:45</td>
+</tr><tr class="acc">
+<td>49</td>
+<td>883559</td>
+<td>1726928</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 20:12:14</td>
+</tr><tr>
+<td>50</td>
+<td>883560</td>
+<td>1726927</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:11:57</td>
+</tr><tr class="acc">
+<td>51</td>
+<td>883553</td>
+<td>4011021</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 20:11:00</td>
+</tr><tr>
+<td>52</td>
+<td>883551</td>
+<td>1726926</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 20:09:57</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>883542</td>
+<td>4011020</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 20:07:38</td>
+</tr><tr>
+<td>54</td>
+<td>883543</td>
+<td>4011019</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 20:07:11</td>
+</tr><tr class="odd">
+<td>55</td>
+<td>883537</td>
+<td>1726925</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 20:05:41</td>
+</tr><tr>
+<td>56</td>
+<td>883528</td>
+<td>1726923</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:03:55</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>883523</td>
+<td>4011018</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 20:03:10</td>
+</tr><tr class="acc">
+<td>58</td>
+<td>883525</td>
+<td>1726922</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 20:03:06</td>
+</tr><tr class="odd">
+<td>59</td>
+<td>883520</td>
+<td>1726921</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 20:01:52</td>
+</tr><tr>
+<td>60</td>
+<td>883512</td>
+<td>1726920</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 20:00:50</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>883521</td>
+<td>4011015</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 19:58:41</td>
+</tr><tr class="acc">
+<td>62</td>
+<td>883509</td>
+<td>12153748</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153748" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 19:57:56</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>883522</td>
+<td>4011014</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2015-07-21 19:56:27</td>
+</tr><tr>
+<td>64</td>
+<td>883479</td>
+<td>1726917</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:54:14</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>883491</td>
+<td>12153719</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153719" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 8</td>
+<td>2015-07-21 19:53:53</td>
+</tr><tr>
+<td>66</td>
+<td>883468</td>
+<td>1726915</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:50:37</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>883456</td>
+<td>4011013</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 19:48:55</td>
+</tr><tr class="acc">
+<td>68</td>
+<td>883469</td>
+<td>1726914</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:48:35</td>
+</tr><tr class="acc">
+<td>69</td>
+<td>883422</td>
+<td>12153682</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153682" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 19:48:26</td>
+</tr><tr class="acc">
+<td>70</td>
+<td>883423</td>
+<td>12153656</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153656" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 19:45:04</td>
+</tr><tr class="acc">
+<td>71</td>
+<td>883470</td>
+<td>1726913</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 19:44:06</td>
+</tr><tr>
+<td>72</td>
+<td>883473</td>
+<td>1726911</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:40:23</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>883474</td>
+<td>1726910</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:40:02</td>
+</tr><tr class="acc">
+<td>74</td>
+<td>883475</td>
+<td>1726909</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 19:39:40</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>883430</td>
+<td>12153612</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153612" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 19:39:33</td>
+</tr><tr>
+<td>76</td>
+<td>883431</td>
+<td>12153610</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153610" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 19:39:26</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>883476</td>
+<td>1726907</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 19:36:40</td>
+</tr><tr>
+<td>78</td>
+<td>883457</td>
+<td>4011012</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 19:35:48</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>883477</td>
+<td>1726906</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:35:37</td>
+</tr><tr>
+<td>80</td>
+<td>883458</td>
+<td>4011011</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 19:34:38</td>
+</tr><tr class="acc">
+<td>81</td>
+<td>883459</td>
+<td>4011010</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:34:35</td>
+</tr><tr>
+<td>82</td>
+<td>883460</td>
+<td>4011009</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++0x</td>
+<td>2015-07-21 19:33:16</td>
+</tr><tr class="acc">
+<td>83</td>
+<td>883478</td>
+<td>1726905</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:32:28</td>
+</tr><tr class="acc">
+<td>84</td>
+<td>883461</td>
+<td>4011008</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 19:32:18</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>883462</td>
+<td>4011007</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 19:32:11</td>
+</tr><tr>
+<td>86</td>
+<td>883463</td>
+<td>4011006</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 19:29:09</td>
+</tr><tr class="acc">
+<td>87</td>
+<td>883418</td>
+<td>1726904</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2389" target="_blank">P5 - Suffix reconstruction</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:27:24</td>
+</tr><tr class="acc">
+<td>88</td>
+<td>883409</td>
+<td>4011005</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:25:50</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>883407</td>
+<td>1726902</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:24:13</td>
+</tr><tr>
+<td>90</td>
+<td>883400</td>
+<td>1726901</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 19:21:08</td>
+</tr><tr class="odd">
+<td>91</td>
+<td>883395</td>
+<td>1726900</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 19:20:27</td>
+</tr><tr>
+<td>92</td>
+<td>883396</td>
+<td>1726899</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:20:18</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>883397</td>
+<td>1726898</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=199" target="_blank">P7 - Protecting Zonk</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:19:35</td>
+</tr><tr class="acc">
+<td>94</td>
+<td>883381</td>
+<td>1726897</td>
+<td><a href="https://a2oj.com/profile?Username=tikaneis">tikaneis</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 19:18:53</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>883384</td>
+<td>1726896</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:18:39</td>
+</tr><tr class="acc">
+<td>96</td>
+<td>883357</td>
+<td>1726895</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:18:02</td>
+</tr><tr class="acc">
+<td>97</td>
+<td>883358</td>
+<td>1726894</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:17:28</td>
+</tr><tr class="acc">
+<td>98</td>
+<td>883361</td>
+<td>1726893</td>
+<td><a href="https://a2oj.com/profile?Username=tikaneis">tikaneis</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 19:17:10</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>883338</td>
+<td>4011004</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 19:16:42</td>
+</tr><tr>
+<td>100</td>
+<td>883363</td>
+<td>1726891</td>
+<td><a href="https://a2oj.com/profile?Username=tikaneis">tikaneis</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 19:15:36</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>883365</td>
+<td>1726890</td>
+<td><a href="https://a2oj.com/profile?Username=tada-s">tada-s</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:14:47</td>
+</tr><tr>
+<td>102</td>
+<td>883340</td>
+<td>4011002</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_10">TC_bahia_10</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2015-07-21 19:13:36</td>
+</tr><tr class="acc">
+<td>103</td>
+<td>883339</td>
+<td>4011003</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 19:13:36</td>
+</tr><tr class="acc">
+<td>104</td>
+<td>883367</td>
+<td>1726889</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 19:12:02</td>
+</tr><tr class="acc">
+<td>105</td>
+<td>883368</td>
+<td>1726888</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:10:30</td>
+</tr><tr>
+<td>106</td>
+<td>883369</td>
+<td>1726887</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-21 19:08:49</td>
+</tr><tr class="acc">
+<td>107</td>
+<td>883370</td>
+<td>1726885</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:08:35</td>
+</tr><tr class="acc">
+<td>108</td>
+<td>883333</td>
+<td>1726884</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:06:36</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>883334</td>
+<td>1726883</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:06:18</td>
+</tr><tr>
+<td>110</td>
+<td>883331</td>
+<td>1726882</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 19:05:36</td>
+</tr><tr class="acc">
+<td>111</td>
+<td>883332</td>
+<td>1726881</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 19:04:33</td>
+</tr><tr>
+<td>112</td>
+<td>883324</td>
+<td>1726880</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-21 19:04:22</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>883325</td>
+<td>4011001</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 19:04:22</td>
+</tr><tr>
+<td>114</td>
+<td>883321</td>
+<td>1726879</td>
+<td><a href="https://a2oj.com/profile?Username=tikaneis">tikaneis</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 19:02:37</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>883313</td>
+<td>1726878</td>
+<td><a href="https://a2oj.com/profile?Username=tikaneis">tikaneis</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 19:01:27</td>
+</tr><tr>
+<td>116</td>
+<td>883312</td>
+<td>4011000</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 19:01:17</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>883311</td>
+<td>4010999</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 18:59:47</td>
+</tr><tr class="acc">
+<td>118</td>
+<td>883310</td>
+<td>1726877</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:58:24</td>
+</tr><tr class="acc">
+<td>119</td>
+<td>883305</td>
+<td>1726875</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 18:54:57</td>
+</tr><tr>
+<td>120</td>
+<td>883303</td>
+<td>1726874</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 18:54:26</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>883304</td>
+<td>1726873</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 18:53:47</td>
+</tr><tr>
+<td>122</td>
+<td>883295</td>
+<td>1726872</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 18:52:30</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>883296</td>
+<td>1726871</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 18:52:27</td>
+</tr><tr>
+<td>124</td>
+<td>883299</td>
+<td>12153227</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153227" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2015-07-21 18:52:16</td>
+</tr><tr class="acc">
+<td>125</td>
+<td>883289</td>
+<td>1726869</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 18:50:05</td>
+</tr><tr>
+<td>126</td>
+<td>883291</td>
+<td>4010995</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C</td>
+<td>2015-07-21 18:49:40</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>883282</td>
+<td>1726868</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-21 18:47:27</td>
+</tr><tr>
+<td>128</td>
+<td>883277</td>
+<td>1726867</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 18:46:23</td>
+</tr><tr class="acc">
+<td>129</td>
+<td>883274</td>
+<td>12153136</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153136" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 18:43:35</td>
+</tr><tr>
+<td>130</td>
+<td>883268</td>
+<td>1726866</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 18:42:55</td>
+</tr><tr class="acc">
+<td>131</td>
+<td>883265</td>
+<td>12153126</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153126" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 18:42:43</td>
+</tr><tr class="acc">
+<td>132</td>
+<td>883266</td>
+<td>12153120</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153120" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 18:42:08</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>883264</td>
+<td>1726865</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-21 18:42:01</td>
+</tr><tr>
+<td>134</td>
+<td>883257</td>
+<td>1726864</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++</td>
+<td>2015-07-21 18:41:16</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>883258</td>
+<td>1726863</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 18:40:41</td>
+</tr><tr>
+<td>136</td>
+<td>883256</td>
+<td>1726862</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2389" target="_blank">P5 - Suffix reconstruction</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 18:40:16</td>
+</tr><tr class="acc">
+<td>137</td>
+<td>883246</td>
+<td>12153081</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153081" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 18:38:19</td>
+</tr><tr class="acc">
+<td>138</td>
+<td>883240</td>
+<td>1726861</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:36:34</td>
+</tr><tr class="odd">
+<td>139</td>
+<td>883235</td>
+<td>12153061</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153061" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 18:35:42</td>
+</tr><tr>
+<td>140</td>
+<td>883228</td>
+<td>1726860</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 18:34:36</td>
+</tr><tr class="odd">
+<td>141</td>
+<td>883229</td>
+<td>1726859</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2389" target="_blank">P5 - Suffix reconstruction</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 18:33:57</td>
+</tr><tr class="acc">
+<td>142</td>
+<td>883199</td>
+<td>12153009</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12153009" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 18:30:54</td>
+</tr><tr class="acc">
+<td>143</td>
+<td>883207</td>
+<td>4010994</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:30:12</td>
+</tr><tr class="acc">
+<td>144</td>
+<td>883208</td>
+<td>4010993</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:29:28</td>
+</tr><tr class="acc">
+<td>145</td>
+<td>883209</td>
+<td>4010992</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:28:27</td>
+</tr><tr>
+<td>146</td>
+<td>883218</td>
+<td>1726858</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 18:27:52</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>883201</td>
+<td>12152977</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152977" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 18:27:42</td>
+</tr><tr class="acc">
+<td>148</td>
+<td>883219</td>
+<td>1726857</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:27:10</td>
+</tr><tr class="acc">
+<td>149</td>
+<td>883210</td>
+<td>4010991</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:26:21</td>
+</tr><tr>
+<td>150</td>
+<td>883211</td>
+<td>4010990</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 18:25:24</td>
+</tr><tr class="acc">
+<td>151</td>
+<td>883220</td>
+<td>1726855</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:25:05</td>
+</tr><tr class="acc">
+<td>152</td>
+<td>883221</td>
+<td>1726854</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:25:04</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>883204</td>
+<td>12152946</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152946" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 18:24:42</td>
+</tr><tr class="acc">
+<td>154</td>
+<td>883222</td>
+<td>1726853</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:23:59</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>883212</td>
+<td>4010989</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 18:23:35</td>
+</tr><tr>
+<td>156</td>
+<td>883213</td>
+<td>4010988</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 18:23:12</td>
+</tr><tr class="acc">
+<td>157</td>
+<td>883214</td>
+<td>4010987</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:16:46</td>
+</tr><tr class="acc">
+<td>158</td>
+<td>883223</td>
+<td>1726852</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-21 18:16:37</td>
+</tr><tr class="acc">
+<td>159</td>
+<td>883215</td>
+<td>4010986</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 18:14:13</td>
+</tr><tr>
+<td>160</td>
+<td>883224</td>
+<td>1726851</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 18:12:17</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>883225</td>
+<td>1726850</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 18:12:12</td>
+</tr><tr>
+<td>162</td>
+<td>883216</td>
+<td>4010984</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 18:12:05</td>
+</tr><tr class="acc">
+<td>163</td>
+<td>883217</td>
+<td>4010983</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:11:06</td>
+</tr><tr>
+<td>164</td>
+<td>883226</td>
+<td>1726849</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>JAVA</td>
+<td>2015-07-21 18:10:17</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>883191</td>
+<td>4010982</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 18:09:19</td>
+</tr><tr>
+<td>166</td>
+<td>883193</td>
+<td>4010981</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 18:09:03</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>883173</td>
+<td>12152744</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152744" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 18:03:46</td>
+</tr><tr>
+<td>168</td>
+<td>883163</td>
+<td>1726848</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>JAVA</td>
+<td>2015-07-21 18:02:43</td>
+</tr><tr class="acc">
+<td>169</td>
+<td>883160</td>
+<td>4010980</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:01:44</td>
+</tr><tr class="acc">
+<td>170</td>
+<td>883159</td>
+<td>1726847</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 18:00:10</td>
+</tr><tr class="acc">
+<td>171</td>
+<td>883157</td>
+<td>1726846</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:59:38</td>
+</tr><tr>
+<td>172</td>
+<td>883158</td>
+<td>1726845</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 17:59:30</td>
+</tr><tr class="acc">
+<td>173</td>
+<td>883177</td>
+<td>12152703</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152703" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:59:21</td>
+</tr><tr class="acc">
+<td>174</td>
+<td>883178</td>
+<td>12152701</td>
+<td><a href="https://a2oj.com/profile?Username=tikaneis">tikaneis</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152701" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:59:15</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>883179</td>
+<td>12152692</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152692" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:58:29</td>
+</tr><tr class="acc">
+<td>176</td>
+<td>883180</td>
+<td>12152683</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152683" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:57:46</td>
+</tr><tr class="odd">
+<td>177</td>
+<td>883155</td>
+<td>4010978</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:56:40</td>
+</tr><tr>
+<td>178</td>
+<td>883156</td>
+<td>4010977</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:56:00</td>
+</tr><tr class="odd">
+<td>179</td>
+<td>883150</td>
+<td>4010976</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:54:02</td>
+</tr><tr>
+<td>180</td>
+<td>883138</td>
+<td>12152613</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152613" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:52:16</td>
+</tr><tr class="odd">
+<td>181</td>
+<td>883139</td>
+<td>12152611</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152611" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:52:12</td>
+</tr><tr>
+<td>182</td>
+<td>883145</td>
+<td>4010975</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:52:05</td>
+</tr><tr class="acc">
+<td>183</td>
+<td>883132</td>
+<td>4010974</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 17:51:19</td>
+</tr><tr>
+<td>184</td>
+<td>883141</td>
+<td>12152599</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152599" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:50:49</td>
+</tr><tr class="odd">
+<td>185</td>
+<td>883142</td>
+<td>12152598</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152598" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:50:44</td>
+</tr><tr class="acc">
+<td>186</td>
+<td>883144</td>
+<td>12152593</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152593" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:50:23</td>
+</tr><tr class="acc">
+<td>187</td>
+<td>883126</td>
+<td>4010973</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:50:02</td>
+</tr><tr>
+<td>188</td>
+<td>883123</td>
+<td>12152587</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152587" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:49:45</td>
+</tr><tr class="odd">
+<td>189</td>
+<td>883124</td>
+<td>12152578</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152578" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:49:20</td>
+</tr><tr>
+<td>190</td>
+<td>883119</td>
+<td>4010972</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:49:17</td>
+</tr><tr class="odd">
+<td>191</td>
+<td>883120</td>
+<td>4010971</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C</td>
+<td>2015-07-21 17:48:54</td>
+</tr><tr>
+<td>192</td>
+<td>883121</td>
+<td>4010970</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++0x</td>
+<td>2015-07-21 17:48:12</td>
+</tr><tr class="odd">
+<td>193</td>
+<td>883122</td>
+<td>4010969</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C</td>
+<td>2015-07-21 17:46:48</td>
+</tr><tr class="acc">
+<td>194</td>
+<td>883116</td>
+<td>1726839</td>
+<td><a href="https://a2oj.com/profile?Username=tada-s">tada-s</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:46:36</td>
+</tr><tr class="odd">
+<td>195</td>
+<td>883111</td>
+<td>12152536</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152536" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:45:37</td>
+</tr><tr>
+<td>196</td>
+<td>883112</td>
+<td>12152530</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152530" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:45:17</td>
+</tr><tr class="acc">
+<td>197</td>
+<td>883113</td>
+<td>12152526</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152526" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:45:12</td>
+</tr><tr class="acc">
+<td>198</td>
+<td>883091</td>
+<td>4010968</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 17:43:51</td>
+</tr><tr class="odd">
+<td>199</td>
+<td>883092</td>
+<td>4010967</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:43:30</td>
+</tr><tr>
+<td>200</td>
+<td>883093</td>
+<td>12152501</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152501" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:42:49</td>
+</tr><tr class="odd">
+<td>201</td>
+<td>883094</td>
+<td>12152489</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152489" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:41:45</td>
+</tr><tr>
+<td>202</td>
+<td>883095</td>
+<td>12152485</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152485" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:41:38</td>
+</tr><tr class="odd">
+<td>203</td>
+<td>883101</td>
+<td>1726838</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 17:41:24</td>
+</tr><tr>
+<td>204</td>
+<td>883096</td>
+<td>12152480</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152480" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:41:12</td>
+</tr><tr class="odd">
+<td>205</td>
+<td>883097</td>
+<td>12152479</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152479" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-21 17:41:11</td>
+</tr><tr class="acc">
+<td>206</td>
+<td>883102</td>
+<td>1726837</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:41:01</td>
+</tr><tr class="odd">
+<td>207</td>
+<td>883062</td>
+<td>4010966</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:40:56</td>
+</tr><tr>
+<td>208</td>
+<td>883103</td>
+<td>1726836</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 17:39:14</td>
+</tr><tr class="odd">
+<td>209</td>
+<td>883063</td>
+<td>4010964</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3318" target="_blank">P10 - Strange Country</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:39:05</td>
+</tr><tr>
+<td>210</td>
+<td>883104</td>
+<td>1726835</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 17:38:38</td>
+</tr><tr class="odd">
+<td>211</td>
+<td>883050</td>
+<td>12152446</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152446" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:38:20</td>
+</tr><tr>
+<td>212</td>
+<td>883051</td>
+<td>12152442</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152442" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:38:11</td>
+</tr><tr class="odd">
+<td>213</td>
+<td>883052</td>
+<td>12152436</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152436" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-21 17:37:51</td>
+</tr><tr class="acc">
+<td>214</td>
+<td>883064</td>
+<td>4010963</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:37:13</td>
+</tr><tr class="acc">
+<td>215</td>
+<td>883065</td>
+<td>4010962</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:37:09</td>
+</tr><tr>
+<td>216</td>
+<td>883054</td>
+<td>12152428</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152428" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:36:54</td>
+</tr><tr class="acc">
+<td>217</td>
+<td>883066</td>
+<td>4010961</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:36:22</td>
+</tr><tr class="acc">
+<td>218</td>
+<td>883067</td>
+<td>4010960</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:34:58</td>
+</tr><tr class="odd">
+<td>219</td>
+<td>883068</td>
+<td>4010959</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3332" target="_blank">P9 - Strange Country II</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-21 17:34:49</td>
+</tr><tr class="acc">
+<td>220</td>
+<td>883055</td>
+<td>12152397</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152397" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:34:05</td>
+</tr><tr class="odd">
+<td>221</td>
+<td>883105</td>
+<td>1726832</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-21 17:33:53</td>
+</tr><tr class="acc">
+<td>222</td>
+<td>883058</td>
+<td>12152375</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152375" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:32:47</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>883069</td>
+<td>4010958</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:32:31</td>
+</tr><tr>
+<td>224</td>
+<td>883070</td>
+<td>4010957</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:31:17</td>
+</tr><tr class="odd">
+<td>225</td>
+<td>883106</td>
+<td>1726830</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2848" target="_blank">P3 - Binary Search Tree</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-21 17:31:00</td>
+</tr><tr>
+<td>226</td>
+<td>883071</td>
+<td>4010956</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2015-07-21 17:30:06</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>883107</td>
+<td>1726829</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:27:42</td>
+</tr><tr>
+<td>228</td>
+<td>883042</td>
+<td>12152254</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152254" target="_blank">MEMORY_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:23:01</td>
+</tr><tr class="odd">
+<td>229</td>
+<td>883108</td>
+<td>1726828</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2389" target="_blank">P5 - Suffix reconstruction</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-21 17:22:53</td>
+</tr><tr>
+<td>230</td>
+<td>883043</td>
+<td>4010955</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:21:57</td>
+</tr><tr class="odd">
+<td>231</td>
+<td>883035</td>
+<td>12152226</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152226" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:20:44</td>
+</tr><tr>
+<td>232</td>
+<td>883036</td>
+<td>12152217</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152217" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:20:11</td>
+</tr><tr class="acc">
+<td>233</td>
+<td>883037</td>
+<td>12152215</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152215" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:20:07</td>
+</tr><tr class="acc">
+<td>234</td>
+<td>883023</td>
+<td>4010952</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:19:52</td>
+</tr><tr class="odd">
+<td>235</td>
+<td>883038</td>
+<td>12152208</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152208" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:19:16</td>
+</tr><tr>
+<td>236</td>
+<td>883039</td>
+<td>12152205</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152205" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:19:05</td>
+</tr><tr class="acc">
+<td>237</td>
+<td>883012</td>
+<td>12152203</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152203" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:18:59</td>
+</tr><tr>
+<td>238</td>
+<td>883028</td>
+<td>1726824</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:18:29</td>
+</tr><tr class="odd">
+<td>239</td>
+<td>883013</td>
+<td>12152193</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152193" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:18:19</td>
+</tr><tr class="acc">
+<td>240</td>
+<td>883014</td>
+<td>12152185</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152185" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:17:44</td>
+</tr><tr class="odd">
+<td>241</td>
+<td>883015</td>
+<td>12152175</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152175" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:16:38</td>
+</tr><tr>
+<td>242</td>
+<td>883016</td>
+<td>12152174</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152174" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:16:24</td>
+</tr><tr class="acc">
+<td>243</td>
+<td>883018</td>
+<td>12152155</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152155" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:15:21</td>
+</tr><tr>
+<td>244</td>
+<td>883019</td>
+<td>12152151</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152151" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:15:05</td>
+</tr><tr class="acc">
+<td>245</td>
+<td>883007</td>
+<td>12152140</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152140" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 17:14:10</td>
+</tr><tr>
+<td>246</td>
+<td>883008</td>
+<td>12152128</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12152128" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 17:13:23</td>
+</tr><tr class="acc">
+<td>247</td>
+<td>883024</td>
+<td>4010949</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:12:56</td>
+</tr><tr>
+<td>248</td>
+<td>883025</td>
+<td>4010948</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:12:31</td>
+</tr><tr class="odd">
+<td>249</td>
+<td>882999</td>
+<td>1726820</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2846" target="_blank">P4 - Password</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-21 17:11:58</td>
+</tr><tr>
+<td>250</td>
+<td>882976</td>
+<td>1726818</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++</td>
+<td>2015-07-21 17:11:19</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>882980</td>
+<td>1726813</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 17:09:21</td>
+</tr><tr class="acc">
+<td>252</td>
+<td>882982</td>
+<td>1726810</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:06:56</td>
+</tr><tr class="acc">
+<td>253</td>
+<td>882983</td>
+<td>1726809</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 17:06:08</td>
+</tr><tr class="acc">
+<td>254</td>
+<td>882984</td>
+<td>1726807</td>
+<td><a href="https://a2oj.com/profile?Username=Gauss">Gauss</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 17:05:21</td>
+</tr><tr class="odd">
+<td>255</td>
+<td>882955</td>
+<td>4010947</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2015-07-21 17:03:09</td>
+</tr><tr>
+<td>256</td>
+<td>882956</td>
+<td>4010946</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2015-07-21 17:01:41</td>
+</tr><tr class="acc">
+<td>257</td>
+<td>882987</td>
+<td>1726802</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=2443">Desorientados</a> (<a class="normal" href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Desorienta2s">Desorienta2s</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 17:00:36</td>
+</tr><tr class="acc">
+<td>258</td>
+<td>882995</td>
+<td>1726792</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 16:55:00</td>
+</tr><tr class="acc">
+<td>259</td>
+<td>882998</td>
+<td>1726789</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:53:20</td>
+</tr><tr>
+<td>260</td>
+<td>882948</td>
+<td>12151242</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12151242" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 16:51:53</td>
+</tr><tr class="acc">
+<td>261</td>
+<td>882952</td>
+<td>1726787</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2015-07-21 16:51:46</td>
+</tr><tr class="acc">
+<td>262</td>
+<td>882947</td>
+<td>1726785</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:50:41</td>
+</tr><tr class="odd">
+<td>263</td>
+<td>882949</td>
+<td>12151227</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12151227" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-21 16:50:22</td>
+</tr><tr class="acc">
+<td>264</td>
+<td>882942</td>
+<td>1726784</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:49:19</td>
+</tr><tr class="acc">
+<td>265</td>
+<td>882944</td>
+<td>1726781</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:49:03</td>
+</tr><tr class="acc">
+<td>266</td>
+<td>882941</td>
+<td>4010941</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3365" target="_blank">P8 - Integer Numbers</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++0x</td>
+<td>2015-07-21 16:48:58</td>
+</tr><tr class="odd">
+<td>267</td>
+<td>882938</td>
+<td>1726779</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_10">TC_bahia_10</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-21 16:48:10</td>
+</tr><tr class="acc">
+<td>268</td>
+<td>882933</td>
+<td>1726777</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:47:07</td>
+</tr><tr class="acc">
+<td>269</td>
+<td>882934</td>
+<td>1726776</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 16:47:04</td>
+</tr><tr class="acc">
+<td>270</td>
+<td>882936</td>
+<td>1726774</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:46:42</td>
+</tr><tr class="acc">
+<td>271</td>
+<td>882924</td>
+<td>12151170</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12151170" target="_blank">Accepted</a></td>
+<td>Java 8</td>
+<td>2015-07-21 16:44:30</td>
+</tr><tr class="acc">
+<td>272</td>
+<td>882925</td>
+<td>12151162</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/274/A" target="_blank">P6 - k-Multiple Free Set</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/274/submission/12151162" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-21 16:43:43</td>
+</tr><tr class="acc">
+<td>273</td>
+<td>882920</td>
+<td>1726770</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 16:43:01</td>
+</tr><tr class="acc">
+<td>274</td>
+<td>882917</td>
+<td>1726769</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:42:22</td>
+</tr><tr class="acc">
+<td>275</td>
+<td>882913</td>
+<td>1726768</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>ANSI C</td>
+<td>2015-07-21 16:40:49</td>
+</tr><tr class="acc">
+<td>276</td>
+<td>882914</td>
+<td>1726767</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_28">TC_bahia_28</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:40:48</td>
+</tr><tr class="acc">
+<td>277</td>
+<td>882905</td>
+<td>1726766</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:40:27</td>
+</tr><tr class="acc">
+<td>278</td>
+<td>882906</td>
+<td>1726765</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:39:47</td>
+</tr><tr class="acc">
+<td>279</td>
+<td>882907</td>
+<td>1726764</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 16:39:42</td>
+</tr><tr class="acc">
+<td>280</td>
+<td>882908</td>
+<td>1726763</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_26">TC_bahia_26</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:39:35</td>
+</tr><tr class="odd">
+<td>281</td>
+<td>882900</td>
+<td>1726762</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_27">TC_bahia_27</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Output Limit Exceeded</td>
+<td>C++</td>
+<td>2015-07-21 16:38:11</td>
+</tr><tr class="acc">
+<td>282</td>
+<td>882895</td>
+<td>1726761</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:37:25</td>
+</tr><tr class="acc">
+<td>283</td>
+<td>882896</td>
+<td>1726760</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:37:04</td>
+</tr><tr class="acc">
+<td>284</td>
+<td>882897</td>
+<td>1726759</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:36:56</td>
+</tr><tr class="acc">
+<td>285</td>
+<td>882891</td>
+<td>1726757</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-21 16:36:33</td>
+</tr><tr class="acc">
+<td>286</td>
+<td>882893</td>
+<td>1726756</td>
+<td><a href="https://a2oj.com/profile?Username=Abril">Abril</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 16:35:43</td>
+</tr><tr class="acc">
+<td>287</td>
+<td>882889</td>
+<td>1726755</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2168" target="_blank">P1 - Parity</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-21 16:35:02</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

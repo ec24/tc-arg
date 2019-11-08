@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache gr__a2oj_com fontface"><head>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="standing_files/all.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="standing_files/all_002.js"></script><script type="text/javascript" async="" src="standing_files/ga.js"></script><script type="text/javascript">
+var ID = 5709;
+var My = 0;
+var non = 0;
+var running = 0;
+var cells = 0;
+</script>
+
+
+<!-- START TABLE SORTER CODE -->
+<script type="text/javascript" src="standing_files/jquery-1.js"></script>
+<script type="text/javascript" src="standing_files/animator.js"></script>
+<script type="text/javascript" src="standing_files/rankingTableUpdate.js"></script>
+<link rel="stylesheet" type="text/css" href="standing_files/scoreboard.css">
+<script src="standing_files/scoreboard.js" type="text/javascript"></script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="standing_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="standing_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+<script type="text/javascript">
+function toggle() {
+	var pars = "";
+	if(document.getElementById("selection") && document.getElementById("selection").checked)
+		pars += "&my";
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked)
+		pars += "&non";
+	window.location = 'standings?ID=5709' + pars;
+}
+</script>
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none;" src="standing_files/xd_arbiter.html" frameborder="0"></iframe></div><div></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123446397673080";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="standing_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="standing_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fstandings%3FID%3D5709" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="standing_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+
+<!-- <center><a href="https://goo.gl/slk2H1" target="_blank"><img src="banner.jpg"></img></a><br/><br/></center> -->
+
+<div id="page">
+
+<font size="3">
+<center>
+
+
+<script type="text/javascript">
+var srt = 1;
+</script>
+
+
+<font size="4">
+<b>
+Standings for: <a href="https://a2oj.com/contest?ID=5709">5709 - Training Camp Argentina - Miercoles 24
+</a>
+ (Contest is over)
+
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=5709">Standings</a> - <a href="https://a2oj.com/submissions?ID=5709">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=5709">Problems</a> - <a href="https://a2oj.com/registrants?ID=5709">Registrants</a>
+
+</b>
+</font>
+
+
+
+<div id="scoreboard">
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<br><br>
+
+
+<div class="scroll">
+<div class="tableHolder">
+<ib style="text-align: center;" class="blind"></ib>
+<table class="template" style="display:none;">
+<thead>
+<tr style="height: 25px;">
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Rank</a> </th>
+<th class="anim:id fe-sortable fe-string"><a href="javascript:void();">Contestant</a> </th>
+<th class="anim:constant fe-sortable fe-string"><a href="javascript:void();">Country</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Solved</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Penalty</a> </th>
+<th class="anim:constant" title="AXIS - Axis of Symmetry (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/AXIS/" target="_blank">P1</a></th>
+<th class="anim:constant" title="BYECAKES - Bye Bye Cakes (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/BYECAKES/" target="_blank">P2</a></th>
+<th class="anim:constant" title="COUNTPAS - Counting Pascal (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/COUNTPAS/" target="_blank">P3</a></th>
+<th class="anim:constant" title="DINOSM - Dinosaur Menace (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/DINOSM/" target="_blank">P4</a></th>
+<th class="anim:constant" title="ESJAIL - Escape from Jail (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/ESJAIL/" target="_blank">P5</a></th>
+<th class="anim:constant" title="FALTAENV - Falta Envido (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/FALTAENV/" target="_blank">P6</a></th>
+<th class="anim:constant" title="GUESSTHE - Guess the Number (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/GUESSTHE/" target="_blank">P7</a></th>
+<th class="anim:constant" title="HEXBOARD - Hexagonal Board (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/HEXBOARD/" target="_blank">P8</a></th>
+<th class="anim:constant" title="INTEGMAX - Integral Maximization (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/INTEGMAX/" target="_blank">P9</a></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<table class="actualTable" style="">
+<thead>
+<tr style="height: 25px;">
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Rank</a> &#8593;</th>
+<th class="anim:id fe-sortable fe-string"><a href="javascript:void();">Contestant</a> </th>
+<th class="anim:constant fe-sortable fe-string"><a href="javascript:void();">Country</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Solved</a> </th>
+<th class="anim:constant fe-sortable fe-number"><a href="javascript:void();">Penalty</a> </th>
+<th class="anim:constant" title="AXIS - Axis of Symmetry (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/AXIS/" target="_blank">P1</a></th>
+<th class="anim:constant" title="BYECAKES - Bye Bye Cakes (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/BYECAKES/" target="_blank">P2</a></th>
+<th class="anim:constant" title="COUNTPAS - Counting Pascal (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/COUNTPAS/" target="_blank">P3</a></th>
+<th class="anim:constant" title="DINOSM - Dinosaur Menace (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/DINOSM/" target="_blank">P4</a></th>
+<th class="anim:constant" title="ESJAIL - Escape from Jail (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/ESJAIL/" target="_blank">P5</a></th>
+<th class="anim:constant" title="FALTAENV - Falta Envido (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/FALTAENV/" target="_blank">P6</a></th>
+<th class="anim:constant" title="GUESSTHE - Guess the Number (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/GUESSTHE/" target="_blank">P7</a></th>
+<th class="anim:constant" title="HEXBOARD - Hexagonal Board (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/HEXBOARD/" target="_blank">P8</a></th>
+<th class="anim:constant" title="INTEGMAX - Integral Maximization (SPOJ)"><a class="normal" href="http://www.spoj.com/problems/INTEGMAX/" target="_blank">P9</a></th>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 25px;"><td style="text-align: center;">1</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">8</td><td style="text-align: center;">588</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/17</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><i>3/125</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/199</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/13</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/12</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/17</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/95</b></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/30</b></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">2</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">8</td><td style="text-align: center;">1297</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/49</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/246</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/223</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/121</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/156</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/41</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/141</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/200</b></td></tr><tr style="height: 25px;"><td style="text-align: center;">3</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">6</td><td style="text-align: center;">370</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/20</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(4, 180, 49);"><b>1/6</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/41</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/58</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/139</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/86</b></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">4</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">6</td><td style="text-align: center;">610</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/15</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">2/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/75</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/26</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/43</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/178</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/113</i></td></tr><tr style="height: 25px;"><td style="text-align: center;">5</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">6</td><td style="text-align: center;">639</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/52</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/248</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/118</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/75</i></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><i>2/17</i></td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/29</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">6</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">6</td><td style="text-align: center;">771</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/16</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/214</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/111</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/64</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/189</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/137</b></td></tr><tr style="height: 25px;"><td style="text-align: center;">7</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=cegece">cegece</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">6</td><td style="text-align: center;">894</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/16</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/237</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/194</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/36</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/111</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/240</b></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">8</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">5</td><td style="text-align: center;">432</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/41</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/107</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/25</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/110</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/129</b></td></tr><tr style="height: 25px;"><td style="text-align: center;">9</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">5</td><td style="text-align: center;">658</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/22</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/207</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/109</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/67</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/173</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">10</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">5</td><td style="text-align: center;">669</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/38</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/155</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/146</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/203</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/67</i></td></tr><tr style="height: 25px;"><td style="text-align: center;">11</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=chaous">chaous</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">5</td><td style="text-align: center;">731</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/110</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/139</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/222</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/89</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/91</b></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">12</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">5</td><td style="text-align: center;">808</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/46</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/166</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/150</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/116</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/230</i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">2/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">13</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=237">COJeros</a> (<a class="normal" href="https://a2oj.com/profile?Username=eddycael">eddycael</a>, <a class="normal" href="https://a2oj.com/profile?Username=florens">florens</a>, <a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">4</td><td style="text-align: center;">182</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/21</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/33</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/52</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/76</b></td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">14</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">4</td><td style="text-align: center;">379</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/26</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/138</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/36</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/79</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">15</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">4</td><td style="text-align: center;">608</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/91</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/85</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/215</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/217</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">16</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=JmJ">JmJ</a></td><td style="text-align: center;">Peru</td><td style="text-align: center;">4</td><td style="text-align: center;">924</td><td style="text-align: center; background-color: rgb(46, 254, 100);"><i>2/132</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/147</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>12/253</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/152</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">17</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td><td style="text-align: center;">Uruguay</td><td style="text-align: center;">3</td><td style="text-align: center;">297</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/33</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">13/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>6/96</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/28</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">18</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">3</td><td style="text-align: center;">332</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/24</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/170</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/138</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">19</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">3</td><td style="text-align: center;">364</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/111</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/48</b></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/205</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">20</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">3</td><td style="text-align: center;">499</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/46</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">2/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/141</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/192</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">21</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">3</td><td style="text-align: center;">615</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/61</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/251</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/223</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">22</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=432">lea</a> (<a class="normal" href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a>, <a class="normal" href="https://a2oj.com/profile?Username=fran20">fran20</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">3</td><td style="text-align: center;">656</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/105</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/160</i></td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>6/211</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">5/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">23</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">3</td><td style="text-align: center;">730</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/49</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>10/243</i></td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/238</b></td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">24</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=glhf">glhf</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">2</td><td style="text-align: center;">219</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>4/68</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/91</b></td><td style="text-align: center; background-color: rgb(240, 128, 128);">6/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">25</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=jorge12387">jorge12387</a></td><td style="text-align: center;">Bolivia</td><td style="text-align: center;">2</td><td style="text-align: center;">276</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/29</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/247</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">4/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">26</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">2</td><td style="text-align: center;">287</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/41</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/166</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">27</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">2</td><td style="text-align: center;">296</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/99</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/197</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">28</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">2</td><td style="text-align: center;">329</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>5/122</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/107</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">29</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td><td style="text-align: center;">Chile</td><td style="text-align: center;">2</td><td style="text-align: center;">415</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><b>1/146</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>6/169</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">30</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">2</td><td style="text-align: center;">454</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>2/152</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(240, 128, 128);">1/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/242</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px;"><td style="text-align: center;">31</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td><td style="text-align: center;">&nbsp;</td><td style="text-align: center;">1</td><td style="text-align: center;">148</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(169, 245, 169);"><i>3/108</i></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(240, 240, 246);"><td style="text-align: center;">32</td><td style="text-align: center;"><a class="normal" href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td><td style="text-align: center;">Argentina</td><td style="text-align: center;">1</td><td style="text-align: center;">187</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: rgb(46, 254, 100);"><b>1/187</b></td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td><td style="text-align: center; background-color: transparent;">0/--</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5" style="text-align: center;">Total Submitted</td><td style="text-align: center;">2</td><td style="text-align: center;">49</td><td style="text-align: center;">11</td><td style="text-align: center;">20</td><td style="text-align: center;">33</td><td style="text-align: center;">60</td><td style="text-align: center;">76</td><td style="text-align: center;">21</td><td style="text-align: center;">28</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5" style="text-align: center;">First Accepted</td><td style="text-align: center;">132</td><td style="text-align: center;">15</td><td style="text-align: center;">125</td><td style="text-align: center;">187</td><td style="text-align: center;">6</td><td style="text-align: center;">12</td><td style="text-align: center;">17</td><td style="text-align: center;">29</td><td style="text-align: center;">30</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5" style="text-align: center;">Total Accepted</td><td style="text-align: center;">1</td><td style="text-align: center;">31</td><td style="text-align: center;">6</td><td style="text-align: center;">4</td><td style="text-align: center;">8</td><td style="text-align: center;">19</td><td style="text-align: center;">28</td><td style="text-align: center;">17</td><td style="text-align: center;">10</td></tr><tr style="height: 25px; background-color: rgb(230, 238, 238);"><td colspan="5"></td><td title="AXIS - Axis of Symmetry (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/AXIS/" class="normal" target="_blank">P1</a></td><td title="BYECAKES - Bye Bye Cakes (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/BYECAKES/" class="normal" target="_blank">P2</a></td><td title="COUNTPAS - Counting Pascal (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/COUNTPAS/" class="normal" target="_blank">P3</a></td><td title="DINOSM - Dinosaur Menace (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/DINOSM/" class="normal" target="_blank">P4</a></td><td title="ESJAIL - Escape from Jail (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/ESJAIL/" class="normal" target="_blank">P5</a></td><td title="FALTAENV - Falta Envido (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/FALTAENV/" class="normal" target="_blank">P6</a></td><td title="GUESSTHE - Guess the Number (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/GUESSTHE/" class="normal" target="_blank">P7</a></td><td title="HEXBOARD - Hexagonal Board (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/HEXBOARD/" class="normal" target="_blank">P8</a></td><td title="INTEGMAX - Integral Maximization (SPOJ)" style="text-align: center;"><a href="http://www.spoj.com/problems/INTEGMAX/" class="normal" target="_blank">P9</a></td></tr><tr style="height: 10px; background-color: rgb(255, 255, 255); border: 0px solid rgb(255, 255, 255);"><td colspan="14" style="border: 0px solid rgb(255, 255, 255);"></td></tr></tbody>
+</table></div>
+</div>
+
+<p style="text-align: center;" class="status">Updated at: 02:15:18 08/11/2019 UTC</p>
+</div>
+
+<div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid_desktop" data-href="https://a2oj.com/contest?ID=5709" data-width="800" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=123446397673080&amp;container_width=1000&amp;height=100&amp;href=https%3A%2F%2Fa2oj.com%2Fcontest%3FID%3D5709&amp;locale=en_US&amp;sdk=joey&amp;width=800"><span style="vertical-align: bottom; width: 800px; height: 215px;"><iframe name="f3ee483bb87025" title="fb:comments Facebook Social Plugin" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" style="border: medium none; visibility: visible; width: 800px; height: 215px;" src="https://www.facebook.com/plugins/comments.php?app_id=123446397673080&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df9847991aad038%26domain%3Da2oj.com%26origin%3Dhttps%253A%252F%252Fa2oj.com%252Ff18fe085a316ae6%26relation%3Dparent.parent&amp;container_width=1000&amp;height=100&amp;href=https%3A%2F%2Fa2oj.com%2Fcontest%3FID%3D5709&amp;locale=en_US&amp;sdk=joey&amp;width=800" class="" width="800px" height="100px" frameborder="0"></iframe></span></div>
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

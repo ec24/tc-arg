@@ -1,0 +1,3673 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=5575&non=true&My=true';
+		else
+			window.location = 'submissions?ID=5575&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=5575&My=true';
+		else
+			window.location = 'submissions?ID=5575';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D5575" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=5575">5575 - Training Camp Argentina 2013 - Martes 16
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=5575">Standings</a> - <a href="https://a2oj.com/submissions?ID=5575">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=5575">Problems</a> - <a href="https://a2oj.com/registrants?ID=5575">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>235197</td>
+<td>1260707</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Sent to judge</td>
+<td>C++</td>
+<td>2013-07-16 20:42:08</td>
+</tr><tr class="acc">
+<td>2</td>
+<td>235203</td>
+<td>3349155</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 20:35:03</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>235199</td>
+<td>3349154</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2013-07-16 20:33:37</td>
+</tr><tr>
+<td>4</td>
+<td>235194</td>
+<td>1260705</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 20:32:44</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>235195</td>
+<td>1260704</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>JAVA</td>
+<td>2013-07-16 20:31:13</td>
+</tr><tr class="acc">
+<td>6</td>
+<td>235190</td>
+<td>3349151</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 20:28:35</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>235188</td>
+<td>3349150</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:25:55</td>
+</tr><tr>
+<td>8</td>
+<td>235186</td>
+<td>3349149</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:24:23</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>235184</td>
+<td>3349148</td>
+<td><a href="https://a2oj.com/profile?Username=vz0">vz0</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:23:24</td>
+</tr><tr>
+<td>10</td>
+<td>235181</td>
+<td>3349147</td>
+<td><a href="https://a2oj.com/profile?Username=vz0">vz0</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 20:22:14</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>235172</td>
+<td>1260702</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3796" target="_blank">P6 - GPS I Love You</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 20:20:46</td>
+</tr><tr>
+<td>12</td>
+<td>235173</td>
+<td>1260701</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 20:20:37</td>
+</tr><tr class="acc">
+<td>13</td>
+<td>235163</td>
+<td>3349146</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 20:16:23</td>
+</tr><tr class="acc">
+<td>14</td>
+<td>235151</td>
+<td>3349145</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 20:11:47</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>235149</td>
+<td>3349144</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 20:10:31</td>
+</tr><tr class="acc">
+<td>16</td>
+<td>235150</td>
+<td>3349143</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 20:10:19</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>235145</td>
+<td>3349142</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:09:46</td>
+</tr><tr>
+<td>18</td>
+<td>235143</td>
+<td>3349141</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:08:02</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>235140</td>
+<td>3349140</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:07:32</td>
+</tr><tr>
+<td>20</td>
+<td>235141</td>
+<td>3349139</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:07:09</td>
+</tr><tr class="odd">
+<td>21</td>
+<td>235133</td>
+<td>3349138</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 20:06:29</td>
+</tr><tr class="acc">
+<td>22</td>
+<td>235127</td>
+<td>3349137</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 20:05:49</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>235128</td>
+<td>3349136</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:05:24</td>
+</tr><tr>
+<td>24</td>
+<td>235112</td>
+<td>3349135</td>
+<td><a href="https://a2oj.com/profile?Username=vz0">vz0</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:03:13</td>
+</tr><tr class="odd">
+<td>25</td>
+<td>235101</td>
+<td>3349134</td>
+<td><a href="https://a2oj.com/profile?Username=vz0">vz0</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:01:49</td>
+</tr><tr>
+<td>26</td>
+<td>235102</td>
+<td>3349133</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C</td>
+<td>2013-07-16 20:01:48</td>
+</tr><tr class="odd">
+<td>27</td>
+<td>235103</td>
+<td>3349132</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:01:16</td>
+</tr><tr>
+<td>28</td>
+<td>235104</td>
+<td>3349131</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 20:01:12</td>
+</tr><tr class="odd">
+<td>29</td>
+<td>235096</td>
+<td>3349130</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 20:00:37</td>
+</tr><tr>
+<td>30</td>
+<td>235097</td>
+<td>3349129</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 19:59:54</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>235093</td>
+<td>3349128</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C</td>
+<td>2013-07-16 19:59:06</td>
+</tr><tr>
+<td>32</td>
+<td>235090</td>
+<td>3349127</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:57:27</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>235091</td>
+<td>3349126</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C</td>
+<td>2013-07-16 19:56:55</td>
+</tr><tr>
+<td>34</td>
+<td>235087</td>
+<td>3349124</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Non-zero Exit Code</td>
+<td>C</td>
+<td>2013-07-16 19:56:05</td>
+</tr><tr class="acc">
+<td>35</td>
+<td>235085</td>
+<td>3349123</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 19:55:32</td>
+</tr><tr>
+<td>36</td>
+<td>235073</td>
+<td>3349122</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:52:45</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>235069</td>
+<td>3349121</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:51:37</td>
+</tr><tr>
+<td>38</td>
+<td>235070</td>
+<td>3349120</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C</td>
+<td>2013-07-16 19:51:36</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>235065</td>
+<td>3349119</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 19:50:32</td>
+</tr><tr>
+<td>40</td>
+<td>235066</td>
+<td>1260693</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:49:54</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>235062</td>
+<td>3349117</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:49:22</td>
+</tr><tr>
+<td>42</td>
+<td>235063</td>
+<td>3349116</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 19:48:59</td>
+</tr><tr class="odd">
+<td>43</td>
+<td>235057</td>
+<td>3349114</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:45:58</td>
+</tr><tr>
+<td>44</td>
+<td>235054</td>
+<td>3349113</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:45:09</td>
+</tr><tr class="odd">
+<td>45</td>
+<td>235035</td>
+<td>1260692</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:43:25</td>
+</tr><tr>
+<td>46</td>
+<td>235038</td>
+<td>3349112</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:41:07</td>
+</tr><tr class="odd">
+<td>47</td>
+<td>235039</td>
+<td>3349111</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:40:36</td>
+</tr><tr class="acc">
+<td>48</td>
+<td>235030</td>
+<td>3349110</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:37:46</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>235022</td>
+<td>1260688</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3796" target="_blank">P6 - GPS I Love You</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:37:02</td>
+</tr><tr>
+<td>50</td>
+<td>235023</td>
+<td>1260687</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:36:57</td>
+</tr><tr class="odd">
+<td>51</td>
+<td>235024</td>
+<td>1260685</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3796" target="_blank">P6 - GPS I Love You</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>JAVA</td>
+<td>2013-07-16 19:34:21</td>
+</tr><tr>
+<td>52</td>
+<td>235016</td>
+<td>3349109</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 19:34:09</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>235012</td>
+<td>3349108</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 19:33:19</td>
+</tr><tr>
+<td>54</td>
+<td>235010</td>
+<td>1260683</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P9 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:31:45</td>
+</tr><tr class="odd">
+<td>55</td>
+<td>235011</td>
+<td>1260682</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3796" target="_blank">P6 - GPS I Love You</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>JAVA</td>
+<td>2013-07-16 19:31:20</td>
+</tr><tr>
+<td>56</td>
+<td>234990</td>
+<td>1260681</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:29:04</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>235000</td>
+<td>3349107</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:28:50</td>
+</tr><tr>
+<td>58</td>
+<td>234991</td>
+<td>1260680</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:26:50</td>
+</tr><tr class="acc">
+<td>59</td>
+<td>234988</td>
+<td>3349106</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=pachilede">pachilede</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:25:52</td>
+</tr><tr class="acc">
+<td>60</td>
+<td>234977</td>
+<td>3349105</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=pachilede">pachilede</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:25:05</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>234978</td>
+<td>3349104</td>
+<td><a href="https://a2oj.com/profile?Username=fran20">fran20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>Java</td>
+<td>2013-07-16 19:24:47</td>
+</tr><tr>
+<td>62</td>
+<td>234979</td>
+<td>3349103</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:24:30</td>
+</tr><tr class="acc">
+<td>63</td>
+<td>234980</td>
+<td>3349102</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=pachilede">pachilede</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:23:37</td>
+</tr><tr class="acc">
+<td>64</td>
+<td>234968</td>
+<td>3349101</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 19:22:54</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>234965</td>
+<td>3349099</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:22:05</td>
+</tr><tr class="acc">
+<td>66</td>
+<td>234966</td>
+<td>3349098</td>
+<td><a href="https://a2oj.com/profile?Username=vgg">vgg</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:21:59</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>234962</td>
+<td>3349095</td>
+<td><a href="https://a2oj.com/profile?Username=vgg">vgg</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>Java</td>
+<td>2013-07-16 19:20:28</td>
+</tr><tr>
+<td>68</td>
+<td>234963</td>
+<td>3349094</td>
+<td><a href="https://a2oj.com/profile?Username=fran20">fran20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>Java</td>
+<td>2013-07-16 19:20:19</td>
+</tr><tr class="odd">
+<td>69</td>
+<td>234947</td>
+<td>1260677</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:18:13</td>
+</tr><tr>
+<td>70</td>
+<td>234948</td>
+<td>1260676</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:17:56</td>
+</tr><tr class="acc">
+<td>71</td>
+<td>234953</td>
+<td>3349093</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:17:35</td>
+</tr><tr>
+<td>72</td>
+<td>234951</td>
+<td>3349092</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 19:16:53</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>234952</td>
+<td>3349091</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 19:16:52</td>
+</tr><tr>
+<td>74</td>
+<td>234946</td>
+<td>3349090</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:14:30</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>234944</td>
+<td>3349089</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:12:50</td>
+</tr><tr>
+<td>76</td>
+<td>234941</td>
+<td>1260674</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:12:21</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>234945</td>
+<td>3349088</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 19:12:08</td>
+</tr><tr>
+<td>78</td>
+<td>234943</td>
+<td>3349087</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:11:54</td>
+</tr><tr class="acc">
+<td>79</td>
+<td>234981</td>
+<td>3349086</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=pachilede">pachilede</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 19:10:16</td>
+</tr><tr>
+<td>80</td>
+<td>234938</td>
+<td>3349085</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 19:09:32</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>234935</td>
+<td>3349084</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-16 19:06:51</td>
+</tr><tr>
+<td>82</td>
+<td>234936</td>
+<td>3349083</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 19:06:16</td>
+</tr><tr class="acc">
+<td>83</td>
+<td>234932</td>
+<td>3349082</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 19:05:19</td>
+</tr><tr>
+<td>84</td>
+<td>234927</td>
+<td>3349081</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 19:04:31</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>234928</td>
+<td>3349080</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 19:04:07</td>
+</tr><tr>
+<td>86</td>
+<td>234929</td>
+<td>3349079</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2013-07-16 19:03:52</td>
+</tr><tr class="odd">
+<td>87</td>
+<td>234924</td>
+<td>3349078</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 19:03:17</td>
+</tr><tr>
+<td>88</td>
+<td>234923</td>
+<td>3349077</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 19:01:38</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>234920</td>
+<td>1260672</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:01:24</td>
+</tr><tr>
+<td>90</td>
+<td>234921</td>
+<td>1260671</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:01:02</td>
+</tr><tr class="odd">
+<td>91</td>
+<td>234922</td>
+<td>1260670</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 19:00:12</td>
+</tr><tr>
+<td>92</td>
+<td>234917</td>
+<td>3349076</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 18:59:25</td>
+</tr><tr class="acc">
+<td>93</td>
+<td>234918</td>
+<td>3349075</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:59:24</td>
+</tr><tr>
+<td>94</td>
+<td>234915</td>
+<td>3349074</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:58:46</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>234914</td>
+<td>3349073</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 18:57:02</td>
+</tr><tr>
+<td>96</td>
+<td>234913</td>
+<td>3349072</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 18:55:51</td>
+</tr><tr class="odd">
+<td>97</td>
+<td>234912</td>
+<td>3349071</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:55:20</td>
+</tr><tr class="acc">
+<td>98</td>
+<td>234905</td>
+<td>3349070</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:54:36</td>
+</tr><tr class="odd">
+<td>99</td>
+<td>234906</td>
+<td>3349069</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:54:02</td>
+</tr><tr>
+<td>100</td>
+<td>234907</td>
+<td>3349068</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:53:55</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>234902</td>
+<td>3349067</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Runtime Error</td>
+<td>Java</td>
+<td>2013-07-16 18:52:42</td>
+</tr><tr class="acc">
+<td>102</td>
+<td>234892</td>
+<td>3349064</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:48:32</td>
+</tr><tr class="odd">
+<td>103</td>
+<td>234888</td>
+<td>3349062</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 18:47:03</td>
+</tr><tr>
+<td>104</td>
+<td>234889</td>
+<td>3349061</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 18:46:37</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>234886</td>
+<td>1260665</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:45:23</td>
+</tr><tr>
+<td>106</td>
+<td>234885</td>
+<td>3349059</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 18:44:43</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>234881</td>
+<td>3349058</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>Java</td>
+<td>2013-07-16 18:41:44</td>
+</tr><tr>
+<td>108</td>
+<td>234878</td>
+<td>1260661</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:40:30</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>234871</td>
+<td>1260660</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:39:20</td>
+</tr><tr class="acc">
+<td>110</td>
+<td>234876</td>
+<td>3349055</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:38:45</td>
+</tr><tr class="odd">
+<td>111</td>
+<td>234872</td>
+<td>1260659</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:38:18</td>
+</tr><tr>
+<td>112</td>
+<td>234874</td>
+<td>3349054</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:36:41</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>234873</td>
+<td>1260657</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:36:29</td>
+</tr><tr>
+<td>114</td>
+<td>234877</td>
+<td>3349053</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:35:35</td>
+</tr><tr class="acc">
+<td>115</td>
+<td>234869</td>
+<td>3349052</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:35:30</td>
+</tr><tr>
+<td>116</td>
+<td>234867</td>
+<td>3349051</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:33:50</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>234866</td>
+<td>3349050</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:32:16</td>
+</tr><tr>
+<td>118</td>
+<td>234859</td>
+<td>3349049</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:30:17</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>234982</td>
+<td>3349048</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=422">PMS</a> (<a class="normal" href="https://a2oj.com/profile?Username=grayfox">grayfox</a>, <a class="normal" href="https://a2oj.com/profile?Username=jdl">jdl</a>, <a class="normal" href="https://a2oj.com/profile?Username=Jugale8">Jugale8</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=pachilede">pachilede</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 18:29:58</td>
+</tr><tr>
+<td>120</td>
+<td>234854</td>
+<td>3349047</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:28:54</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>234853</td>
+<td>3349046</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:27:53</td>
+</tr><tr>
+<td>122</td>
+<td>234861</td>
+<td>1260655</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:27:26</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>234862</td>
+<td>1260654</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:26:05</td>
+</tr><tr>
+<td>124</td>
+<td>234863</td>
+<td>1260653</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:25:56</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>234851</td>
+<td>1260651</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:23:15</td>
+</tr><tr class="acc">
+<td>126</td>
+<td>234849</td>
+<td>3349045</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:22:02</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>234852</td>
+<td>1260648</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:21:51</td>
+</tr><tr class="acc">
+<td>128</td>
+<td>234841</td>
+<td>3349044</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:19:09</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>234845</td>
+<td>1260644</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:18:10</td>
+</tr><tr>
+<td>130</td>
+<td>234846</td>
+<td>1260643</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:15:30</td>
+</tr><tr class="odd">
+<td>131</td>
+<td>234847</td>
+<td>1260642</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:15:14</td>
+</tr><tr>
+<td>132</td>
+<td>234835</td>
+<td>1260641</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:13:26</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>234836</td>
+<td>1260639</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:11:33</td>
+</tr><tr>
+<td>134</td>
+<td>234837</td>
+<td>1260638</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:10:44</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>234838</td>
+<td>1260637</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:09:59</td>
+</tr><tr>
+<td>136</td>
+<td>234821</td>
+<td>3349039</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Memory Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 18:07:28</td>
+</tr><tr class="acc">
+<td>137</td>
+<td>234818</td>
+<td>3349038</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:06:15</td>
+</tr><tr>
+<td>138</td>
+<td>234827</td>
+<td>1260635</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:04:27</td>
+</tr><tr class="odd">
+<td>139</td>
+<td>234828</td>
+<td>1260634</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:03:22</td>
+</tr><tr>
+<td>140</td>
+<td>234829</td>
+<td>1260633</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 18:03:15</td>
+</tr><tr class="odd">
+<td>141</td>
+<td>234809</td>
+<td>3349032</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 18:02:30</td>
+</tr><tr class="acc">
+<td>142</td>
+<td>234805</td>
+<td>3349030</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:01:24</td>
+</tr><tr class="acc">
+<td>143</td>
+<td>234806</td>
+<td>3349029</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 18:00:54</td>
+</tr><tr class="acc">
+<td>144</td>
+<td>234800</td>
+<td>3349027</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:59:57</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>234797</td>
+<td>3349026</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Memory Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:59:29</td>
+</tr><tr>
+<td>146</td>
+<td>234798</td>
+<td>3349023</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:59:01</td>
+</tr><tr class="odd">
+<td>147</td>
+<td>234796</td>
+<td>3349021</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:58:35</td>
+</tr><tr>
+<td>148</td>
+<td>234804</td>
+<td>1260622</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:58:17</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>234785</td>
+<td>1260620</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:57:39</td>
+</tr><tr>
+<td>150</td>
+<td>234792</td>
+<td>3349020</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:57:22</td>
+</tr><tr class="odd">
+<td>151</td>
+<td>234793</td>
+<td>3349017</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:56:41</td>
+</tr><tr class="acc">
+<td>152</td>
+<td>234794</td>
+<td>3349016</td>
+<td><a href="https://a2oj.com/profile?Username=vz0">vz0</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:56:37</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>234789</td>
+<td>3349015</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:56:13</td>
+</tr><tr>
+<td>154</td>
+<td>234786</td>
+<td>1260618</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:55:40</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>234781</td>
+<td>3349012</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:55:01</td>
+</tr><tr>
+<td>156</td>
+<td>234787</td>
+<td>1260617</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:54:59</td>
+</tr><tr class="acc">
+<td>157</td>
+<td>234770</td>
+<td>3349009</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:54:33</td>
+</tr><tr class="acc">
+<td>158</td>
+<td>234771</td>
+<td>3349008</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:54:33</td>
+</tr><tr class="odd">
+<td>159</td>
+<td>234788</td>
+<td>1260616</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:54:21</td>
+</tr><tr class="acc">
+<td>160</td>
+<td>234769</td>
+<td>3349005</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:53:10</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>234766</td>
+<td>1260615</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:52:46</td>
+</tr><tr class="acc">
+<td>162</td>
+<td>234772</td>
+<td>3349003</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:51:47</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>234767</td>
+<td>1260613</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:50:33</td>
+</tr><tr>
+<td>164</td>
+<td>234755</td>
+<td>1260611</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4206" target="_blank">P4 - The Dueling Philosophers Problem</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:48:07</td>
+</tr><tr class="odd">
+<td>165</td>
+<td>234756</td>
+<td>1260609</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:47:39</td>
+</tr><tr>
+<td>166</td>
+<td>234757</td>
+<td>1260607</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:44:31</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>234750</td>
+<td>3348998</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:43:48</td>
+</tr><tr>
+<td>168</td>
+<td>234751</td>
+<td>3348997</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:43:44</td>
+</tr><tr class="acc">
+<td>169</td>
+<td>234752</td>
+<td>3348996</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 17:43:36</td>
+</tr><tr>
+<td>170</td>
+<td>234758</td>
+<td>1260606</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:42:52</td>
+</tr><tr class="odd">
+<td>171</td>
+<td>234743</td>
+<td>1260605</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:42:03</td>
+</tr><tr class="acc">
+<td>172</td>
+<td>234746</td>
+<td>3348995</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 17:41:22</td>
+</tr><tr class="odd">
+<td>173</td>
+<td>234744</td>
+<td>1260604</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:41:12</td>
+</tr><tr>
+<td>174</td>
+<td>234745</td>
+<td>1260602</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:39:52</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>234741</td>
+<td>3348994</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:39:50</td>
+</tr><tr>
+<td>176</td>
+<td>234737</td>
+<td>3348993</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2500" target="_blank">P3 - Median Weight Bead</a></td>
+<td>ZOJ</td>
+<td>Memory Limit Exceeded</td>
+<td>C++</td>
+<td>2013-07-16 17:38:52</td>
+</tr><tr class="acc">
+<td>177</td>
+<td>234738</td>
+<td>3348992</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:38:34</td>
+</tr><tr>
+<td>178</td>
+<td>234773</td>
+<td>3348990</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2013-07-16 17:37:43</td>
+</tr><tr class="odd">
+<td>179</td>
+<td>234735</td>
+<td>1260600</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:36:45</td>
+</tr><tr class="acc">
+<td>180</td>
+<td>234732</td>
+<td>3348988</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:36:04</td>
+</tr><tr class="odd">
+<td>181</td>
+<td>234774</td>
+<td>3348987</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 17:34:56</td>
+</tr><tr>
+<td>182</td>
+<td>234736</td>
+<td>1260597</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:34:46</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>234723</td>
+<td>1260595</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:33:22</td>
+</tr><tr>
+<td>184</td>
+<td>234775</td>
+<td>3348986</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 17:32:54</td>
+</tr><tr class="odd">
+<td>185</td>
+<td>234724</td>
+<td>1260594</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:31:51</td>
+</tr><tr>
+<td>186</td>
+<td>234776</td>
+<td>3348985</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 17:31:35</td>
+</tr><tr class="odd">
+<td>187</td>
+<td>234721</td>
+<td>3348984</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:31:11</td>
+</tr><tr>
+<td>188</td>
+<td>234725</td>
+<td>1260593</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:31:06</td>
+</tr><tr class="acc">
+<td>189</td>
+<td>234720</td>
+<td>3348983</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:28:48</td>
+</tr><tr class="acc">
+<td>190</td>
+<td>234718</td>
+<td>3348982</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:27:54</td>
+</tr><tr class="odd">
+<td>191</td>
+<td>234717</td>
+<td>3348981</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Time Limit Exceeded</td>
+<td>Java</td>
+<td>2013-07-16 17:26:33</td>
+</tr><tr>
+<td>192</td>
+<td>234714</td>
+<td>1260591</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4196" target="_blank">P8 - Find the Outlier</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:25:26</td>
+</tr><tr class="odd">
+<td>193</td>
+<td>234715</td>
+<td>1260590</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:24:43</td>
+</tr><tr class="acc">
+<td>194</td>
+<td>234709</td>
+<td>3348980</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:24:32</td>
+</tr><tr class="acc">
+<td>195</td>
+<td>234726</td>
+<td>3348979</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 17:24:18</td>
+</tr><tr class="acc">
+<td>196</td>
+<td>234708</td>
+<td>3348978</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:23:18</td>
+</tr><tr class="odd">
+<td>197</td>
+<td>234701</td>
+<td>1260587</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3796" target="_blank">P6 - GPS I Love You</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:23:17</td>
+</tr><tr>
+<td>198</td>
+<td>234702</td>
+<td>1260586</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:22:53</td>
+</tr><tr class="odd">
+<td>199</td>
+<td>234704</td>
+<td>1260584</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:20:27</td>
+</tr><tr>
+<td>200</td>
+<td>234703</td>
+<td>1260585</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:20:27</td>
+</tr><tr class="odd">
+<td>201</td>
+<td>234705</td>
+<td>1260583</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4196" target="_blank">P8 - Find the Outlier</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:19:43</td>
+</tr><tr>
+<td>202</td>
+<td>234692</td>
+<td>1260579</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P7 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:18:10</td>
+</tr><tr class="acc">
+<td>203</td>
+<td>234697</td>
+<td>3348976</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:17:55</td>
+</tr><tr>
+<td>204</td>
+<td>234690</td>
+<td>3348975</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:15:05</td>
+</tr><tr class="acc">
+<td>205</td>
+<td>234683</td>
+<td>3348974</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:14:52</td>
+</tr><tr>
+<td>206</td>
+<td>234656</td>
+<td>1260577</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2013-07-16 17:14:38</td>
+</tr><tr class="odd">
+<td>207</td>
+<td>234657</td>
+<td>1260576</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4196" target="_blank">P8 - Find the Outlier</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-16 17:14:31</td>
+</tr><tr>
+<td>208</td>
+<td>234684</td>
+<td>3348973</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:14:09</td>
+</tr><tr class="odd">
+<td>209</td>
+<td>234678</td>
+<td>3348970</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:13:13</td>
+</tr><tr>
+<td>210</td>
+<td>234676</td>
+<td>3348969</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 17:12:31</td>
+</tr><tr class="acc">
+<td>211</td>
+<td>234671</td>
+<td>3348967</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:11:44</td>
+</tr><tr>
+<td>212</td>
+<td>234672</td>
+<td>3348965</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:10:55</td>
+</tr><tr class="odd">
+<td>213</td>
+<td>234727</td>
+<td>3348964</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:10:28</td>
+</tr><tr>
+<td>214</td>
+<td>234663</td>
+<td>3348963</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:09:53</td>
+</tr><tr class="odd">
+<td>215</td>
+<td>234664</td>
+<td>3348961</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:09:40</td>
+</tr><tr>
+<td>216</td>
+<td>234650</td>
+<td>1260574</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-16 17:09:37</td>
+</tr><tr class="odd">
+<td>217</td>
+<td>234777</td>
+<td>3348958</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:09:01</td>
+</tr><tr>
+<td>218</td>
+<td>234647</td>
+<td>1260572</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-16 17:08:30</td>
+</tr><tr class="acc">
+<td>219</td>
+<td>234673</td>
+<td>3348957</td>
+<td><a href="https://a2oj.com/profile?Username=fran20">fran20</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 17:06:53</td>
+</tr><tr>
+<td>220</td>
+<td>234658</td>
+<td>1260570</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2187" target="_blank">P9 - Lucky cities</a></td>
+<td>Live Archive</td>
+<td>Submission error</td>
+<td>C++</td>
+<td>2013-07-16 17:06:42</td>
+</tr><tr class="acc">
+<td>221</td>
+<td>234659</td>
+<td>3348955</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:06:33</td>
+</tr><tr>
+<td>222</td>
+<td>234728</td>
+<td>3348954</td>
+<td><a href="https://a2oj.com/profile?Username=rcanibano">rcanibano</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:06:18</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>234778</td>
+<td>3348953</td>
+<td><a href="https://a2oj.com/profile?Username=conc%2B%2B">conc++</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:06:15</td>
+</tr><tr class="acc">
+<td>224</td>
+<td>234660</td>
+<td>3348952</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:06:03</td>
+</tr><tr class="acc">
+<td>225</td>
+<td>234661</td>
+<td>3348951</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:05:59</td>
+</tr><tr class="acc">
+<td>226</td>
+<td>234665</td>
+<td>3348947</td>
+<td><a href="https://a2oj.com/profile?Username=vgg">vgg</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 17:05:32</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>234655</td>
+<td>3348946</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:04:47</td>
+</tr><tr>
+<td>228</td>
+<td>234641</td>
+<td>1260569</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2013-07-16 17:04:37</td>
+</tr><tr class="odd">
+<td>229</td>
+<td>234654</td>
+<td>3348944</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=213">Bugs Lucas y Coyote</a> (<a class="normal" href="https://a2oj.com/profile?Username=Joshi">Joshi</a>, <a class="normal" href="https://a2oj.com/profile?Username=jainor">jainor</a>, <a class="normal" href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=alculquicondor">alculquicondor</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 17:03:00</td>
+</tr><tr class="acc">
+<td>230</td>
+<td>234685</td>
+<td>3348943</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:02:21</td>
+</tr><tr class="acc">
+<td>231</td>
+<td>234652</td>
+<td>3348942</td>
+<td><a href="https://a2oj.com/profile?Username=glhf">glhf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 17:02:02</td>
+</tr><tr>
+<td>232</td>
+<td>234686</td>
+<td>3348941</td>
+<td><a href="https://a2oj.com/profile?Username=GreedyPlusPlus">GreedyPlusPlus</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 17:01:52</td>
+</tr><tr class="odd">
+<td>233</td>
+<td>234651</td>
+<td>3348940</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 17:01:33</td>
+</tr><tr>
+<td>234</td>
+<td>234648</td>
+<td>3348938</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 17:00:10</td>
+</tr><tr class="acc">
+<td>235</td>
+<td>234649</td>
+<td>3348937</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:59:52</td>
+</tr><tr class="acc">
+<td>236</td>
+<td>234646</td>
+<td>3348936</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:59:40</td>
+</tr><tr class="acc">
+<td>237</td>
+<td>234642</td>
+<td>3348928</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:55:49</td>
+</tr><tr>
+<td>238</td>
+<td>234637</td>
+<td>3348926</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 16:54:19</td>
+</tr><tr class="acc">
+<td>239</td>
+<td>234638</td>
+<td>3348925</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:54:12</td>
+</tr><tr>
+<td>240</td>
+<td>234639</td>
+<td>3348924</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg19">tcarg19</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 16:54:10</td>
+</tr><tr class="acc">
+<td>241</td>
+<td>234640</td>
+<td>3348921</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=421">MaxiDynamic</a> (<a class="normal" href="https://a2oj.com/profile?Username=daniffig">daniffig</a>, <a class="normal" href="https://a2oj.com/profile?Username=Andres1433">Andres1433</a>, <a class="normal" href="https://a2oj.com/profile?Username=DuilioRay">DuilioRay</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=daniffig">daniffig</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:52:03</td>
+</tr><tr class="acc">
+<td>242</td>
+<td>234635</td>
+<td>3348919</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:51:19</td>
+</tr><tr class="odd">
+<td>243</td>
+<td>234634</td>
+<td>3348917</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 16:50:16</td>
+</tr><tr class="acc">
+<td>244</td>
+<td>234633</td>
+<td>3348915</td>
+<td><a href="https://a2oj.com/profile?Username=eternauta">eternauta</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:49:28</td>
+</tr><tr class="acc">
+<td>245</td>
+<td>234628</td>
+<td>3348912</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:46:25</td>
+</tr><tr class="acc">
+<td>246</td>
+<td>234629</td>
+<td>3348911</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:46:17</td>
+</tr><tr class="odd">
+<td>247</td>
+<td>234630</td>
+<td>3348910</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 16:46:14</td>
+</tr><tr>
+<td>248</td>
+<td>234611</td>
+<td>1260562</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4207" target="_blank">P2 - Party Games</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2013-07-16 16:43:27</td>
+</tr><tr class="acc">
+<td>249</td>
+<td>234627</td>
+<td>3348905</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=423">D.A.R 011</a> (<a class="normal" href="https://a2oj.com/profile?Username=Flores">Flores</a>, <a class="normal" href="https://a2oj.com/profile?Username=Miguel">Miguel</a>, <a class="normal" href="https://a2oj.com/profile?Username=Runke">Runke</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Flores">Flores</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C</td>
+<td>2013-07-16 16:43:15</td>
+</tr><tr>
+<td>250</td>
+<td>234624</td>
+<td>3348903</td>
+<td><a href="https://a2oj.com/profile?Username=foreverWA">foreverWA</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 16:42:08</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>234625</td>
+<td>3348902</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:42:01</td>
+</tr><tr>
+<td>252</td>
+<td>234623</td>
+<td>3348900</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 16:41:23</td>
+</tr><tr class="acc">
+<td>253</td>
+<td>234626</td>
+<td>3348897</td>
+<td><a href="https://a2oj.com/profile?Username=tcfrsf">tcfrsf</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:39:49</td>
+</tr><tr>
+<td>254</td>
+<td>234620</td>
+<td>3348895</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 16:39:37</td>
+</tr><tr class="odd">
+<td>255</td>
+<td>234615</td>
+<td>3348893</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 16:38:59</td>
+</tr><tr>
+<td>256</td>
+<td>234643</td>
+<td>3348892</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>Java</td>
+<td>2013-07-16 16:38:46</td>
+</tr><tr class="acc">
+<td>257</td>
+<td>234616</td>
+<td>3348891</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 16:38:43</td>
+</tr><tr class="acc">
+<td>258</td>
+<td>234617</td>
+<td>3348890</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:38:36</td>
+</tr><tr class="odd">
+<td>259</td>
+<td>234644</td>
+<td>3348889</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>Java</td>
+<td>2013-07-16 16:38:17</td>
+</tr><tr class="acc">
+<td>260</td>
+<td>234618</td>
+<td>3348888</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=418">Maffer Paffer</a> (<a class="normal" href="https://a2oj.com/profile?Username=joseolivera123">joseolivera123</a>, <a class="normal" href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a>, <a class="normal" href="https://a2oj.com/profile?Username=emakna">emakna</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cristian1604">cristian1604</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:37:44</td>
+</tr><tr class="acc">
+<td>261</td>
+<td>234612</td>
+<td>3348886</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:35:24</td>
+</tr><tr class="acc">
+<td>262</td>
+<td>234610</td>
+<td>3348884</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:32:46</td>
+</tr><tr class="acc">
+<td>263</td>
+<td>234607</td>
+<td>3348881</td>
+<td><a href="https://a2oj.com/profile?Username=tcarg08">tcarg08</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 16:31:39</td>
+</tr><tr class="acc">
+<td>264</td>
+<td>234608</td>
+<td>3348880</td>
+<td><a href="https://a2oj.com/profile?Username=Los+Charros">Los Charros</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 16:31:25</td>
+</tr><tr class="acc">
+<td>265</td>
+<td>234609</td>
+<td>3348879</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:31:22</td>
+</tr><tr class="acc">
+<td>266</td>
+<td>234606</td>
+<td>3348878</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=378">MojeGule</a> (<a class="normal" href="https://a2oj.com/profile?Username=sonG">sonG</a>, <a class="normal" href="https://a2oj.com/profile?Username=Csarg">Csarg</a>, <a class="normal" href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=jpmartinezv">jpmartinezv</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:31:00</td>
+</tr><tr class="acc">
+<td>267</td>
+<td>234605</td>
+<td>3348876</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:26:15</td>
+</tr><tr class="acc">
+<td>268</td>
+<td>234599</td>
+<td>3348875</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:25:54</td>
+</tr><tr class="acc">
+<td>269</td>
+<td>234600</td>
+<td>3348874</td>
+<td><a href="https://a2oj.com/profile?Username=mek">mek</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:25:12</td>
+</tr><tr class="acc">
+<td>270</td>
+<td>234594</td>
+<td>3348873</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:25:01</td>
+</tr><tr class="odd">
+<td>271</td>
+<td>234595</td>
+<td>3348871</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 16:24:49</td>
+</tr><tr>
+<td>272</td>
+<td>234596</td>
+<td>3348870</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 16:24:19</td>
+</tr><tr class="acc">
+<td>273</td>
+<td>234593</td>
+<td>3348868</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=420">El Rejunte</a> (<a class="normal" href="https://a2oj.com/profile?Username=facu">facu</a>, <a class="normal" href="https://a2oj.com/profile?Username=WaVEV">WaVEV</a>, <a class="normal" href="https://a2oj.com/profile?Username=hm2p33">hm2p33</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=facu">facu</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:23:27</td>
+</tr><tr class="acc">
+<td>274</td>
+<td>234597</td>
+<td>3348867</td>
+<td><a href="https://a2oj.com/profile?Username=wachiturings">wachiturings</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:23:03</td>
+</tr><tr class="odd">
+<td>275</td>
+<td>234592</td>
+<td>3348865</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2013-07-16 16:21:45</td>
+</tr><tr class="acc">
+<td>276</td>
+<td>234601</td>
+<td>3348864</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:21:26</td>
+</tr><tr class="odd">
+<td>277</td>
+<td>234591</td>
+<td>3348862</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=424">Game Over</a> (<a class="normal" href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a>, <a class="normal" href="https://a2oj.com/profile?Username=adolfo">adolfo</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Ziklon">Ziklon</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 16:20:59</td>
+</tr><tr>
+<td>278</td>
+<td>234602</td>
+<td>3348861</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Segmentation Fault</td>
+<td>C++</td>
+<td>2013-07-16 16:20:41</td>
+</tr><tr class="acc">
+<td>279</td>
+<td>234614</td>
+<td>3348858</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>Java</td>
+<td>2013-07-16 16:18:53</td>
+</tr><tr class="acc">
+<td>280</td>
+<td>234631</td>
+<td>3348856</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:18:10</td>
+</tr><tr class="odd">
+<td>281</td>
+<td>234632</td>
+<td>3348854</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=425">Alianza Latina</a> (<a class="normal" href="https://a2oj.com/profile?Username=vvasquez.1994">vvasquez.1994</a>, <a class="normal" href="https://a2oj.com/profile?Username=Sergio">Sergio</a>, <a class="normal" href="https://a2oj.com/profile?Username=bsoj">bsoj</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=matyvp92">matyvp92</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2013-07-16 16:17:39</td>
+</tr><tr class="acc">
+<td>282</td>
+<td>234590</td>
+<td>3348853</td>
+<td><a href="https://a2oj.com/profile?Username=Nigga">Nigga</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2966" target="_blank">P5 - Build The Electric System</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:17:16</td>
+</tr><tr class="acc">
+<td>283</td>
+<td>234589</td>
+<td>3348851</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=427">Trulencios</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3714" target="_blank">P1 - Java Beans</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2013-07-16 16:16:38</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

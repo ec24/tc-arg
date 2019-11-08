@@ -1,0 +1,3709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=11574&non=true&My=true';
+		else
+			window.location = 'submissions?ID=11574&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=11574&My=true';
+		else
+			window.location = 'submissions?ID=11574';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D11574" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=11574">11574 - Training Camp Argentina 2014 #4
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=11574">Standings</a> - <a href="https://a2oj.com/submissions?ID=11574">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=11574">Problems</a> - <a href="https://a2oj.com/registrants?ID=11574">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+<th class="header">Submitted by</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>530903</td>
+<td>3720621</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:57:04</td>
+</tr><tr>
+<td>2</td>
+<td>530900</td>
+<td>12068617</td>
+<td><a href="https://a2oj.com/profile?Username=aleman111">aleman111</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2014-08-01 20:55:07</td>
+</tr><tr class="acc">
+<td>3</td>
+<td>530902</td>
+<td>3720620</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:54:55</td>
+</tr><tr class="acc">
+<td>4</td>
+<td>530896</td>
+<td>12068613</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:53:48</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>530897</td>
+<td>12068608</td>
+<td><a href="https://a2oj.com/profile?Username=aleman111">aleman111</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2014-08-01 20:53:06</td>
+</tr><tr>
+<td>6</td>
+<td>530901</td>
+<td>3720618</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:52:46</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>530894</td>
+<td>7322372</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7322372" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:52:36</td>
+</tr><tr>
+<td>8</td>
+<td>530892</td>
+<td>7322364</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/201/B" target="_blank">P1 - Guess That Car!</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/201/submission/7322364" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:51:28</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>530899</td>
+<td>3720617</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:51:25</td>
+</tr><tr>
+<td>10</td>
+<td>530889</td>
+<td>12068595</td>
+<td><a href="https://a2oj.com/profile?Username=aleman111">aleman111</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2014-08-01 20:50:21</td>
+</tr><tr class="odd">
+<td>11</td>
+<td>530890</td>
+<td>12068593</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 20:49:47</td>
+</tr><tr>
+<td>12</td>
+<td>530895</td>
+<td>3720616</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:49:42</td>
+</tr><tr class="odd">
+<td>13</td>
+<td>530891</td>
+<td>3720615</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:48:27</td>
+</tr><tr>
+<td>14</td>
+<td>530886</td>
+<td>12068584</td>
+<td><a href="https://a2oj.com/profile?Username=aleman111">aleman111</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>JAVA</td>
+<td>2014-08-01 20:47:25</td>
+</tr><tr class="odd">
+<td>15</td>
+<td>530877</td>
+<td>1504262</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cephei">cephei</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 20:43:27</td>
+</tr><tr class="acc">
+<td>16</td>
+<td>530875</td>
+<td>1504261</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:42:44</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>530882</td>
+<td>3720614</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:42:40</td>
+</tr><tr class="acc">
+<td>18</td>
+<td>530876</td>
+<td>12068557</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:42:02</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>530871</td>
+<td>1504260</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 20:41:51</td>
+</tr><tr>
+<td>20</td>
+<td>530873</td>
+<td>7322331</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322331" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 20:41:33</td>
+</tr><tr class="acc">
+<td>21</td>
+<td>530872</td>
+<td>12068550</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:40:48</td>
+</tr><tr class="acc">
+<td>22</td>
+<td>530870</td>
+<td>7322328</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322328" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:40:03</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>530878</td>
+<td>3720613</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:39:47</td>
+</tr><tr>
+<td>24</td>
+<td>530879</td>
+<td>3720612</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:39:33</td>
+</tr><tr class="odd">
+<td>25</td>
+<td>530865</td>
+<td>7322320</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322320" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:38:48</td>
+</tr><tr class="acc">
+<td>26</td>
+<td>530866</td>
+<td>7322319</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7322319" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:38:38</td>
+</tr><tr class="acc">
+<td>27</td>
+<td>530863</td>
+<td>1504259</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:36:32</td>
+</tr><tr>
+<td>28</td>
+<td>530859</td>
+<td>1504258</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 20:34:13</td>
+</tr><tr class="acc">
+<td>29</td>
+<td>530857</td>
+<td>12068526</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:32:23</td>
+</tr><tr class="acc">
+<td>30</td>
+<td>530855</td>
+<td>12068518</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:30:35</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>530854</td>
+<td>7322269</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322269" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 20:30:06</td>
+</tr><tr>
+<td>32</td>
+<td>530852</td>
+<td>7322265</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7322265" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:29:35</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>530848</td>
+<td>7322254</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322254" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:28:32</td>
+</tr><tr>
+<td>34</td>
+<td>530847</td>
+<td>1504257</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 20:28:19</td>
+</tr><tr class="acc">
+<td>35</td>
+<td>530856</td>
+<td>3720609</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:28:17</td>
+</tr><tr>
+<td>36</td>
+<td>530844</td>
+<td>7322242</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322242" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:26:26</td>
+</tr><tr class="odd">
+<td>37</td>
+<td>530850</td>
+<td>3720608</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:26:05</td>
+</tr><tr>
+<td>38</td>
+<td>530846</td>
+<td>3720607</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:24:13</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>530842</td>
+<td>7322229</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322229" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 20:23:38</td>
+</tr><tr class="acc">
+<td>40</td>
+<td>530841</td>
+<td>12068484</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:23:11</td>
+</tr><tr class="odd">
+<td>41</td>
+<td>530838</td>
+<td>1504255</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 20:22:51</td>
+</tr><tr>
+<td>42</td>
+<td>530840</td>
+<td>7322224</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322224" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 20:22:46</td>
+</tr><tr class="acc">
+<td>43</td>
+<td>530839</td>
+<td>12068482</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:22:39</td>
+</tr><tr>
+<td>44</td>
+<td>530835</td>
+<td>12068476</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 20:21:18</td>
+</tr><tr class="odd">
+<td>45</td>
+<td>530834</td>
+<td>7322211</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7322211" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:20:05</td>
+</tr><tr>
+<td>46</td>
+<td>530828</td>
+<td>12068462</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 20:17:33</td>
+</tr><tr class="acc">
+<td>47</td>
+<td>530825</td>
+<td>12068456</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 20:16:12</td>
+</tr><tr>
+<td>48</td>
+<td>530826</td>
+<td>12068453</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>compilation error</td>
+<td>ADA</td>
+<td>2014-08-01 20:16:01</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>530829</td>
+<td>3720606</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:15:10</td>
+</tr><tr>
+<td>50</td>
+<td>530822</td>
+<td>7322183</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7322183" target="_blank">MEMORY_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:14:31</td>
+</tr><tr class="acc">
+<td>51</td>
+<td>530812</td>
+<td>7322142</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322142" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:07:50</td>
+</tr><tr class="acc">
+<td>52</td>
+<td>530813</td>
+<td>7322136</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7322136" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:07:03</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>530815</td>
+<td>3720604</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:05:13</td>
+</tr><tr>
+<td>54</td>
+<td>530809</td>
+<td>7322125</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322125" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 20:04:43</td>
+</tr><tr class="odd">
+<td>55</td>
+<td>530810</td>
+<td>3720603</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 20:03:03</td>
+</tr><tr class="acc">
+<td>56</td>
+<td>530801</td>
+<td>3720601</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:58:25</td>
+</tr><tr class="acc">
+<td>57</td>
+<td>530788</td>
+<td>1504245</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:57:43</td>
+</tr><tr>
+<td>58</td>
+<td>530797</td>
+<td>7322077</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322077" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 19:57:19</td>
+</tr><tr class="acc">
+<td>59</td>
+<td>530789</td>
+<td>1504244</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:55:30</td>
+</tr><tr class="acc">
+<td>60</td>
+<td>530785</td>
+<td>7322058</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7322058" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:55:04</td>
+</tr><tr class="acc">
+<td>61</td>
+<td>530786</td>
+<td>7322047</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7322047" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:54:11</td>
+</tr><tr>
+<td>62</td>
+<td>530795</td>
+<td>3720599</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 19:53:38</td>
+</tr><tr class="acc">
+<td>63</td>
+<td>530777</td>
+<td>7322031</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322031" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:52:40</td>
+</tr><tr>
+<td>64</td>
+<td>530778</td>
+<td>7322027</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7322027" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 19:52:17</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>530769</td>
+<td>12068377</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:51:26</td>
+</tr><tr>
+<td>66</td>
+<td>530766</td>
+<td>7322009</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7322009" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:49:35</td>
+</tr><tr class="acc">
+<td>67</td>
+<td>530765</td>
+<td>12068369</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:49:20</td>
+</tr><tr class="acc">
+<td>68</td>
+<td>530761</td>
+<td>12068366</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:48:43</td>
+</tr><tr class="acc">
+<td>69</td>
+<td>530760</td>
+<td>7321994</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/201/B" target="_blank">P1 - Guess That Car!</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/201/submission/7321994" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:47:40</td>
+</tr><tr class="acc">
+<td>70</td>
+<td>530756</td>
+<td>7321979</td>
+<td><a href="https://a2oj.com/profile?Username=chrisnachjuli">chrisnachjuli</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321979" target="_blank">Accepted</a></td>
+<td>Java 7</td>
+<td>2014-08-01 19:45:53</td>
+</tr><tr class="odd">
+<td>71</td>
+<td>530757</td>
+<td>7321976</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321976" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:45:33</td>
+</tr><tr class="acc">
+<td>72</td>
+<td>530758</td>
+<td>7321975</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321975" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:45:23</td>
+</tr><tr class="acc">
+<td>73</td>
+<td>530753</td>
+<td>7321968</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321968" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:45:01</td>
+</tr><tr>
+<td>74</td>
+<td>530762</td>
+<td>3720596</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 19:44:43</td>
+</tr><tr class="acc">
+<td>75</td>
+<td>530754</td>
+<td>7321958</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321958" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:44:27</td>
+</tr><tr>
+<td>76</td>
+<td>530747</td>
+<td>7321929</td>
+<td><a href="https://a2oj.com/profile?Username=smarro">smarro</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321929" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:41:36</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>530744</td>
+<td>7321923</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321923" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:40:57</td>
+</tr><tr>
+<td>78</td>
+<td>530737</td>
+<td>7321885</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321885" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:36:59</td>
+</tr><tr class="odd">
+<td>79</td>
+<td>530741</td>
+<td>3720594</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 19:36:44</td>
+</tr><tr class="acc">
+<td>80</td>
+<td>530734</td>
+<td>12068317</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:36:08</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>530733</td>
+<td>7321873</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321873" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 19:35:38</td>
+</tr><tr class="acc">
+<td>82</td>
+<td>530729</td>
+<td>7321858</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321858" target="_blank">Accepted</a></td>
+<td>Java 6</td>
+<td>2014-08-01 19:34:41</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>530730</td>
+<td>7321852</td>
+<td><a href="https://a2oj.com/profile?Username=TapFedDav">TapFedDav</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321852" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2014-08-01 19:33:52</td>
+</tr><tr>
+<td>84</td>
+<td>530731</td>
+<td>7321850</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321850" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:33:41</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>530732</td>
+<td>7321844</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321844" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:33:10</td>
+</tr><tr>
+<td>86</td>
+<td>530722</td>
+<td>7321829</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321829" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 6</td>
+<td>2014-08-01 19:31:24</td>
+</tr><tr class="acc">
+<td>87</td>
+<td>530723</td>
+<td>7321827</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321827" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:31:09</td>
+</tr><tr>
+<td>88</td>
+<td>530727</td>
+<td>3720592</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 19:30:57</td>
+</tr><tr class="acc">
+<td>89</td>
+<td>530724</td>
+<td>7321811</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321811" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:30:02</td>
+</tr><tr class="acc">
+<td>90</td>
+<td>530725</td>
+<td>7321808</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321808" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:29:55</td>
+</tr><tr class="acc">
+<td>91</td>
+<td>530718</td>
+<td>12068292</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:29:28</td>
+</tr><tr>
+<td>92</td>
+<td>530715</td>
+<td>1504239</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cephei">cephei</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:28:06</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>530713</td>
+<td>12068283</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:27:36</td>
+</tr><tr class="acc">
+<td>94</td>
+<td>530711</td>
+<td>1504238</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:27:22</td>
+</tr><tr class="acc">
+<td>95</td>
+<td>530714</td>
+<td>7321784</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321784" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:27:18</td>
+</tr><tr>
+<td>96</td>
+<td>530712</td>
+<td>1504237</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cephei">cephei</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>C++</td>
+<td>2014-08-01 19:27:17</td>
+</tr><tr class="acc">
+<td>97</td>
+<td>530707</td>
+<td>12068282</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:26:50</td>
+</tr><tr>
+<td>98</td>
+<td>530708</td>
+<td>12068280</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:26:37</td>
+</tr><tr class="acc">
+<td>99</td>
+<td>530719</td>
+<td>3720589</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:26:18</td>
+</tr><tr class="acc">
+<td>100</td>
+<td>530710</td>
+<td>7321774</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321774" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:26:11</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>530720</td>
+<td>3720588</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C</td>
+<td>2014-08-01 19:26:07</td>
+</tr><tr>
+<td>102</td>
+<td>530702</td>
+<td>12068267</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 19:24:21</td>
+</tr><tr class="odd">
+<td>103</td>
+<td>530697</td>
+<td>7321744</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321744" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:22:55</td>
+</tr><tr>
+<td>104</td>
+<td>530703</td>
+<td>12068256</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:21:41</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>530701</td>
+<td>3720586</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 19:20:48</td>
+</tr><tr>
+<td>106</td>
+<td>530691</td>
+<td>7321729</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321729" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:20:46</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>530690</td>
+<td>12068243</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:18:54</td>
+</tr><tr>
+<td>108</td>
+<td>530685</td>
+<td>12068238</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:17:29</td>
+</tr><tr class="acc">
+<td>109</td>
+<td>530679</td>
+<td>7321678</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321678" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:15:14</td>
+</tr><tr class="acc">
+<td>110</td>
+<td>530680</td>
+<td>7321677</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321677" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:15:12</td>
+</tr><tr class="odd">
+<td>111</td>
+<td>530678</td>
+<td>12068219</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 19:14:43</td>
+</tr><tr class="acc">
+<td>112</td>
+<td>530669</td>
+<td>7321632</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321632" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:10:26</td>
+</tr><tr class="acc">
+<td>113</td>
+<td>530671</td>
+<td>7321625</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321625" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:09:50</td>
+</tr><tr class="acc">
+<td>114</td>
+<td>530672</td>
+<td>7321620</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321620" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:09:18</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>530665</td>
+<td>7321596</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321596" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:07:34</td>
+</tr><tr class="acc">
+<td>116</td>
+<td>530668</td>
+<td>3720581</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:07:28</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>530664</td>
+<td>1504233</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cephei">cephei</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:07:19</td>
+</tr><tr>
+<td>118</td>
+<td>530666</td>
+<td>7321589</td>
+<td><a href="https://a2oj.com/profile?Username=theComite">theComite</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321589" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:07:00</td>
+</tr><tr class="odd">
+<td>119</td>
+<td>530655</td>
+<td>12068180</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 19:06:35</td>
+</tr><tr>
+<td>120</td>
+<td>530790</td>
+<td>1504231</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 19:05:53</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>530654</td>
+<td>7321580</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321580" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:05:38</td>
+</tr><tr>
+<td>122</td>
+<td>530663</td>
+<td>3720580</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 19:04:06</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>530650</td>
+<td>7321553</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321553" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:03:03</td>
+</tr><tr class="acc">
+<td>124</td>
+<td>530658</td>
+<td>3720579</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 19:02:54</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>530645</td>
+<td>7321550</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321550" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:02:37</td>
+</tr><tr>
+<td>126</td>
+<td>530646</td>
+<td>7321542</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321542" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:01:52</td>
+</tr><tr class="acc">
+<td>127</td>
+<td>530647</td>
+<td>7321536</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321536" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:01:04</td>
+</tr><tr class="acc">
+<td>128</td>
+<td>530648</td>
+<td>7321523</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321523" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 19:00:07</td>
+</tr><tr class="odd">
+<td>129</td>
+<td>530791</td>
+<td>1504229</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 18:59:56</td>
+</tr><tr class="acc">
+<td>130</td>
+<td>530638</td>
+<td>7321503</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321503" target="_blank">Accepted</a></td>
+<td>Java 6</td>
+<td>2014-08-01 18:58:47</td>
+</tr><tr class="odd">
+<td>131</td>
+<td>530639</td>
+<td>7321490</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321490" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:58:19</td>
+</tr><tr class="acc">
+<td>132</td>
+<td>530640</td>
+<td>7321488</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321488" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:58:16</td>
+</tr><tr class="odd">
+<td>133</td>
+<td>530635</td>
+<td>7321480</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321480" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:57:42</td>
+</tr><tr>
+<td>134</td>
+<td>530792</td>
+<td>1504227</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 18:56:36</td>
+</tr><tr class="odd">
+<td>135</td>
+<td>530631</td>
+<td>7321464</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321464" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:56:36</td>
+</tr><tr class="acc">
+<td>136</td>
+<td>530627</td>
+<td>7321439</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321439" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:55:06</td>
+</tr><tr class="odd">
+<td>137</td>
+<td>530628</td>
+<td>7321430</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321430" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:54:31</td>
+</tr><tr class="acc">
+<td>138</td>
+<td>530629</td>
+<td>7321426</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321426" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:54:19</td>
+</tr><tr class="acc">
+<td>139</td>
+<td>530622</td>
+<td>7321413</td>
+<td><a href="https://a2oj.com/profile?Username=aleman111">aleman111</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321413" target="_blank">Accepted</a></td>
+<td>Java 7</td>
+<td>2014-08-01 18:53:05</td>
+</tr><tr class="acc">
+<td>140</td>
+<td>530617</td>
+<td>12068111</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:52:46</td>
+</tr><tr class="odd">
+<td>141</td>
+<td>530623</td>
+<td>7321409</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321409" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 6</td>
+<td>2014-08-01 18:52:43</td>
+</tr><tr class="acc">
+<td>142</td>
+<td>530618</td>
+<td>12068108</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:52:13</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>530626</td>
+<td>3720574</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 18:51:15</td>
+</tr><tr>
+<td>144</td>
+<td>530611</td>
+<td>7321385</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321385" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:51:04</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>530609</td>
+<td>1504226</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 18:50:40</td>
+</tr><tr class="acc">
+<td>146</td>
+<td>530612</td>
+<td>7321378</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321378" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:50:34</td>
+</tr><tr class="acc">
+<td>147</td>
+<td>530610</td>
+<td>12068088</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:50:12</td>
+</tr><tr>
+<td>148</td>
+<td>530608</td>
+<td>7321367</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321367" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:49:54</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>530620</td>
+<td>3720573</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 18:49:30</td>
+</tr><tr class="acc">
+<td>150</td>
+<td>530607</td>
+<td>12068080</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:49:12</td>
+</tr><tr class="acc">
+<td>151</td>
+<td>530602</td>
+<td>12068074</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>JAVA</td>
+<td>2014-08-01 18:48:11</td>
+</tr><tr>
+<td>152</td>
+<td>530599</td>
+<td>12068073</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 18:47:54</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>530603</td>
+<td>7321347</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321347" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:47:51</td>
+</tr><tr>
+<td>154</td>
+<td>530604</td>
+<td>7321338</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321338" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:47:19</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>530596</td>
+<td>7321312</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321312" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:45:29</td>
+</tr><tr class="acc">
+<td>156</td>
+<td>530587</td>
+<td>1504225</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:44:53</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>530593</td>
+<td>7321294</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7321294" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:44:45</td>
+</tr><tr>
+<td>158</td>
+<td>530594</td>
+<td>7321283</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7321283" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:44:15</td>
+</tr><tr class="acc">
+<td>159</td>
+<td>530595</td>
+<td>7321273</td>
+<td><a href="https://a2oj.com/profile?Username=emanresu11">emanresu11</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321273" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:43:24</td>
+</tr><tr class="acc">
+<td>160</td>
+<td>530589</td>
+<td>1504223</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:43:16</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>530582</td>
+<td>3720569</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 18:39:03</td>
+</tr><tr class="acc">
+<td>162</td>
+<td>530581</td>
+<td>7321203</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321203" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:38:58</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>530578</td>
+<td>12068020</td>
+<td><a href="https://a2oj.com/profile?Username=Hallo+Welt">Hallo Welt</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 18:38:20</td>
+</tr><tr class="acc">
+<td>164</td>
+<td>530577</td>
+<td>12068013</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:37:12</td>
+</tr><tr class="acc">
+<td>165</td>
+<td>530570</td>
+<td>7321141</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/201/B" target="_blank">P1 - Guess That Car!</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/201/submission/7321141" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:34:49</td>
+</tr><tr>
+<td>166</td>
+<td>530580</td>
+<td>3720568</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 18:34:46</td>
+</tr><tr class="acc">
+<td>167</td>
+<td>530571</td>
+<td>7321133</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321133" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:34:16</td>
+</tr><tr class="acc">
+<td>168</td>
+<td>530566</td>
+<td>7321128</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321128" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 18:34:06</td>
+</tr><tr class="acc">
+<td>169</td>
+<td>530567</td>
+<td>7321127</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7321127" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 18:34:03</td>
+</tr><tr class="acc">
+<td>170</td>
+<td>530575</td>
+<td>3720567</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:33:52</td>
+</tr><tr class="odd">
+<td>171</td>
+<td>530568</td>
+<td>7321122</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/201/B" target="_blank">P1 - Guess That Car!</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/201/submission/7321122" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:33:46</td>
+</tr><tr class="acc">
+<td>172</td>
+<td>530565</td>
+<td>12067994</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:33:43</td>
+</tr><tr class="odd">
+<td>173</td>
+<td>530573</td>
+<td>3720566</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Compilation Error</td>
+<td>C++</td>
+<td>2014-08-01 18:32:26</td>
+</tr><tr>
+<td>174</td>
+<td>530556</td>
+<td>7321091</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/201/B" target="_blank">P1 - Guess That Car!</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/201/submission/7321091" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:31:40</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>530557</td>
+<td>7321069</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7321069" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:30:14</td>
+</tr><tr>
+<td>176</td>
+<td>530558</td>
+<td>7321057</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/201/B" target="_blank">P1 - Guess That Car!</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/201/submission/7321057" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:29:26</td>
+</tr><tr class="acc">
+<td>177</td>
+<td>530550</td>
+<td>12067961</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:29:17</td>
+</tr><tr>
+<td>178</td>
+<td>530549</td>
+<td>1504218</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 18:29:15</td>
+</tr><tr class="acc">
+<td>179</td>
+<td>530546</td>
+<td>12067948</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:27:16</td>
+</tr><tr>
+<td>180</td>
+<td>530540</td>
+<td>1504216</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cephei">cephei</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 18:25:28</td>
+</tr><tr class="acc">
+<td>181</td>
+<td>530541</td>
+<td>7320987</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320987" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:24:52</td>
+</tr><tr class="acc">
+<td>182</td>
+<td>530538</td>
+<td>7320977</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320977" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:24:43</td>
+</tr><tr class="acc">
+<td>183</td>
+<td>530533</td>
+<td>7320944</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320944" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:23:22</td>
+</tr><tr>
+<td>184</td>
+<td>530534</td>
+<td>7320933</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320933" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:22:40</td>
+</tr><tr class="acc">
+<td>185</td>
+<td>530521</td>
+<td>7320887</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320887" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:21:06</td>
+</tr><tr>
+<td>186</td>
+<td>530522</td>
+<td>7320883</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320883" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:21:01</td>
+</tr><tr class="acc">
+<td>187</td>
+<td>530523</td>
+<td>7320879</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320879" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:20:55</td>
+</tr><tr class="acc">
+<td>188</td>
+<td>530520</td>
+<td>7320856</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320856" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 18:20:16</td>
+</tr><tr class="acc">
+<td>189</td>
+<td>530511</td>
+<td>12067900</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:19:43</td>
+</tr><tr>
+<td>190</td>
+<td>530514</td>
+<td>7320831</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320831" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:19:37</td>
+</tr><tr class="odd">
+<td>191</td>
+<td>530507</td>
+<td>7320776</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320776" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:18:10</td>
+</tr><tr class="acc">
+<td>192</td>
+<td>530508</td>
+<td>7320756</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320756" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:17:33</td>
+</tr><tr class="odd">
+<td>193</td>
+<td>530498</td>
+<td>7320711</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320711" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 18:16:12</td>
+</tr><tr>
+<td>194</td>
+<td>530489</td>
+<td>7320682</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320682" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:15:27</td>
+</tr><tr class="odd">
+<td>195</td>
+<td>530490</td>
+<td>7320650</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320650" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:14:00</td>
+</tr><tr>
+<td>196</td>
+<td>530491</td>
+<td>7320640</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320640" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:13:50</td>
+</tr><tr class="acc">
+<td>197</td>
+<td>530492</td>
+<td>7320638</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320638" target="_blank">Accepted</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 18:13:49</td>
+</tr><tr class="acc">
+<td>198</td>
+<td>530493</td>
+<td>7320623</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1366">team03424</a> (<a class="normal" href="https://a2oj.com/profile?Username=lbarrios">lbarrios</a>, <a class="normal" href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=fgasperijabalera">fgasperijabalera</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320623" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:12:55</td>
+</tr><tr class="acc">
+<td>199</td>
+<td>530494</td>
+<td>7320612</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320612" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:12:41</td>
+</tr><tr class="acc">
+<td>200</td>
+<td>530472</td>
+<td>12067854</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:10:41</td>
+</tr><tr class="acc">
+<td>201</td>
+<td>530474</td>
+<td>7320538</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320538" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:10:31</td>
+</tr><tr>
+<td>202</td>
+<td>530468</td>
+<td>12067849</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 18:09:50</td>
+</tr><tr class="acc">
+<td>203</td>
+<td>530475</td>
+<td>7320493</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320493" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:09:33</td>
+</tr><tr class="acc">
+<td>204</td>
+<td>530476</td>
+<td>7320489</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7320489" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:09:28</td>
+</tr><tr class="acc">
+<td>205</td>
+<td>530469</td>
+<td>12067843</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:09:02</td>
+</tr><tr>
+<td>206</td>
+<td>530465</td>
+<td>7320454</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320454" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:08:55</td>
+</tr><tr class="acc">
+<td>207</td>
+<td>530466</td>
+<td>7320411</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320411" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 18:07:51</td>
+</tr><tr class="acc">
+<td>208</td>
+<td>530459</td>
+<td>12067823</td>
+<td><a href="https://a2oj.com/profile?Username=apaapa">apaapa</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:05:22</td>
+</tr><tr class="acc">
+<td>209</td>
+<td>530460</td>
+<td>12067822</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:05:19</td>
+</tr><tr class="acc">
+<td>210</td>
+<td>530433</td>
+<td>12067809</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 18:03:15</td>
+</tr><tr class="odd">
+<td>211</td>
+<td>530431</td>
+<td>12067801</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 18:00:58</td>
+</tr><tr>
+<td>212</td>
+<td>530435</td>
+<td>7320132</td>
+<td><a href="https://a2oj.com/profile?Username=mrvr">mrvr</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320132" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 6</td>
+<td>2014-08-01 18:00:46</td>
+</tr><tr class="odd">
+<td>213</td>
+<td>530436</td>
+<td>7320127</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320127" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:59:42</td>
+</tr><tr>
+<td>214</td>
+<td>530428</td>
+<td>12067788</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 17:58:07</td>
+</tr><tr class="acc">
+<td>215</td>
+<td>530427</td>
+<td>12067787</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 17:58:04</td>
+</tr><tr class="acc">
+<td>216</td>
+<td>530425</td>
+<td>12067783</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 17:57:25</td>
+</tr><tr class="acc">
+<td>217</td>
+<td>530437</td>
+<td>7320119</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320119" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:55:47</td>
+</tr><tr>
+<td>218</td>
+<td>530419</td>
+<td>12067770</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 17:54:44</td>
+</tr><tr class="odd">
+<td>219</td>
+<td>530438</td>
+<td>7320116</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320116" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:54:34</td>
+</tr><tr>
+<td>220</td>
+<td>530439</td>
+<td>7320115</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320115" target="_blank">TESTING</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:54:11</td>
+</tr><tr class="odd">
+<td>221</td>
+<td>530420</td>
+<td>12067769</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 17:54:02</td>
+</tr><tr class="acc">
+<td>222</td>
+<td>530440</td>
+<td>7320114</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320114" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:53:51</td>
+</tr><tr class="acc">
+<td>223</td>
+<td>530416</td>
+<td>12067768</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 17:53:27</td>
+</tr><tr>
+<td>224</td>
+<td>530441</td>
+<td>7320111</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320111" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 17:52:33</td>
+</tr><tr class="odd">
+<td>225</td>
+<td>530442</td>
+<td>7320110</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320110" target="_blank">TESTING</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:52:07</td>
+</tr><tr class="acc">
+<td>226</td>
+<td>530410</td>
+<td>12067763</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 17:51:26</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>530443</td>
+<td>7320108</td>
+<td><a href="https://a2oj.com/profile?Username=martinarjovsky">martinarjovsky</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320108" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 17:50:52</td>
+</tr><tr class="acc">
+<td>228</td>
+<td>530444</td>
+<td>7320107</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320107" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:50:51</td>
+</tr><tr class="odd">
+<td>229</td>
+<td>530408</td>
+<td>12067753</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 17:49:33</td>
+</tr><tr class="acc">
+<td>230</td>
+<td>530405</td>
+<td>12067746</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012E/" target="_blank">P3 - Emma s Domino</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 17:47:27</td>
+</tr><tr class="odd">
+<td>231</td>
+<td>530445</td>
+<td>7320103</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320103" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:47:11</td>
+</tr><tr class="acc">
+<td>232</td>
+<td>530446</td>
+<td>7320100</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320100" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:46:16</td>
+</tr><tr class="odd">
+<td>233</td>
+<td>530447</td>
+<td>7320099</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=995">MiMamaMeDijoQueProgramoBien</a> (<a class="normal" href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Jsantillana">Jsantillana</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320099" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:46:05</td>
+</tr><tr>
+<td>234</td>
+<td>530448</td>
+<td>7320098</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320098" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:45:30</td>
+</tr><tr class="odd">
+<td>235</td>
+<td>530449</td>
+<td>7320096</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1015">bit.Me</a> (<a class="normal" href="https://a2oj.com/profile?Username=jeslev">jeslev</a>, <a class="normal" href="https://a2oj.com/profile?Username=edhhu007">edhhu007</a>, <a class="normal" href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=maritzalapa">maritzalapa</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320096" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:44:22</td>
+</tr><tr>
+<td>236</td>
+<td>530392</td>
+<td>12067735</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 17:44:14</td>
+</tr><tr class="odd">
+<td>237</td>
+<td>530450</td>
+<td>7320092</td>
+<td><a href="https://a2oj.com/profile?Username=rockdj">rockdj</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320092" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++0x</td>
+<td>2014-08-01 17:42:15</td>
+</tr><tr class="acc">
+<td>238</td>
+<td>530451</td>
+<td>7320091</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320091" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:42:06</td>
+</tr><tr class="acc">
+<td>239</td>
+<td>530452</td>
+<td>7320088</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320088" target="_blank">Accepted</a></td>
+<td>Java 6</td>
+<td>2014-08-01 17:41:16</td>
+</tr><tr>
+<td>240</td>
+<td>530453</td>
+<td>7320087</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Boxer">Boxer</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320087" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:41:13</td>
+</tr><tr class="acc">
+<td>241</td>
+<td>530454</td>
+<td>7320086</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320086" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:40:50</td>
+</tr><tr class="acc">
+<td>242</td>
+<td>530455</td>
+<td>7320085</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320085" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:40:45</td>
+</tr><tr class="odd">
+<td>243</td>
+<td>530456</td>
+<td>7320081</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320081" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:38:52</td>
+</tr><tr>
+<td>244</td>
+<td>530457</td>
+<td>7320074</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7320074" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:36:22</td>
+</tr><tr class="acc">
+<td>245</td>
+<td>530376</td>
+<td>7320013</td>
+<td><a href="https://a2oj.com/profile?Username=Ahhh+Zombies">Ahhh Zombies</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320013" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:34:01</td>
+</tr><tr class="acc">
+<td>246</td>
+<td>530377</td>
+<td>7320009</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7320009" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:33:42</td>
+</tr><tr class="acc">
+<td>247</td>
+<td>530378</td>
+<td>7320007</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320007" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:33:26</td>
+</tr><tr>
+<td>248</td>
+<td>530370</td>
+<td>12067658</td>
+<td><a href="https://a2oj.com/profile?Username=grupo25">grupo25</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>time limit exceeded</td>
+<td>C++</td>
+<td>2014-08-01 17:32:34</td>
+</tr><tr class="acc">
+<td>249</td>
+<td>530372</td>
+<td>7320003</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320003" target="_blank">Accepted</a></td>
+<td>Java 6</td>
+<td>2014-08-01 17:32:15</td>
+</tr><tr>
+<td>250</td>
+<td>530389</td>
+<td>1504205</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=927">SKT1</a> (<a class="normal" href="https://a2oj.com/profile?Username=Boxer">Boxer</a>, <a class="normal" href="https://a2oj.com/profile?Username=Rmg_91">Rmg_91</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=dmansilla07">dmansilla07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4048" target="_blank">P10 - Takeover Wars</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 17:31:55</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>530364</td>
+<td>7320000</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7320000" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:31:40</td>
+</tr><tr>
+<td>252</td>
+<td>530365</td>
+<td>7319998</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319998" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 6</td>
+<td>2014-08-01 17:30:33</td>
+</tr><tr class="odd">
+<td>253</td>
+<td>530366</td>
+<td>7319997</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=477">SkipyCoders</a> (<a class="normal" href="https://a2oj.com/profile?Username=OscarGauss">OscarGauss</a>, <a class="normal" href="https://a2oj.com/profile?Username=Manic">Manic</a>, <a class="normal" href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=cartrrz">cartrrz</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319997" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:30:30</td>
+</tr><tr class="acc">
+<td>254</td>
+<td>530367</td>
+<td>7319996</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7319996" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:30:21</td>
+</tr><tr class="acc">
+<td>255</td>
+<td>530368</td>
+<td>7319927</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7319927" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:29:38</td>
+</tr><tr class="acc">
+<td>256</td>
+<td>530369</td>
+<td>7319907</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319907" target="_blank">Accepted</a></td>
+<td>Java 8</td>
+<td>2014-08-01 17:29:32</td>
+</tr><tr class="odd">
+<td>257</td>
+<td>530359</td>
+<td>7319746</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1361">GG WP</a> (<a class="normal" href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a>, <a class="normal" href="https://a2oj.com/profile?Username=jonatyum">jonatyum</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Pantnkrator">Pantnkrator</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319746" target="_blank">TESTING</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:28:08</td>
+</tr><tr class="acc">
+<td>258</td>
+<td>530358</td>
+<td>12067622</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://www.spoj.com/problems/TAP2012B/" target="_blank">P7 - Ball of Reconciliation</a></td>
+<td>SPOJ</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2014-08-01 17:27:29</td>
+</tr><tr class="odd">
+<td>259</td>
+<td>530357</td>
+<td>7319636</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319636" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:27:06</td>
+</tr><tr class="acc">
+<td>260</td>
+<td>530355</td>
+<td>7319426</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319426" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:24:45</td>
+</tr><tr class="odd">
+<td>261</td>
+<td>530354</td>
+<td>7319299</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319299" target="_blank">TESTING</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:23:36</td>
+</tr><tr class="acc">
+<td>262</td>
+<td>530351</td>
+<td>7319171</td>
+<td><a class="normal" href="https://a2oj.com/team?ID=1360">UPC Old Lions</a> (<a class="normal" href="https://a2oj.com/profile?Username=Fraaraco">Fraaraco</a>, <a class="normal" href="https://a2oj.com/profile?Username=cephei">cephei</a>)</td>
+<td><a href="https://a2oj.com/profile?Username=CarlosM">CarlosM</a></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7319171" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:22:03</td>
+</tr><tr class="acc">
+<td>263</td>
+<td>530352</td>
+<td>7319170</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319170" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:22:03</td>
+</tr><tr class="acc">
+<td>264</td>
+<td>530349</td>
+<td>7319107</td>
+<td><a href="https://a2oj.com/profile?Username=cegece">cegece</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7319107" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:21:24</td>
+</tr><tr class="acc">
+<td>265</td>
+<td>530344</td>
+<td>7318995</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318995" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:20:04</td>
+</tr><tr class="acc">
+<td>266</td>
+<td>530345</td>
+<td>7318988</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7318988" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:20:01</td>
+</tr><tr class="odd">
+<td>267</td>
+<td>530341</td>
+<td>7318875</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318875" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 6</td>
+<td>2014-08-01 17:18:44</td>
+</tr><tr>
+<td>268</td>
+<td>530337</td>
+<td>7318780</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7318780" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:17:33</td>
+</tr><tr class="odd">
+<td>269</td>
+<td>530338</td>
+<td>7318776</td>
+<td><a href="https://a2oj.com/profile?Username=bufferedreader">bufferedreader</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318776" target="_blank">COMPILATION_ERROR</a></td>
+<td>Java 6</td>
+<td>2014-08-01 17:17:26</td>
+</tr><tr>
+<td>270</td>
+<td>530339</td>
+<td>7318772</td>
+<td><a href="https://a2oj.com/profile?Username=facug91">facug91</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318772" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 8</td>
+<td>2014-08-01 17:17:23</td>
+</tr><tr class="odd">
+<td>271</td>
+<td>530342</td>
+<td>3720554</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=2016" target="_blank">P6 - Play on Words</a></td>
+<td>ZOJ</td>
+<td>Wrong Answer</td>
+<td>C++</td>
+<td>2014-08-01 17:17:13</td>
+</tr><tr class="acc">
+<td>272</td>
+<td>530340</td>
+<td>7318754</td>
+<td><a href="https://a2oj.com/profile?Username=drak">drak</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7318754" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:17:10</td>
+</tr><tr class="odd">
+<td>273</td>
+<td>530334</td>
+<td>7318647</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318647" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:15:38</td>
+</tr><tr class="acc">
+<td>274</td>
+<td>530335</td>
+<td>7318600</td>
+<td><a href="https://a2oj.com/profile?Username=GrabYourself">GrabYourself</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318600" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:15:04</td>
+</tr><tr class="acc">
+<td>275</td>
+<td>530330</td>
+<td>7318564</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7318564" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:14:35</td>
+</tr><tr class="acc">
+<td>276</td>
+<td>530331</td>
+<td>7318563</td>
+<td><a href="https://a2oj.com/profile?Username=jhtan">jhtan</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318563" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:14:34</td>
+</tr><tr class="acc">
+<td>277</td>
+<td>530332</td>
+<td>7318537</td>
+<td><a href="https://a2oj.com/profile?Username=mjhun">mjhun</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318537" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:14:11</td>
+</tr><tr>
+<td>278</td>
+<td>530326</td>
+<td>7318500</td>
+<td><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318500" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:13:39</td>
+</tr><tr class="acc">
+<td>279</td>
+<td>530328</td>
+<td>7318491</td>
+<td><a href="https://a2oj.com/profile?Username=ArmyAnts">ArmyAnts</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318491" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:13:31</td>
+</tr><tr class="acc">
+<td>280</td>
+<td>530324</td>
+<td>7318415</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7318415" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:12:17</td>
+</tr><tr class="odd">
+<td>281</td>
+<td>530322</td>
+<td>7318392</td>
+<td><a href="https://a2oj.com/profile?Username=quimey">quimey</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/158/D" target="_blank">P2 - Ice Sculptures</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/158/submission/7318392" target="_blank">COMPILATION_ERROR</a></td>
+<td>Python 2</td>
+<td>2014-08-01 17:11:51</td>
+</tr><tr class="acc">
+<td>282</td>
+<td>530323</td>
+<td>7318306</td>
+<td><a href="https://a2oj.com/profile?Username=caloventorEnDos">caloventorEnDos</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/103/B" target="_blank">P9 - Cthulhu</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/103/submission/7318306" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:10:40</td>
+</tr><tr class="acc">
+<td>283</td>
+<td>530320</td>
+<td>7318270</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318270" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:10:02</td>
+</tr><tr>
+<td>284</td>
+<td>530316</td>
+<td>7318199</td>
+<td><a href="https://a2oj.com/profile?Username=kouichicruz">kouichicruz</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/27/D" target="_blank">P5 - Ring Road 2</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/27/submission/7318199" target="_blank">TESTING</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:09:02</td>
+</tr><tr class="odd">
+<td>285</td>
+<td>530317</td>
+<td>7318164</td>
+<td><a href="https://a2oj.com/profile?Username=equipoacm2014">equipoacm2014</a></td>
+<td></td>
+<td><a href="http://codeforces.com/problemset/problem/219/A" target="_blank">P4 - k-String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/219/submission/7318164" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2014-08-01 17:08:28</td>
+</tr><tr>
+<td>286</td>
+<td>530590</td>
+<td>1504196</td>
+<td><a href="https://a2oj.com/profile?Username=Melarita">Melarita</a></td>
+<td></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=3136" target="_blank">P8 - Mining Your Own Business</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2014-08-01 17:05:41</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

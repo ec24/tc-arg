@@ -1,0 +1,3961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions video audio localstorage sessionstorage webworkers applicationcache fontface gr__a2oj_com"><head>
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="submissions_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" async="" src="submissions_files/ga.js"></script><script type="text/javascript" src="submissions_files/jquery-latest.js"></script>
+<script type="text/javascript" src="submissions_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="submissions_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="submissions_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function toggle() {
+	if(document.getElementById("selection2") && document.getElementById("selection2").checked) {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19235&non=true&My=true';
+		else
+			window.location = 'submissions?ID=19235&non=true';
+	} else {
+		if(document.getElementById("selection") && document.getElementById("selection").checked)
+			window.location = 'submissions?ID=19235&My=true';
+		else
+			window.location = 'submissions?ID=19235';
+	}
+}
+</script>
+
+
+<style type="text/css">
+<!--
+div.scroll {
+height: 100%;
+width: 1000px;
+overflow: auto;
+}
+-->
+</style> 
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="submissions_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="submissions_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2Fsubmissions%3FID%3D19235" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        
+        <script src="submissions_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="page">
+
+<font size="3">
+<center>
+
+
+
+
+
+<font size="4">
+<b>
+Submissions for: <a href="https://a2oj.com/contest?ID=19235">19235 - TC Argentina 2015 - Dia 1
+</a>
+
+<br>
+<br>
+<a href="https://a2oj.com/standings?ID=19235">Standings</a> - <a href="https://a2oj.com/submissions?ID=19235">Submissions</a>
+ - <a href="https://a2oj.com/contest?ID=19235">Problems</a> - <a href="https://a2oj.com/registrants?ID=19235">Registrants</a>
+
+</b>
+</font>
+
+
+
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+
+
+<table class="tablesorter" style="text-align: center;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">ID</th>
+
+<th class="header">Judge ID</th>
+<th class="header">Contestant</th>
+
+<th class="header">Problem</th>
+<th class="header">Online Judge</th>
+
+<th class="header">Result</th>
+<th class="header">Language</th>
+
+<th class="header">Time</th>
+
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td>1</td>
+<td>882109</td>
+<td>1725960</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:29:47</td>
+</tr><tr>
+<td>2</td>
+<td>882103</td>
+<td>12137951</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12137951" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 21:29:19</td>
+</tr><tr class="odd">
+<td>3</td>
+<td>882105</td>
+<td>12137946</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12137946" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 21:29:02</td>
+</tr><tr class="acc">
+<td>4</td>
+<td>882099</td>
+<td>12137940</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12137940" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 21:27:15</td>
+</tr><tr class="odd">
+<td>5</td>
+<td>882095</td>
+<td>1725956</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:25:53</td>
+</tr><tr class="acc">
+<td>6</td>
+<td>882096</td>
+<td>1725955</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 21:25:47</td>
+</tr><tr class="odd">
+<td>7</td>
+<td>882094</td>
+<td>12137929</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12137929" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 21:25:37</td>
+</tr><tr>
+<td>8</td>
+<td>882090</td>
+<td>1725953</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:24:56</td>
+</tr><tr class="odd">
+<td>9</td>
+<td>882092</td>
+<td>1725951</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>JAVA</td>
+<td>2015-07-20 21:24:49</td>
+</tr><tr>
+<td>10</td>
+<td>882083</td>
+<td>1725950</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:24:18</td>
+</tr><tr class="acc">
+<td>11</td>
+<td>882084</td>
+<td>1725949</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 21:24:16</td>
+</tr><tr class="acc">
+<td>12</td>
+<td>882079</td>
+<td>1725947</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 21:23:08</td>
+</tr><tr class="odd">
+<td>13</td>
+<td>882078</td>
+<td>12137914</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12137914" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 21:22:24</td>
+</tr><tr>
+<td>14</td>
+<td>882076</td>
+<td>1725942</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:22:11</td>
+</tr><tr class="acc">
+<td>15</td>
+<td>882069</td>
+<td>1725940</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 21:21:24</td>
+</tr><tr class="acc">
+<td>16</td>
+<td>882073</td>
+<td>1725936</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 21:20:33</td>
+</tr><tr class="odd">
+<td>17</td>
+<td>882065</td>
+<td>1725932</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:20:06</td>
+</tr><tr class="acc">
+<td>18</td>
+<td>882066</td>
+<td>1725931</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 21:20:02</td>
+</tr><tr class="odd">
+<td>19</td>
+<td>882057</td>
+<td>1725929</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:19:25</td>
+</tr><tr>
+<td>20</td>
+<td>882058</td>
+<td>1725927</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:18:43</td>
+</tr><tr class="acc">
+<td>21</td>
+<td>882049</td>
+<td>1725922</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 21:16:35</td>
+</tr><tr>
+<td>22</td>
+<td>882043</td>
+<td>1725921</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:16:17</td>
+</tr><tr class="odd">
+<td>23</td>
+<td>882036</td>
+<td>1725919</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:15:11</td>
+</tr><tr>
+<td>24</td>
+<td>882037</td>
+<td>1725918</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-20 21:14:34</td>
+</tr><tr class="odd">
+<td>25</td>
+<td>882038</td>
+<td>1725917</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:14:28</td>
+</tr><tr>
+<td>26</td>
+<td>882040</td>
+<td>1725915</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:13:52</td>
+</tr><tr class="odd">
+<td>27</td>
+<td>882041</td>
+<td>1725914</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:13:48</td>
+</tr><tr class="acc">
+<td>28</td>
+<td>882031</td>
+<td>12137373</td>
+<td><a href="https://a2oj.com/profile?Username=Csarg">Csarg</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12137373" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 21:13:41</td>
+</tr><tr class="odd">
+<td>29</td>
+<td>882033</td>
+<td>1725913</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:13:19</td>
+</tr><tr class="acc">
+<td>30</td>
+<td>882035</td>
+<td>1725909</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 21:12:30</td>
+</tr><tr class="odd">
+<td>31</td>
+<td>882026</td>
+<td>1725908</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:11:21</td>
+</tr><tr>
+<td>32</td>
+<td>882019</td>
+<td>1725907</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:10:17</td>
+</tr><tr class="odd">
+<td>33</td>
+<td>882021</td>
+<td>1725905</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:09:36</td>
+</tr><tr>
+<td>34</td>
+<td>882013</td>
+<td>1725903</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-20 21:09:18</td>
+</tr><tr class="odd">
+<td>35</td>
+<td>882014</td>
+<td>1725902</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:09:17</td>
+</tr><tr>
+<td>36</td>
+<td>882009</td>
+<td>1725900</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>JAVA</td>
+<td>2015-07-20 21:08:08</td>
+</tr><tr class="acc">
+<td>37</td>
+<td>882010</td>
+<td>1725899</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 21:08:04</td>
+</tr><tr class="acc">
+<td>38</td>
+<td>882003</td>
+<td>1725898</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 21:07:17</td>
+</tr><tr class="odd">
+<td>39</td>
+<td>882005</td>
+<td>1725896</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:06:36</td>
+</tr><tr>
+<td>40</td>
+<td>882006</td>
+<td>1725895</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>JAVA</td>
+<td>2015-07-20 21:06:34</td>
+</tr><tr class="acc">
+<td>41</td>
+<td>882000</td>
+<td>1725893</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 21:06:14</td>
+</tr><tr>
+<td>42</td>
+<td>882002</td>
+<td>1725891</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:05:42</td>
+</tr><tr class="odd">
+<td>43</td>
+<td>881994</td>
+<td>12136858</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136858" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 21:05:08</td>
+</tr><tr>
+<td>44</td>
+<td>881990</td>
+<td>1725889</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:04:55</td>
+</tr><tr class="odd">
+<td>45</td>
+<td>881991</td>
+<td>1725888</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>JAVA</td>
+<td>2015-07-20 21:04:52</td>
+</tr><tr>
+<td>46</td>
+<td>881992</td>
+<td>1725887</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 21:04:42</td>
+</tr><tr class="odd">
+<td>47</td>
+<td>881978</td>
+<td>12136847</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12136847" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 21:01:53</td>
+</tr><tr>
+<td>48</td>
+<td>881984</td>
+<td>1725884</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:01:38</td>
+</tr><tr class="odd">
+<td>49</td>
+<td>881980</td>
+<td>1725883</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 21:01:06</td>
+</tr><tr>
+<td>50</td>
+<td>881977</td>
+<td>1725881</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:59:46</td>
+</tr><tr class="acc">
+<td>51</td>
+<td>881975</td>
+<td>1725880</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 20:57:55</td>
+</tr><tr class="acc">
+<td>52</td>
+<td>881973</td>
+<td>1725877</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 20:56:35</td>
+</tr><tr class="odd">
+<td>53</td>
+<td>881974</td>
+<td>1725876</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-20 20:56:34</td>
+</tr><tr>
+<td>54</td>
+<td>881968</td>
+<td>1725875</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 20:55:56</td>
+</tr><tr class="acc">
+<td>55</td>
+<td>881965</td>
+<td>12136816</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136816" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:55:42</td>
+</tr><tr>
+<td>56</td>
+<td>881969</td>
+<td>1725873</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:55:40</td>
+</tr><tr class="odd">
+<td>57</td>
+<td>881962</td>
+<td>1725871</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:54:57</td>
+</tr><tr class="acc">
+<td>58</td>
+<td>881966</td>
+<td>12136813</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136813" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:54:38</td>
+</tr><tr class="odd">
+<td>59</td>
+<td>881963</td>
+<td>1725870</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-20 20:54:31</td>
+</tr><tr class="acc">
+<td>60</td>
+<td>881967</td>
+<td>12136808</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136808" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:54:05</td>
+</tr><tr class="odd">
+<td>61</td>
+<td>881960</td>
+<td>1725869</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:53:39</td>
+</tr><tr>
+<td>62</td>
+<td>881956</td>
+<td>1725868</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:53:05</td>
+</tr><tr class="odd">
+<td>63</td>
+<td>881957</td>
+<td>1725867</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:52:46</td>
+</tr><tr>
+<td>64</td>
+<td>881955</td>
+<td>12136798</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136798" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:52:34</td>
+</tr><tr class="odd">
+<td>65</td>
+<td>881958</td>
+<td>1725866</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:52:33</td>
+</tr><tr>
+<td>66</td>
+<td>881948</td>
+<td>12136792</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136792" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:51:53</td>
+</tr><tr class="odd">
+<td>67</td>
+<td>881950</td>
+<td>1725863</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:51:02</td>
+</tr><tr>
+<td>68</td>
+<td>881951</td>
+<td>1725862</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 20:50:36</td>
+</tr><tr class="odd">
+<td>69</td>
+<td>881947</td>
+<td>1725861</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:50:00</td>
+</tr><tr>
+<td>70</td>
+<td>881945</td>
+<td>12136781</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136781" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:49:33</td>
+</tr><tr class="odd">
+<td>71</td>
+<td>881940</td>
+<td>1725860</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:49:06</td>
+</tr><tr>
+<td>72</td>
+<td>881938</td>
+<td>1725856</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-20 20:47:49</td>
+</tr><tr class="odd">
+<td>73</td>
+<td>881933</td>
+<td>12136767</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136767" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:46:37</td>
+</tr><tr class="acc">
+<td>74</td>
+<td>881934</td>
+<td>12136765</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12136765" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:46:14</td>
+</tr><tr class="odd">
+<td>75</td>
+<td>881931</td>
+<td>1725854</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:46:12</td>
+</tr><tr>
+<td>76</td>
+<td>881935</td>
+<td>12136761</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136761" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:46:00</td>
+</tr><tr class="odd">
+<td>77</td>
+<td>881927</td>
+<td>12136755</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136755" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:45:12</td>
+</tr><tr>
+<td>78</td>
+<td>881929</td>
+<td>1725851</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 20:44:45</td>
+</tr><tr class="acc">
+<td>79</td>
+<td>881930</td>
+<td>1725850</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>ANSI C</td>
+<td>2015-07-20 20:44:41</td>
+</tr><tr>
+<td>80</td>
+<td>881924</td>
+<td>1725849</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-20 20:44:16</td>
+</tr><tr class="odd">
+<td>81</td>
+<td>881925</td>
+<td>1725848</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 20:43:57</td>
+</tr><tr>
+<td>82</td>
+<td>881918</td>
+<td>1725844</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 20:42:23</td>
+</tr><tr class="odd">
+<td>83</td>
+<td>881921</td>
+<td>12136738</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12136738" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:42:11</td>
+</tr><tr>
+<td>84</td>
+<td>881919</td>
+<td>1725843</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:41:58</td>
+</tr><tr class="odd">
+<td>85</td>
+<td>881920</td>
+<td>1725842</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:41:43</td>
+</tr><tr>
+<td>86</td>
+<td>881916</td>
+<td>1725840</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 20:41:10</td>
+</tr><tr class="odd">
+<td>87</td>
+<td>881908</td>
+<td>12136715</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136715" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:38:07</td>
+</tr><tr class="acc">
+<td>88</td>
+<td>881909</td>
+<td>12136714</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136714" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:38:05</td>
+</tr><tr class="odd">
+<td>89</td>
+<td>881911</td>
+<td>12136706</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136706" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:37:15</td>
+</tr><tr>
+<td>90</td>
+<td>881903</td>
+<td>12136697</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136697" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:35:58</td>
+</tr><tr class="acc">
+<td>91</td>
+<td>881905</td>
+<td>1725830</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 20:35:36</td>
+</tr><tr>
+<td>92</td>
+<td>881896</td>
+<td>1725828</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:34:30</td>
+</tr><tr class="odd">
+<td>93</td>
+<td>881893</td>
+<td>1725826</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 20:32:42</td>
+</tr><tr>
+<td>94</td>
+<td>881885</td>
+<td>12136665</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136665" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:30:27</td>
+</tr><tr class="odd">
+<td>95</td>
+<td>881886</td>
+<td>12136660</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136660" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-20 20:29:57</td>
+</tr><tr>
+<td>96</td>
+<td>881887</td>
+<td>1725825</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:29:36</td>
+</tr><tr class="odd">
+<td>97</td>
+<td>881882</td>
+<td>12136654</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136654" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:29:18</td>
+</tr><tr>
+<td>98</td>
+<td>881878</td>
+<td>1725822</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 20:26:32</td>
+</tr><tr class="acc">
+<td>99</td>
+<td>881876</td>
+<td>1725820</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 20:25:39</td>
+</tr><tr>
+<td>100</td>
+<td>881868</td>
+<td>12136641</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136641" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:24:55</td>
+</tr><tr class="odd">
+<td>101</td>
+<td>881874</td>
+<td>1725818</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-20 20:24:49</td>
+</tr><tr>
+<td>102</td>
+<td>881869</td>
+<td>12136639</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136639" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-20 20:24:29</td>
+</tr><tr class="odd">
+<td>103</td>
+<td>881870</td>
+<td>12136638</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136638" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 20:24:27</td>
+</tr><tr>
+<td>104</td>
+<td>881862</td>
+<td>12136637</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136637" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:23:56</td>
+</tr><tr class="odd">
+<td>105</td>
+<td>881863</td>
+<td>12136636</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136636" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:23:42</td>
+</tr><tr class="acc">
+<td>106</td>
+<td>881864</td>
+<td>1725816</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 20:23:14</td>
+</tr><tr class="odd">
+<td>107</td>
+<td>881860</td>
+<td>1725815</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-20 20:22:16</td>
+</tr><tr>
+<td>108</td>
+<td>881856</td>
+<td>1725813</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:18:59</td>
+</tr><tr class="odd">
+<td>109</td>
+<td>881852</td>
+<td>1725812</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:18:06</td>
+</tr><tr>
+<td>110</td>
+<td>881853</td>
+<td>1725811</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-20 20:17:35</td>
+</tr><tr class="odd">
+<td>111</td>
+<td>881848</td>
+<td>1725809</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 20:16:26</td>
+</tr><tr>
+<td>112</td>
+<td>881849</td>
+<td>1725808</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:15:35</td>
+</tr><tr class="odd">
+<td>113</td>
+<td>881838</td>
+<td>1725805</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:14:17</td>
+</tr><tr class="acc">
+<td>114</td>
+<td>881829</td>
+<td>1725802</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 20:12:15</td>
+</tr><tr class="odd">
+<td>115</td>
+<td>881823</td>
+<td>12136559</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136559" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:11:25</td>
+</tr><tr class="acc">
+<td>116</td>
+<td>881821</td>
+<td>1725798</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 20:10:03</td>
+</tr><tr class="odd">
+<td>117</td>
+<td>881816</td>
+<td>12136532</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136532" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-20 20:07:56</td>
+</tr><tr>
+<td>118</td>
+<td>881811</td>
+<td>1725796</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:07:02</td>
+</tr><tr class="acc">
+<td>119</td>
+<td>881804</td>
+<td>12136520</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136520" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 20:06:18</td>
+</tr><tr>
+<td>120</td>
+<td>881807</td>
+<td>1725794</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:06:13</td>
+</tr><tr class="odd">
+<td>121</td>
+<td>881800</td>
+<td>12136516</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_25">TC_bahia_25</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136516" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 20:05:58</td>
+</tr><tr>
+<td>122</td>
+<td>881801</td>
+<td>12136514</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136514" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 20:05:27</td>
+</tr><tr class="odd">
+<td>123</td>
+<td>881799</td>
+<td>1725792</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 20:04:59</td>
+</tr><tr>
+<td>124</td>
+<td>881789</td>
+<td>12136506</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136506" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 20:04:51</td>
+</tr><tr class="odd">
+<td>125</td>
+<td>881775</td>
+<td>1725785</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 19:59:00</td>
+</tr><tr>
+<td>126</td>
+<td>881776</td>
+<td>1725784</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:58:53</td>
+</tr><tr class="odd">
+<td>127</td>
+<td>881766</td>
+<td>12136441</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136441" target="_blank">WRONG_ANSWER</a></td>
+<td>Java 7</td>
+<td>2015-07-20 19:56:30</td>
+</tr><tr>
+<td>128</td>
+<td>881763</td>
+<td>1725779</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-20 19:54:51</td>
+</tr><tr class="acc">
+<td>129</td>
+<td>881764</td>
+<td>1725778</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 19:54:31</td>
+</tr><tr class="acc">
+<td>130</td>
+<td>881743</td>
+<td>12136383</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="http://codeforces.com/problemset/problem/551/D" target="_blank">P2 - GukiZ and Binary Operations</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/551/submission/12136383" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 19:50:22</td>
+</tr><tr class="acc">
+<td>131</td>
+<td>881742</td>
+<td>1725771</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 19:48:54</td>
+</tr><tr class="acc">
+<td>132</td>
+<td>881739</td>
+<td>12136364</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136364" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 19:47:39</td>
+</tr><tr class="acc">
+<td>133</td>
+<td>881738</td>
+<td>1725768</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 19:45:35</td>
+</tr><tr>
+<td>134</td>
+<td>881719</td>
+<td>1725762</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:41:27</td>
+</tr><tr class="acc">
+<td>135</td>
+<td>881721</td>
+<td>1725760</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 19:40:32</td>
+</tr><tr class="acc">
+<td>136</td>
+<td>881722</td>
+<td>1725759</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 19:40:30</td>
+</tr><tr class="odd">
+<td>137</td>
+<td>881712</td>
+<td>1725758</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-20 19:40:25</td>
+</tr><tr>
+<td>138</td>
+<td>881713</td>
+<td>1725757</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:40:18</td>
+</tr><tr class="odd">
+<td>139</td>
+<td>881708</td>
+<td>1725754</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:38:49</td>
+</tr><tr>
+<td>140</td>
+<td>881709</td>
+<td>1725753</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-20 19:38:36</td>
+</tr><tr class="odd">
+<td>141</td>
+<td>881707</td>
+<td>1725752</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-20 19:37:57</td>
+</tr><tr>
+<td>142</td>
+<td>881699</td>
+<td>1725750</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++</td>
+<td>2015-07-20 19:35:55</td>
+</tr><tr class="odd">
+<td>143</td>
+<td>881700</td>
+<td>1725749</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 19:35:54</td>
+</tr><tr>
+<td>144</td>
+<td>881691</td>
+<td>1725746</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:34:23</td>
+</tr><tr class="odd">
+<td>145</td>
+<td>881692</td>
+<td>1725744</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_18">TC_bahia_18</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Compilation error</td>
+<td>JAVA</td>
+<td>2015-07-20 19:34:01</td>
+</tr><tr>
+<td>146</td>
+<td>881693</td>
+<td>1725743</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Runtime error</td>
+<td>C++11</td>
+<td>2015-07-20 19:33:51</td>
+</tr><tr class="acc">
+<td>147</td>
+<td>881686</td>
+<td>12136256</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136256" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:33:08</td>
+</tr><tr>
+<td>148</td>
+<td>881688</td>
+<td>12136251</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136251" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 19:32:09</td>
+</tr><tr class="odd">
+<td>149</td>
+<td>881679</td>
+<td>1725738</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-20 19:30:13</td>
+</tr><tr>
+<td>150</td>
+<td>881667</td>
+<td>12136223</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136223" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 19:28:58</td>
+</tr><tr class="acc">
+<td>151</td>
+<td>881668</td>
+<td>12136222</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136222" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:28:57</td>
+</tr><tr class="acc">
+<td>152</td>
+<td>881664</td>
+<td>1725734</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 19:27:22</td>
+</tr><tr class="odd">
+<td>153</td>
+<td>881665</td>
+<td>1725733</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:27:09</td>
+</tr><tr>
+<td>154</td>
+<td>881666</td>
+<td>1725732</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:26:55</td>
+</tr><tr class="odd">
+<td>155</td>
+<td>881662</td>
+<td>1725731</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:26:30</td>
+</tr><tr>
+<td>156</td>
+<td>881663</td>
+<td>1725730</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:25:43</td>
+</tr><tr class="odd">
+<td>157</td>
+<td>881674</td>
+<td>12136193</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12136193" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 19:25:28</td>
+</tr><tr>
+<td>158</td>
+<td>881661</td>
+<td>1725729</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:24:41</td>
+</tr><tr class="odd">
+<td>159</td>
+<td>881656</td>
+<td>1725728</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:22:48</td>
+</tr><tr>
+<td>160</td>
+<td>881653</td>
+<td>1725725</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:21:40</td>
+</tr><tr class="odd">
+<td>161</td>
+<td>881648</td>
+<td>1725723</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:19:48</td>
+</tr><tr class="acc">
+<td>162</td>
+<td>881642</td>
+<td>12136108</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136108" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:17:46</td>
+</tr><tr class="odd">
+<td>163</td>
+<td>881637</td>
+<td>1725721</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:17:24</td>
+</tr><tr class="acc">
+<td>164</td>
+<td>881632</td>
+<td>12136096</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136096" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:15:42</td>
+</tr><tr class="acc">
+<td>165</td>
+<td>881634</td>
+<td>1725719</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 19:15:28</td>
+</tr><tr class="acc">
+<td>166</td>
+<td>881633</td>
+<td>12136088</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12136088" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 19:15:18</td>
+</tr><tr class="odd">
+<td>167</td>
+<td>881627</td>
+<td>1725715</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:12:25</td>
+</tr><tr class="acc">
+<td>168</td>
+<td>881625</td>
+<td>1725713</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 19:11:07</td>
+</tr><tr class="odd">
+<td>169</td>
+<td>881623</td>
+<td>1725710</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:09:40</td>
+</tr><tr class="acc">
+<td>170</td>
+<td>881624</td>
+<td>1725709</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 19:09:29</td>
+</tr><tr class="acc">
+<td>171</td>
+<td>881618</td>
+<td>12136016</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12136016" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:08:42</td>
+</tr><tr>
+<td>172</td>
+<td>881616</td>
+<td>12135998</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135998" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:06:16</td>
+</tr><tr class="odd">
+<td>173</td>
+<td>881615</td>
+<td>1725708</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 19:05:50</td>
+</tr><tr>
+<td>174</td>
+<td>881610</td>
+<td>1725707</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 19:04:25</td>
+</tr><tr class="odd">
+<td>175</td>
+<td>881611</td>
+<td>12135984</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135984" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:04:14</td>
+</tr><tr>
+<td>176</td>
+<td>881608</td>
+<td>1725705</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++11</td>
+<td>2015-07-20 19:02:59</td>
+</tr><tr class="acc">
+<td>177</td>
+<td>881609</td>
+<td>1725704</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 19:02:34</td>
+</tr><tr>
+<td>178</td>
+<td>881606</td>
+<td>12135970</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135970" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 19:02:27</td>
+</tr><tr class="odd">
+<td>179</td>
+<td>881598</td>
+<td>12135948</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135948" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2015-07-20 19:00:12</td>
+</tr><tr>
+<td>180</td>
+<td>881600</td>
+<td>12135941</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12135941" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:59:15</td>
+</tr><tr class="odd">
+<td>181</td>
+<td>881590</td>
+<td>12135931</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135931" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:58:28</td>
+</tr><tr>
+<td>182</td>
+<td>881585</td>
+<td>1725698</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 18:56:27</td>
+</tr><tr class="odd">
+<td>183</td>
+<td>881583</td>
+<td>12135915</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135915" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:56:03</td>
+</tr><tr>
+<td>184</td>
+<td>881582</td>
+<td>1725696</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 18:54:47</td>
+</tr><tr class="odd">
+<td>185</td>
+<td>881577</td>
+<td>12135900</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135900" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:54:15</td>
+</tr><tr>
+<td>186</td>
+<td>881581</td>
+<td>1725694</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 18:53:59</td>
+</tr><tr class="odd">
+<td>187</td>
+<td>881571</td>
+<td>12135891</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135891" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:53:22</td>
+</tr><tr>
+<td>188</td>
+<td>881573</td>
+<td>12135876</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135876" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:52:26</td>
+</tr><tr class="odd">
+<td>189</td>
+<td>881564</td>
+<td>1725692</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:51:16</td>
+</tr><tr class="acc">
+<td>190</td>
+<td>881567</td>
+<td>1725688</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 18:50:12</td>
+</tr><tr class="acc">
+<td>191</td>
+<td>881561</td>
+<td>1725683</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 18:48:03</td>
+</tr><tr>
+<td>192</td>
+<td>881562</td>
+<td>1725682</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:47:43</td>
+</tr><tr class="odd">
+<td>193</td>
+<td>881559</td>
+<td>1725681</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 18:46:49</td>
+</tr><tr>
+<td>194</td>
+<td>881557</td>
+<td>12135833</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135833" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:46:21</td>
+</tr><tr class="odd">
+<td>195</td>
+<td>881558</td>
+<td>12135827</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135827" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2015-07-20 18:45:50</td>
+</tr><tr>
+<td>196</td>
+<td>881551</td>
+<td>12135814</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135814" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:45:06</td>
+</tr><tr class="odd">
+<td>197</td>
+<td>881554</td>
+<td>1725679</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:44:57</td>
+</tr><tr>
+<td>198</td>
+<td>881546</td>
+<td>12135800</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_11">TC_bahia_11</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135800" target="_blank">RUNTIME_ERROR</a></td>
+<td>Java 7</td>
+<td>2015-07-20 18:43:47</td>
+</tr><tr class="odd">
+<td>199</td>
+<td>881547</td>
+<td>1725677</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 18:43:23</td>
+</tr><tr class="acc">
+<td>200</td>
+<td>881540</td>
+<td>12135769</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135769" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:41:02</td>
+</tr><tr class="acc">
+<td>201</td>
+<td>881544</td>
+<td>1725675</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 18:40:51</td>
+</tr><tr>
+<td>202</td>
+<td>881527</td>
+<td>12135753</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135753" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:38:43</td>
+</tr><tr class="odd">
+<td>203</td>
+<td>881529</td>
+<td>12135749</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135749" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:38:37</td>
+</tr><tr>
+<td>204</td>
+<td>881536</td>
+<td>1725673</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:38:33</td>
+</tr><tr class="acc">
+<td>205</td>
+<td>881537</td>
+<td>1725672</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 18:38:31</td>
+</tr><tr>
+<td>206</td>
+<td>881525</td>
+<td>1725671</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:38:08</td>
+</tr><tr class="odd">
+<td>207</td>
+<td>881531</td>
+<td>12135741</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135741" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:37:58</td>
+</tr><tr>
+<td>208</td>
+<td>881522</td>
+<td>1725669</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 18:36:43</td>
+</tr><tr class="odd">
+<td>209</td>
+<td>881532</td>
+<td>12135726</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135726" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:36:39</td>
+</tr><tr>
+<td>210</td>
+<td>881533</td>
+<td>12135724</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_10">TC_bahia_10</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135724" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Java 7</td>
+<td>2015-07-20 18:36:33</td>
+</tr><tr class="odd">
+<td>211</td>
+<td>881519</td>
+<td>1725668</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:36:03</td>
+</tr><tr>
+<td>212</td>
+<td>881521</td>
+<td>1725666</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:35:47</td>
+</tr><tr class="odd">
+<td>213</td>
+<td>881518</td>
+<td>12135714</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12135714" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:35:34</td>
+</tr><tr class="acc">
+<td>214</td>
+<td>881515</td>
+<td>12135302</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12135302" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:34:08</td>
+</tr><tr class="odd">
+<td>215</td>
+<td>881512</td>
+<td>1725664</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_17">TC_bahia_17</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 18:33:32</td>
+</tr><tr>
+<td>216</td>
+<td>881513</td>
+<td>1725663</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:33:29</td>
+</tr><tr class="odd">
+<td>217</td>
+<td>881506</td>
+<td>1725660</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:31:08</td>
+</tr><tr class="acc">
+<td>218</td>
+<td>881499</td>
+<td>12134857</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134857" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:30:25</td>
+</tr><tr class="acc">
+<td>219</td>
+<td>881493</td>
+<td>1725657</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 18:30:01</td>
+</tr><tr>
+<td>220</td>
+<td>881494</td>
+<td>1725656</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:29:54</td>
+</tr><tr class="acc">
+<td>221</td>
+<td>881502</td>
+<td>12134846</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134846" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:29:24</td>
+</tr><tr>
+<td>222</td>
+<td>881497</td>
+<td>1725653</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-20 18:28:47</td>
+</tr><tr class="odd">
+<td>223</td>
+<td>881486</td>
+<td>1725650</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:27:29</td>
+</tr><tr>
+<td>224</td>
+<td>881481</td>
+<td>12134804</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134804" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:24:58</td>
+</tr><tr class="odd">
+<td>225</td>
+<td>881478</td>
+<td>1725647</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:24:54</td>
+</tr><tr>
+<td>226</td>
+<td>881479</td>
+<td>1725646</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:24:33</td>
+</tr><tr class="odd">
+<td>227</td>
+<td>881480</td>
+<td>1725645</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:24:32</td>
+</tr><tr>
+<td>228</td>
+<td>881469</td>
+<td>1725641</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:22:54</td>
+</tr><tr class="acc">
+<td>229</td>
+<td>881470</td>
+<td>1725640</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 18:22:41</td>
+</tr><tr>
+<td>230</td>
+<td>881466</td>
+<td>12134359</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12134359" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:20:39</td>
+</tr><tr class="acc">
+<td>231</td>
+<td>881467</td>
+<td>12134353</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134353" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:20:24</td>
+</tr><tr>
+<td>232</td>
+<td>881461</td>
+<td>12134334</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134334" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:18:00</td>
+</tr><tr class="odd">
+<td>233</td>
+<td>881460</td>
+<td>12134329</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134329" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 18:17:28</td>
+</tr><tr>
+<td>234</td>
+<td>881458</td>
+<td>1725638</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:17:03</td>
+</tr><tr class="acc">
+<td>235</td>
+<td>881457</td>
+<td>12134315</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12134315" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:15:37</td>
+</tr><tr class="acc">
+<td>236</td>
+<td>881448</td>
+<td>12134286</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134286" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:11:14</td>
+</tr><tr class="odd">
+<td>237</td>
+<td>881449</td>
+<td>12134283</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12134283" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:10:57</td>
+</tr><tr class="acc">
+<td>238</td>
+<td>881446</td>
+<td>1725632</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 18:10:15</td>
+</tr><tr class="acc">
+<td>239</td>
+<td>881443</td>
+<td>12134265</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12134265" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:09:16</td>
+</tr><tr>
+<td>240</td>
+<td>881442</td>
+<td>1725630</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:08:50</td>
+</tr><tr class="odd">
+<td>241</td>
+<td>881439</td>
+<td>12133861</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133861" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:08:41</td>
+</tr><tr>
+<td>242</td>
+<td>881441</td>
+<td>1725629</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 18:08:05</td>
+</tr><tr class="odd">
+<td>243</td>
+<td>881440</td>
+<td>12133855</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133855" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>PyPy 2</td>
+<td>2015-07-20 18:08:01</td>
+</tr><tr>
+<td>244</td>
+<td>881438</td>
+<td>1725628</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:07:03</td>
+</tr><tr class="odd">
+<td>245</td>
+<td>881435</td>
+<td>12133847</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133847" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:06:58</td>
+</tr><tr>
+<td>246</td>
+<td>881436</td>
+<td>12133834</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133834" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:06:00</td>
+</tr><tr class="odd">
+<td>247</td>
+<td>881434</td>
+<td>1725627</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 18:05:53</td>
+</tr><tr class="acc">
+<td>248</td>
+<td>881430</td>
+<td>12133831</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133831" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:05:35</td>
+</tr><tr class="acc">
+<td>249</td>
+<td>881432</td>
+<td>1725624</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 18:05:06</td>
+</tr><tr>
+<td>250</td>
+<td>881427</td>
+<td>12133818</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133818" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 18:04:13</td>
+</tr><tr class="acc">
+<td>251</td>
+<td>881425</td>
+<td>12133815</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133815" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:03:43</td>
+</tr><tr>
+<td>252</td>
+<td>881426</td>
+<td>1725622</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-20 18:03:36</td>
+</tr><tr class="acc">
+<td>253</td>
+<td>881424</td>
+<td>1725620</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 18:03:19</td>
+</tr><tr>
+<td>254</td>
+<td>881421</td>
+<td>12133796</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_09">TC_bahia_09</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12133796" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:02:01</td>
+</tr><tr class="odd">
+<td>255</td>
+<td>881419</td>
+<td>1725619</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 18:01:26</td>
+</tr><tr>
+<td>256</td>
+<td>881422</td>
+<td>12133788</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133788" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 18:01:19</td>
+</tr><tr class="odd">
+<td>257</td>
+<td>881418</td>
+<td>1725617</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>JAVA</td>
+<td>2015-07-20 18:00:22</td>
+</tr><tr class="acc">
+<td>258</td>
+<td>881414</td>
+<td>12133769</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12133769" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:59:50</td>
+</tr><tr class="acc">
+<td>259</td>
+<td>881415</td>
+<td>1725615</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 17:58:48</td>
+</tr><tr>
+<td>260</td>
+<td>881410</td>
+<td>1725610</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_10">TC_bahia_10</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-20 17:55:35</td>
+</tr><tr class="odd">
+<td>261</td>
+<td>881408</td>
+<td>12133719</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133719" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:53:49</td>
+</tr><tr>
+<td>262</td>
+<td>881401</td>
+<td>1725606</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:53:46</td>
+</tr><tr class="acc">
+<td>263</td>
+<td>881399</td>
+<td>1725603</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2288" target="_blank">P7 - Proving Equivalences</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 17:52:59</td>
+</tr><tr>
+<td>264</td>
+<td>881393</td>
+<td>12133693</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133693" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:51:13</td>
+</tr><tr class="odd">
+<td>265</td>
+<td>881394</td>
+<td>12133692</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133692" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:51:01</td>
+</tr><tr class="acc">
+<td>266</td>
+<td>881389</td>
+<td>12133687</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133687" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:50:39</td>
+</tr><tr class="acc">
+<td>267</td>
+<td>881387</td>
+<td>12133678</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133678" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:49:38</td>
+</tr><tr>
+<td>268</td>
+<td>881391</td>
+<td>1725600</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_10">TC_bahia_10</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>JAVA</td>
+<td>2015-07-20 17:49:32</td>
+</tr><tr class="odd">
+<td>269</td>
+<td>881386</td>
+<td>1725599</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:49:26</td>
+</tr><tr class="acc">
+<td>270</td>
+<td>881381</td>
+<td>12133661</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133661" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:48:30</td>
+</tr><tr class="odd">
+<td>271</td>
+<td>881379</td>
+<td>1725597</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:47:44</td>
+</tr><tr>
+<td>272</td>
+<td>881382</td>
+<td>12133647</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133647" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:47:30</td>
+</tr><tr class="odd">
+<td>273</td>
+<td>881375</td>
+<td>12133634</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133634" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:46:41</td>
+</tr><tr class="acc">
+<td>274</td>
+<td>881374</td>
+<td>1725595</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 17:46:21</td>
+</tr><tr class="acc">
+<td>275</td>
+<td>881369</td>
+<td>1725593</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 17:45:01</td>
+</tr><tr>
+<td>276</td>
+<td>881364</td>
+<td>12133599</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133599" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:43:27</td>
+</tr><tr class="odd">
+<td>277</td>
+<td>881363</td>
+<td>1725589</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:42:36</td>
+</tr><tr>
+<td>278</td>
+<td>881358</td>
+<td>1725585</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_16">TC_bahia_16</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 17:40:11</td>
+</tr><tr class="odd">
+<td>279</td>
+<td>881359</td>
+<td>1725584</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:39:34</td>
+</tr><tr class="acc">
+<td>280</td>
+<td>881351</td>
+<td>12133548</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133548" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:38:34</td>
+</tr><tr class="odd">
+<td>281</td>
+<td>881347</td>
+<td>1725581</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1959" target="_blank">P9 - Weird Numbers</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:35:24</td>
+</tr><tr>
+<td>282</td>
+<td>881353</td>
+<td>12133512</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133512" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>Python 2</td>
+<td>2015-07-20 17:34:57</td>
+</tr><tr class="acc">
+<td>283</td>
+<td>881354</td>
+<td>12133504</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133504" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:34:08</td>
+</tr><tr>
+<td>284</td>
+<td>881355</td>
+<td>12133500</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133500" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:33:56</td>
+</tr><tr class="odd">
+<td>285</td>
+<td>881356</td>
+<td>12133498</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133498" target="_blank">RUNTIME_ERROR</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:33:27</td>
+</tr><tr>
+<td>286</td>
+<td>881343</td>
+<td>1725573</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:30:32</td>
+</tr><tr class="odd">
+<td>287</td>
+<td>881337</td>
+<td>1725571</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 17:29:19</td>
+</tr><tr class="acc">
+<td>288</td>
+<td>881338</td>
+<td>12133455</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133455" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:29:07</td>
+</tr><tr class="odd">
+<td>289</td>
+<td>881335</td>
+<td>12133449</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_22">TC_bahia_22</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133449" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:28:36</td>
+</tr><tr>
+<td>290</td>
+<td>881333</td>
+<td>1725569</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:28:18</td>
+</tr><tr class="acc">
+<td>291</td>
+<td>881334</td>
+<td>1725568</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 17:28:12</td>
+</tr><tr class="acc">
+<td>292</td>
+<td>881332</td>
+<td>12133439</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133439" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:27:15</td>
+</tr><tr class="acc">
+<td>293</td>
+<td>881331</td>
+<td>1725566</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 17:26:32</td>
+</tr><tr class="acc">
+<td>294</td>
+<td>881321</td>
+<td>12133399</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133399" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:23:16</td>
+</tr><tr class="acc">
+<td>295</td>
+<td>881323</td>
+<td>1725561</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_04">TC_bahia_04</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 17:23:08</td>
+</tr><tr>
+<td>296</td>
+<td>881325</td>
+<td>1725558</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:22:36</td>
+</tr><tr class="odd">
+<td>297</td>
+<td>881320</td>
+<td>1725554</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_24">TC_bahia_24</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:21:35</td>
+</tr><tr>
+<td>298</td>
+<td>881314</td>
+<td>12133365</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133365" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:20:55</td>
+</tr><tr class="odd">
+<td>299</td>
+<td>881306</td>
+<td>12133351</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133351" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:19:44</td>
+</tr><tr>
+<td>300</td>
+<td>881311</td>
+<td>1725553</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:19:33</td>
+</tr><tr class="odd">
+<td>301</td>
+<td>881308</td>
+<td>12133328</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133328" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:17:32</td>
+</tr><tr>
+<td>302</td>
+<td>881310</td>
+<td>12133313</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12133313" target="_blank">WRONG_ANSWER</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:15:19</td>
+</tr><tr class="odd">
+<td>303</td>
+<td>881297</td>
+<td>1725547</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:14:42</td>
+</tr><tr>
+<td>304</td>
+<td>881291</td>
+<td>12133302</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_06">TC_bahia_06</a></td>
+<td><a href="http://codeforces.com/problemset/problem/505/D" target="_blank">P3 - Mr. Kitayuta's Technology</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/505/submission/12133302" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:14:17</td>
+</tr><tr class="odd">
+<td>305</td>
+<td>881288</td>
+<td>1725543</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 17:12:18</td>
+</tr><tr class="acc">
+<td>306</td>
+<td>881294</td>
+<td>12133281</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133281" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:11:37</td>
+</tr><tr class="odd">
+<td>307</td>
+<td>881285</td>
+<td>1725541</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:11:26</td>
+</tr><tr>
+<td>308</td>
+<td>881295</td>
+<td>12133279</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_03">TC_bahia_03</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133279" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:11:04</td>
+</tr><tr class="odd">
+<td>309</td>
+<td>881286</td>
+<td>1725540</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_14">TC_bahia_14</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:10:53</td>
+</tr><tr class="acc">
+<td>310</td>
+<td>881278</td>
+<td>12133271</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133271" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:09:40</td>
+</tr><tr class="odd">
+<td>311</td>
+<td>881279</td>
+<td>12133269</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_21">TC_bahia_21</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133269" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:09:11</td>
+</tr><tr class="acc">
+<td>312</td>
+<td>881277</td>
+<td>1725535</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_08">TC_bahia_08</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2186" target="_blank">P4 - Perfect Election</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++</td>
+<td>2015-07-20 17:08:36</td>
+</tr><tr class="odd">
+<td>313</td>
+<td>881272</td>
+<td>12133264</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133264" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:08:35</td>
+</tr><tr>
+<td>314</td>
+<td>881276</td>
+<td>1725533</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:07:34</td>
+</tr><tr class="odd">
+<td>315</td>
+<td>881266</td>
+<td>12133256</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133256" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:07:33</td>
+</tr><tr>
+<td>316</td>
+<td>881269</td>
+<td>1725532</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:07:23</td>
+</tr><tr class="odd">
+<td>317</td>
+<td>881267</td>
+<td>12133248</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_05">TC_bahia_05</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133248" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:07:13</td>
+</tr><tr>
+<td>318</td>
+<td>881270</td>
+<td>1725531</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_07">TC_bahia_07</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Time limit exceeded</td>
+<td>C++</td>
+<td>2015-07-20 17:06:38</td>
+</tr><tr class="acc">
+<td>319</td>
+<td>881261</td>
+<td>1725527</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 17:04:32</td>
+</tr><tr>
+<td>320</td>
+<td>881259</td>
+<td>12133227</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133227" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:04:20</td>
+</tr><tr class="odd">
+<td>321</td>
+<td>881258</td>
+<td>1725526</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_23">TC_bahia_23</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 17:04:08</td>
+</tr><tr>
+<td>322</td>
+<td>881253</td>
+<td>12133216</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133216" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:03:29</td>
+</tr><tr class="acc">
+<td>323</td>
+<td>881254</td>
+<td>12133210</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133210" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 17:02:50</td>
+</tr><tr class="acc">
+<td>324</td>
+<td>881250</td>
+<td>12133208</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133208" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 17:02:41</td>
+</tr><tr class="odd">
+<td>325</td>
+<td>881251</td>
+<td>12133202</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_13">TC_bahia_13</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133202" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:02:10</td>
+</tr><tr>
+<td>326</td>
+<td>881245</td>
+<td>12133194</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_20">TC_bahia_20</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133194" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 17:01:30</td>
+</tr><tr class="acc">
+<td>327</td>
+<td>881246</td>
+<td>12133174</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="http://codeforces.com/problemset/problem/479/C" target="_blank">P8 - Exams</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/479/submission/12133174" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 16:59:18</td>
+</tr><tr class="acc">
+<td>328</td>
+<td>881239</td>
+<td>1725521</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 16:55:24</td>
+</tr><tr class="acc">
+<td>329</td>
+<td>881237</td>
+<td>12133130</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_01">TC_bahia_01</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133130" target="_blank">Accepted</a></td>
+<td>GNU C++</td>
+<td>2015-07-20 16:55:20</td>
+</tr><tr>
+<td>330</td>
+<td>881233</td>
+<td>1725518</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=2591" target="_blank">P6 - Business Center</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++11</td>
+<td>2015-07-20 16:52:03</td>
+</tr><tr class="odd">
+<td>331</td>
+<td>881231</td>
+<td>1725517</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_12">TC_bahia_12</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Wrong answer</td>
+<td>C++</td>
+<td>2015-07-20 16:51:11</td>
+</tr><tr>
+<td>332</td>
+<td>881229</td>
+<td>12133062</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133062" target="_blank">TIME_LIMIT_EXCEEDED</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 16:48:17</td>
+</tr><tr class="odd">
+<td>333</td>
+<td>881228</td>
+<td>12133054</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_15">TC_bahia_15</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12133054" target="_blank">COMPILATION_ERROR</a></td>
+<td>GNU C</td>
+<td>2015-07-20 16:47:53</td>
+</tr><tr class="acc">
+<td>334</td>
+<td>881227</td>
+<td>1725515</td>
+<td><a href="https://a2oj.com/profile?Username=TC_bahia_19">TC_bahia_19</a></td>
+<td><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=4859" target="_blank">P1 - Zeroes</a></td>
+<td>Live Archive</td>
+<td>Accepted</td>
+<td>C++11</td>
+<td>2015-07-20 16:47:16</td>
+</tr><tr class="acc">
+<td>335</td>
+<td>881220</td>
+<td>12132959</td>
+<td><a href="https://a2oj.com/profile?Username=SorryCaloventorEnDos">SorryCaloventorEnDos</a></td>
+<td><a href="http://codeforces.com/problemset/problem/525/B" target="_blank">P5 - Pasha and String</a></td>
+<td>Codeforces</td>
+<td><a href="http://codeforces.com/contest/525/submission/12132959" target="_blank">Accepted</a></td>
+<td>GNU C++11</td>
+<td>2015-07-20 16:36:05</td>
+</tr></tbody>
+</table>
+
+
+
+</center>
+</font>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>

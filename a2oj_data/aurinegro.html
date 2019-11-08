@@ -1,0 +1,529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="canvas canvastext geolocation rgba hsla multiplebgs borderimage borderradius boxshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions  video audio localstorage sessionstorage webworkers applicationcache gr__a2oj_com fontface"><head>
+
+<link href="https://a2oj.com/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>A2 Online Judge</title>
+
+<meta name="description" content="A2 Online Judge (or Virtual Online Contests) is an online judge with hundreds of problems and it helps you to create, run and participate in virtual contests using problems from the following online judges: A2 Online Judge, Live Archive, Codeforces, Timus, SPOJ, TJU, SGU, PKU, ZOJ, URI. It also helps you to manage and track your programming comepetions training for you and your friends. It helps for ICPC ACM and IOI training also.">
+<meta name="keywords" content="ahmed aly,ahmed aly tools,voc,virtual online contests,programming,c++,java,contest,contests,competition,competitions,programming contest,programming contests,programming compitition,programming compititions,cf,codeforces,live archive,uva,spoj,tju,sgu,pku,timus,zoj,uri,programming tools,a2oj,a2 online judge">
+<meta name="author" content="Ahmed Aly">
+<link href="aurinegro_files/default.css" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="aurinegro_files/nav.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+<!-- START TRACKING CODE -->
+<script type="text/javascript" async="" src="aurinegro_files/ga.js"></script><script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push( [ '_setAccount', 'UA-16947566-3' ]);
+	_gaq.push( [ '_trackPageview' ]);
+
+	( function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+<!-- END TRACKING CODE -->
+
+<!-- START TABLE SORTER CODE -->
+<link rel="stylesheet" href="aurinegro_files/style.css" type="text/css" id="" media="print, projection, screen">
+<script type="text/javascript" src="aurinegro_files/jquery-latest.js"></script>
+<script type="text/javascript" src="aurinegro_files/jquery.js"></script>
+	
+<script type="text/javascript" id="js">
+$(document).ready(function() {
+	$.tablesorter.defaults.sortList = [[0,0]];
+	$.tablesorter.defaults.textExtraction = ['complex'];
+	$("table").tablesorter();
+});
+</script>
+<!-- END TABLE SORTER CODE -->
+
+<!-- START AUTO COMPLETE CODE -->
+<link rel="stylesheet" href="aurinegro_files/jquery.css" type="text/css">
+<script type="text/javascript" src="aurinegro_files/jquery_003.js"></script>
+<script type="text/javascript" src="aurinegro_files/jquery_002.js"></script>
+<script type="text/javascript" src="aurinegro_files/jquery_004.js"></script>
+
+<script>
+$(document).ready(function(){
+	$("#Username").autocomplete("usernames",{
+    	delay: 200,
+		scrollHeight: 220,
+    	selectFirst: false
+	});
+});
+</script>
+<!-- END AUTO COMPLETE CODE -->
+
+
+
+
+
+
+
+<style>@font-face{font-family:testfont;src:url('data:font/ttf;base64,AAEAAAAMAIAAAwBAT1MvMliohmwAAADMAAAAVmNtYXCp5qrBAAABJAAAANhjdnQgACICiAAAAfwAAAAEZ2FzcP//AAMAAAIAAAAACGdseWYv5OZoAAACCAAAANxoZWFk69bnvwAAAuQAAAA2aGhlYQUJAt8AAAMcAAAAJGhtdHgGDgC4AAADQAAAABRsb2NhAIQAwgAAA1QAAAAMbWF4cABVANgAAANgAAAAIG5hbWUgXduAAAADgAAABPVwb3N03NkzmgAACHgAAAA4AAECBAEsAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAACAAMDAAAAAAAAgAACbwAAAAoAAAAAAAAAAFBmRWQAAAAgqS8DM/8zAFwDMwDNAAAABQAAAAAAAAAAAAMAAAADAAAAHAABAAAAAABGAAMAAQAAAK4ABAAqAAAABgAEAAEAAgAuqQD//wAAAC6pAP///9ZXAwAAAAAAAAACAAAABgBoAAAAAAAvAAEAAAAAAAAAAAAAAAAAAAABAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEACoAAAAGAAQAAQACAC6pAP//AAAALqkA////1lcDAAAAAAAAAAIAAAAiAogAAAAB//8AAgACACIAAAEyAqoAAwAHAC6xAQAvPLIHBADtMrEGBdw8sgMCAO0yALEDAC88sgUEAO0ysgcGAfw8sgECAO0yMxEhESczESMiARDuzMwCqv1WIgJmAAACAFUAAAIRAc0ADwAfAAATFRQWOwEyNj0BNCYrASIGARQGKwEiJj0BNDY7ATIWFX8aIvAiGhoi8CIaAZIoN/43KCg3/jcoAWD0JB4eJPQkHh7++EY2NkbVRjY2RgAAAAABAEH/+QCdAEEACQAANjQ2MzIWFAYjIkEeEA8fHw8QDxwWFhwWAAAAAQAAAAIAAIuYbWpfDzz1AAsEAAAAAADFn9IuAAAAAMWf0i797/8zA4gDMwAAAAgAAgAAAAAAAAABAAADM/8zAFwDx/3v/98DiAABAAAAAAAAAAAAAAAAAAAABQF2ACIAAAAAAVUAAAJmAFUA3QBBAAAAKgAqACoAWgBuAAEAAAAFAFAABwBUAAQAAgAAAAEAAQAAAEAALgADAAMAAAAQAMYAAQAAAAAAAACLAAAAAQAAAAAAAQAhAIsAAQAAAAAAAgAFAKwAAQAAAAAAAwBDALEAAQAAAAAABAAnAPQAAQAAAAAABQAKARsAAQAAAAAABgAmASUAAQAAAAAADgAaAUsAAwABBAkAAAEWAWUAAwABBAkAAQBCAnsAAwABBAkAAgAKAr0AAwABBAkAAwCGAscAAwABBAkABABOA00AAwABBAkABQAUA5sAAwABBAkABgBMA68AAwABBAkADgA0A/tDb3B5cmlnaHQgMjAwOSBieSBEYW5pZWwgSm9obnNvbi4gIFJlbGVhc2VkIHVuZGVyIHRoZSB0ZXJtcyBvZiB0aGUgT3BlbiBGb250IExpY2Vuc2UuIEtheWFoIExpIGdseXBocyBhcmUgcmVsZWFzZWQgdW5kZXIgdGhlIEdQTCB2ZXJzaW9uIDMuYmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhTGlnaHRiYWVjMmE5MmJmZmU1MDMyIC0gc3Vic2V0IG9mIEZvbnRGb3JnZSAyLjAgOiBKdXJhIExpZ2h0IDogMjMtMS0yMDA5YmFlYzJhOTJiZmZlNTAzMiAtIHN1YnNldCBvZiBKdXJhIExpZ2h0VmVyc2lvbiAyIGJhZWMyYTkyYmZmZTUwMzIgLSBzdWJzZXQgb2YgSnVyYUxpZ2h0aHR0cDovL3NjcmlwdHMuc2lsLm9yZy9PRkwAQwBvAHAAeQByAGkAZwBoAHQAIAAyADAAMAA5ACAAYgB5ACAARABhAG4AaQBlAGwAIABKAG8AaABuAHMAbwBuAC4AIAAgAFIAZQBsAGUAYQBzAGUAZAAgAHUAbgBkAGUAcgAgAHQAaABlACAAdABlAHIAbQBzACAAbwBmACAAdABoAGUAIABPAHAAZQBuACAARgBvAG4AdAAgAEwAaQBjAGUAbgBzAGUALgAgAEsAYQB5AGEAaAAgAEwAaQAgAGcAbAB5AHAAaABzACAAYQByAGUAIAByAGUAbABlAGEAcwBlAGQAIAB1AG4AZABlAHIAIAB0AGgAZQAgAEcAUABMACAAdgBlAHIAcwBpAG8AbgAgADMALgBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQBMAGkAZwBoAHQAYgBhAGUAYwAyAGEAOQAyAGIAZgBmAGUANQAwADMAMgAgAC0AIABzAHUAYgBzAGUAdAAgAG8AZgAgAEYAbwBuAHQARgBvAHIAZwBlACAAMgAuADAAIAA6ACAASgB1AHIAYQAgAEwAaQBnAGgAdAAgADoAIAAyADMALQAxAC0AMgAwADAAOQBiAGEAZQBjADIAYQA5ADIAYgBmAGYAZQA1ADAAMwAyACAALQAgAHMAdQBiAHMAZQB0ACAAbwBmACAASgB1AHIAYQAgAEwAaQBnAGgAdABWAGUAcgBzAGkAbwBuACAAMgAgAGIAYQBlAGMAMgBhADkAMgBiAGYAZgBlADUAMAAzADIAIAAtACAAcwB1AGIAcwBlAHQAIABvAGYAIABKAHUAcgBhAEwAaQBnAGgAdABoAHQAdABwADoALwAvAHMAYwByAGkAcAB0AHMALgBzAGkAbAAuAG8AcgBnAC8ATwBGAEwAAAAAAgAAAAAAAP+BADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAQACAQIAEQt6ZXJva2F5YWhsaQ==')}</style></head>
+<body class="" data-gr-c-s-loaded="true">
+    	<script>
+			var el = document.getElementsByTagName("body")[0];
+			el.className = "";
+		</script>
+        <noscript>
+        	<!--[if IE]>
+            	<link rel="stylesheet" href="css/ie.css">
+            <![endif]-->
+        </noscript>
+        
+
+<center>
+<table width="100%">
+<tbody><tr>
+<td>
+        
+
+
+<div id="wrapper"><!-- start header -->
+
+<div id="logo">
+<table width="100%">
+<tbody><tr>
+<td style="vertical-align: bottom;"><a href="https://a2oj.com/"><img src="aurinegro_files/logo.png"></a></td>
+<td>
+<h1 style="padding-top: 11px;">A<sup>2</sup> Online Judge</h1>
+<h2 class="author">»&nbsp;&nbsp;&nbsp;&nbsp; by <a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></h2>
+<br>
+<h3>Sponsored by <b><a href="https://www.facebook.com/elcoachacademy/" target="_blank" style="text-decoration: none;">Coach Academy</a></b> &amp; <b><a href="https://www.facebook.com/AfricaArabCPC/" target="_blank" style="text-decoration: none;">ACPC</a></b></h3>
+</td>
+<td style="text-align: right; padding-top: 27px;">
+<iframe src="aurinegro_files/like.html" scrolling="no" style="border:none; height:45px" frameborder="0"></iframe>
+</td>
+</tr>
+</tbody></table>
+</div>
+
+<div id="header3"><div align="right"><a href="https://a2oj.com/signin?url=%2F%3FUsername%3Daurinegro" style="font-size: 15px;">Sign In</a> - <a href="https://a2oj.com/signup" style="font-size: 15px;">Sign Up</a></div></div>
+
+
+<div id="header2">
+<div id="menu2">
+        <nav id="topNav">
+          <ul>
+<li><a href="https://a2oj.com/">Contests</a></li><li><a href="https://a2oj.com/ladders"><font color="red">Ladders</font></a></li><li><a href="https://a2oj.com/ps">Problems</a></li><li><a href="https://a2oj.com/status">Status</a></li><li><a href="https://a2oj.com/categories">Categories</a></li><li><a href="https://a2oj.com/groups">Groups</a></li><li><a href="javascript:void();">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>^</span></a><ul><li><center><a href="https://a2oj.com/codes">Source Codes</a></center></li><li><center><a href="https://a2oj.com/finder">Problems Finder</a></center></li><li><center><a href="https://a2oj.com/users">Users</a></center></li><li><center><a href="https://a2oj.com/teams">Teams</a></center></li><li><center><a href="https://a2oj.com/cumulative">Cumulative Rank</a></center></li></ul></li><li class="last"><a href="https://a2oj.com/about">About</a></li>
+          </ul>
+        </nav>
+        
+        <script src="aurinegro_files/modernizr.js"></script>
+		<script>
+			(function($){
+				
+				//cache nav
+				var nav = $("#topNav");
+				
+				//add indicator and hovers to submenu parents
+				nav.find("li").each(function() {
+					if ($(this).find("ul").length > 0) {
+						$("<span>").text("^").appendTo($(this).children(":first"));
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).find("ul").stop(true, true).slideDown();
+						});
+						
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).find("ul").stop(true, true).slideUp();
+						});
+					}
+				});
+			})(jQuery);
+		</script>
+
+	
+</div>
+</div>
+<!-- end header --></div>
+<!-- start page -->
+</td>
+</tr>
+
+
+<tr>
+
+<td style="vertical-align: top;">
+
+
+<center>
+<table>
+<tbody><tr style="max-height: 0px; padding: 0px;">
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 1060px;"></td>
+<td style="max-height: 0px; padding: 0px; min-width: 165px;"></td>
+</tr>
+<tr>
+<td style="padding: 0px; vertical-align: top;">
+<div id="leftAd">
+
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+
+<!-- <center><a href="https://goo.gl/hhK6L3" target="_blank"><img src="banner.jpg"></img></a><br/><br/></center> -->
+
+<div id="page"> 
+
+<center>
+
+
+
+<table cellpadding="5" border="1">
+<tbody><tr><td><b><center><font size="3" color="black"></font><font size="3" color="red">I'm sadly announcing that a2oj.com (A2 Online Judge) will be retiring by end of 2019, please read more details <a href="https://a2oj.com/bye">here</a>.</font></center></b></td></tr>
+</tbody></table>
+<br>
+
+<iframe src="aurinegro_files/tb1.html" width="227" height="20" frameborder="0"></iframe>
+<br><br>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+<center>
+
+<form method="get" action="">
+<table>
+<tbody><tr>
+<td><font size="3">Show contests only for this username (as owner and/or registrant):</font></td>
+<td><input type="text" id="Username" name="Username" style="Width:150px" value="aurinegro" autocomplete="off" class="ac_input"></td>
+<td><input type="submit" value="Show"></td>
+</tr>
+</tbody></table>
+</form>
+<br>
+
+
+
+<b style="font: 22px arial, sans-serif;
+  color: #5C5C5C;">Running Contests</b>
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+There are no running contests<br><br>
+
+
+<br><br>
+
+<b style="font: 22px arial, sans-serif;
+  color: #5C5C5C;">Coming Contests</b>
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+There are no coming contests<br><br>
+
+
+<br><br>
+
+<b style="font: 22px arial, sans-serif;
+  color: #5C5C5C;">Past 20 Contests</b>
+<p style="border-bottom: 1px solid #5C5C5C;
+  padding-bottom: 6px;
+  margin-bottom: 1em;">
+</p>
+<table class="tablesorter" style="text-align: center;vertical-align:middle;" cellspacing="1">
+<thead>
+<tr>
+<th class="header headerSortDown"></th>
+<th class="header">Contest Name</th>
+<th class="header">Owner</th>
+<th class="header">Start Time</th>
+<th class="header">Duration</th>
+<th class="header">Registrants</th>
+<th class="header">Type</th>
+<th class="header"></th>
+<th class="header"></th>
+</tr>
+</thead>
+<tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr class="odd">
+<td style="vertical-align:middle">1</td>
+<td style="vertical-align:middle">2556 - simulacro bahia 1910
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=nikouni">nikouni</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=19&amp;month=10&amp;year=2012&amp;hour=17&amp;min=45&amp;sec=0&amp;p1=1440" target="_blank">2012-10-19 17:45:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=2556">3</a></td>
+<td style="vertical-align:middle">Private</td>
+<td style="vertical-align:middle">By invitation only</td>
+<td></td>
+</tr><tr>
+<td style="vertical-align:middle">2</td>
+<td style="vertical-align:middle">3786 - Simulacro 1 - 2013
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=15&amp;month=2&amp;year=2013&amp;hour=19&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2013-02-15 19:00:00</a></td>
+<td style="vertical-align:middle">3 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=3786">2</a></td>
+<td style="vertical-align:middle">Private</td>
+<td style="vertical-align:middle">By invitation only</td>
+<td></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">3</td>
+<td style="vertical-align:middle">4090 - Simulacro 2bis - 2013
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=13&amp;month=3&amp;year=2013&amp;hour=21&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2013-03-13 21:15:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=4090">2</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=4090">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=4090">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">4</td>
+<td style="vertical-align:middle">5673 - Training Camp Argentina 2013 - Lunes 22
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=22&amp;month=7&amp;year=2013&amp;hour=16&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2013-07-22 16:15:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5673">37</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5673">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5673">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">5</td>
+<td style="vertical-align:middle">5709 - Training Camp Argentina - Miercoles 24
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=24&amp;month=7&amp;year=2013&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2013-07-24 16:30:00</a></td>
+<td style="vertical-align:middle">4 hrs and 15 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=5709">35</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=5709">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=5709">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">6</td>
+<td style="vertical-align:middle">11712 - Training Camp Argentina 2014 #7
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=6&amp;month=8&amp;year=2014&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-08-06 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11712">37</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11712">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11712">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">7</td>
+<td style="vertical-align:middle">11840 - Training Camp Argentina 2014 - All Contests
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=ltaravilse">ltaravilse</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=12&amp;month=8&amp;year=2014&amp;hour=0&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2014-08-12 00:00:00</a></td>
+<td style="vertical-align:middle">30 days</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=11840">19</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=11840">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=11840">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">8</td>
+<td style="vertical-align:middle">19235 - TC Argentina 2015 - Dia 1
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=20&amp;month=7&amp;year=2015&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2015-07-20 16:30:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19235">26</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19235">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19235">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">9</td>
+<td style="vertical-align:middle">19241 - TC Argentina 2015 - Dia 2
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=21&amp;month=7&amp;year=2015&amp;hour=16&amp;min=30&amp;sec=0&amp;p1=1440" target="_blank">2015-07-21 16:30:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19241">33</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19241">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19241">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">10</td>
+<td style="vertical-align:middle">19257 - TC Argentina 2015 - Dia 3
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=22&amp;month=7&amp;year=2015&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-07-22 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19257">30</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19257">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19257">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">11</td>
+<td style="vertical-align:middle">19272 - TC Argentina 2015 - Dia 4
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=23&amp;month=7&amp;year=2015&amp;hour=16&amp;min=45&amp;sec=0&amp;p1=1440" target="_blank">2015-07-23 16:45:00</a></td>
+<td style="vertical-align:middle">4 hrs and 45 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19272">29</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19272">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19272">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">12</td>
+<td style="vertical-align:middle">19281 - TC Argentina 2015 - Dia 5
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=27&amp;month=7&amp;year=2015&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-07-27 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19281">29</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19281">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19281">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">13</td>
+<td style="vertical-align:middle">19397 - TC Argentina 2015 - Dia 6
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=28&amp;month=7&amp;year=2015&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-07-28 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19397">29</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19397">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19397">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">14</td>
+<td style="vertical-align:middle">19409 - TC Argentina 2015 - Dia 7
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=29&amp;month=7&amp;year=2015&amp;hour=17&amp;min=15&amp;sec=0&amp;p1=1440" target="_blank">2015-07-29 17:15:00</a></td>
+<td style="vertical-align:middle">4 hrs and 15 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19409">29</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19409">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19409">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">15</td>
+<td style="vertical-align:middle">19459 - TC Argentina 2015 - Dia 8
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=30&amp;month=7&amp;year=2015&amp;hour=17&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-07-30 17:00:00</a></td>
+<td style="vertical-align:middle">4 hrs and 30 mins</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19459">30</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19459">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19459">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">16</td>
+<td style="vertical-align:middle">19807 - TC Argentina 2015 - Dia 1 - Rematch
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=13&amp;month=8&amp;year=2015&amp;hour=19&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-08-13 19:00:00</a></td>
+<td style="vertical-align:middle">5 hrs</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19807">2</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19807">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19807">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">17</td>
+<td style="vertical-align:middle">19709 - TC Argentina 2015
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=9&amp;month=8&amp;year=2015&amp;hour=3&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-08-09 03:00:00</a></td>
+<td style="vertical-align:middle">30 days</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19709">14</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19709">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19709">Standings</a></td>
+</tr><tr>
+<td style="vertical-align:middle">18</td>
+<td style="vertical-align:middle">19708 - TC Argentina 2015
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=9&amp;month=8&amp;year=2015&amp;hour=3&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-08-09 03:00:00</a></td>
+<td style="vertical-align:middle">30 days</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19708">2</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19708">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19708">Standings</a></td>
+</tr><tr class="odd">
+<td style="vertical-align:middle">19</td>
+<td style="vertical-align:middle">19707 - TC Argentina 2015
+</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/profile?Username=aurinegro">aurinegro</a></td>
+<td style="vertical-align:middle"><a href="http://timeanddate.com/worldclock/fixedtime.html?day=9&amp;month=8&amp;year=2015&amp;hour=3&amp;min=0&amp;sec=0&amp;p1=1440" target="_blank">2015-08-09 03:00:00</a></td>
+<td style="vertical-align:middle">30 days</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/registrants?ID=19707">2</a></td>
+<td style="vertical-align:middle">Public</td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/contest?ID=19707">Watch</a></td>
+<td style="vertical-align:middle"><a href="https://a2oj.com/standings?ID=19707">Standings</a></td>
+</tr></tbody>
+</table>
+
+
+
+
+
+</center>
+
+</div>
+</td>
+<td style="padding: 0px; vertical-align: top;">
+<div id="rightAd">
+
+
+</div>
+</td>
+</tr>
+</tbody></table>
+</center>
+<!-- end page -->
+<!-- start footer -->
+<div id="footer">
+<p id="legal">A2OJ © Copyright 2010-2019 <b><a href="https://www.facebook.com/ahmed.aly.tc" target="_blank" style="text-decoration: none;">Ahmed Aly</a></b> All Rights Reserved. A2OJ uses <a href="http://sphere-engine.com/" target="_blank" style="text-decoration: none;">Sphere Engine</a>™ © by <a href="http://sphere-research.com/" target="_blank" style="text-decoration: none;">Sphere Research Labs</a>.</p>
+</div>
+</td>
+
+
+</tr>
+</tbody></table>
+</center><span style="font: 99px testfont, _, serif; position: absolute; visibility: hidden; bottom: 0px;" id="fonttest">........</span>
+<!-- end footer -->
+
+
+
+
+</body></html>
