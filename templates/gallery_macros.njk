@@ -1,0 +1,74 @@
+{% macro print_edition(year, lang) %}
+    {% if lang == "es" %}
+        Edición {{year}}
+    {% else %}
+        {{year}} Edition
+    {% endif %}
+{% endmacro %}
+
+
+{% macro print_see_more(lang) %}
+    {% if lang == "es" %}
+        Ver más
+    {% else %}
+        See more
+    {% endif %}
+{% endmacro %}
+
+{% macro get_image_folder(year, i, lang) %}{% if lang == "es" %}images/gallery/{{year}}{% else %}../images/gallery/{{year}}{% endif %}{% endmacro %}
+
+{% macro get_image_href(year, i, lang) %}{{get_image_folder(year, i, lang)}}/img_{{i}}.jpg{% endmacro %}
+
+{% macro get_vimage_href(year, i, lang) %}{{get_image_folder(year, i, lang)}}/vimg_{{i}}.jpg{% endmacro %}
+
+{% macro get_vimage_thumbnail_href(year, i, lang) %}{{get_image_folder(year, i, lang)}}/vimg_{{i}}_thumbnail.jpg{% endmacro %}
+
+{% macro print_year_gallery(year, horizontal_images, vertical_images, lang) %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center mb-8 section-heading">
+        <h2 class="mb-8 text-uppercase">{{print_edition(year, lang)}}</h2>
+      </div>
+    </div>
+    {% set visable_images = 6 %}
+    {% if horizontal_images < 6 %}
+        {% set visable_images = horizontal_images %}
+    {% endif %}
+    <div class="row">
+    {% for i in range(0,visable_images)%}
+      <div class="col-md-6 col-lg-4 item">
+          <a class="lightbox" href="{{get_image_href(year, i, lang)}}">
+              <img class="img-fluid image scale-on-hover" src="{{get_image_href(year, i, lang)}}">
+          </a>
+      </div>
+    {% endfor %}
+    </div>
+
+    {% if visable_images < horizontal_images + vertical_images %}
+    <div class="row collapse" id="galleyCollapse{{year}}">
+    {% for i in range(visable_images,horizontal_images)%}
+      <div class="col-md-6 col-lg-4 item">
+          <a class="lightbox" href="{{get_image_href(year, i, lang)}}">
+              <img class="img-fluid image scale-on-hover" src="{{get_image_href(year, i, lang)}}">
+          </a>
+      </div>
+    {% endfor %}
+    {% for i in range(0,vertical_images)%}
+      <div class="col-md-6 col-lg-4 item">
+          <a class="lightbox" href="{{get_vimage_href(year, i, lang)}}">
+            <img class="img-fluid image scale-on-hover" src="{{get_vimage_thumbnail_href(year, i, lang)}}">
+          </a>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <button class="btn btn-primary btn-lg" type="button" data-toggle="collapse" data-target="#galleyCollapse{{year}}" aria-expanded="false" aria-controls="galleyCollapse{{year}}" onclick="this.style.display='none'">
+              {{ print_see_more(lang) }}
+            </button>
+        </div>
+    </div>
+    {% endif %}
+</div>
+<br>
+{% endmacro %}

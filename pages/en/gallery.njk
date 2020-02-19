@@ -14,30 +14,10 @@
 {% endblock %}
 
 {% block content %}
+{% from 'gallery_macros.njk' import 'print_year_gallery' %}
 <section class="site-section gallery-block grid-gallery">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto text-center mb-8 section-heading">
-            <h2 class="mb-8 text-uppercase">2018 Edition</h2>
-          </div>
-        </div>
-        <div class="row">
-            {% for i in range(0,79)%}
-              <div class="col-md-6 col-lg-4 item">
-                  <a class="lightbox" href="../images/gallery/2018/img_{{i}}.jpg">
-                      <img class="img-fluid image scale-on-hover" src="../images/gallery/2018/img_{{i}}.jpg">
-                  </a>
-              </div>
-            {% endfor %}
-            {% for i in range(0,8)%}
-              <div class="col-md-6 col-lg-4 item">
-                  <a class="lightbox" href="../images/gallery/2018/vimg_{{i}}.jpg">
-                    <img class="img-fluid image scale-on-hover" src="../images/gallery/2018/vimg_{{i}}_thumbnail.jpg">
-                  </a>
-              </div>
-            {% endfor %}
-        </div>
-    </div>
+    {{ print_year_gallery(2019, 6, 0, 'en') }}
+    {{ print_year_gallery(2018, 79, 8, 'en') }}
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 <script>
