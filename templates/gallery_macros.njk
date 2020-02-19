@@ -24,7 +24,7 @@
 {% macro get_vimage_thumbnail_href(year, i, lang) %}{{get_image_folder(year, i, lang)}}/vimg_{{i}}_thumbnail.jpg{% endmacro %}
 
 {% macro print_year_gallery(year, horizontal_images, vertical_images, lang) %}
-<div class="container">
+<div class="container" id="gallery{{year}}">
     <div class="row">
       <div class="col-md-8 mx-auto text-center mb-8 section-heading">
         <h2 class="mb-8 text-uppercase">{{print_edition(year, lang)}}</h2>

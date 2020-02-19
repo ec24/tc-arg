@@ -16,8 +16,14 @@
 {% block content %}
 {% from 'gallery_macros.njk' import 'print_year_gallery' %}
 <section class="site-section gallery-block grid-gallery">
+    <div class="container text-center" style="margin-bottom:20px">
+        <a class="btn btn-primary btn-lg" href="#gallery2019">2019</a>
+        <a class="btn btn-primary btn-lg" href="#gallery2018">2018</a>
+        <a class="btn btn-primary btn-lg" href="#gallery2015">2015</a>
+    </div>
     {{ print_year_gallery(2019, 6, 0, 'en') }}
     {{ print_year_gallery(2018, 79, 8, 'en') }}
+    {{ print_year_gallery(2015, 11, 0, 'en') }}
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
 <script>
