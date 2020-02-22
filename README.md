@@ -25,3 +25,8 @@ $ sudo npm install
  ```shell
 $ gulp nunjucks
 ```
+
+### Desarrollo
+* Realizar modificaiones en pages/, templates/, css/, images/, pdfs/ y js/
+* Correr `$ gulp nunjucks` para generar los .html
+* Commitear con los cambios realizado y .html generados en el paso anterior.
