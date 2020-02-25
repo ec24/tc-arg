@@ -49,14 +49,14 @@
     {% for i in range(visable_images,horizontal_images)%}
       <div class="col-md-6 col-lg-4 item">
           <a class="lightbox" href="{{get_image_href(year, i, lang)}}">
-              <img class="img-fluid image scale-on-hover" src="{{get_image_href(year, i, lang)}}">
+              <img class="img-fluid image scale-on-hover lazyload" data-src="{{get_image_href(year, i, lang)}}">
           </a>
       </div>
     {% endfor %}
     {% for i in range(0,vertical_images)%}
       <div class="col-md-6 col-lg-4 item">
           <a class="lightbox" href="{{get_vimage_href(year, i, lang)}}">
-            <img class="img-fluid image scale-on-hover" src="{{get_vimage_thumbnail_href(year, i, lang)}}">
+            <img class="img-fluid image scale-on-hover lazyload" data-src="{{get_vimage_thumbnail_href(year, i, lang)}}">
           </a>
       </div>
     {% endfor %}
