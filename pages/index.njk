@@ -4,11 +4,33 @@
 {% block main_header %}
   <div class="col-md-10 text-center" data-aos="fade">
     <h1 class="mb-4">Training Camp Argentina VIRTUAL</h1>
-    <h3 class="mb-5" style="color:white; background: rgba(0,0,0,0.6)">Estamos trabajando para brindarte una nueva forma de practicar programación competitiva.
-      <a href="virtual-tc-info.html#tcvirtual"> Más información </a> sobre la nueva modalidad del evento. 
-    </h3>
+    <h2 class="mb-5" style="color:white; background: rgba(0,0,0,0.6); padding: 10px 0 10px 0" id="countdown">
+    </h2>
+    <script>
+        var start_date = new Date("July 13, 2020 10:00:00 GMT-03:00").getTime();
+        
+        function updateCountdown() {
+            var now = new Date().getTime();
+            var time_to_start_date = start_date - now;
+            var days = Math.floor(time_to_start_date / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((time_to_start_date % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((time_to_start_date % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById("countdown").innerHTML = "Arranca en <span style=\"color:red\">"
+                + (days > 0 ? " " + days + " día" + (days >= 2 ? "s" : "") : "")
+                + (hours > 0 ? " " + hours + " hora" + (hours >= 2 ? "s" : "") : "")
+                + (minutes > 0 ? " " + minutes + " minuto" + (minutes >= 2 ? "s" : "") : "")
+                + "</span>";
+
+            if (time_to_start_date < 0) document.getElementById("countdown").innerHTML = "";
+        }
+       
+        updateCountdown(); 
+        setInterval(updateCountdown, 30000);
+    </script>
     <p class="regular-font-size">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfp7NGpCNkFjgo30QsvJQq8UXkrAFYpC0pl4YHLnlzxJrALtQ/viewform" class="btn btn-primary px-4 py-3 text-uppercase">Formulario de inscripción</a>
+      <a href="virtual-tc-info.html#tcvirtual" class="btn btn-info px-4 py-3 text-uppercase">Más información</a>
     </p>
     <br>
     <p>
