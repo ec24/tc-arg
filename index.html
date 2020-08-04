@@ -75,46 +75,6 @@
           
   <div class="col-md-10 text-center" data-aos="fade">
     <h1 class="mb-4">Training Camp Argentina VIRTUAL</h1>
-    <h3 class="mb-5" style="color:white; background: rgba(0,0,0,0.6); padding: 10px 0 10px 0" id="countdown"></h3>
-    <script>
-        var start_date = new Date("July 13, 2020 10:00:00 GMT-03:00");
-        var end_date = new Date("July 24, 2020 20:00:00 GMT-03:00");
-        
-        function updateCountdown() {
-            var today = new Date();
-            if(new Date() < start_date) {
-                var now = new Date().getTime();
-                var time_to_start_date = start_date.getTime() - now;
-                var days = Math.floor(time_to_start_date / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((time_to_start_date % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((time_to_start_date % (1000 * 60 * 60)) / (1000 * 60));
-            
-                document.getElementById("countdown").innerHTML = "Arranca en <span style=\"color:red\">"
-                    + (days > 0 ? " " + days + " día" + (days >= 2 ? "s" : "") : "")
-                    + (hours > 0 ? " " + hours + " hora" + (hours >= 2 ? "s" : "") : "")
-                    + (minutes > 0 ? " " + minutes + " minuto" + (minutes >= 2 ? "s" : "") : "")
-                    + "</span>";
-            } else if(today < end_date) {
-                var hours = today.getUTCHours();
-
-                var in_contest = hours >= 18 && hours < 23;
-                var in_classes = hours >= 13 && hours < 16;
-                var prox_contest = 16 <= hours && hours < 18;
-                var prox_classes = hours == 12;
-
-                document.getElementById("countdown").innerHTML = 
-                    (in_contest || in_classes ? "<span style=\"color:#4ee44e\"><strong>Ahora</strong>: </span>" : "")
-                    + (prox_contest || prox_classes ? "<span style=\"color:#f8f32b\"><strong>Próximamente</strong>: </span>" : "")
-                    + (in_classes || prox_classes ? "clases teóricas (<a href=\"https://www.youtube.com/channel/UCTtoEdiHyjP6XmxMGhsngCA\">link al canal</a>)" : "")
-                    + (in_contest || prox_contest ? "contest (<a href=\"https://codeforces.com/group/j1UosVRZar/contests\">link a contests</a>)" : "");
-                if(hours == 23 || hours < 12 || today.getUTCDate() == 18 || today.getUTCDate() == 19)
-                    document.getElementById("countdown").style.display = "none";
-            }
-        }
-
-        updateCountdown(); 
-        setInterval(updateCountdown, 5000);
-    </script>
     <p class="regular-font-size">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfp7NGpCNkFjgo30QsvJQq8UXkrAFYpC0pl4YHLnlzxJrALtQ/viewform" class="btn btn-primary px-4 py-3 text-uppercase" style="margin-top:5px">Formulario de inscripción</a>
       <a href="virtual-tc-info.html#tcvirtual" class="btn btn-info px-4 py-3 text-uppercase" style="margin-top:5px">Más información</a>
