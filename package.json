@@ -20,7 +20,7 @@
     "gulp": "^4.0.2",
     "gulp-nunjucks-render": "^2.2.3",
     "lodash": "^4.17.19",
-    "yargs-parser": ">=13.1.2"
+    "yargs-parser": "^20.2.4"
   },
   "dependencies": {
     "npx": "^10.2.2"
