@@ -17,12 +17,13 @@
   },
   "homepage": "https://github.com/ec24/tmp#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^3.9.1",
     "gulp-nunjucks-render": "^2.2.3",
-    "lodash": "^4.17.19",
-    "yargs-parser": "^20.2.4"
+    "lodash": "^4.17.21",
+    "lodash.template": ">=4.5.0",
+    "yargs-parser": "^20.2.7"
   },
   "dependencies": {
-    "npx": "^10.2.2"
+    "npx": "^3.0.0"
   }
 }
